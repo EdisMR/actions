@@ -1,0 +1,43 @@
+body{
+	margin: 0;
+	font-family: 'Segoe UI', Tahoma, Roboto, sans-serif;
+	user-select: none;
+}
+
+header{
+}
+
+.header-shortcuts{
+	a{
+		&:hover{
+			background-color: rgb(41, 110, 189);
+		}
+	}
+}
+
+footer {
+	article{
+		&:hover{
+			background-color: rgb(41, 110, 189);
+		}
+	}
+}
+
+a{
+	color: white;
+	text-decoration: none;
+}
+
+
+.glass{
+	color: white;
+	img{
+		filter: invert(90%);
+	}
+	&::before{
+		background-color: black;
+		box-shadow: inset 0 0 2000px rgba(0, 0, 0, 0.5);
+		filter: blur(1px);
+		opacity: 50%;
+	}
+}
