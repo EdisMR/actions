@@ -17,7 +17,10 @@ header{
 }
 
 .header-Title{
-	padding: 20px;
+	padding-top: 5px;
+	padding-right: 20px;
+	padding-bottom: 5px;
+	padding-left: 20px;
 }
 
 .header-shortcuts{
@@ -56,9 +59,28 @@ header{
 /* ********************************************** */
 /****************** MAIN *********************** */
 /* ********************************************** */
-main{
+#indexMain{
 	overflow: initial;
 	margin-top: 80px;
+}
+.grid-container{
+	grid-template-columns: 1fr;
+	article{
+		div{
+			div{
+			}
+			figure{
+				img{
+				}
+			}
+		}
+		h3{
+		}
+		ul{
+			li{
+			}
+		}
+	}
 }
 
 

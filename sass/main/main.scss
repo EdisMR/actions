@@ -1,4 +1,5 @@
 /* CONSTRUCTION STRUCTURE */
+@import "structure/normalize";
 @import "structure/structure";
 @media screen and (orientation: portrait){
 	@import "structure/structure-portrait";
@@ -18,4 +19,4 @@
 }
 
 /* DEVELOPMENT PROCESS VISUALIZATIONS */
-//@import "dev"
+/* @import "dev"; */

@@ -1,0 +1,13 @@
+/main
+    main.scss
+    _dev.scss
+
+    /appearance
+        _appearance.scss
+        _colorsDark.scss
+        _colorsLight.scss
+
+    /structure
+        _structure.scss
+        _structurePortrait.scss
+        _normalize.scss

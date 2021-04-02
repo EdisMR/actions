@@ -1,10 +1,27 @@
 body{
 	margin: 0;
 	font-family: 'Segoe UI', Tahoma, Roboto, sans-serif;
-	user-select: none;
+}
+
+a{
+	text-decoration: none;
 }
 
 header{
+	a{
+		color: white;
+	}
+}
+
+.indexMain{
+}
+
+.grid-container{
+	border: 2px solid black;
+}
+
+.grid-header{
+
 }
 
 .header-shortcuts{
@@ -22,12 +39,6 @@ footer {
 		}
 	}
 }
-
-a{
-	color: white;
-	text-decoration: none;
-}
-
 
 .glass{
 	color: white;
