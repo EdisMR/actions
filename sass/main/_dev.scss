@@ -1,0 +1,21 @@
+.indexMain{
+	border: 2px solid red;
+}
+.grid-container{
+	border: 2px solid rgb(0, 81, 255);
+	article{
+		border: 2px solid yellow;
+		h3{
+			border: 2px solid seagreen;
+		}
+		ul{
+			border: 2px solid maroon;
+			li{
+				border: 2px solid rosybrown;
+			}
+		}
+	}
+}
+.grid-header{
+	border: 2px solid rgb(43, 255, 0) !important;
+}

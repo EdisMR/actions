@@ -59,10 +59,31 @@ header{
 }
 
 /* ********************************************** */
-/****************** MAIN *********************** */
+/****************** INDEX MAIN ****************** */
 /* ********************************************** */
-main{
+.indexMain{
 	overflow: auto;
+}
+.grid-container{
+	display: grid;
+	margin: 10px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+	article{
+		padding: 2px 10px;
+		h3{
+
+		}
+		ul{
+			li{
+
+			}
+		}
+	}
+}
+.grid-header{
+	grid-column-start: 1;
+	grid-column-end: -1;
 }
 
 
@@ -70,8 +91,6 @@ main{
 /****************** FOOTER *********************** */
 /* ********************************************** */
 footer{
-	grid-column-start: 1;
-	grid-column-end: -1;
 }
 
 .footerIcons{
