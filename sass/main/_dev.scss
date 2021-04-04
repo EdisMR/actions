@@ -32,9 +32,27 @@
 	border: 2px solid rgb(43, 255, 0) !important;
 }
 
+.portada{
+	border: 2px solid red;
+	figure{
+		border: 2px solid green;
+		img{
+			border: 2px solid greenyellow;
+		}
+	}
+}
+
+
 .footerIcons{
 	article{
 		img{
 		}
+	}
+}
+
+.url-icon{
+	border: 1px solid forestgreen;
+	span{
+		border: 1px solid rgb(255, 217, 2);
 	}
 }

@@ -34,6 +34,9 @@ header{
 
 footer {
 	article{
+		span,a{
+			color: white;
+		}
 		&:hover{
 			background-color: rgb(41, 110, 189);
 		}
@@ -52,3 +55,4 @@ footer {
 		opacity: 80%;
 	}
 }
+
