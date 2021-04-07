@@ -244,6 +244,7 @@ input[type=checkbox], input[type=radio] {
 }
 
 img {
+  width: 100%;
   pointer-events: none;
   object-fit: contain;
 }
@@ -317,33 +318,11 @@ header {
 }
 
 /* *************************************************** */
-/********************* INDEX MAIN ******************** */
+/********************* MAIN ************************** */
 /* *************************************************** */
 main {
   height: 100vh;
   overflow-y: scroll;
-}
-
-.main-index-grid {
-  padding-top: 0px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.index-portada figure img {
-  width: 100%;
-  aspect-ratio: 16/9;
-  object-fit: cover;
-  overflow: hidden;
-}
-
-#index-paginas, #juegos-html {
-  padding-left: 20px;
-  margin: 0px;
 }
 
 /* ********************************************** */
@@ -400,11 +379,15 @@ footer ul li a div figure img {
 /* ********************************************** */
 /********************* GENERALES **************** */
 /* ********************************************** */
+a {
+  color: steelblue;
+}
+
 /* ********************************************** */
 /********************* HEADER ******************* */
 /* ********************************************** */
 header ul li:hover {
-  background-color: slateblue;
+  background-color: steelblue;
 }
 header ul li a {
   color: white;
@@ -423,6 +406,16 @@ header ul li a {
   box-shadow: inset 0 0 2000px rgba(0, 0, 0, 0.5);
   filter: blur(1px);
   opacity: 80%;
+}
+
+/* ********************************************** */
+/********************* FOOTER ****************** */
+/* ********************************************** */
+footer ul li:hover {
+  background-color: steelblue;
+}
+footer ul li a {
+  color: white;
 }
 
 /* COLORS */
@@ -9341,5 +9334,6 @@ header ul li a {
 }
 
 /* DEVELOPMENT PROCESS VISUALIZATIONS */
+/* @import "global-dev"; */
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=global.css.map */

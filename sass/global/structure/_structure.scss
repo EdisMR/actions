@@ -8,6 +8,7 @@
 }
 
 img{
+	width: 100%;
 	pointer-events: none;
 	object-fit: contain;
 }
@@ -87,37 +88,13 @@ header{
 
 
 /* *************************************************** */
-/********************* INDEX MAIN ******************** */
+/********************* MAIN ************************** */
 /* *************************************************** */
 main{
 	height: 100vh;
 	overflow-y: scroll;
 }
-.main-index-grid{
-	padding-top: 0px;
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-bottom: 20px;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 20px;
-}
 
-.index-portada{
-	figure{
-		img{
-			width: 100%;
-			aspect-ratio: 16/9;
-			object-fit: cover;
-			overflow: hidden;
-		}
-	}
-}
-
-#index-paginas,#juegos-html{
-	padding-left: 20px;
-	margin: 0px;
-}
 /* ********************************************** */
 /********************* GLASS ******************** */
 /* ********************************************** */
