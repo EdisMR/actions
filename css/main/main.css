@@ -234,6 +234,15 @@ input[type=checkbox], input[type=radio] {
   padding: 0;
 }
 
+/* ********************************************** */
+/********************* GENERAL ****************** */
+/* ********************************************** */
+.block {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+}
+
 body {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -246,124 +255,20 @@ body {
 
 img {
   pointer-events: none;
-  width: 100%;
+  width: 20px;
   object-fit: contain;
 }
 
-/* ********************************************** */
-/******************HEADER*********************** */
-/* ********************************************** */
-header {
-  touch-action: none;
-}
-
-.menuControl {
-  display: none;
-  cursor: pointer;
-}
-
-.header-Title {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  padding: 15px;
-}
-
-.header-shortcuts ul {
-  padding: 0px;
-  margin: 0px;
-  list-style-type: none;
-}
-.header-shortcuts ul li a {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: start;
-  align-items: center;
-  margin: 2px;
-  padding: 0px 15px;
-}
-.header-shortcuts ul li a div {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.url-icon {
-  width: 35px;
-  height: 35px;
-}
-.url-icon span {
-  font-size: 30px;
-}
-
-.events {
-  padding: 15px;
-}
-.events .event-item {
-  margin-bottom: 10px;
-}
-
-/* ********************************************** */
-/****************** INDEX MAIN ****************** */
-/* ********************************************** */
-.indexMain {
-  overflow: auto;
-}
-
-.gc2c {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.gc4c {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.grid-container {
+/* *************************************************** */
+/********************* INDEX MAIN ******************** */
+/* *************************************************** */
+.main-index-grid {
   display: grid;
-  margin: 10px;
-  grid-template-rows: auto;
-}
-.grid-container article {
-  padding: 2px 10px;
-}
-.grid-header {
-  grid-column-start: 1;
-  grid-column-end: -1;
-}
-
-.portada {
-  grid-column-start: 1;
-  grid-column-end: -1;
-}
-.portada figure {
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
   width: 100%;
 }
-.portada figure img {
-  width: 100%;
-  object-fit: cover;
-}
 
-/* ********************************************** */
-/****************** FOOTER *********************** */
-/* ********************************************** */
-.footerIcons {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-}
-.footerIcons article {
-  margin: 5px;
-  display: inline-block;
-  cursor: pointer;
-}
-.footerIcons article span, .footerIcons article img {
-  width: 35px;
-  height: 35px;
-  font-size: 35px;
-}
-
-/* ********************************************** */
-/********************* GLASS ******************** */
-/* ********************************************** */
 /* ********************************************** */
 /********************* GLASS ******************** */
 /* ********************************************** */
@@ -380,121 +285,13 @@ header {
   height: 100%;
 }
 
-@media screen and (orientation: portrait) {
-  body {
-    display: initial;
-  }
-
-  /* ********************************************** */
-  /******************HEADER*********************** */
-  /* ********************************************** */
-  header {
-    position: fixed !important;
-    top: 0px;
-    left: 0px;
-    width: 100vw;
-  }
-
-  .menuControl {
-    display: initial;
-  }
-
-  .header-Title {
-    padding-top: 7px;
-    padding-right: 20px;
-    padding-bottom: 7px;
-    padding-left: 20px;
-  }
-
-  .header-shortcuts {
-    height: 0px;
-    overflow: hidden;
-    transition: all 1s;
-    padding-bottom: 10px;
-    /* animation: headerAppear 2s linear 1; */
-  }
-  @keyframes headerAppear {
-    from {
-      opacity: 0%;
-    }
-    to {
-      opacity: 100%;
-    }
-  }
-  .header-shortcuts ul li a {
-    padding: 0px 20px;
-  }
-  .events {
-    display: none;
-    padding: 20px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%);
-    zoom: 0.9;
-  }
-  .events .event-item {
-    margin-bottom: 10px;
-  }
-
-  /* ********************************************** */
-  /****************** MAIN *********************** */
-  /* ********************************************** */
-  .indexMain {
-    overflow: initial;
-    margin-top: 50px;
-  }
-
-  .grid-container {
-    grid-template-columns: 1fr;
-  }
-  /* ********************************************** */
-  /****************** FOOTER *********************** */
-  /* ********************************************** */
-  footer {
-    display: inline-block;
-    position: fixed;
-    bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  /* ********************************************** */
-  /********************* GLASS ******************** */
-  /* ********************************************** */
-  /* ********************************************** */
-  /********************* GLASS ******************** */
-  /* ********************************************** */
-}
+/* ********************************************** */
+/********************* FOOTER ****************** */
+/* ********************************************** */
 /* ESTHETIC APPEARANCE */
-body {
-  margin: 0;
-  font-family: "Segoe UI", Tahoma, Roboto, sans-serif;
-}
-
-a {
-  text-decoration: none;
-}
-
-header a {
-  color: white;
-}
-
-.grid-container {
-  border: 2px solid black;
-}
-
-.header-shortcuts a:hover {
-  background-color: #296ebd;
-}
-
-footer article span, footer article a {
-  color: white;
-}
-footer article:hover {
-  background-color: #296ebd;
-}
-
+/* ********************************************** */
+/********************* GLASS ******************** */
+/* ********************************************** */
 .glass {
   color: white;
 }
@@ -9424,6 +9221,8 @@ footer article:hover {
 }
 
 /* DEVELOPMENT PROCESS VISUALIZATIONS */
-/* @import "dev"; */
+* {
+  border: 0.1px dotted red;
+}
 
 /*# sourceMappingURL=main.css.map */

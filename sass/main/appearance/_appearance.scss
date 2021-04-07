@@ -1,48 +1,6 @@
-body{
-	margin: 0;
-	font-family: 'Segoe UI', Tahoma, Roboto, sans-serif;
-}
-
-a{
-	text-decoration: none;
-}
-
-header{
-	a{
-		color: white;
-	}
-}
-
-.indexMain{
-}
-
-.grid-container{
-	border: 2px solid black;
-}
-
-.grid-header{
-
-}
-
-.header-shortcuts{
-	a{
-		&:hover{
-			background-color: rgb(41, 110, 189);
-		}
-	}
-}
-
-footer {
-	article{
-		span,a{
-			color: white;
-		}
-		&:hover{
-			background-color: rgb(41, 110, 189);
-		}
-	}
-}
-
+/* ********************************************** */
+/********************* GLASS ******************** */
+/* ********************************************** */
 .glass{
 	color: white;
 	img{
@@ -55,4 +13,3 @@ footer {
 		opacity: 80%;
 	}
 }
-
