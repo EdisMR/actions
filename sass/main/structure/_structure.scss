@@ -7,33 +7,117 @@
 	padding: 0px;
 }
 
+img{
+	pointer-events: none;
+	object-fit: contain;
+}
+
+
+/* *********************************************** */
+/********************* BODY ********************** */
+/* *********************************************** */
 body{
 	display: grid;
 	grid-template-columns: auto 1fr;
 	grid-template-rows: 1fr auto;
-	width: 100vw;
-	height: 100vh;
 	user-select: none;
 	scroll-behavior: smooth;
 }
 
-img{
-	pointer-events: none;
-	width: 20px;
-	object-fit: contain;
+
+/* *********************************************** */
+/********************* HEADER ******************** */
+/* *********************************************** */
+header{
+	overflow-y: hidden;
+}
+
+.header-enlaces{
+	ul{
+		padding: 0px;
+		margin: 0px;
+		li{
+			list-style-type: none;
+			a{
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				text-decoration: none;
+				margin-top: 10px;
+				padding-left: 10px;
+				padding-right: 10px;
+				div{
+					display: inline-block;
+					span{
+						font-size: 30px;
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+.header-title{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	button{
+		display: none;
+	}
+}
+
+.header-events{
+	margin-top: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	div{
+		margin-top: 10px;
+		p{
+			margin: 0px;
+			padding: 0px;
+		}
+	}
 }
 
 
 /* *************************************************** */
 /********************* INDEX MAIN ******************** */
 /* *************************************************** */
+main{
+	height: 100vh;
+	overflow-y: scroll;
+}
 .main-index-grid{
+	padding-top: 0px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 20px;
-	width: 100%;
 }
 
+.index-portada{
+	figure{
+		img{
+			width: 100%;
+			aspect-ratio: 16/9;
+			object-fit: cover;
+			overflow: hidden;
+		}
+	}
+}
+
+#index-paginas,#juegos-html{
+	padding-left: 20px;
+	margin: 0px;
+}
 /* ********************************************** */
 /********************* GLASS ******************** */
 /* ********************************************** */
@@ -55,5 +139,39 @@ img{
 /********************* FOOTER ****************** */
 /* ********************************************** */
 footer{
-
+	display: flex;
+	width: 100vw;
+	margin: 0px;
+	padding: 0px;
+	position: fixed;
+	bottom: 0px;
+	left: 50%;
+	transform: translateX(-50%);
+	justify-content: center;
+	
+	ul{
+		margin: 0px;
+		padding: 0px;
+		li{
+			display: inline-block;
+			padding: 5px;
+			a{
+				div{
+					span{
+						display: inline-block;
+						width: 35px;
+						height: 35px;
+						font-size: 35px;
+					}
+					figure{
+						img{
+							display: inline-block;
+							width: 35px;
+							height: 35px;
+						}
+					}
+				}
+			}
+		}
+	}
 }

@@ -243,30 +243,107 @@ input[type=checkbox], input[type=radio] {
   padding: 0px;
 }
 
+img {
+  pointer-events: none;
+  object-fit: contain;
+}
+
+/* *********************************************** */
+/********************* BODY ********************** */
+/* *********************************************** */
 body {
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: 1fr auto;
-  width: 100vw;
-  height: 100vh;
   user-select: none;
   scroll-behavior: smooth;
 }
 
-img {
-  pointer-events: none;
-  width: 20px;
-  object-fit: contain;
+/* *********************************************** */
+/********************* HEADER ******************** */
+/* *********************************************** */
+header {
+  overflow-y: hidden;
+}
+
+.header-enlaces ul {
+  padding: 0px;
+  margin: 0px;
+}
+.header-enlaces ul li {
+  list-style-type: none;
+}
+.header-enlaces ul li a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.header-enlaces ul li a div {
+  display: inline-block;
+}
+.header-enlaces ul li a div span {
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.header-title {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.header-title button {
+  display: none;
+}
+
+.header-events {
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.header-events div {
+  margin-top: 10px;
+}
+.header-events div p {
+  margin: 0px;
+  padding: 0px;
 }
 
 /* *************************************************** */
 /********************* INDEX MAIN ******************** */
 /* *************************************************** */
+main {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
 .main-index-grid {
+  padding-top: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+}
+
+.index-portada figure img {
   width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+#index-paginas, #juegos-html {
+  padding-left: 20px;
+  margin: 0px;
 }
 
 /* ********************************************** */
@@ -288,7 +365,50 @@ img {
 /* ********************************************** */
 /********************* FOOTER ****************** */
 /* ********************************************** */
+footer {
+  display: flex;
+  width: 100vw;
+  margin: 0px;
+  padding: 0px;
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: center;
+}
+footer ul {
+  margin: 0px;
+  padding: 0px;
+}
+footer ul li {
+  display: inline-block;
+  padding: 5px;
+}
+footer ul li a div span {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  font-size: 35px;
+}
+footer ul li a div figure img {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+}
+
 /* ESTHETIC APPEARANCE */
+/* ********************************************** */
+/********************* GENERALES **************** */
+/* ********************************************** */
+/* ********************************************** */
+/********************* HEADER ******************* */
+/* ********************************************** */
+header ul li:hover {
+  background-color: slateblue;
+}
+header ul li a {
+  color: white;
+}
 /* ********************************************** */
 /********************* GLASS ******************** */
 /* ********************************************** */
@@ -9221,8 +9341,5 @@ img {
 }
 
 /* DEVELOPMENT PROCESS VISUALIZATIONS */
-* {
-  border: 0.1px dotted red;
-}
 
 /*# sourceMappingURL=main.css.map */

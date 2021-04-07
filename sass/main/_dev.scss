@@ -1,3 +1,22 @@
-*{
-	border: .1px dotted red;
+footer{
+	border: 2px solid red;
+		border: 2px solid green;
+		li{
+			border: 2px solid yellowgreen;
+			a{
+				border: 2px solid cadetblue;
+				div{
+					border: 2px solid blue;
+					span{
+						border: 2px solid sienna;
+					}
+					figure{
+						border: 2px solid aqua;
+						img{
+							border: 2px solid slateblue;
+						}
+					}
+				}
+			}
+		}
 }
