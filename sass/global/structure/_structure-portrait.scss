@@ -1,0 +1,103 @@
+/* ********************************************** */
+/********************* GENERAL ****************** */
+/* ********************************************** */
+
+
+
+/* *********************************************** */
+/********************* BODY ********************** */
+/* *********************************************** */
+body{
+	display: initial;
+	grid-template-columns: initial;
+	grid-template-rows: initial;
+}
+
+
+
+/* *********************************************** */
+/********************* HEADER ******************** */
+/* *********************************************** */
+header{
+	position: fixed !important;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+}
+
+.header-title{
+	display: flex;
+	padding-left: 20px;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0px;
+	div{
+		margin: 0px;
+		
+		h1{
+			margin:5px 0px;
+			font-size: 25px;
+		}
+		button{
+			display: inline-block;
+		}
+	}
+}
+
+.header-enlaces{
+	display: none;/* block */
+	padding-bottom: 20px;
+	margin: 0px;
+	ul{
+		li{
+			a{
+				display: none;/* flex */
+				padding-left: 20px;
+			}
+		}
+	}
+}
+
+
+.header-events{
+	display: none;
+}
+
+
+
+/* *************************************************** */
+/********************* MAIN ************************** */
+/* *************************************************** */
+main{
+	height: auto;
+	overflow-y: auto;
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+
+
+
+/* ********************************************** */
+/********************* FOOTER ****************** */
+/* ********************************************** */
+footer{	
+	ul{
+		li{
+			a{
+				div{
+					span{
+						width: 25px;
+						height: 25px;
+						font-size: 25px;
+					}
+					figure{
+						img{
+							width: 25px;
+							height: 25px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

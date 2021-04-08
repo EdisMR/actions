@@ -302,6 +302,8 @@ header {
 }
 .header-title button {
   display: none;
+  border-radius: 100%;
+  aspect-ratio: 1/1;
 }
 
 .header-events {
@@ -375,6 +377,86 @@ footer ul li a div figure img {
   height: 35px;
 }
 
+@media screen and (orientation: portrait) {
+  /* ********************************************** */
+  /********************* GENERAL ****************** */
+  /* ********************************************** */
+  /* *********************************************** */
+  /********************* BODY ********************** */
+  /* *********************************************** */
+  body {
+    display: initial;
+    grid-template-columns: initial;
+    grid-template-rows: initial;
+  }
+
+  /* *********************************************** */
+  /********************* HEADER ******************** */
+  /* *********************************************** */
+  header {
+    position: fixed !important;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+  }
+
+  .header-title {
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px;
+  }
+  .header-title div {
+    margin: 0px;
+  }
+  .header-title div h1 {
+    margin: 5px 0px;
+    font-size: 25px;
+  }
+  .header-title div button {
+    display: inline-block;
+  }
+
+  .header-enlaces {
+    display: none;
+    /* block */
+    padding-bottom: 20px;
+    margin: 0px;
+  }
+  .header-enlaces ul li a {
+    display: none;
+    /* flex */
+    padding-left: 20px;
+  }
+
+  .header-events {
+    display: none;
+  }
+
+  /* *************************************************** */
+  /********************* MAIN ************************** */
+  /* *************************************************** */
+  main {
+    height: auto;
+    overflow-y: auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  /* ********************************************** */
+  /********************* FOOTER ****************** */
+  /* ********************************************** */
+  footer ul li a div span {
+    width: 25px;
+    height: 25px;
+    font-size: 25px;
+  }
+  footer ul li a div figure img {
+    width: 25px;
+    height: 25px;
+  }
+}
 /* ESTHETIC APPEARANCE */
 /* ********************************************** */
 /********************* GENERALES **************** */
@@ -386,12 +468,37 @@ a {
 /* ********************************************** */
 /********************* HEADER ******************* */
 /* ********************************************** */
+header {
+  touch-action: none;
+}
 header ul li:hover {
   background-color: steelblue;
 }
 header ul li a {
   color: white;
 }
+.headerLiAnimated {
+  animation-name: liAppear;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes liAppear {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+.header-title button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.411);
+  outline: none;
+}
+
 /* ********************************************** */
 /********************* GLASS ******************** */
 /* ********************************************** */
