@@ -425,6 +425,7 @@ footer ul li a div figure img {
     margin: 0px;
   }
   .header-enlaces ul li a {
+    font-size: 20px;
     display: none;
     /* flex */
     padding-left: 20px;
@@ -448,13 +449,13 @@ footer ul li a div figure img {
   /********************* FOOTER ****************** */
   /* ********************************************** */
   footer ul li a div span {
-    width: 25px;
-    height: 25px;
-    font-size: 25px;
+    width: 35px;
+    height: 35px;
+    font-size: 35px;
   }
   footer ul li a div figure img {
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
   }
 }
 /* ESTHETIC APPEARANCE */
@@ -9441,6 +9442,16 @@ footer ul li a {
 }
 
 /* DEVELOPMENT PROCESS VISUALIZATIONS */
-/* @import "global-dev"; */
+header {
+  border: 2px solid #00eeff;
+}
+
+main {
+  border: 2px solid #e100ff;
+}
+
+footer {
+  border: 2px solid #45c92b;
+}
 
 /*# sourceMappingURL=global.css.map */

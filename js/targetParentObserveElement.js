@@ -112,7 +112,7 @@ function notif(){
 	div.style.display="none";
 	div.style.fontSize="20px";
 	div.style.opacity=".9";
-	div.style.transform="translate(-50%,-50%,0)";
+	div.style.transform="translate(50%,50%)";
 	div.style.zIndex="100";
 	div.onclick=function(){this.style.display="none";}
 

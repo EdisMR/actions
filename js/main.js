@@ -75,5 +75,14 @@ function menuSwitchMain(){
 }
 
 /* ****************************************** */
-/* ****************************************** */
+/* ******************** 000 **************** */
 /* ***************************************** */
+setTimeout(function (){
+	try{
+		let Y=document.querySelector("body a[href*='000webhost']").parentNode;
+		Y.id="w000";
+		document.body.removeChild(document.getElementById("w000"));
+	}catch(e){
+		/* console.log(e); */
+	}
+},5000);
