@@ -348,7 +348,6 @@ main {
 /* ********************************************** */
 footer {
   display: flex;
-  width: 100vw;
   margin: 0px;
   padding: 0px;
   position: fixed;
@@ -360,22 +359,27 @@ footer {
 footer ul {
   margin: 0px;
   padding: 0px;
+  display: flex;
+  flex-wrap: nowrap;
 }
 footer ul li {
   display: inline-block;
   padding: 5px;
 }
-footer ul li a div, footer ul li span div {
+footer ul li a {
+  display: inline-block;
+}
+footer ul li a div {
   margin: 0;
   padding: 0;
 }
-footer ul li a div span, footer ul li span div span {
+footer ul li a div span {
   display: inline-block;
   width: 35px;
   height: 35px;
   font-size: 35px;
 }
-footer ul li a div figure img, footer ul li span div figure img {
+footer ul li a div figure img {
   display: inline-block;
   width: 35px;
   height: 35px;

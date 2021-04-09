@@ -97,8 +97,8 @@ setTimeout(function () {
 /* **************************************************** */
 /* ******************** ENLACE DE EMAIL **************** */
 /* **************************************************** */
-var email = ["edisanthony", "gmail.com"];
-var emailBTN = document.querySelector("footer a[title='email']");
+const email = ["edisanthony", "gmail.com"];
+const emailBTN = document.querySelector("footer a[title='email']");
 emailBTN.addEventListener("click", function () { window.open("mailto:" + email[0] + "@" + email[1]);}, false);
 
 
@@ -107,6 +107,18 @@ emailBTN.addEventListener("click", function () { window.open("mailto:" + email[0
 /* **************************************************** */
 /* ******************** ENLACE DE WHATSAPP ************ */
 /* **************************************************** */
-var wsppF = ["wa.me/", "50663062581"];
-var wsppFBTN = document.querySelector("footer a[title='whatsapp']");
+const wsppF = ["wa.me/", "50663062581"];
+const wsppFBTN = document.querySelector("footer a[title='whatsapp']");
 wsppFBTN.addEventListener("click", function () { window.open("https://"+wsppF[0] + wsppF[1]);}, false);
+
+
+
+/* ********************************************** */
+/* ******************** ACCESIBILIDAD ************ */
+/* ********************************************** */
+const btnAccesibilidad=document.getElementById("accesibilityButton");
+btnAccesibilidad.addEventListener("click",accesibilitySwitch,false);
+
+function accesibilitySwitch(){
+	console.log("Accesibility");
+}
