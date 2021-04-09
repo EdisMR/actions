@@ -134,8 +134,10 @@ footer{
 		li{
 			display: inline-block;
 			padding: 5px;
-			a{
+			a,span{
 				div{
+					margin: 0;
+					padding: 0;
 					span{
 						display: inline-block;
 						width: 35px;
@@ -153,4 +155,8 @@ footer{
 			}
 		}
 	}
+}
+
+a[href = '##']{
+	pointer-events: none;
 }

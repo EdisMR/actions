@@ -6,6 +6,7 @@ body{
 
 a{
 	color: steelblue;
+	cursor: pointer;
 }
 
 /* ********************************************** */
@@ -79,4 +80,14 @@ footer{
 			}
 		}
 	}
+}
+
+
+:target{
+	animation: targetAnimation 2s linear 3;
+}
+@keyframes targetAnimation {
+	0%{background-color: transparent;}
+	50%{background-color: steelblue;}
+	100%{background-color: transparent;}
 }

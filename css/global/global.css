@@ -365,16 +365,24 @@ footer ul li {
   display: inline-block;
   padding: 5px;
 }
-footer ul li a div span {
+footer ul li a div, footer ul li span div {
+  margin: 0;
+  padding: 0;
+}
+footer ul li a div span, footer ul li span div span {
   display: inline-block;
   width: 35px;
   height: 35px;
   font-size: 35px;
 }
-footer ul li a div figure img {
+footer ul li a div figure img, footer ul li span div figure img {
   display: inline-block;
   width: 35px;
   height: 35px;
+}
+
+a[href="##"] {
+  pointer-events: none;
 }
 
 @media screen and (orientation: portrait) {
@@ -464,6 +472,7 @@ footer ul li a div figure img {
 /* ********************************************** */
 a {
   color: steelblue;
+  cursor: pointer;
 }
 
 /* ********************************************** */
@@ -526,6 +535,21 @@ footer ul li a {
   color: white;
 }
 
+:target {
+  animation: targetAnimation 2s linear 3;
+}
+
+@keyframes targetAnimation {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: steelblue;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
 /* COLORS */
 /* FONTS - ICONS */
 /*
@@ -9442,16 +9466,6 @@ footer ul li a {
 }
 
 /* DEVELOPMENT PROCESS VISUALIZATIONS */
-header {
-  border: 2px solid #00eeff;
-}
-
-main {
-  border: 2px solid #e100ff;
-}
-
-footer {
-  border: 2px solid #45c92b;
-}
+/* @import "global-dev"; */
 
 /*# sourceMappingURL=global.css.map */
