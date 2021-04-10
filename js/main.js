@@ -28,6 +28,7 @@ var headerButton = {
 };
 
 if (screen.orientation.type == "portrait-primary") {
+	window.removeEventListener("keyup", keyEvent, false);
 	/* Variables */
 	headerButton.btn = document.querySelector(".header-title button")
 	headerButton.headerEnlaces = document.querySelector(".header-enlaces");
@@ -83,7 +84,9 @@ function closeMenu() {
 /* ****************************************** */
 /* ******************** 000 **************** */
 /* ***************************************** */
-setTimeout(function () {
+window.addEventListener("load", w000, false);
+function w000() {
+	window.removeEventListener("load", w000, false);
 	try {
 		let Y = document.querySelector("body a[href*='000webhost']").parentNode;
 		Y.id = "w000";
@@ -91,7 +94,7 @@ setTimeout(function () {
 	} catch (e) {
 		/* console.log(e); */
 	}
-}, 5000);
+}
 
 
 /* **************************************************** */
@@ -99,7 +102,7 @@ setTimeout(function () {
 /* **************************************************** */
 const email = ["edisanthony", "gmail.com"];
 const emailBTN = document.querySelector("footer a[title='email']");
-emailBTN.addEventListener("click", function () { window.open("mailto:" + email[0] + "@" + email[1]);}, false);
+emailBTN.addEventListener("click", function () { window.open("mailto:" + email[0] + "@" + email[1]); }, false);
 
 
 
@@ -109,16 +112,16 @@ emailBTN.addEventListener("click", function () { window.open("mailto:" + email[0
 /* **************************************************** */
 const wsppF = ["wa.me/", "50663062581"];
 const wsppFBTN = document.querySelector("footer a[title='whatsapp']");
-wsppFBTN.addEventListener("click", function () { window.open("https://"+wsppF[0] + wsppF[1]);}, false);
+wsppFBTN.addEventListener("click", function () { window.open("https://" + wsppF[0] + wsppF[1]); }, false);
 
 
 
 /* ********************************************** */
 /* ******************** ACCESIBILIDAD ************ */
 /* ********************************************** */
-const btnAccesibilidad=document.getElementById("accesibilityButton");
-btnAccesibilidad.addEventListener("click",accesibilitySwitch,false);
+const btnAccesibilidad = document.getElementById("accesibilityButton");
+btnAccesibilidad.addEventListener("click", accesibilitySwitch, false);
 
-function accesibilitySwitch(){
+function accesibilitySwitch() {
 	console.log("Accesibility");
 }

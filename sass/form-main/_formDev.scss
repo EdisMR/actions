@@ -1,11 +1,58 @@
 header{
-	border: 2px solid rgb(0, 238, 255);
+	border: 2px solid rgb(151, 248, 255);
 }
 
 main{
-	border: 2px solid rgb(225, 0, 255);
+	border: 2px solid rgb(255, 0, 0);
 }
 
 footer{
-	border: 2px solid rgb(69, 201, 43);
+	border: 2px solid rgb(255, 217, 0);
+}
+
+
+
+form{
+	border: 2px solid blue;
+}
+
+.inputGroupContainer{
+	border: 2px solid green;
+}
+
+.buttonContainer{
+	border: 2px solid red;
+	button{
+		border: 2px solid springgreen;
+	}
+}
+
+.cardInputGroup{
+	border: 2px solid rgb(118, 173, 255);
+}
+
+.formHeaderCard{
+	border: 2px solid rgb(186, 255, 192);
+	h3{
+		border: 2px solid rgb(255, 139, 139);
+	}
+}
+
+.inputPadding{
+	border: 2px solid rgb(255, 0, 140);
+}
+
+.itemInput{
+	border: 2px solid rgb(11, 148, 153);
+}
+
+.descriptionInput{
+	border: 2px solid slategrey;
+}
+
+.inputC{
+	border: 2px solid aquamarine;
+	input{
+		border: 2px solid rgb(255, 139, 139);
+	}
 }

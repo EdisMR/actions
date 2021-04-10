@@ -1,0 +1,64 @@
+form{
+}
+
+.inputGroupContainer{
+	margin: 0px;
+}
+
+.buttonContainer{
+	margin: 40px 0px;
+	justify-content: space-evenly;
+	button{
+		margin: 0;
+	}
+}
+
+.cardInputGroup{
+	display: flex;
+	width: 100%;
+	height: auto;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	.block{
+		width: 100%;
+	}
+}
+
+.formHeaderCard{
+	h3{
+	}
+}
+
+.inputPadding{
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.itemInput{
+}
+
+.descriptionInput{
+}
+
+.inputC{
+	input{
+	}
+}
+
+.goodInput,.badInput{
+	&::before{
+	}
+}
+
+.goodInput{
+	&::before{
+		content:"✔";
+	}
+}
+.badInput{
+	&::before{
+		content:"❌";
+	}
+}

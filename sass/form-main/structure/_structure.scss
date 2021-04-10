@@ -1,0 +1,84 @@
+form{
+}
+
+.inputGroupContainer{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 40px;
+	justify-content: center;
+}
+
+.buttonContainer{
+	display: flex;
+	flex-wrap: nowrap;
+	margin: 40px;
+	justify-content: center;
+	button{
+		margin: auto 10px;
+	}
+}
+
+.cardInputGroup{
+
+}
+
+.formHeaderCard{
+	h3{
+		margin: 0px;
+	}
+}
+
+.inputPadding{
+	padding: 20px;
+}
+
+.itemInput{
+	margin: 10px auto;
+	width: 100%;
+}
+
+.descriptionInput{
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	white-space: nowrap;
+}
+
+.inputC{
+	display: flex;
+	width: 100%;
+	flex-wrap: nowrap;
+	align-content: stretch;
+	margin: 0px;
+	padding: 0px;
+	input{
+		flex-basis: 100%;
+	}
+}
+
+.goodInput,.badInput{
+	position: relative;
+	&::before{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		height: 25px;
+		width: 30px;
+		top: 0px;
+		right: 0px;
+		z-index: 100;
+	}
+}
+
+.goodInput{
+	&::before{
+		content:"✔";
+	}
+}
+.badInput{
+	position: relative;
+	&::before{
+		content:"❌";
+	}
+}
