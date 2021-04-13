@@ -1,6 +1,14 @@
 form{
 }
 
+.infoPadding{
+	padding-left: 20px;
+	padding-right: 20px;
+	p{
+		font-size: 15px;
+	}
+}
+
 .inputGroupContainer{
 	display: flex;
 	flex-wrap: wrap;
@@ -19,6 +27,7 @@ form{
 }
 
 .cardInputGroup{
+	width: 400px;
 
 }
 

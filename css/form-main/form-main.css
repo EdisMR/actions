@@ -1,4 +1,12 @@
 @charset "UTF-8";
+.infoPadding {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.infoPadding p {
+  font-size: 15px;
+}
+
 .inputGroupContainer {
   display: flex;
   flex-wrap: wrap;
@@ -14,6 +22,10 @@
 }
 .buttonContainer button {
   margin: auto 10px;
+}
+
+.cardInputGroup {
+  width: 400px;
 }
 
 .formHeaderCard h3 {
@@ -117,38 +129,35 @@
   background-color: rgba(70, 131, 180, 0.219);
 }
 
-.buttonContainer button[type=submit] {
-  color: whitesmoke;
-  background-color: #47c247;
+.buttonContainer button {
+  outline: none;
+  color: #666666;
 }
 .buttonContainer button[type=submit]:hover {
+  color: white;
   background-color: #00b900;
 }
 .buttonContainer button[type=submit]:active {
   background-color: #149714;
 }
-.buttonContainer button[type=reset] {
-  color: whitesmoke;
-  background-color: #e92b2b;
-}
 .buttonContainer button[type=reset]:hover {
-  background-color: red;
+  background-color: #ce4141;
+  color: white;
 }
 .buttonContainer button[type=reset]:active {
-  background-color: #c01b1b;
+  background-color: #a71111;
 }
 
 .goodInput::before {
   color: whitesmoke;
-  background-color: #00ca3d;
+  background-color: rgba(0, 202, 61, 0.377);
 }
 
 .badInput {
   position: relative;
 }
 .badInput::before {
-  color: whitesmoke;
-  background-color: red;
+  color: white;
+  background-color: rgba(207, 31, 31, 0.377);
 }
-
 /*# sourceMappingURL=form-main.css.map */

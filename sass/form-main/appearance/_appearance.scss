@@ -5,24 +5,24 @@
 
 .buttonContainer{
 	button{
+		outline: none;
+		color: rgb(102, 102, 102);
 		&[type="submit"]{
-			color: whitesmoke;
-			background-color: rgb(71, 194, 71);
 			&:hover{
+				color: white;
 				background-color: rgb(0, 185, 0);
 			}
 			&:active{
 				background-color: rgb(20, 151, 20);
 			}
 		}
-		&[type="reset"]{
-			color: whitesmoke;
-			background-color: rgb(233, 43, 43);
+		&[type="reset"]{			
 			&:hover{
-				background-color: rgb(255, 0, 0);
+				background-color: rgb(206, 65, 65);
+				color: white;
 			}
 			&:active{
-				background-color: rgb(192, 27, 27);
+				background-color: rgb(167, 17, 17);
 			}
 		}
 	}
@@ -31,13 +31,13 @@
 .goodInput{
 	&::before{
 		color: whitesmoke;
-		background-color: rgb(0, 202, 61);
+		background-color: rgba(0, 202, 61, 0.377);
 	}
 }
 .badInput{
 	position: relative;
 	&::before{
-		color: whitesmoke;
-		background-color: rgb(255, 0, 0);
+		color: rgb(255, 255, 255);
+		background-color: rgba(207, 31, 31, 0.377);
 	}
 }
