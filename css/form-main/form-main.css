@@ -21,6 +21,9 @@
   justify-content: center;
 }
 .buttonContainer button {
+  padding: 5px;
+  border-radius: 0px;
+  border-width: 1px;
   margin: auto 10px;
 }
 
