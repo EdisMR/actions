@@ -130,7 +130,6 @@
 }
 
 .buttonContainer button {
-  outline: none;
   color: #666666;
 }
 .buttonContainer button[type=submit]:hover {
@@ -148,9 +147,14 @@
   background-color: #a71111;
 }
 
+.inputC input:disabled {
+  background-color: azure;
+  color: black;
+}
+
 .goodInput::before {
   color: whitesmoke;
-  background-color: rgba(0, 202, 61, 0.377);
+  background-color: rgba(0, 202, 61, 0.7);
 }
 
 .badInput {
@@ -158,6 +162,6 @@
 }
 .badInput::before {
   color: white;
-  background-color: rgba(207, 31, 31, 0.377);
+  background-color: rgba(207, 31, 31, 0.7);
 }
 /*# sourceMappingURL=form-main.css.map */

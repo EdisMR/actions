@@ -5,7 +5,6 @@
 
 .buttonContainer{
 	button{
-		outline: none;
 		color: rgb(102, 102, 102);
 		&[type="submit"]{
 			&:hover{
@@ -28,16 +27,25 @@
 	}
 }
 
+.inputC{
+	input{
+		&:disabled{
+			background-color: azure;
+			color: black;
+		}
+	}
+}
+
 .goodInput{
 	&::before{
 		color: whitesmoke;
-		background-color: rgba(0, 202, 61, 0.377);
+		background-color: rgba(0, 202, 61, 0.7);
 	}
 }
 .badInput{
 	position: relative;
 	&::before{
 		color: rgb(255, 255, 255);
-		background-color: rgba(207, 31, 31, 0.377);
+		background-color: rgba(207, 31, 31, 0.7);
 	}
 }

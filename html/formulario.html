@@ -127,6 +127,11 @@
 
 
 
+	<!-- 
+	<style>
+		main{background-color: rgb(24, 27, 29);color: white;}
+	</style>
+	-->
 
 	<main>
 
@@ -153,7 +158,7 @@
 
 
 		<section class="block">
-			<form class="block" action="##" method="post" onsubmit="return false">
+			<form class="block" action="../php/form.php" method="post">
 				<!--  -->
 				<article class="block">
 
@@ -178,11 +183,11 @@
 
 									<!-- BEM del nombre con input -->
 									<div class="itemInput">
-										<div class="descriptionInput">Nombre y apellidos:&nbsp;</div>
+										<div class="descriptionInput">Un nombre y dos apellidos:&nbsp;</div>
 										
 										<!-- class goodInput badInput -->
 										<div class="inputC">
-											<input type="text" placeholder="Con dos apellidos" name="nombre">
+											<input type="text" placeholder="Con dos apellidos" name="nombre" pattern="^[A-Za-z]{2,20}\W[A-Za-z]{2,20}\W[A-Za-z]{2,20}$" required>
 										</div>
 									</div>
 
@@ -190,7 +195,7 @@
 									<div class="itemInput">
 										<div class="descriptionInput">Fecha de nacimiento:&nbsp;</div>
 										<div class="inputC">
-											<input type="date" placeholder="Fecha de nacimiento"  name="fechaNac">
+											<input type="date" step="1" placeholder="Fecha de nacimiento"  name="fechaNac" required>
 										</div>
 									</div>
 
@@ -233,7 +238,7 @@
 									<div class="itemInput">
 										<div class="descriptionInput">Número de teléfono:&nbsp;</div>
 										<div class="inputC">
-											<input type="tel" placeholder="Sólo formato de CR (+506)" name="telefono">
+											<input type="tel" placeholder="Sólo formato de CR (+506)" name="telefono" pattern="^\+506\d{8}$" required>
 										</div>
 									</div>
 
@@ -241,7 +246,7 @@
 									<div class="itemInput">
 										<div class="descriptionInput">Correo electrónico 1:&nbsp;</div>
 										<div class="inputC">
-											<input type="email" placeholder="Correo de contacto 1"  name="correo1">
+											<input type="email" placeholder="Correo de contacto 1"  pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" name="correo1" required>
 										</div>
 									</div>
 
@@ -249,7 +254,7 @@
 									<div class="itemInput">
 										<div class="descriptionInput">Correo electrónico 2:&nbsp;</div>
 										<div class="inputC">
-											<input type="email" placeholder="Correo de contacto 2" name="correo2">
+											<input type="email" placeholder="Correo de contacto 2" pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" name="correo2" required>
 										</div>
 									</div>
 
@@ -314,7 +319,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="https://bitii.co/777" rel="noopener noreferrer" title="Website">
+				<a href="../index.html" rel="noopener noreferrer" title="Website">
 					<div>
 						<span class="ms-Icon ms-Icon--Website"></span>
 					</div>
