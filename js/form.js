@@ -80,7 +80,7 @@ formulario.addEventListener("reset",formularioReseteado,false)
 
 function formularioReseteado(){
 	inputs.forEach(elm=>{
-		elm.style.border="initial";
+		elm.style.border="2px solid transparent";
 	})
 }
 

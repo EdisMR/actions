@@ -150,6 +150,9 @@
   background-color: #a71111;
 }
 
+.inputC input {
+  border: 2px solid transparent;
+}
 .inputC input:disabled {
   background-color: azure;
   color: black;
@@ -167,4 +170,3 @@
   color: white;
   background-color: rgba(207, 31, 31, 0.7);
 }
-/*# sourceMappingURL=form-main.css.map */

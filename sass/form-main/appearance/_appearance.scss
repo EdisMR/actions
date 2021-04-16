@@ -29,6 +29,7 @@
 
 .inputC{
 	input{
+		border: 2px solid transparent;
 		&:disabled{
 			background-color: azure;
 			color: black;
