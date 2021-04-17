@@ -71,7 +71,13 @@ header{
 	button{
 		display: none;
 		border-radius: 100%;
-		aspect-ratio: 1/1;
+		width:30px;
+		height:30px;
+		@supports(aspect-ratio: 1/1){
+			width: auto;
+			height: auto;
+			aspect-ratio: 1/1;
+		}
 	}
 }
 

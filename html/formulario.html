@@ -8,6 +8,10 @@
 	<link rel="shortcut icon" href="../multimedia/img/me.ico" type="image/x-icon">
 	<link rel="stylesheet" href="../css/global/global.css">
 	<link rel="stylesheet" href="../css/form-main/form-main.css">
+
+	<link rel="preload" href="../js/login.js" as="script">
+	<script src="../js/login.js"></script>
+	
 </head>
 <body>
 	<header class="glass">
@@ -186,7 +190,7 @@
 										
 										<!-- class goodInput badInput -->
 										<div class="inputC">
-											<input type="text" placeholder="Con dos apellidos" name="nombre" pattern="^[A-Za-z]{2,20}\W[A-Za-z]{2,20}\W[A-Za-z]{2,20}$" required>
+											<input type="text" placeholder="Con dos apellidos" name="nombre" pattern="^[A-Za-z]{2,20}\W[A-Za-z]{2,20}\W[A-Za-z]{2,20}$" required autocomplete="off">
 										</div>
 									</div>
 
@@ -194,7 +198,7 @@
 									<div class="itemInput">
 										<div class="descriptionInput">Fecha de nacimiento:&nbsp;</div>
 										<div class="inputC">
-											<input type="date" step="1" placeholder="Fecha de nacimiento"  name="fechaNac" required>
+											<input type="date" step="1" placeholder="Fecha de nacimiento"  name="fechaNac" required autocomplete="off">
 										</div>
 									</div>
 
@@ -202,7 +206,7 @@
 									<div class="itemInput">
 										<div class="descriptionInput">Su edad calculada:&nbsp;</div>
 										<div class="inputC">
-											<input type="number" placeholder="Calculada con la fecha de nacimiento" name="edad" disabled>
+											<input type="number" placeholder="Calculada con la fecha de nacimiento" name="edad" disabled autocomplete="off">
 										</div>
 									</div>
 
@@ -237,7 +241,7 @@
 									<div class="itemInput">
 										<div class="descriptionInput">Número de teléfono:&nbsp;</div>
 										<div class="inputC">
-											<input type="tel" placeholder="Sólo formato de CR (+506)" name="telefono" pattern="^\+506\d{8}$" required>
+											<input type="tel" placeholder="Sólo formato de CR (+506)" name="telefono" pattern="^\+506\d{8}$" required autocomplete="off">
 										</div>
 									</div>
 
@@ -245,7 +249,7 @@
 									<div class="itemInput">
 										<div class="descriptionInput">Correo electrónico 1:&nbsp;</div>
 										<div class="inputC">
-											<input type="email" placeholder="Correo de contacto 1"  pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" name="correo1" required>
+											<input type="email" placeholder="Correo de contacto 1"  pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" name="correo1" required autocomplete="off">
 										</div>
 									</div>
 
@@ -253,7 +257,7 @@
 									<div class="itemInput">
 										<div class="descriptionInput">Correo electrónico 2:&nbsp;</div>
 										<div class="inputC">
-											<input type="email" placeholder="Correo de contacto 2" pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" name="correo2" required>
+											<input type="email" placeholder="Correo de contacto 2" pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" name="correo2" required autocomplete="off">
 										</div>
 									</div>
 

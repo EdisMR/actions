@@ -8,9 +8,15 @@
 }
 
 .index-portada figure img {
-  aspect-ratio: 16/9;
+  max-height: 600px;
   object-fit: cover;
   overflow: hidden;
+}
+@supports (aspect-ratio: 1/1) {
+  .index-portada figure img {
+    max-height: initial;
+    aspect-ratio: 16/9;
+  }
 }
 
 #index-paginas, #juegos-html {

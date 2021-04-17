@@ -302,7 +302,15 @@ header {
 .header-title button {
   display: none;
   border-radius: 100%;
-  aspect-ratio: 1/1;
+  width: 30px;
+  height: 30px;
+}
+@supports (aspect-ratio: 1/1) {
+  .header-title button {
+    width: auto;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
 }
 
 .header-events {
@@ -452,8 +460,8 @@ a[href="##"] {
   main {
     height: auto;
     overflow-y: auto;
-    margin-top: 40px;
-    margin-bottom: 50px;
+    padding-top: 40px;
+    padding-bottom: 50px;
   }
 
   /* ********************************************** */

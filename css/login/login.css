@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  -webkit-user-select: none;
+          user-select: none;
+}
+
+* {
+  font-size: 1.2rem;
+}
+
+form {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+form span {
+  display: inline-block;
+  margin: 0;
+  padding: 5px;
+  border: 1px solid white;
+}
+form input {
+  padding: 5px;
+  border: none;
+}
+form input[type=password] {
+  max-width: 100px;
+  overflow: hidden;
+}
+form input[type=submit] {
+  cursor: pointer;
+}
+
+body {
+  background-color: #202020;
+}
+
+* {
+  font-family: sans-serif;
+  color: white;
+}
+
+form {
+  background-color: rgba(0, 128, 255, 0.164);
+}
+form input {
+  background-color: transparent;
+  border: 1px solid white;
+}
