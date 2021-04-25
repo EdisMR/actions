@@ -7,7 +7,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Ingresar</title>
 	<link rel="shortcut icon" href="../multimedia/img/me.ico" type="image/x-icon">
+	
 	<link rel="stylesheet" href="../css/login/login.css">
+	
+	<link rel="preload" href="../js/login.js" as="script">
+	<script src="../js/login.js"></script>
 </head>
 
 <body>
@@ -18,15 +22,14 @@
 		<input type="submit" value="Enviar">
 
 	</form>
+	
+
 	<script>
-		window.addEventListener("contextmenu",(e)=>{e.preventDefault();return false;},false);
-		function eval() {
-			let cookieEvaluar = new RegExp("432289");
-			if ((cookieEvaluar.test(document.cookie))) {
-				window.location.pathname = "/index.html";
+		setInterval(()=>{
+			if(window.evalResult){
+				window.location.pathname="/";
 			}
-		}
-		eval();
+		},1000);
 	</script>
 </body>
 

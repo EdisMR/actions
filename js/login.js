@@ -1,10 +1,26 @@
 /* ****************************************** */
 /* *********** EVALUAR COOKIE *************** */
 /* ***************************************** */
-function eval(){
-	let cookieEvaluar=new RegExp("access=432289");
-	if(!(cookieEvaluar.test(document.cookie))){
-		window.location.pathname="/html/login.html"
+window.evalResult="";
+
+fetch("../php/cookieEval.php")
+.then(
+	function(response){return response.text();}
+)
+.then(
+	function(resp){
+		/* Resp tiene el booleano */
+		eval(resp);
 	}
-}
-eval();
+)
+
+function eval(res){
+	let evaluar=Boolean(res=="true");
+
+	if(!evaluar && window.location.pathname!="/html/login.html"){
+		window.location.pathname="../html/login.html";
+	}else{
+		window.evalResult=evaluar;
+	}
+	
+} 
