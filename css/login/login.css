@@ -19,6 +19,7 @@ form {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  margin-bottom: 500px;
 }
 form span {
   display: inline-block;
@@ -38,6 +39,11 @@ form input[type=submit] {
   cursor: pointer;
 }
 
+@media (orientation: portrait) {
+  form {
+    margin-bottom: 200px;
+  }
+}
 body {
   background-color: #202020;
 }

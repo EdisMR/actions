@@ -31,6 +31,9 @@
   width: 400px;
 }
 
+.formHeaderCard {
+  padding-bottom: 0px !important;
+}
 .formHeaderCard h3 {
   margin: 0px;
 }

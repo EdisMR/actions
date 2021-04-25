@@ -1,0 +1,165 @@
+.portada{
+	margin: 10px;
+}
+
+.carousel-block-container{
+	margin: 150px auto;
+	@media (orientation:portrait){
+		padding: 0px;
+	}
+
+	&:first-child{
+		margin-top: 0px;
+	}
+
+	&:last-child{
+		margin-bottom: 50px;
+	}
+}
+
+/* CONTENEDOR */
+.carousel-container{
+	display: block;
+	margin: 0;
+	padding: 0;
+	
+}
+
+.carousel-No-controls{
+	.carousel-controls{
+		display: none;
+	}
+}
+
+
+/* HEADER */
+.carousel-header{
+	display: block;
+	margin: 20px 0;
+	padding: 10px 10px 0 10px;
+}
+
+
+/* BODY */
+.carousel-body{
+	display: block;
+	margin: 20px 0;
+	padding: 10px 10px 0 10px;
+}
+
+.carousel-items{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	overflow-x: scroll;
+	scroll-behavior: smooth;
+	scroll-snap-type: x mandatory;
+
+	&::-webkit-scrollbar{display: none;}
+	@supports(scrollbar-width: none){
+		&{scrollbar-width: none;}
+	}
+}
+
+.carousel-item{
+	flex: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	width: 90%;
+	min-height: 200px;
+	margin-right: 20px;
+	scroll-snap-align: center;
+}
+
+.carousel-itemPart{
+	width: auto;
+	max-width: 50%;
+	max-height: 500px;
+	min-width: 200px;
+	margin-right: 20px;
+	&:only-child{
+		max-width: 80%;
+	}
+	figure{
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+		img,video{
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+}
+
+.itemPart-MinHeight{
+	min-height: 200px;
+	max-width: initial;
+	width: 100%;
+	&:only-child{
+		max-width: initial;
+	}
+	figure{
+		max-height: 300px;
+	}
+}
+
+/* CONTROLS */
+.carousel-controls{
+	display: block;
+	*{
+	}
+}
+
+.carousel-buttons{
+	display: flex;
+	flex-wrap: nowrap;
+	width: 100%;
+	height: 100%;
+	padding-bottom: 20px;
+	justify-content: center;
+	/* user-select: none; */
+
+	button,span{
+		width: 30px;
+		height: 30px;
+	}
+	button{
+		display: flex;
+		align-items: stretch;
+		justify-content: space-around;
+		margin: auto 5px;
+		&:disabled{
+		}
+	}
+}
+.carousel-btn-previous{
+	
+}
+.carousel-Inner-howMany{
+	display: inline-table;
+	height: 25px;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+
+.carousel-innerActual{
+	
+}
+.carousel-innerTotal{
+	
+}
+.carousel-btn-pause{
+	
+}
+.carousel-btn-play{
+	
+}
+.carousel-btn-next{
+	
+}

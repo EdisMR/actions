@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,28 +9,519 @@
 	<link rel="shortcut icon" href="../multimedia/img/me.ico" type="image/x-icon">
 	<link rel="stylesheet" href="../css/global/global.css">
 
-	
+	<script defer src="../js/main.js"></script>
+	<script defer src="../js/carousel.js"></script>
+	<link rel="stylesheet" href="../css/carousel/carousel.css">
+
+
 	<link rel="preload" href="../js/login.js" as="script">
 	<script src="../js/login.js"></script>
 
 </head>
-<body>
 
+<body>
+	<header class="glass">
+
+		<!-- title -->
+		<section class="block">
+			<article class="header-title">
+				<div>
+					<h1>Titulo</h1>
+				</div>
+				<div>
+					<button>
+						<!-- Down -->
+						&#x25BC;
+
+						<!-- Up -->
+						<!-- &#x25B2; -->
+					</button>
+				</div>
+			</article>
+		</section>
+
+		<!-- URLs -->
+		<section class="block">
+			<nav class="header-enlaces">
+				<ul>
+					<li>
+						<a href="../index.html" rel="noopener noreferrer">
+							<div>
+								<span class="ms-Icon ms-Icon--Home"></span>
+							</div>
+							<div>
+								Inicio
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="formulario.html" rel="noopener noreferrer">
+							<div>
+								<span class="ms-Icon ms-Icon--OfficeFormsLogo24"></span>
+							</div>
+							<div>
+								Formulario
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="galeria.html" rel="noopener noreferrer">
+							<div>
+								<span class="ms-Icon ms-Icon--SamsungGallery"></span>
+							</div>
+							<div>
+								Galería
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="carruseles.html" rel="noopener noreferrer">
+							<div>
+								<span class="ms-Icon ms-Icon--PanoIndicator"></span>
+							</div>
+							<div>
+								Carruseles
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="api.html" rel="noopener noreferrer">
+							<div>
+								<span class="ms-Icon ms-Icon--AzureAPIManagement"></span>
+							</div>
+							<div>
+								API en uso
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="../index.html#juegos-html" rel="noopener noreferrer">
+							<div>
+								<span class="ms-Icon ms-Icon--Game"></span>
+							</div>
+							<div>
+								Juegos HTML5
+							</div>
+						</a>
+					</li>
+					<li>
+						<a rel="noopener noreferrer" id="accesibilityButton">
+							<div>
+								<span class="ms-Icon ms-Icon--AccessibiltyChecker"></span>
+							</div>
+							<div>
+								Accesibilidad
+							</div>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</section>
+
+
+		<!-- Eventos -->
+		<section class="block">
+			<article class="header-events">
+				<div>
+					<p>Posicion del mouse:</p>
+					<span class="inner-event"></span>
+				</div>
+				<div>
+					<p>Tecla presionada:</p>
+					<span class="inner-event"></span>
+				</div>
+			</article>
+		</section>
+
+	</header>
 
 
 	<main>
-		<div style="display: grid;place-items: center;width: 100vw;height: 100vh;font-family: sans-serif;overflow: hidden;background-color: black;position: fixed;top: 0;left: 0;">
-			<div style="display: inline-block;">
-					<img src="../multimedia/img/pagina-en-construccion.gif" alt="">
-			</div>
-			<div>
-				<a href="../index.html" style="color: steelblue;">Volver a Inicio</a>
-			</div>
-		</div>
+
+		<section class="portada">
+			<h1>Carruseles</h1>
+			<p>
+				Es importante destacar que estos carruseles y su funcionamiento fue desarrollado desde cero por mi persona (EdisAnthony).
+			</p>
+			<p>
+				Es posible manipular el carrusel mediante los controles añadidos, o por medio de scroll manual, para lo cual se desliza con el dedo, 
+				y en el caso de las computadoras se hace con Shift+Scroll
+			</p>
+		</section>
+
+		<section class="carousel-block-container">
+
+
+			<section class="carousel-container">
+
+				<article class="carousel-header">
+					<div>
+						<h1>Carrusel de imágenes</h1>
+					</div>
+				</article>
+
+				<article class="carousel-body">
+					<section class="carousel-items">
+
+
+						<!-- ITEM -->
+						<article class="carousel-item">
+							<div class="carousel-itemPart">
+								<figure>
+									<img src="https://picsum.photos/200/300" alt="copa">
+								</figure>
+							</div>
+						</article>
+						<!-- FIN DEL ITEM -->
+
+						<!-- ITEM -->
+						<article class="carousel-item">
+							<div class="carousel-itemPart">
+								<figure>
+									<img src="https://picsum.photos/200/200" alt="copa">
+								</figure>
+							</div>
+						</article>
+						<!-- FIN DEL ITEM -->
+
+						<!-- ITEM -->
+						<article class="carousel-item">
+							<div class="carousel-itemPart">
+								<figure>
+									<img src="https://picsum.photos/800/200" alt="copa">
+								</figure>
+							</div>
+						</article>
+						<!-- FIN DEL ITEM -->
+
+						<!-- ITEM -->
+						<article class="carousel-item">
+							<div class="carousel-itemPart">
+								<figure>
+									<img src="https://picsum.photos/700/200" alt="copa">
+								</figure>
+							</div>
+						</article>
+						<!-- FIN DEL ITEM -->
+
+
+					</section>
+				</article>
+
+				<article class="carousel-controls">
+					<div class="carousel-buttons">
+						<button class="carousel-btn-previous"><span
+								class="ms-Icon ms-Icon--ChevronLeftMed"></span></button>
+						<div class="carousel-Inner-howMany">
+							<span class="carousel-innerActual">5</span> <span>/</span>
+							<span class="carousel-innerTotal">8</span>
+						</div>
+						<button class="carousel-btn-pause"><span class="ms-Icon ms-Icon--Pause"></span></button>
+						<button class="carousel-btn-play"><span class="ms-Icon ms-Icon--Play"></span></button>
+						<button class="carousel-btn-next"><span
+								class="ms-Icon ms-Icon--ChevronRightMed"></span></button>
+					</div>
+				</article>
+			</section>
+			<!-- FIN DE CAROUSEl -->
+
+		</section>
+
+
+
+
+
+
+		<section class="carousel-block-container">
+
+			<section class="carousel-container">
+
+				<article class="carousel-header">
+					<div>
+						<h1>Carrusel de diversos elementos</h1>
+					</div>
+				</article>
+
+				<article class="carousel-body">
+					<section class="carousel-items">
+
+
+						<!-- ITEM -->
+						<article class="carousel-item">
+							<div class="carousel-itemPart">
+								<figure>
+									<img src="https://picsum.photos/200/300" alt="copa">
+								</figure>
+							</div>
+							<div class="carousel-itemPart">
+								<h3>Imagen, título y un párrafo</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihi llam.</p>
+							</div>
+						</article>
+						<!-- FIN DEL ITEM -->
+
+
+						<!-- ITEM -->
+						<article class="carousel-item">
+							<div class="carousel-itemPart">
+								<figure>
+									<img src="https://picsum.photos/200/300" alt="copa">
+								</figure>
+							</div>
+							<div class="carousel-itemPart">
+								<figure>
+									<img src="https://picsum.photos/200/300" alt="copa">
+								</figure>
+							</div>
+							<div class="carousel-itemPart">
+								<h3>Dos imágenes, un título y un párrafo</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quaerat fugit quod
+									necessitatibus sint laboriosam cumque unde praesentium ipsam ullam.</p>
+							</div>
+						</article>
+						<!-- FIN DEL ITEM -->
+
+
+						<!-- ITEM -->
+						<article class="carousel-item">
+							
+							<div class="carousel-itemPart">
+								<h3>Titulo 1 con párrafo</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quaerat fugit quod
+									necessitatibus sint laboriosam cumque unde praesentium ipsam ullam.</p>
+							</div>
+							<div class="carousel-itemPart">
+								<h3>Titulo 2 con párrafo</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quaerat fugit quod
+									necessitatibus sint laboriosam cumque unde praesentium ipsam ullam.</p>
+							</div>
+							<div class="carousel-itemPart">
+								<h3>Titulo 3 con párrafo</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quaerat fugit quod
+									necessitatibus sint laboriosam cumque unde praesentium ipsam ullam.</p>
+							</div>
+						</article>
+						<!-- FIN DEL ITEM -->
+
+
+						<!-- ITEM -->
+						<article class="carousel-item">
+							<div class="carousel-itemPart">
+								<figure>
+									<img src="https://picsum.photos/200/300" alt="playa">
+								</figure>
+							</div>
+							<div class="carousel-itemPart">
+								<figure>
+									<img src="https://picsum.photos/200/300" alt="playa">
+								</figure>
+							</div>
+							<div class="carousel-itemPart">
+								<figure>
+									<img src="https://picsum.photos/200/300" alt="playa">
+								</figure>
+							</div>
+							
+						</article>
+						<!-- FIN DEL ITEM -->
+
+
+						<!-- ITEM -->
+						<article class="carousel-item">
+							<div class="carousel-itemPart">
+								<figure>
+									<video src="../multimedia/videos/vid.mp4" alt="vid">
+								</figure>
+							</div>
+							<div class="carousel-itemPart">
+								<h3>Un video, un título y párrafo</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quaerat fugit quod
+									necessitatibus sint laboriosam cumque unde praesentium ipsam ullam.</p>
+							</div>
+						</article>
+						<!-- FIN DEL ITEM -->
+
+
+					</section>
+				</article>
+
+				<article class="carousel-controls">
+					<div class="carousel-buttons">
+						<button class="carousel-btn-previous"><span
+								class="ms-Icon ms-Icon--ChevronLeftMed"></span></button>
+						<div class="carousel-Inner-howMany">
+							<span class="carousel-innerActual">5</span> <span>/</span>
+							<span class="carousel-innerTotal">8</span>
+						</div>
+						<button class="carousel-btn-pause"><span class="ms-Icon ms-Icon--Pause"></span></button>
+						<button class="carousel-btn-play"><span class="ms-Icon ms-Icon--Play"></span></button>
+						<button class="carousel-btn-next"><span
+								class="ms-Icon ms-Icon--ChevronRightMed"></span></button>
+					</div>
+				</article>
+			</section>
+			<!-- FIN DE CAROUSEl -->
+
+
+		</section>
+
+
+
+
+
+
+		<section class="carousel-block-container">
+
+			<section class="carousel-container carousel-No-controls">
+
+				<article class="carousel-header">
+					<div>
+						<h1>Scroll manual, sin controles</h1>
+					</div>
+				</article>
+
+				<article class="carousel-body">
+					<section class="carousel-items">
+
+
+						<!-- ITEM -->
+						<article class="carousel-item">
+							<div class="carousel-itemPart">
+								<figure>
+									<img src="https://picsum.photos/200/300" alt="copa">
+								</figure>
+							</div>
+							<div class="carousel-itemPart">
+								<h3>Titulo de item</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quaerat fugit quod
+									necessitatibus sint laboriosam cumque unde praesentium ipsam ullam.</p>
+							</div>
+						</article>
+						<!-- FIN DEL ITEM -->
+
+
+						<!-- ITEM -->
+						<article class="carousel-item">
+							<div class="carousel-itemPart">
+								<h3>Titulo de item</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quaerat fugit quod
+									necessitatibus sint laboriosam cumque unde praesentium ipsam ullam.</p>
+							</div>
+						</article>
+						<!-- FIN DEL ITEM -->
+
+
+						<!-- ITEM -->
+						<article class="carousel-item">
+							<div class="carousel-itemPart">
+								<figure>
+									<img src="https://picsum.photos/200/300" alt="img">
+								</figure>
+							</div>
+							<div class="carousel-itemPart">
+								<h3>Titulo de item</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quaerat fugit quod
+									necessitatibus sint laboriosam cumque unde praesentium ipsam ullam.</p>
+							</div>
+						</article>
+						<!-- FIN DEL ITEM -->
+
+
+						<!-- ITEM -->
+						<article class="carousel-item">
+							<div class="carousel-itemPart">
+								<figure>
+									<img src="https://picsum.photos/200/300" alt="playa">
+								</figure>
+							</div>
+							<div class="carousel-itemPart">
+								<h3>Titulo de item</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quaerat fugit quod
+									necessitatibus sint laboriosam cumque unde praesentium ipsam ullam.</p>
+							</div>
+						</article>
+						<!-- FIN DEL ITEM -->
+
+
+						<!-- ITEM -->
+						<article class="carousel-item">
+							<div class="carousel-itemPart">
+								<figure>
+									<img src="https://picsum.photos/200/300" alt="playa">
+								</figure>
+							</div>
+							<div class="carousel-itemPart">
+								<h3>Titulo de item</h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quaerat fugit quod
+									necessitatibus sint laboriosam cumque unde praesentium ipsam ullam.</p>
+							</div>
+						</article>
+						<!-- FIN DEL ITEM -->
+
+
+					</section>
+				</article>
+
+				<article class="carousel-controls">
+					<div class="carousel-buttons">
+						<button class="carousel-btn-previous"><span
+								class="ms-Icon ms-Icon--ChevronLeftMed"></span></button>
+						<div class="carousel-Inner-howMany">
+							<span class="carousel-innerActual">5</span> <span>/</span>
+							<span class="carousel-innerTotal">8</span>
+						</div>
+						<button class="carousel-btn-pause"><span class="ms-Icon ms-Icon--Pause"></span></button>
+						<button class="carousel-btn-play"><span class="ms-Icon ms-Icon--Play"></span></button>
+						<button class="carousel-btn-next"><span
+								class="ms-Icon ms-Icon--ChevronRightMed"></span></button>
+					</div>
+				</article>
+			</section>
+			<!-- FIN DE CAROUSEl -->
+
+		</section>
+
+
+
 	</main>
 
+	<footer>
+		<ul class="glass">
+			<li>
+				<a href="https://github.com/EdisAnthony" target="_blank" rel="noopener noreferrer" title="Git">
+					<div>
+						<span class="ms-Icon ms-Icon--GitGraph"></span>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a title="email">
+					<!-- EMAIL -->
+					<div>
+						<span class="ms-Icon ms-Icon--Mail"></span>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a title="whatsapp">
+					<!-- WHATSAPP -->
+					<div>
+						<figure>
+							<img src="../multimedia/icons/logo-whatsapp.svg" alt="">
+						</figure>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="../index.html" rel="noopener noreferrer" title="Website">
+					<div>
+						<span class="ms-Icon ms-Icon--Website"></span>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</footer>
 
-	<script src="../js/main.js"></script>
-	<script src="../js/targetParentObserveElement.js"></script>
 </body>
+
 </html>

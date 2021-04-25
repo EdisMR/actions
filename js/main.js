@@ -123,8 +123,5 @@ const btnAccesibilidad = document.getElementById("accesibilityButton");
 btnAccesibilidad.addEventListener("click", accesibilitySwitch, false);
 
 function accesibilitySwitch() {
-	let algo=document.querySelectorAll("*")
-	algo=Array.from(algo);
-	algo=algo.filter(elm=>{elm.firstChild==text;})
-	console.log(algo);
+	console.log("accesibilitySwitch");
 }
