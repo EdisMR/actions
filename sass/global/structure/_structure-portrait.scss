@@ -44,19 +44,44 @@ header{
 	}
 }
 
-.header-enlaces{
-	display: none;/* block */
-	padding-bottom: 20px;
+.header-enlaces {
+	display: block;
+	padding-bottom: 0px;
 	margin: 0px;
+	*{height: 0;}
 	ul{
 		li{
 			a{
-				font-size: 20px;
-				display: none;/* flex */
-				padding-left: 20px;
+				display: none ;/* none || flex */
+				padding-left: 0px;
+				margin-top: 0px;
+				div{
+					span{
+					}
+				}
 			}
 		}
 	}
+}
+
+.showMenu{
+	padding-bottom: 20px; /* 20px */
+	*{height: auto;}
+	ul{
+		li{
+			a{
+				display: flex;
+				opacity: 0;
+				padding-left: 20px; /* 20px */
+				margin-top: 10px;
+				div{
+					span{
+					}
+				}
+			}
+		}
+	}
+
 }
 
 

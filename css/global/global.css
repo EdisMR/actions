@@ -222,6 +222,8 @@ table {
 
 input[type=search] {
   -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
@@ -247,6 +249,29 @@ img {
   object-fit: contain;
 }
 
+.loader {
+  background-color: #333;
+  display: grid;
+  place-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 100;
+}
+.loader img {
+  width: 100px;
+  animation: rotar 1s linear infinite;
+}
+
+@keyframes rotar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 /* *********************************************** */
 /********************* BODY ********************** */
 /* *********************************************** */
@@ -254,8 +279,7 @@ body {
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: 1fr auto;
-  -webkit-user-select: none;
-          user-select: none;
+  user-select: none;
   scroll-behavior: smooth;
 }
 
@@ -438,18 +462,33 @@ a[href="##"] {
   }
 
   .header-enlaces {
-    display: none;
-    /* block */
-    padding-bottom: 20px;
+    display: block;
+    padding-bottom: 0px;
     margin: 0px;
   }
-  .header-enlaces ul li a {
-    font-size: 20px;
-    display: none;
-    /* flex */
-    padding-left: 20px;
+  .header-enlaces * {
+    height: 0;
   }
-
+  .header-enlaces ul li a {
+    display: none;
+    /* none || flex */
+    padding-left: 0px;
+    margin-top: 0px;
+  }
+  .showMenu {
+    padding-bottom: 20px;
+    /* 20px */
+  }
+  .showMenu * {
+    height: auto;
+  }
+  .showMenu ul li a {
+    display: flex;
+    opacity: 0;
+    padding-left: 20px;
+    /* 20px */
+    margin-top: 10px;
+  }
   .header-events {
     display: none;
   }
@@ -498,7 +537,7 @@ header ul li:hover {
 header ul li a {
   color: white;
 }
-.headerLiAnimated {
+.animatedItem {
   animation-name: liAppear;
   animation-duration: 0.2s;
   animation-timing-function: linear;
@@ -507,10 +546,12 @@ header ul li a {
 
 @keyframes liAppear {
   from {
-    opacity: 0%;
+    opacity: 0;
+    transform: rotateX(90deg);
   }
   to {
-    opacity: 100%;
+    opacity: 1;
+    transform: rotateX(0deg);
   }
 }
 .header-title button {
@@ -9477,4 +9518,5 @@ footer ul li a {
 }
 
 /* DEVELOPMENT PROCESS VISUALIZATIONS */
+
 /*# sourceMappingURL=global.css.map */

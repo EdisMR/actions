@@ -64,6 +64,7 @@
 }
 .inputC input {
   flex-basis: 100%;
+  border: 2px solid transparent;
 }
 
 .goodInput, .badInput {
@@ -81,12 +82,15 @@
   z-index: 100;
 }
 
+.goodInput input {
+  border: 2px solid #009600 !important;
+}
 .goodInput::before {
   content: "✔";
 }
 
-.badInput {
-  position: relative;
+.badInput input {
+  border: 2px solid red !important;
 }
 .badInput::before {
   content: "❌";
@@ -173,3 +177,5 @@
   color: white;
   background-color: rgba(207, 31, 31, 0.7);
 }
+
+/*# sourceMappingURL=form-main.css.map */

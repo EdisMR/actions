@@ -66,6 +66,7 @@ form{
 	padding: 0px;
 	input{
 		flex-basis: 100%;
+		border: 2px solid transparent;
 	}
 }
 
@@ -85,12 +86,17 @@ form{
 }
 
 .goodInput{
+	input{
+		border: 2px solid rgb(0,150,00) !important;
+	}
 	&::before{
 		content:"✔";
 	}
 }
 .badInput{
-	position: relative;
+	input{
+		border:2px solid red !important;
+	}
 	&::before{
 		content:"❌";
 	}

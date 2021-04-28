@@ -21,10 +21,10 @@ function keyEvent(e) {
 /* ***** FUNCIONAMIENTO DE BOTON MENU ***** */
 /* ***************************************** */
 var headerButton = {
-	btn: null,
-	disp: false,
-	headerEnlaces: null,
-	headerLi: null,
+	btn: null, /* Boton para activar el menu */
+	disp: false, /* Determina si el menu esta oculto o no */
+	headerEnlaces: null, /* Contenedor de enlaces del menu */
+	headerLi: null, /* Cada uno de los enlaces del menu */
 };
 
 if (screen.orientation.type == "portrait-primary") {
@@ -50,20 +50,21 @@ function menuSwitchMain() {
 
 function openMenu() {
 	headerButton.disp = true;
-	headerButton.headerEnlaces.style.display = "block";
 
-	/* ANIMACION */
-	headerButton.headerLi.forEach(elm => {
-		elm.style.display = "flex";
-		elm.style.opacity = "0%";
-		elm.addEventListener("animationend", function () { elm.style.opacity = "100%"; }, false);
+	headerButton.headerEnlaces.classList.add("showMenu");
+
+	/* AGREGAR ANIMACION */
+	/* elm.style.display="flex";
+	elm.classList.add("animatedItem"); */
+	headerButton.headerLi.forEach((elm,index)=>{
+		elm.style.animationDelay=(index/16)+"s";
+		elm.classList.add("animatedItem");
+		elm.addEventListener("animationend",()=>{
+			elm.style.opacity="1";
+		},false)
 	})
 
-	for (let x = 0; x < headerButton.headerLi.length; x++) {
-		headerButton.headerLi[x].classList.add("headerLiAnimated");
-		headerButton.headerLi[x].style.animationDelay = x + "00ms";
-	}
-
+	/* Llenar boton con el icono */
 	headerButton.btn.innerHTML = "&#x25B2;";
 
 }
@@ -72,11 +73,16 @@ function closeMenu() {
 	if (headerButton.disp == true) {
 		headerButton.disp = false;
 
-		headerButton.headerEnlaces.style.display = "none";
-		headerButton.headerLi.forEach(elm => {
-			elm.style.display = "none";
-			elm.classList.remove("headerLiAnimated");
-		})
+	headerButton.headerEnlaces.classList.remove("showMenu");
+
+	/* QUITAR ANIMACION */
+	headerButton.headerLi.forEach(elm=>{
+		elm.style.display="auto";
+		elm.classList.remove("animatedItem");
+		elm.style.opacity="0";
+	})
+
+	/* Quitar animacion y Llenar boton con el icono */
 		headerButton.btn.innerHTML = "&#x25BC;";
 	}
 }

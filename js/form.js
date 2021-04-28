@@ -29,34 +29,37 @@ inputs.forEach(elm => {
 function validateInput(eventDisp = null,input=null) {
 	let evento = eventDisp.target || input;
 	let salida=false;
-	let goodColor="2px solid rgb(0,150,00)";
-	let badColor="2px solid red";
+	let borderRemoveTime=3000;
 
 		/* **************** Evaluacion directa ************** */
 	if (evento.checkValidity() == false) {
 		salida=false;
-		evento.style.border = badColor;
 
 		evento.parentNode.classList.add("badInput");
 		setTimeout(function(){
 			evento.parentNode.classList.remove("badInput");
-		},3000)
+		},borderRemoveTime)
 
 		if (evento == formulario.fechaNac) {
-			formulario.edad.style.border = badColor;
+			formulario.edad.parentNode.classList.add("badInput");
+				setTimeout(function(){
+					formulario.edad.parentNode.classList.remove("badInput");
+				},borderRemoveTime)
 		}
 	} else {
 		if (evento.checkValidity() == true) {
 			salida=true;
-			evento.style.border = goodColor;
 			
 			evento.parentNode.classList.add("goodInput");
 			setTimeout(function(){
 				evento.parentNode.classList.remove("goodInput");
-			},3000)
+			},borderRemoveTime)
 
 			if (evento == formulario.fechaNac) {
-				formulario.edad.style.border = goodColor;
+				formulario.edad.parentNode.classList.add("goodInput");
+				setTimeout(function(){
+					formulario.edad.parentNode.classList.remove("goodInput");
+				},borderRemoveTime)
 			}
 		}
 	}
@@ -80,7 +83,7 @@ formulario.addEventListener("reset",formularioReseteado,false)
 
 function formularioReseteado(){
 	inputs.forEach(elm=>{
-		elm.style.border="2px solid transparent";
+		elm.style.border="auto";
 	})
 }
 
