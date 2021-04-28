@@ -1,3 +1,15 @@
+window.addEventListener("load",removeLoader,false);
+
+function removeLoader(){
+	if(window.evalResult){
+		let quienes=Array.from(document.getElementsByClassName("loader"))
+		quienes.forEach(elm=>{
+			elm.style.display="none";
+		})
+	}
+}
+
+
 /* ****************************************** */
 /* ******** EVENTOS DE MOUSE Y TECLADO ***** */
 /* ***************************************** */
