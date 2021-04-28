@@ -5,9 +5,12 @@ var urlDeValidacion=window.location.origin+"/php/cookieEval.php";
 
 window.evalResult=null;
 
-function evaluar(item){
-	if((!item) && window.location.pathname!="/html/login.html"){
+function evaluar(){
+	if((!window.evalResult) && window.location.pathname != "/html/login.html"){
 		window.location.pathname="/html/login.html";
+		//console.log("ir a login");
+	}else{
+		//console.log("No vas a login");
 	}
 }
 
@@ -15,13 +18,14 @@ function evaluar(item){
 fetch(urlDeValidacion)
 .then(
 	function(response){
-		return response.text()
+		return response.text();
 	}
 )
 .then(
 	function(resp){
-		window.evalResult=Boolean(resp=="true");
+		window.evalResult=JSON.parse(resp);
+		let temp=window.evalResult[0];
+		window.evalResult=temp;
+		evaluar();
 	}
 )
-
-evaluar(window.evalResult);

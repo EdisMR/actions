@@ -474,6 +474,7 @@ a[href="##"] {
     /* none || flex */
     padding-left: 0px;
     margin-top: 0px;
+    font-size: 20px;
   }
   .showMenu {
     padding-bottom: 20px;

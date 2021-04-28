@@ -21,9 +21,9 @@
 		<img src="../multimedia/img/spinner-angular.svg" alt="loader">
 	</div>
 
-	<form action="../php/cookieEval.php" method="POST">
+	<form>
 
-		<span>Contraseña:</span><input type="password" name="inputPass" autocomplete="off" required>
+		<span>Contraseña:</span><input type="password" name="inputPass" autocomplete="off" required autofocus>
 
 		<input type="submit" value="Enviar">
 
@@ -31,7 +31,20 @@
 	
 
 	<script>
+		formulario=document.forms[0];
+		formulario.addEventListener("submit",function(e){
+			e.preventDefault();
+			const data = new FormData(formulario);
+			fetch('../php/cookieEval.php', {
+				method: 'POST',
+				body: data
+			}).then(()=>{
+				window.location.reload();
+			})
+		})
+
 		setInterval(()=>{
+			console.log("Intervalo Realizado");
 			if(window.evalResult){
 				window.location.pathname="/";
 			}
