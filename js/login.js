@@ -8,9 +8,9 @@ window.evalResult=null;
 function evaluar(){
 	if((!window.evalResult) && window.location.pathname != "/html/login.html"){
 		window.location.pathname="/html/login.html";
-		//console.log("ir a login");
+		console.log("ir a login");
 	}else{
-		//console.log("No vas a login");
+		console.log("No vas a login");
 	}
 }
 

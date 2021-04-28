@@ -1,19 +1,20 @@
 window.addEventListener("load",removeLoader,false);
 
 function removeLoader(){
-	if(window.evalResult){
-		let quienes=Array.from(document.getElementsByClassName("loader"))
-		quienes.forEach(elm=>{
-			elm.style.display="none";
-		})
-	}
-}
 
+	setTimeout(()=>{
+		if(window.evalResult){
+			let quienes=Array.from(document.getElementsByClassName("loader"))
+			quienes.forEach(elm=>{
+				elm.style.display="none";
+			})
+		}
+	},500);
+}
 
 /* ****************************************** */
 /* ******** EVENTOS DE MOUSE Y TECLADO ***** */
 /* ***************************************** */
-
 window.addEventListener("mousemove", mouseMovement, false)
 function mouseMovement(e) {
 	let evento = e;
@@ -27,7 +28,6 @@ function keyEvent(e) {
 	let innerKey = Array.from(document.querySelectorAll(".header-events .inner-event"))[1];
 	innerKey.innerHTML = '"' + evento.key + '"';
 }
-
 
 /* ****************************************** */
 /* ***** FUNCIONAMIENTO DE BOTON MENU ***** */
