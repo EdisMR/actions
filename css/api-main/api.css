@@ -1,3 +1,165 @@
+/* ******************************* */
+/* ********** Generales ************ */
+/* ******************************* */
+.block {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
 
+/* ******************************* */
+/* ****** Formulario solicitar datos **** */
+/* ******************************* */
+.solicitar {
+  border: 2px solid rgba(100, 100, 100, 0.5);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px 20px;
+  margin: 20px;
+}
+@media screen and (max-width: 600px) {
+  .solicitar {
+    grid-gap: initial;
+    grid-template-columns: 1fr;
+  }
+}
+
+.textContainer {
+  padding: 10px;
+}
+
+.bigHelp {
+  font-size: 35px;
+}
+@media screen and (max-width: 600px) {
+  .bigHelp {
+    font-size: 30px;
+    margin: 2px;
+  }
+}
+
+.notaPie {
+  font-size: 10px;
+}
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  .formContainer {
+    margin-bottom: 20px;
+  }
+}
+
+.formItem {
+  margin: 0;
+  padding: 0;
+}
+
+.textInput {
+  margin: 0;
+  padding: 0;
+}
+
+.inputContainer {
+  margin: 0;
+  padding: 0;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  width: 100%;
+}
+.btn:first-child {
+  margin-right: 5px;
+}
+.btn:last-child {
+  margin-left: 5px;
+}
+.btn button {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+}
+.btn button span {
+  font-size: 20px;
+  margin: 5px;
+}
+
+/* ******************************* */
+/* ******** Mostrar Datos ************ */
+/* ******************************* */
+.mostrar {
+  display: none;
+  /* grid || none */
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px 20px;
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid rgba(100, 100, 100, 0.5);
+  background-color: #eb6e4be8;
+  color: #eeeeee;
+  font-size: 20px;
+}
+@media screen and (max-width: 600px) {
+  .mostrar {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mostrarFooter {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+/* ******************************* */
+/* ************ DATOS DE TEMP **** */
+/* ******************************* */
+.cardHeader {
+  margin-bottom: 10px;
+}
+.cardHeader .titulo {
+  font-size: 40px;
+}
+.cardHeader .subtitulo div {
+  display: inline-block;
+}
+.cardHeader .subtitulo .lat {
+  color: #6df5ff;
+}
+.cardHeader .subtitulo .long {
+  color: #6df5ff;
+}
+
+.cardImg {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.cardImg div {
+  font-size: 40px;
+  display: inline-block;
+}
+.cardImg img {
+  width: 100px;
+  height: auto;
+}
+
+.descrip {
+  display: block;
+  text-align: center;
+}
 
 /*# sourceMappingURL=api.css.map */

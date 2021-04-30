@@ -16,6 +16,7 @@
 	
 
 	<link rel="stylesheet" href="../css/global/global.css">
+	<link rel="stylesheet" href="../css/api-main/api.css">
 
 </head>
 
@@ -140,8 +141,102 @@
 
 	<main>
 		
-	</main>
+		<section class="block">
+		
+			<section class="solicitar">
 
+			
+				<article class="textContainer">
+					<article class="textItem">
+						<p class="bigHelp">Ingrese los datos de la localización para obtener la información</p>
+					</article>
+
+					<article class="textItem">
+						<p class="notaPie">Los numeros pueden ser enteros o de punto flotante</p>
+					</article>
+				</article>
+
+
+				<article class="formContainer">
+					<form>
+						<div class="formItem">
+							<div class="textInp">
+								<p>Latitud</p>
+							</div>
+							<div class="inputContainer">
+								<input type="number" step="any" name="latitud" autocomplete="off">
+							</div>
+						</div>
+						<div class="formItem">
+							<div class="textInp">
+								<p>Longitud</p>
+							</div>
+							<div class="inputContainer">
+								<input type="number" step="any" name="longitud" autocomplete="off">
+							</div>
+						</div>
+						<div class="buttons">
+							<div class="btn">
+								<button type="reset">
+									<span class="ms-Icon ms-Icon--Reset"></span>
+								</button>
+							</div>
+							<div class="btn">
+								<button type="submit">
+									<span class="ms-Icon ms-Icon--AcceptMedium"></span>
+								</button>
+							</div>
+						</div>
+					</form>
+				</article>
+			
+			</section>
+
+		</section>
+
+		<section class="block">
+			<section class="mostrar">
+				
+				<article class="itemInfo">
+				
+					<div class="cardHeader">
+						<div class="titulo">...</div>
+						<div class="subtitulo">
+							<div>
+								Latitud: <span class="lat">...</span>
+							</div>
+							<div>
+								Longitud: <span class="long">...</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="cardBody">
+						<div class="feels">Sensacion termica: <span>...</span>°C</div>
+						<div class="tempMax">Temperatura Máxima: <span>...</span>°C</div>
+						<div class="tempMin">Temperatura Mínima: <span>...</span>°C</div>
+					</div>
+
+				</article>
+
+				<article class="itemImg">
+					<div class="cardImg">
+						<div class="temp"><span>...</span>°C</div>
+						<img src="" alt="">
+					</div>
+					<div class="descrip">
+
+					</div>
+				</article>
+
+				<article class="mostrarFooter">
+					<p class="notaPie">Datos proporcionados por OpenWeatherMap</p>
+				</article>
+
+			</section>
+		</section>
+
+	</main>
 
 	<footer>
 		<ul class="glass">
