@@ -161,20 +161,13 @@
 					<form>
 						<div class="formItem">
 							<div class="textInp">
-								<p>Latitud</p>
+								<p>Latitud y longitud </p>
 							</div>
 							<div class="inputContainer">
-								<input type="number" step="any" name="latitud" autocomplete="off">
+								<input type="text" name="inputL" autocomplete="off" placeholder="Ir a Google Maps" required pattern="^[\-]{0,1}\d{1,}\.\d{1,},\s[\-]{0,1}\d{1,}\.\d{1,}$">
 							</div>
 						</div>
-						<div class="formItem">
-							<div class="textInp">
-								<p>Longitud</p>
-							</div>
-							<div class="inputContainer">
-								<input type="number" step="any" name="longitud" autocomplete="off">
-							</div>
-						</div>
+
 						<div class="buttons">
 							<div class="btn">
 								<button type="reset">
@@ -187,6 +180,8 @@
 								</button>
 							</div>
 						</div>
+						<p class="notaPie">ejemplo: <span style="color: rgb(0, 0, 255); background-color: rgba(137, 43, 226, 0.096);">14.281848, -74.793821</span></p>
+
 					</form>
 				</article>
 			

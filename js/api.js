@@ -92,8 +92,14 @@ formulario.addEventListener("submit",datosDeForm,true);
 function datosDeForm(e){
 	evento=e;e.preventDefault();
 
-	api.lat=formulario.latitud.value;
-	api.lon=formulario.longitud.value;
+	let valordeInput=formulario.inputL.value;
+	let coordenadas=valordeInput.split(",");
+
+	coordenadas[0]=parseFloat(coordenadas[0]);
+	coordenadas[1]=parseFloat(coordenadas[1]);
+
+	api.lat=coordenadas[0]
+	api.lon=coordenadas[1]
 	
 	defineUrlSolicitud();	
 	solicitarDatos();
