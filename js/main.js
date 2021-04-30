@@ -66,8 +66,6 @@ function openMenu() {
 	headerButton.headerEnlaces.classList.add("showMenu");
 
 	/* AGREGAR ANIMACION */
-	/* elm.style.display="flex";
-	elm.classList.add("animatedItem"); */
 	headerButton.headerLi.forEach((elm,index)=>{
 		elm.style.animationDelay=(index/16)+"s";
 		elm.classList.add("animatedItem");

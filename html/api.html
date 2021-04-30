@@ -7,13 +7,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
 	<title>EdisAnthony - Uso de API</title>
 	<link rel="shortcut icon" href="../multimedia/img/me.ico" type="image/x-icon">
-	
+
 	<link rel="preload" href="../js/login.js" as="script">
 	<script src="../js/login.js"></script>
 
 	<script defer src="../js/main.js"></script>
 	<script defer src="../js/api.js"></script>
-	
+
 
 	<link rel="stylesheet" href="../css/global/global.css">
 	<link rel="stylesheet" href="../css/api-main/api.css">
@@ -22,7 +22,7 @@
 
 <body>
 	<div class="loader">
-	<img src="../multimedia/img/spinner-angular.svg" alt="loader">
+		<img src="../multimedia/img/spinner-angular.svg" alt="loader">
 	</div>
 	<header class="glass">
 
@@ -140,19 +140,19 @@
 	</header>
 
 	<main>
-		
+
 		<section class="block">
-		
+
 			<section class="solicitar">
 
-			
+
 				<article class="textContainer">
 					<article class="textItem">
 						<p class="bigHelp">Ingrese los datos de la localización para obtener la información</p>
 					</article>
 
 					<article class="textItem">
-						<p class="notaPie">Los numeros pueden ser enteros o de punto flotante</p>
+						<p class="btnSendHelper">ejemplo: <span>9.936633, -84.107593</span></p>
 					</article>
 				</article>
 
@@ -164,7 +164,8 @@
 								<p>Latitud y longitud </p>
 							</div>
 							<div class="inputContainer">
-								<input type="text" name="inputL" autocomplete="off" placeholder="Ir a Google Maps" required pattern="^[\-]{0,1}\d{1,}\.\d{1,},\s[\-]{0,1}\d{1,}\.\d{1,}$">
+								<input type="text" name="inputL" autocomplete="off" placeholder="Ir a Google Maps"
+									required pattern="^[\-]{0,1}\d{1,}\.\d{1,},\s[\-]{0,1}\d{1,}\.\d{1,}$">
 							</div>
 						</div>
 
@@ -180,20 +181,19 @@
 								</button>
 							</div>
 						</div>
-						<p class="notaPie">ejemplo: <span style="color: rgb(0, 0, 255); background-color: rgba(137, 43, 226, 0.096);">14.281848, -74.793821</span></p>
 
 					</form>
 				</article>
-			
+
 			</section>
 
 		</section>
 
 		<section class="block">
 			<section class="mostrar">
-				
+
 				<article class="itemInfo">
-				
+
 					<div class="cardHeader">
 						<div class="titulo">...</div>
 						<div class="subtitulo">
@@ -208,23 +208,33 @@
 
 					<div class="cardBody">
 						<div class="feels">Sensacion termica: <span>...</span>°C</div>
-						<div class="tempMax">Temperatura Máxima: <span>...</span>°C</div>
-						<div class="tempMin">Temperatura Mínima: <span>...</span>°C</div>
+						<div class="sunrise">Amanecer: <span>...</span>h</div>
+						<div class="sunset">Atardecer: <span>...</span>h</div>
+						<div class="humidity">Humedad: <span>...</span>%</div>
 					</div>
 
 				</article>
 
 				<article class="itemImg">
-					<div class="cardImg">
-						<div class="temp"><span>...</span>°C</div>
-						<img src="" alt="">
-					</div>
-					<div class="descrip">
 
+					<div class="temperatureItem">
+						<div class="temp"><span>...</span>°C</div>
+						<div class="tempMax">Max: <span>...</span>°C</div>
+						<div class="tempMin">Min: <span>...</span>°C</div>
 					</div>
+
+					<div class="cardImg">
+						<div>
+							<img src="" alt="">
+						</div>
+						<div class="descrip"></div>
+					</div>
+
+
 				</article>
 
 				<article class="mostrarFooter">
+					<button>Actualizar</button>
 					<p class="notaPie">Datos proporcionados por OpenWeatherMap</p>
 				</article>
 

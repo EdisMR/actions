@@ -5,47 +5,24 @@ var api={
 	lon:"",
 	units:"metric",
 }
-
-/* Url para el fetch */
-var urlSolicitud;
-function defineUrlSolicitud(){
-	urlSolicitud=`https://api.openweathermap.org/data/2.5/weather?lat=${api.lat}&lon=${api.lon}&appid=${api.apiKey}&lang=sp&units=${api.units}`;
-}
-
 /* Para guardar los datos del fetch */
 var datosCapture;
 
-/* Datos que se van a necesitar para el html */
-var datos={
-	country:"",
-	place:"",
-	lat:"",
-	long:"",
-	temp:"",
-	feelsLike:"",
-	tempMax:"",
-	tempMin:"",
-	weatherImagen:"",
-	imgDesc:"",
-};
-
-/* Los elementos html que se llenaran con la info */
-var htmlElements={
-	country:document.querySelector(".cardHeader .titulo"),
-	lat:document.querySelector(".subtitulo .lat"),
-	long:document.querySelector(".subtitulo .long"),
-	temp:document.querySelector(".cardImg .temp span"),
-	feelsLike:document.querySelector(".cardBody .feels span"),
-	tempMax:document.querySelector(".cardBody .tempMax span"),
-	tempMin:document.querySelector(".cardBody .tempMin span"),
-	weatherImagen:document.querySelector(".cardImg img"),
-	imgDesc:document.querySelector(".itemImg .descrip"),
+/* Url para el fetch */
+function defineUrlSolicitud(){
+	return `https://api.openweathermap.org/data/2.5/weather?lat=${api.lat}&lon=${api.lon}&appid=${api.apiKey}&lang=sp&units=${api.units}`;
 }
+
+/* URL de la imagen */
+function defineUrlImagen(){
+	return `http://openweathermap.org/img/wn/${datosCapture.weather[0].icon}.png`;
+}
+
 
 /* Funcion principal del fetch */
 function solicitarDatos(){
 	fetch(
-		urlSolicitud,
+		defineUrlSolicitud(),
 		{method:"get",}
 	).then(
 		function(response){
@@ -54,34 +31,60 @@ function solicitarDatos(){
 	).then(
 		function(resp){
 			afterFetch(resp);
+			console.log("Datos Solicitados");
 		}
 	)
 }
 
 
-function dataFilter(){
-	datos.weatherImagen="http://openweathermap.org/img/wn/"+datosCapture.weather[0].icon+"@2x.png";
-	datos.country=datosCapture.sys.country;
-	datos.place=datosCapture.name;
-	datos.lat=datosCapture.coord.lat;
-	datos.long=datosCapture.coord.lon;
-	datos.temp=datosCapture.main.temp;
-	datos.feelsLike=datosCapture.main.feels_like;
-	datos.tempMax=datosCapture.main.temp_max;
-	datos.tempMin=datosCapture.main.temp_min;
-	datos.imgDesc=datosCapture.weather[0].description;
+
+/* Los elementos html que se llenaran con la info */
+var htmlElements={
+	country:document.querySelector(".cardHeader .titulo"),
+	lat:document.querySelector(".subtitulo .lat"),
+	long:document.querySelector(".subtitulo .long"),
+	feelsLike:document.querySelector(".cardBody .feels span"),
+	sunrise:document.querySelector(".cardBody .sunrise span"),
+	sunset:document.querySelector(".cardBody .sunset span"),
+	humidity:document.querySelector(".cardBody .humidity span"),
+	temp:document.querySelector(".temperatureItem .temp span"),
+	tempMax:document.querySelector(".temperatureItem .tempMax span"),
+	tempMin:document.querySelector(".temperatureItem .tempMin span"),
+	weatherImagen:document.querySelector(".cardImg img"),
+	imgDescription:document.querySelector(".cardImg .descrip"),
 }
 
+/* Llenar el html con los datos */
 function innerDatos(){
-	htmlElements.country.innerHTML=datos.country+" - "+datos.place;
-	htmlElements.lat.innerHTML=datos.lat;
-	htmlElements.long.innerHTML=datos.long;
-	htmlElements.temp.innerHTML=datos.temp;
-	htmlElements.feelsLike.innerHTML=datos.feelsLike;
-	htmlElements.tempMax.innerHTML=datos.tempMax;
-	htmlElements.tempMin.innerHTML=datos.tempMin;
-	htmlElements.weatherImagen.src=datos.weatherImagen;
-	htmlElements.imgDesc.innerHTML=datos.imgDesc;
+	htmlElements.country.innerHTML=datosCapture.sys.country+" - "+datosCapture.name;
+	htmlElements.lat.innerHTML=api.lat;
+	htmlElements.long.innerHTML=api.lon;
+	htmlElements.feelsLike.innerHTML=datosCapture.main.feels_like;
+	
+	let sun1=new Date(datosCapture.sys.sunrise*1000);
+	htmlElements.sunrise.innerHTML=sun1.getHours()+":"+sun1.getMinutes();
+	
+	let sun2=new Date(datosCapture.sys.sunset*1000);
+	htmlElements.sunset.innerHTML=sun2.getHours()+":"+sun2.getMinutes();
+	
+	htmlElements.humidity.innerHTML=datosCapture.main.humidity;
+	htmlElements.temp.innerHTML=datosCapture.main.temp;
+	htmlElements.tempMax.innerHTML=datosCapture.main.temp_max;
+	htmlElements.tempMin.innerHTML=datosCapture.main.temp_min;
+	htmlElements.weatherImagen.src=defineUrlImagen();
+	htmlElements.imgDescription.innerHTML=datosCapture.weather[0].description;
+}
+
+
+function afterFetch(respuesta){
+	datosCapture=respuesta;
+	innerDatos();
+	
+	let cardMostrar=document.querySelector(".mostrar");
+	cardMostrar.style.display="grid";
+
+	let cardSolicitar=document.querySelector(".solicitar");
+	cardSolicitar.style.display="none";
 }
 
 
@@ -98,19 +101,11 @@ function datosDeForm(e){
 	coordenadas[0]=parseFloat(coordenadas[0]);
 	coordenadas[1]=parseFloat(coordenadas[1]);
 
-	api.lat=coordenadas[0]
-	api.lon=coordenadas[1]
-	
-	defineUrlSolicitud();	
+	api.lat=coordenadas[0];
+	api.lon=coordenadas[1];
+
 	solicitarDatos();
 }
 
-
-function afterFetch(respuesta){
-	datosCapture=respuesta;
-	dataFilter();
-	innerDatos();
-	
-	let card=document.querySelector(".mostrar");
-	card.style.display="grid";
-}
+const buttonActualizar=document.querySelector(".mostrarFooter button");
+buttonActualizar.addEventListener("click",solicitarDatos,false);

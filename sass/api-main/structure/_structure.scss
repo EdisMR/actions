@@ -20,6 +20,7 @@
 	@media screen and (max-width:600px){
 		grid-gap:initial;
 		grid-template-columns: 1fr;
+		margin: 5px;
 	}
 }
 
@@ -62,6 +63,10 @@
 .inputContainer{
 	margin: 0;
 	padding: 0;
+	input{
+		border: 2px solid rgba(10,10,10,.3);
+		padding: 5px;
+	}
 }
 
 .buttons{
@@ -91,6 +96,16 @@
 	}
 }
 
+.btnSendHelper{
+	font-size: .9rem;
+	opacity: .8;
+	span{
+		color: rgb(0, 0, 255);
+		background-color: rgba(137, 43, 226, 0.096);
+		user-select: text;
+	}
+}
+
 /* ******************************* */
 /* ******** Mostrar Datos ************ */
 /* ******************************* */
@@ -103,10 +118,11 @@
 	margin: 20px;
 	padding: 10px;
 	border: 2px solid rgba(100,100,100,.5);
-	background-color: #eb6e4be8;
-	color: rgb(238, 238, 238);
+	background-color: #4682b4;
+	color: #e4e4e4;
 	font-size: 20px;
 	@media screen and (max-width:600px){
+		margin: 5px;
 		grid-template-columns: 1fr;
 	}
 }
@@ -117,6 +133,9 @@
 .mostrarFooter{
 	grid-column-start: 1;
 	grid-column-end: -1;
+	button{
+		font-size: 12px;
+	}
 }
 
 /* ******************************* */
@@ -143,21 +162,70 @@
 }
 
 
-.cardBody{}
-.temp{}
-.feels{}
-.tempMax{}
-.tempMin{}
+.cardBody{
+	span{}
+}
+.feels{
+	span{}
+}
+.sunrise{
+	span{}
+}
+.sunset{
+	span{}
+}
+.humidity{
+	span{}
+}
 
-.itemImg{}
+/* En la columna de temperatura */
+.itemImg{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+	@media screen and (max-width:600px) {
+		grid-template-columns: 1fr;
+	}
+}
+.temperatureItem{
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    align-content: center;
+}
+.temp{
+	flex: none;
+	width: 100%;
+	font-size: 40px;
+	text-align: center;
+}
+.tempMax,.tempMin{
+	flex: auto;
+	width: 4ch;
+	text-align:center;
+	padding: 10px;
+}
+
+
 .cardImg{
 	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
+	flex-wrap: wrap;
+	align-items: baseline;
+	flex-direction: column;
 	div{
-		font-size: 40px;
-		display:inline-block;
+		width: 100%;
+		display: block;
+		text-align: center;
+		img{
+			width: 100px;
+			height: auto;
+			margin: 0 auto;
+		}
 	}
-	img{width: 100px;height: auto;}
 }
-.descrip{display: block;text-align: center;}
+
+.descrip{
+	display: block;
+	text-align: center;
+}
