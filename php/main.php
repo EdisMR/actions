@@ -1,0 +1,174 @@
+<?php
+
+function headerHTML(){
+?>
+	<header class="glass">
+
+		<!-- title -->
+		<section class="block">
+			<article class="header-title">
+				<div>
+					<h1>Titulo</h1>
+				</div>
+				<div>
+					<button>
+						<!-- Down -->
+						&#x25BC;
+
+						<!-- Up -->
+						<!-- &#x25B2; -->
+					</button>
+				</div>
+			</article>
+		</section>
+
+		<!-- URLs -->
+		<section class="block">
+			<nav class="header-enlaces">
+				<ul>
+					<li>
+						<a href="/index.html" rel="noopener noreferrer">
+							<div>
+								<span class="ms-Icon ms-Icon--Home"></span>
+							</div>
+							<div>
+								Inicio
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="/html/formulario.html" rel="noopener noreferrer">
+							<div>
+								<span class="ms-Icon ms-Icon--OfficeFormsLogo24"></span>
+							</div>
+							<div>
+								Formulario
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="/html/galeria.html" rel="noopener noreferrer">
+							<div>
+								<span class="ms-Icon ms-Icon--SamsungGallery"></span>
+							</div>
+							<div>
+								Galería
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="/html/carruseles.html" rel="noopener noreferrer">
+							<div>
+								<span class="ms-Icon ms-Icon--PanoIndicator"></span>
+							</div>
+							<div>
+								Carruseles
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="/html/api.html" rel="noopener noreferrer">
+							<div>
+								<span class="ms-Icon ms-Icon--AzureAPIManagement"></span>
+							</div>
+							<div>
+								API en uso
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="/index.html#juegos-html" rel="noopener noreferrer">
+							<div>
+								<span class="ms-Icon ms-Icon--Game"></span>
+							</div>
+							<div>
+								Juegos HTML5
+							</div>
+						</a>
+					</li>
+					<li>
+						<a rel="noopener noreferrer" id="accesibilityButton">
+							<div>
+								<span class="ms-Icon ms-Icon--AccessibiltyChecker"></span>
+							</div>
+							<div>
+								Accesibilidad
+							</div>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</section>
+
+
+		<!-- Eventos -->
+		<section class="block">
+			<article class="header-events">
+				<div>
+					<p>Posicion del mouse:</p>
+					<span class="inner-event"></span>
+				</div>
+				<div>
+					<p>Tecla presionada:</p>
+					<span class="inner-event"></span>
+				</div>
+			</article>
+		</section>
+
+	</header>
+	
+	<?php
+}
+
+
+function footerHTML(){
+?>
+	<footer>
+			<ul class="glass">
+				<li>
+					<a href="https://github.com/EdisAnthony" target="_blank" rel="noopener noreferrer" title="Git">
+						<div>
+							<span class="ms-Icon ms-Icon--GitGraph"></span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a title="email"><!-- EMAIL -->
+						<div>
+							<span class="ms-Icon ms-Icon--Mail"></span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a title="whatsapp"><!-- WHATSAPP -->
+						<div>
+							<figure>
+								<img src="/multimedia/icons/logo-whatsapp.svg" alt="">
+							</figure>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="index.html" rel="noopener noreferrer" title="Website">
+						<div>
+							<span class="ms-Icon ms-Icon--Website"></span>
+						</div>
+					</a>
+				</li>
+			</ul>
+	</footer>
+
+	<?php
+
+}
+
+$elm=$_POST["elm"];
+if($elm=="header"){
+	headerHTML();
+}
+if($elm=="footer"){
+	footerHTML();
+}
+
+
+?>
