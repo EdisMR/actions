@@ -29,9 +29,12 @@ fetch(window.location.origin+"/php/cookieEval.php")
 )
 
 window.addEventListener("DOMContentLoaded",()=>{
-	headerCreator();
-	footerCreator()
+	if(window.location.pathname!="/html/login.html"){
+		headerCreator();
+		footerCreator();
+	}
 },false);
+
 
 
 function headerCreator(){
@@ -65,11 +68,11 @@ function footerCreator(){
 	.then(function(resp){
 		document.body.insertAdjacentHTML("beforeend",resp)
 
-		setTimeout(()=>{
-			document.body.insertAdjacentHTML("beforeend",
-				"<script src=' "+window.location.origin+ "/js/main.js '>"
-			)
-		})
+		let scriptSRC=document.createElement("script");
+		let srcURL=window.location.origin+ "/js/main.js";
+		scriptSRC.setAttribute("src",srcURL);
+
+		document.head.appendChild(scriptSRC);
 
 	})
 }

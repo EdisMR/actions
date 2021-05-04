@@ -140,6 +140,3 @@ btnAccesibilidad.addEventListener("click", accesibilitySwitch, false);
 function accesibilitySwitch() {
 	console.log("accesibilitySwitch");
 }
-
-//!SOLICIONAR: no se ejecuta el js despues de haber terminado la carga de la pagina
-console.log("Ahora si")
