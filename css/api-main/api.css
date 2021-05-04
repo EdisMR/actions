@@ -1,1 +1,221 @@
-.block{display:block;margin:0;padding:0}.solicitar{border:2px solid rgba(100,100,100,.5);display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto;grid-gap:20px 20px;margin:20px}@media screen and (max-width: 600px){.solicitar{grid-gap:initial;grid-template-columns:1fr;margin:5px}}.textContainer{padding:10px}.bigHelp{font-size:35px}@media screen and (max-width: 600px){.bigHelp{font-size:30px;margin:2px}}.notaPie{font-size:10px}.formContainer{display:flex;justify-content:center;align-items:center}@media screen and (max-width: 600px){.formContainer{margin-bottom:20px}}.formItem{margin:0;padding:0}.textInput{margin:0;padding:0}.inputContainer{margin:0;padding:0}.inputContainer input{border:2px solid rgba(10,10,10,.3);padding:5px}.buttons{display:flex;align-items:center;justify-content:center}.btn{display:inline-block;margin-top:20px;width:100%}.btn:first-child{margin-right:5px}.btn:last-child{margin-left:5px}.btn button{display:flex;width:100%;height:auto;justify-content:center}.btn button span{font-size:20px;margin:5px}.btnSendHelper{font-size:.9rem;opacity:.8}.btnSendHelper span{color:blue;background-color:rgba(137,43,226,.096);user-select:text}.mostrar{display:none;grid-template-columns:1fr 1fr;grid-template-rows:auto;grid-gap:20px 20px;margin:20px;padding:10px;border:2px solid rgba(100,100,100,.5);background-color:#4682b4;color:#e4e4e4;font-size:20px}@media screen and (max-width: 600px){.mostrar{margin:5px;grid-template-columns:1fr}}.mostrarFooter{grid-column-start:1;grid-column-end:-1}.mostrarFooter button{font-size:12px}.cardHeader{margin-bottom:10px}.cardHeader .titulo{font-size:40px}.cardHeader .subtitulo div{display:inline-block}.cardHeader .subtitulo .lat{color:#6df5ff}.cardHeader .subtitulo .long{color:#6df5ff}.itemImg{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto}@media screen and (max-width: 600px){.itemImg{grid-template-columns:1fr}}.temperatureItem{display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;align-content:center}.temp{flex:none;width:100%;font-size:40px;text-align:center}.tempMax,.tempMin{flex:auto;width:4ch;text-align:center;padding:10px}.cardImg{display:flex;flex-wrap:wrap;align-items:baseline;flex-direction:column}.cardImg div{width:100%;display:block;text-align:center}.cardImg div img{width:100px;height:auto;margin:0 auto}.descrip{display:block;text-align:center}/*# sourceMappingURL=api.css.map */
+/* ******************************* */
+/* ********** Generales ************ */
+/* ******************************* */
+.block {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* ******************************* */
+/* ****** Formulario solicitar datos **** */
+/* ******************************* */
+.solicitar {
+  border: 2px solid rgba(100, 100, 100, 0.5);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px 20px;
+  margin: 20px;
+}
+@media screen and (max-width: 600px) {
+  .solicitar {
+    grid-gap: initial;
+    grid-template-columns: 1fr;
+    margin: 5px;
+  }
+}
+
+.textContainer {
+  padding: 10px;
+}
+
+.bigHelp {
+  font-size: 35px;
+}
+@media screen and (max-width: 600px) {
+  .bigHelp {
+    font-size: 30px;
+    margin: 2px;
+  }
+}
+
+.notaPie {
+  font-size: 10px;
+}
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  .formContainer {
+    margin-bottom: 20px;
+  }
+}
+
+.formItem {
+  margin: 0;
+  padding: 0;
+}
+
+.textInput {
+  margin: 0;
+  padding: 0;
+}
+
+.inputContainer {
+  margin: 0;
+  padding: 0;
+}
+.inputContainer input {
+  border: 2px solid rgba(10, 10, 10, 0.3);
+  padding: 5px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  width: 100%;
+}
+.btn:first-child {
+  margin-right: 5px;
+}
+.btn:last-child {
+  margin-left: 5px;
+}
+.btn button {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+}
+.btn button span {
+  font-size: 20px;
+  margin: 5px;
+}
+
+.btnSendHelper {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+.btnSendHelper span {
+  color: blue;
+  background-color: rgba(137, 43, 226, 0.096);
+  user-select: text;
+}
+
+/* ******************************* */
+/* ******** Mostrar Datos ************ */
+/* ******************************* */
+.mostrar {
+  display: none;
+  /* grid || none */
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px 20px;
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid rgba(100, 100, 100, 0.5);
+  background-color: #4682b4;
+  color: #e4e4e4;
+  font-size: 20px;
+}
+@media screen and (max-width: 600px) {
+  .mostrar {
+    margin: 5px;
+    grid-template-columns: 1fr;
+  }
+}
+
+.mostrarFooter {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+.mostrarFooter button {
+  font-size: 12px;
+}
+
+/* ******************************* */
+/* ************ DATOS DE TEMP **** */
+/* ******************************* */
+.cardHeader {
+  margin-bottom: 10px;
+}
+.cardHeader .titulo {
+  font-size: 40px;
+}
+.cardHeader .subtitulo div {
+  display: inline-block;
+}
+.cardHeader .subtitulo .lat {
+  color: #6df5ff;
+}
+.cardHeader .subtitulo .long {
+  color: #6df5ff;
+}
+
+/* En la columna de temperatura */
+.itemImg {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
+@media screen and (max-width: 600px) {
+  .itemImg {
+    grid-template-columns: 1fr;
+  }
+}
+
+.temperatureItem {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  align-content: center;
+}
+
+.temp {
+  flex: none;
+  width: 100%;
+  font-size: 40px;
+  text-align: center;
+}
+
+.tempMax, .tempMin {
+  flex: auto;
+  width: 4ch;
+  text-align: center;
+  padding: 10px;
+}
+
+.cardImg {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  flex-direction: column;
+}
+.cardImg div {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+.cardImg div img {
+  width: 100px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.descrip {
+  display: block;
+  text-align: center;
+}
+
+/*# sourceMappingURL=api.css.map */

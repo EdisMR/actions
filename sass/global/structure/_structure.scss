@@ -15,17 +15,12 @@ img{
 
 .loader{
 	background-color: #333;
-	display: grid;
-	place-items: center;
+	display: inline-block;
 	position: fixed;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
 	z-index: 100;
-	img{
-		width: 100px;
-		animation: rotar 1s linear infinite;
-	}
 }
 
 @keyframes rotar{
