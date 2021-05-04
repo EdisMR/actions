@@ -1,13 +1,10 @@
 function removeLoader(){
-
-	setTimeout(()=>{
-		if(window.evalResult){
-			let quienes=Array.from(document.getElementsByClassName("loader"))
-			quienes.forEach(elm=>{
-				elm.style.display="none";
-			})
-		}
-	},500);
+	if(window.evalResult){
+		let quienes=Array.from(document.getElementsByClassName("loader"))
+		quienes.forEach(elm=>{
+			elm.style.display="none";
+		})
+	}
 }
 removeLoader();
 
@@ -99,9 +96,7 @@ function closeMenu() {
 /* ****************************************** */
 /* ******************** 000 **************** */
 /* ***************************************** */
-window.addEventListener("load", w000, false);
 function w000() {
-	window.removeEventListener("load", w000, false);
 	try {
 		let Y = document.querySelector("body a[href*='000webhost']").parentNode;
 		Y.id = "w000";
@@ -110,6 +105,7 @@ function w000() {
 		/* console.log(e); */
 	}
 }
+w000();
 
 
 /* **************************************************** */
