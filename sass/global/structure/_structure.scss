@@ -178,6 +178,19 @@ footer{
 	}
 }
 
-a[href = '##']{
+/* a[href = '##']{
 	pointer-events: none;
+} */
+
+#helpNode{
+	background-color: steelblue;
+	border-radius: 10px;
+	color: white;
+	padding: 10px 20px 10px 20px;
+	display: none; /* none || inline-block */
+	position: fixed;
+	left: 50vw;
+	top: 50vh;
+	transform: translate(-50%,-50%);
+	box-shadow: 10px 10px 15px rgba(56, 56, 56, 0.377)
 }

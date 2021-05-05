@@ -136,3 +136,24 @@ btnAccesibilidad.addEventListener("click", accesibilitySwitch, false);
 function accesibilitySwitch() {
 	console.log("accesibilitySwitch");
 }
+
+
+/* HELP en enlaces # */
+let ayuda=document.createElement("div");
+ayuda.setAttribute("id","helpNode")
+ayuda.innerHTML="<p>Sitio en construcción</p>";
+document.body.appendChild(ayuda);
+
+var enlacesGato=document.querySelectorAll("a[href = '##']");
+enlacesGato.forEach(elm=>{
+	elm.parentNode.addEventListener("click",helpNodeAppear,false);
+})
+
+function helpNodeAppear(){
+	let elemento1=document.getElementById("helpNode");
+	elemento1.style.display="inline-block";
+
+	setTimeout(()=>{
+		elemento1.style.display="none";
+	},2000)
+}

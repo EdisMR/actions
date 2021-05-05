@@ -47,7 +47,7 @@ function headerHTML(){
 						</a>
 					</li>
 					<li>
-						<a href="/html/galeria.html" rel="noopener noreferrer">
+						<a href="##" rel="noopener noreferrer">
 							<div>
 								<span class="ms-Icon ms-Icon--SamsungGallery"></span>
 							</div>
@@ -87,7 +87,7 @@ function headerHTML(){
 						</a>
 					</li>
 					<li>
-						<a rel="noopener noreferrer" id="accesibilityButton">
+						<a href="##" rel="noopener noreferrer" id="accesibilityButton">
 							<div>
 								<span class="ms-Icon ms-Icon--AccessibiltyChecker"></span>
 							</div>
