@@ -20,28 +20,15 @@
 	<div class="loader">
 	</div>
 	<main>
-		<section class="whoVSwho">
-			<div class="perComp">
-				<div>Compu</div>
-				<div>VS</div>
-				<div>Persona</div>
-			</div>
-
-			<div class="perComp">
-				<div>Persona</div>
-				<div>VS</div>
-				<div>Persona</div>
-			</div>
-		</section>
 
 		<section class="nombres">
 			<form>
 				<div class="inputsName">
-					<input type="text" name="user1" minlength="2" maxlength="20">
+					<input type="text" name="user1" minlength="2" maxlength="20" autocomplete="off">
 				</div>
 				<div>VS</div>
 				<div class="inputsName">
-					<input type="text" name="user2" minlength="2" maxlength="20">
+					<input type="text" name="user2" minlength="2" maxlength="20" autocomplete="off">
 				</div>
 				<div class="btnSubmit">
 					<button type="submit">Iniciar</button>
@@ -50,7 +37,20 @@
 		</section>
 
 		<section id="juego">
-			Content
+			<section class="turno">
+				Turno de <span>User1</span>
+			</section>
+			<div id="grid">
+				<div data-x="0" data-y="0"><span>X</span></div>
+				<div data-x="0" data-y="1"></div>
+				<div data-x="0" data-y="2"></div>
+				<div data-x="1" data-y="0"></div>
+				<div data-x="1" data-y="1"></div>
+				<div data-x="1" data-y="2"><span>O</span></div>
+				<div data-x="2" data-y="0"></div>
+				<div data-x="2" data-y="1"></div>
+				<div data-x="2" data-y="2"></div>
+			</div>
 		</section>
 	</main>
 </body>

@@ -4,50 +4,17 @@ main{
     flex-wrap:wrap;
     justify-content:center;
     align-items:center;
+    min-height: 90vh;
 }
 
-/* //! containerGame */
-@mixin containerGame{
+/* Form de nombres */
+.nombres{
     background-color:rgba(70, 130, 180, .8);
-    display:flex;
+    display:none;/* none | flex */
     flex-wrap:wrap;
     justify-content:center;
     align-items:center;
     padding:20px;
-}
-
-/* //! containerGame */
-.whoVSwho{
-    @include containerGame;
-    display: none;
-}
-
-.perComp{
-    display:inline-block;
-    padding:20px;
-    background-image: linear-gradient(29deg, #c0c0c0, #d9d9d9,#b3b3b3, #e2e2e2);
-    margin:10px;
-    font-size:40px;
-    color:#343636;
-    font-weight:600;
-    text-align:center;
-    cursor:pointer;
-
-    &:hover{
-        background-image: linear-gradient(29deg, #e4e2e2, #d9d9d9,#d9d7d7, #e2e2e2);
-        font-weight:800;
-    }
-    &:active{
-        background-image: linear-gradient(29deg, #c0c0c0, #a6a4a4,#7d7b7b, #e2e2e2);
-        font-weight:600;
-    }
-}
-
-
-/* Form de nombres */
-/* //! containerGame */
-.nombres{
-    @include containerGame;
     div{
         display: block;
         text-align: center;
@@ -83,19 +50,40 @@ main{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 #juego{
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
+
+.turno{
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 20px;
+    color: white;
+    width: 80vw;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+#grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 10px 10px;
+    div{
+        height: 100px;
+        width: 100px;
+        background-color: steelblue;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        font-weight: 900;
+        color: rgb(196, 211, 224);
+    }
+}
+
