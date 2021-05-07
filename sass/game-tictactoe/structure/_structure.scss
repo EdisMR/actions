@@ -1,0 +1,101 @@
+main{
+    background-image: linear-gradient(195deg, #252525, #3a3939,#353030, #252525);
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+}
+
+/* //! containerGame */
+@mixin containerGame{
+    background-color:rgba(70, 130, 180, .8);
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+/* //! containerGame */
+.whoVSwho{
+    @include containerGame;
+    display: none;
+}
+
+.perComp{
+    display:inline-block;
+    padding:20px;
+    background-image: linear-gradient(29deg, #c0c0c0, #d9d9d9,#b3b3b3, #e2e2e2);
+    margin:10px;
+    font-size:40px;
+    color:#343636;
+    font-weight:600;
+    text-align:center;
+    cursor:pointer;
+
+    &:hover{
+        background-image: linear-gradient(29deg, #e4e2e2, #d9d9d9,#d9d7d7, #e2e2e2);
+        font-weight:800;
+    }
+    &:active{
+        background-image: linear-gradient(29deg, #c0c0c0, #a6a4a4,#7d7b7b, #e2e2e2);
+        font-weight:600;
+    }
+}
+
+
+/* Form de nombres */
+/* //! containerGame */
+.nombres{
+    @include containerGame;
+    div{
+        display: block;
+        text-align: center;
+        margin: 5px;
+        font-size: 20px;
+        color: white;
+    }
+}
+
+.inputsName{
+    input{
+        background-color: transparent;
+        border: 2px solid white;
+        color: white;
+    }
+}
+
+.btnSubmit{
+    button{
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        background-color: #eee;
+        &:hover{
+            background-color: #fff;
+        }
+        &:active{
+            background-color: #ddd;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#juego{
+    display: none;
+}

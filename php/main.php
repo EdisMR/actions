@@ -149,7 +149,7 @@ function footerHTML(){
 					</a>
 				</li>
 				<li>
-					<a href="index.html" rel="noopener noreferrer" title="Website">
+					<a href="/index.html" rel="noopener noreferrer" title="Website">
 						<div>
 							<span class="ms-Icon ms-Icon--Website"></span>
 						</div>
