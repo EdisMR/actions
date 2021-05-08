@@ -24,6 +24,7 @@ a{
 /* ********************************************** */
 header{
 	touch-action: none;
+	z-index: 100;
 	ul{
 		li{
 			&:hover{

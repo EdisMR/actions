@@ -43,7 +43,10 @@ function listenerDivs(evento){
 	let claseParaInner="";
 	turno?claseParaInner=classInner.userX:claseParaInner=classInner.userO;
 
-	innerTurnIcon(e.target.querySelector(".ms-Icon"),claseParaInner);
+	if(e.target.dataset.occupied=="false"){
+		innerTurnIcon(e.target.querySelector(".ms-Icon"),claseParaInner);
+		e.target.dataset.occupied="true";
+	}
 	switchTurno();
 	innerTurnUser();
 }

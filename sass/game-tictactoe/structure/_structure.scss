@@ -19,6 +19,7 @@ main{
     justify-content:center;
     align-items:center;
     padding:20px;
+    max-width: 90vw;
     div{
         display: block;
         text-align: center;
@@ -38,6 +39,7 @@ main{
         background-color: transparent;
         border: 2px solid white;
         color: white;
+        width: 150px;
     }
 }
 
