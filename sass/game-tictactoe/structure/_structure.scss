@@ -4,13 +4,17 @@ main{
     flex-wrap:wrap;
     justify-content:center;
     align-items:center;
-    min-height: 90vh;
+    min-height: 90vh;;
+}
+
+.d-None{
+    display: none !important;
 }
 
 /* Form de nombres */
 .nombres{
     background-color:rgba(70, 130, 180, .8);
-    display:none;/* none | flex */
+    display:flex;/* none | flex */
     flex-wrap:wrap;
     justify-content:center;
     align-items:center;
@@ -25,6 +29,11 @@ main{
 }
 
 .inputsName{
+    span{
+        border: 2px solid white;
+        padding: 2px;
+        border-right: 0px;
+    }
     input{
         background-color: transparent;
         border: 2px solid white;
@@ -51,7 +60,7 @@ main{
 
 
 #juego{
-    display: flex;
+    display: flex; /* none | flex */
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -84,6 +93,7 @@ main{
         font-size: 50px;
         font-weight: 900;
         color: rgb(196, 211, 224);
+        cursor: pointer;
     }
 }
 
