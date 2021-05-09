@@ -1,20 +1,21 @@
 /* Variables */
 const formulario=document.forms[0];
-
 var turno=true; /* Debe ser true para turno de usuario 1 y false para turno de usuario 2 */
 const innerUserHTML=document.querySelector(".turno span");
-
 var users={
 	user1 : "", /* Es X */
 	user2 : "", /* Es O */
+	winner:"",
 }
-
 const classInner={
 	userO:"ms-Icon--CircleRing", /* classlist add */
 	userX:"ms-Icon--Cancel", /* classlist add */
 }
-
 const gridItems=document.querySelectorAll("#grid div");
+const gridItemsSpan=document.querySelectorAll("#grid div span");
+var contadorDeTurnos=0;
+
+
 
 /* Definir usuarios del juego con el form */
 formulario.addEventListener("submit",defineUsers,false);
@@ -30,6 +31,11 @@ function defineUsers(e){
 }
 
 
+/* ******************************************* */
+/********* Eventos al hacer clic en el cuadro *********/
+/* ******************************************* */
+
+/* Al hacer clic en un elemento del grid */
 gridItems.forEach(elm=>{
 	elm.addEventListener("click",listenerDivs,false);
 })
@@ -39,20 +45,25 @@ function listenerDivs(evento){
 	let posX=parseInt(e.target.dataset.x);
 	let posY=parseInt(e.target.dataset.y);
 
-	/* Llenar elemento con el icono */
-	let claseParaInner="";
-	turno?claseParaInner=classInner.userX:claseParaInner=classInner.userO;
-
-	if(e.target.dataset.occupied=="false"){
-		innerTurnIcon(e.target.querySelector(".ms-Icon"),claseParaInner);
-		e.target.dataset.occupied="true";
+	llenarConIcono(e.target);
+	
+	contadorDeTurnos++;
+	if(contadorDeTurnos>4){
+		evaluarGanador();
 	}
+
 	switchTurno();
 	innerTurnUser();
 }
 
-function innerTurnIcon(where,classIn){
-	where.classList.add(classIn);
+function llenarConIcono(donde){
+	/* Llenar elemento con el icono */
+	let claseParaInner="";
+	turno?claseParaInner=classInner.userX:claseParaInner=classInner.userO;
+	if(donde.dataset.occupied=="false"){
+		donde.querySelector(".ms-Icon").classList.add(claseParaInner);
+		donde.dataset.occupied="true";
+	}
 }
 
 function switchTurno(){
@@ -67,4 +78,95 @@ function innerTurnUser(){
 	if(!turno){
 		innerUserHTML.innerHTML=users.user2;
 	}
+}
+
+/* ***************************************** */
+/* ********Funcion para evaluar el ganador******* */
+/* ***************************************** */
+function evaluarGanador(icono){
+	let hayGanador=false;
+	let comparador;
+	if(turno){
+		comparador=classInner.userX;
+	}else{
+		comparador=classInner.userO;
+	}
+
+	/* EVALUADOR AQUI */
+	if(gridItemsSpan[0].classList[1]==comparador &&
+		gridItemsSpan[1].classList[1]==comparador &&
+		gridItemsSpan[2].classList[1]==comparador	){
+			hayGanador=true;
+	}
+		
+	if(gridItemsSpan[3].classList[1]==comparador &&
+		gridItemsSpan[4].classList[1]==comparador &&
+		gridItemsSpan[5].classList[1]==comparador
+	){
+		hayGanador=true;
+	}
+
+	if(gridItemsSpan[6].classList[1]==comparador &&
+		gridItemsSpan[7].classList[1]==comparador &&
+		gridItemsSpan[8].classList[1]==comparador
+	){
+		hayGanador=true;
+	}
+
+	if(gridItemsSpan[0].classList[1]==comparador &&
+		gridItemsSpan[3].classList[1]==comparador &&
+		gridItemsSpan[6].classList[1]==comparador
+	){
+		hayGanador=true;
+	}
+
+	if(gridItemsSpan[1].classList[1]==comparador &&
+		gridItemsSpan[4].classList[1]==comparador &&
+		gridItemsSpan[7].classList[1]==comparador
+	){
+		hayGanador=true;
+	}
+
+	if(gridItemsSpan[2].classList[1]==comparador &&
+		gridItemsSpan[5].classList[1]==comparador &&
+		gridItemsSpan[8].classList[1]==comparador
+	){
+		hayGanador=true;
+	}
+
+	if(gridItemsSpan[0].classList[1]==comparador &&
+		gridItemsSpan[4].classList[1]==comparador &&
+		gridItemsSpan[8].classList[1]==comparador
+	){
+		hayGanador=true;
+	}
+
+	if(gridItemsSpan[2].classList[1]==comparador &&
+		gridItemsSpan[4].classList[1]==comparador &&
+		gridItemsSpan[6].classList[1]==comparador
+	){
+		hayGanador=true;
+	}
+
+	/* cuando detecta gandor, entonces: */
+	if(turno && hayGanador){
+		users.winner=users.user1;
+	}
+	if(!turno && hayGanador){
+		users.winner=users.user2;
+	}
+	if(hayGanador){
+		mostrarGanador();
+	}
+}
+
+function mostrarGanador(){
+	gridItems.forEach(elm=>{
+		elm.removeEventListener("click",listenerDivs,false);
+	})
+
+	document.querySelector(".turno").classList.add("d-None");
+	document.getElementById("mostrarGanador").classList.remove("d-None");
+
+	document.querySelector("#mostrarGanador .ganadorInner").innerHTML=users.winner;
 }

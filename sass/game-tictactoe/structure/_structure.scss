@@ -4,7 +4,8 @@ main{
     flex-wrap:wrap;
     justify-content:center;
     align-items:center;
-    min-height: 90vh;;
+    min-height: 90vh;
+    flex-direction: column-reverse;
 }
 
 .d-None{
@@ -99,3 +100,21 @@ main{
     }
 }
 
+.ventanaGanador{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	align-content: center;
+    background-color: steelblue;
+    color: whitesmoke;
+    padding: 10px;
+    text-align: center;
+	font-size: 40px;
+    margin-bottom: 20px;
+	p{
+		flex: none;
+		display: block;
+		width: 100%;
+        margin: 10px;
+	}
+}
