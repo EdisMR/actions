@@ -31,7 +31,9 @@ form{
 
 .cardInputGroup{
 	width: 400px;
-
+	&:first-child{
+		margin-right: 20px !important;
+	}
 }
 
 .formHeaderCard{

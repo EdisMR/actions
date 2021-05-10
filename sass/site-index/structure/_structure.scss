@@ -2,7 +2,7 @@
 	padding-top: 0px;
 	padding-left: 20px;
 	padding-right: 20px;
-	padding-bottom: 20px;
+	padding-bottom: 50px;
 	display: grid;
 	gap: 20px;
 }
@@ -24,6 +24,8 @@
 #index-paginas,#juegos-html{
 	padding-left: 20px;
 	margin: 0px;
+	margin-bottom: 20px;
+	margin-top: 30px;
 }
 
 .col2y1{
@@ -32,4 +34,9 @@
 
 .col4y2{
 	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#juegos-html{
+	margin-top: 30px;
+	margin-bottom: 20px;
 }
