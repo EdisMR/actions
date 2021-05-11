@@ -135,6 +135,7 @@
 	grid-column-end: -1;
 	button{
 		font-size: 12px;
+		padding: 5px;
 	}
 }
 
@@ -193,6 +194,7 @@
     justify-content: center;
     align-items: baseline;
     align-content: center;
+	color: #ffc55b;
 }
 .temp{
 	flex: none;

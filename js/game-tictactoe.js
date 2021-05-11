@@ -22,8 +22,13 @@ formulario.addEventListener("submit",defineUsers,false);
 function defineUsers(e){
 	evento=e;
 	evento.preventDefault();
-	users.user1=formulario.user1.value;
-	users.user2=formulario.user2.value;
+
+	if(formulario.user1.value!=formulario.user2.value){
+		users.user1=formulario.user1.value;
+		users.user2=formulario.user2.value;
+	}else{
+		return false;
+	}
 
 	document.querySelector(".nombres").classList.add("d-None");
 	document.getElementById("juego").classList.remove("d-None");
@@ -157,16 +162,25 @@ function evaluarGanador(icono){
 	}
 	if(hayGanador){
 		mostrarGanador();
+	}else{
+		if(contadorDeTurnos>=9){
+			document.querySelector(".turno").classList.add("d-None");
+			removeListeners();
+		}
 	}
 }
 
 function mostrarGanador(){
-	gridItems.forEach(elm=>{
-		elm.removeEventListener("click",listenerDivs,false);
-	})
+	removeListeners();
 
 	document.querySelector(".turno").classList.add("d-None");
 	document.getElementById("mostrarGanador").classList.remove("d-None");
 
 	document.querySelector("#mostrarGanador .ganadorInner").innerHTML=users.winner;
+}
+
+function removeListeners(){
+	gridItems.forEach(elm=>{
+		elm.removeEventListener("click",listenerDivs,false);
+	})
 }
