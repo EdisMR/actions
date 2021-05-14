@@ -79,12 +79,21 @@ function switchTurno(){
 function innerTurnUser(){
 	if(turno){
 		innerUserHTML.innerHTML=users.user1;
+		innerUserHTML.parentNode.classList.add("animatedWho");
+		innerUserHTML.parentNode.addEventListener("animationend",animatedWhoRemove)
 	}
 	if(!turno){
 		innerUserHTML.innerHTML=users.user2;
+		innerUserHTML.parentNode.classList.add("animatedWho");
+		innerUserHTML.parentNode.addEventListener("animationend",animatedWhoRemove)
 	}
 }
 
+function animatedWhoRemove(){
+	innerUserHTML.parentNode.classList.remove("animatedWho");
+	innerUserHTML.parentNode.removeEventListener("animationend",animatedWhoRemove);
+
+}
 /* ***************************************** */
 /* ********Funcion para evaluar el ganador******* */
 /* ***************************************** */

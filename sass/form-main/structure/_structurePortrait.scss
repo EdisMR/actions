@@ -22,6 +22,9 @@ form{
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	margin-bottom: 30px;
+	&:first-child{
+		margin-right: 0px !important;
+	}
 	.block{
 		width: 100%;
 	}
