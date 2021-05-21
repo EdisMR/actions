@@ -1,11 +1,34 @@
 main{
-    background-image: linear-gradient(195deg, #232323, #3a3939, #353030, #191717);
+    background-image: linear-gradient(195deg, #424242, #141414,#333,#141414, #424242);
+
+    background-size:100vw 800vh;
+
+    background-repeat: no-repeat;
+
+    animation: backgroundGame 15s linear infinite;
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
     align-items:center;
     min-height: 90vh;
     flex-direction: column-reverse;
+}
+@keyframes backgroundGame {
+    0%{
+        background-position:top;
+    }
+    25%{
+        background-position:center;
+    }
+    50%{
+        background-position:bottom;
+    }
+    75%{
+        background-position:center;
+    }
+    100%{
+        background-position:top;
+    }
 }
 
 .d-None{
