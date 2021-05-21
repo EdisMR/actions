@@ -190,7 +190,6 @@ function mostrarGanador(){
 
 	document.querySelector(".turno").classList.add("d-None");
 	document.getElementById("mostrarGanador").classList.remove("d-None");
-
 	document.querySelector("#mostrarGanador .ganadorInner").innerHTML=users.winner;
 }
 
@@ -213,7 +212,6 @@ function resetGame(){
 
 	document.getElementById("mostrarGanador").classList.add("d-None");
 	document.querySelector(".resetGame").classList.add("d-None");
-
 
 	addClickEventGrid();
 	contadorDeTurnos=0;
