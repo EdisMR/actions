@@ -31,7 +31,7 @@ function solicitarDatos(){
 	).then(
 		function(resp){
 			afterFetch(resp);
-			console.log("Datos Solicitados");
+			/* console.log("Datos Solicitados"); */
 		}
 	)
 }

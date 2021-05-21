@@ -13,7 +13,7 @@
 	<?php
 	?>
 	<script>
-		window.location.pathname="/html/formulario.html";
+		window.location.pathname="/html/formulario.php";
 	</script>
 </body>
 </html>

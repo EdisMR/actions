@@ -27,7 +27,7 @@ function headerHTML(){
 			<nav class="header-enlaces">
 				<ul>
 					<li>
-						<a href="/index.html" rel="noopener noreferrer">
+						<a href="/index.php" rel="noopener noreferrer">
 							<div>
 								<span class="ms-Icon ms-Icon--Home"></span>
 							</div>
@@ -37,7 +37,7 @@ function headerHTML(){
 						</a>
 					</li>
 					<li>
-						<a href="/html/formulario.html" rel="noopener noreferrer">
+						<a href="/html/formulario.php" rel="noopener noreferrer">
 							<div>
 								<span class="ms-Icon ms-Icon--OfficeFormsLogo24"></span>
 							</div>
@@ -57,7 +57,7 @@ function headerHTML(){
 						</a>
 					</li>
 					<li>
-						<a href="/html/carruseles.html" rel="noopener noreferrer">
+						<a href="/html/carruseles.php" rel="noopener noreferrer">
 							<div>
 								<span class="ms-Icon ms-Icon--PanoIndicator"></span>
 							</div>
@@ -67,7 +67,7 @@ function headerHTML(){
 						</a>
 					</li>
 					<li>
-						<a href="/html/api.html" rel="noopener noreferrer">
+						<a href="/html/api.php" rel="noopener noreferrer">
 							<div>
 								<span class="ms-Icon ms-Icon--AzureAPIManagement"></span>
 							</div>
@@ -77,7 +77,7 @@ function headerHTML(){
 						</a>
 					</li>
 					<li>
-						<a href="/index.html#juegos-html" rel="noopener noreferrer">
+						<a href="/index.php#juegos-html" rel="noopener noreferrer">
 							<div>
 								<span class="ms-Icon ms-Icon--Game"></span>
 							</div>
@@ -149,7 +149,7 @@ function footerHTML(){
 					</a>
 				</li>
 				<li>
-					<a href="/index.html" rel="noopener noreferrer" title="Website">
+					<a href="/index.php" rel="noopener noreferrer" title="Website">
 						<div>
 							<span class="ms-Icon ms-Icon--Website"></span>
 						</div>
@@ -161,14 +161,5 @@ function footerHTML(){
 	<?php
 
 }
-
-$elm=$_POST["elm"];
-if($elm=="header"){
-	headerHTML();
-}
-if($elm=="footer"){
-	footerHTML();
-}
-
 
 ?>

@@ -19,6 +19,10 @@
 </head>
 
 <body>
+	<?php
+		include_once "../php/main.php";
+		headerHTML();
+	?>
 	<div class="loader">
 	</div>
 
@@ -372,7 +376,9 @@
 
 	</main>
 
-
+	<?php
+		footerHTML();
+	?>
 </body>
 
 </html>

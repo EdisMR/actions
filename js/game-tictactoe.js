@@ -41,9 +41,13 @@ function defineUsers(e){
 /* ******************************************* */
 
 /* Al hacer clic en un elemento del grid */
-gridItems.forEach(elm=>{
-	elm.addEventListener("click",listenerDivs,false);
-})
+function addClickEventGrid(){
+	gridItems.forEach(elm=>{
+		elm.addEventListener("click",listenerDivs,false);
+	})
+}
+addClickEventGrid();
+
 function listenerDivs(evento){
 	e=evento;
 
@@ -171,9 +175,11 @@ function evaluarGanador(icono){
 	}
 	if(hayGanador){
 		mostrarGanador();
+		document.querySelector(".resetGame").classList.remove("d-None");
 	}else{
 		if(contadorDeTurnos>=9){
 			document.querySelector(".turno").classList.add("d-None");
+			document.querySelector(".resetGame").classList.remove("d-None");
 			removeListeners();
 		}
 	}
@@ -192,4 +198,24 @@ function removeListeners(){
 	gridItems.forEach(elm=>{
 		elm.removeEventListener("click",listenerDivs,false);
 	})
+}
+
+
+var buttonReset=document.querySelector(".resetGame button");
+buttonReset.addEventListener("click",resetGame,false);
+function resetGame(){
+
+	gridItemsSpan.forEach(elm=>{
+		elm.parentNode.dataset.occupied="false";
+		elm.classList.remove("ms-Icon--CircleRing");
+		elm.classList.remove("ms-Icon--Cancel");
+	})
+
+	document.getElementById("mostrarGanador").classList.add("d-None");
+	document.querySelector(".resetGame").classList.add("d-None");
+
+
+	addClickEventGrid();
+	contadorDeTurnos=0;
+
 }

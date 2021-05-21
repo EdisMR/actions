@@ -15,6 +15,12 @@
 </head>
 
 <body>
+
+	<?php
+		include_once "php/main.php";
+		headerHTML();
+	?>
+
 	<div class="loader">
 	</div>
 	
@@ -41,7 +47,7 @@
 				<div class="main-index-grid col2y1">
 					<section class="card">
 						<div class="card-header">
-							<h4><a href="html/formulario.html" rel="noopener noreferrer">Formulario</a></h4>
+							<h4><a href="html/formulario.php" rel="noopener noreferrer">Formulario</a></h4>
 						</div>
 						<div class="card-content">
 							<ul>
@@ -65,7 +71,7 @@
 					</section>
 					<section class="card">
 						<div class="card-header">
-							<h4><a href="html/carruseles.html" rel="noopener noreferrer">Carrusel/Presentacion</a></h4>
+							<h4><a href="html/carruseles.php" rel="noopener noreferrer">Carrusel/Presentacion</a></h4>
 						</div>
 						<div class="card-content">
 							<ul>
@@ -125,7 +131,7 @@
 					</section>
 					<section class="card">
 						<div>
-							<h4><a href="html/tictactoe.html" rel="noopener noreferrer">Tic tac toe</a></h4>
+							<h4><a href="html/tictactoe.php" rel="noopener noreferrer">Tic tac toe</a></h4>
 						</div>
 						<div>
 							<figure>
@@ -148,7 +154,9 @@
 		</section>
 	</main>
 
-	
+	<?php
+		footerHTML();
+	?>
 </body>
 
 </html>

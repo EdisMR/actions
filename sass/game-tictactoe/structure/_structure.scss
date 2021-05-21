@@ -130,3 +130,12 @@ main{
     animation-delay: 0s;
     animation-duration: .5s;
 }
+
+.resetGame{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    button{
+        padding: 5px;
+    }
+}

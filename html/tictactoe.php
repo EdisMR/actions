@@ -17,6 +17,10 @@
 </head>
 
 <body>
+	<?php
+		include_once "../php/main.php";
+		headerHTML();
+	?>
 	<div class="loader">
 	</div>
 	<main>
@@ -47,39 +51,39 @@
 
 			<div id="grid">
 				
-				<div data-x="0" data-y="0" data-occupied="false">
+				<div data-occupied="false">
 					<span class="ms-Icon"></span>
 				</div>
 				
-				<div data-x="0" data-y="1" data-occupied="false">
+				<div data-occupied="false">
 					<span class="ms-Icon"></span>
 				</div>
 				
-				<div data-x="0" data-y="2" data-occupied="false">
+				<div data-occupied="false">
 					<span class="ms-Icon"></span>
 				</div>
 				
-				<div data-x="1" data-y="0" data-occupied="false">
+				<div data-occupied="false">
 					<span class="ms-Icon"></span>
 				</div>
 				
-				<div data-x="1" data-y="1" data-occupied="false">
+				<div data-occupied="false">
 					<span class="ms-Icon"></span>
 				</div>
 				
-				<div data-x="1" data-y="2" data-occupied="false">
+				<div data-occupied="false">
 					<span class="ms-Icon"></span>
 				</div>
 				
-				<div data-x="2" data-y="0" data-occupied="false">
+				<div data-occupied="false">
 					<span class="ms-Icon"></span>
 				</div>
 				
-				<div data-x="2" data-y="1" data-occupied="false">
+				<div data-occupied="false">
 					<span class="ms-Icon"></span>
 				</div>
 				
-				<div data-x="2" data-y="2" data-occupied="false">
+				<div data-occupied="false">
 					<span class="ms-Icon"></span>
 				</div>
 			</div>
@@ -87,6 +91,9 @@
 		</section>
 
 		<!-- PARA MOSTRAR GANADOR -->
+		<div class="resetGame d-None">
+			<button>Reiniciar juego</button>
+		</div>
 		<section id="mostrarGanador" class="d-None">
 
 			<div class="ventanaGanador">
@@ -94,7 +101,11 @@
 				<p class="ganadorInner">Alguien</p>
 			</div>
 
+			
 		</section>
 	</main>
+	<?php
+		footerHTML();
+	?>
 </body>
 </html>
