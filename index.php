@@ -111,7 +111,7 @@
 				<div class="main-index-grid col4y2">
 					<section class="card">
 						<div>
-							<h4><a href="##" rel="noopener noreferrer">3 en raya</a></h4>
+							<h4><a href="html/conecta4.php" rel="noopener noreferrer">Conecta 4</a></h4>
 						</div>
 						<div>
 							<figure>

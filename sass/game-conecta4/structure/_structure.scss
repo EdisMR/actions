@@ -1,0 +1,35 @@
+main{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.definirJugadores{
+	background-color: steelblue;
+	padding: 20px;
+
+	form{
+		div{
+			margin: 20px auto 20px auto;
+			color: white;
+			input{
+				max-width: 150px;
+			}
+		}
+	}
+}
+
+.resetearInputs{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	button{
+		display: inline-block;
+		width: 49%;
+		height: 40px;
+	}
+}
+
+.d-none{
+	display:none;
+}
