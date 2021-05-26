@@ -33,3 +33,21 @@ main{
 .d-none{
 	display:none;
 }
+
+.game-container{
+	
+}
+
+.grid-container{
+	display: grid;
+	grid-template-columns: repeat(7,1fr);
+	grid-template-rows: repeat(5,1fr);
+	grid-gap: 5px;
+	/* border: 2px solid red; */
+	
+	div{
+		border: 2px solid rgba($color: black, $alpha: .3);
+		height: 80px;
+		width: 80px;
+	}
+}

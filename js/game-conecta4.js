@@ -22,6 +22,6 @@ function defineUsers(ev){
 
 function afterDefineUsers(){
 	document.querySelector(".definirJugadores").classList.add("d-none");
-	
+	document.querySelector(".game-container").classList.remove("d-none");
 }
 

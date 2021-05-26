@@ -40,7 +40,190 @@
 			</form>
 		</section>
 
+		
+		<section class="game-container d-none">
+			
+			<section class="player-inner">
+			</section>
+			
+			<section class="reset-container">
+			</section>
 
+			<section class="grid-container">
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-ocuppied="false"></span>
+				</div>
+
+
+
+			</section>
+		
+		</section>
 
 
 	</main>
