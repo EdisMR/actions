@@ -54,25 +54,26 @@ function listenerDivs(evento){
 	let posX=parseInt(e.target.dataset.x);
 	let posY=parseInt(e.target.dataset.y);
 
-	llenarConIcono(e.target);
 	
-	contadorDeTurnos++;
-	if(contadorDeTurnos>4){
+	
+	if(e.target.dataset.occupied=="false"){
+		llenarConIcono(e.target);
+		contadorDeTurnos++;
+		
 		evaluarGanador();
+		
+		switchTurno();
+		innerTurnUser();
 	}
 
-	switchTurno();
-	innerTurnUser();
 }
 
 function llenarConIcono(donde){
 	/* Llenar elemento con el icono */
 	let claseParaInner="";
 	turno?claseParaInner=classInner.userX:claseParaInner=classInner.userO;
-	if(donde.dataset.occupied=="false"){
-		donde.querySelector(".ms-Icon").classList.add(claseParaInner);
-		donde.dataset.occupied="true";
-	}
+	donde.querySelector(".ms-Icon").classList.add(claseParaInner);
+	donde.dataset.occupied="true";
 }
 
 function switchTurno(){
@@ -212,6 +213,8 @@ function resetGame(){
 
 	document.getElementById("mostrarGanador").classList.add("d-None");
 	document.querySelector(".resetGame").classList.add("d-None");
+
+	document.querySelector(".turno").classList.remove("d-None");
 
 	addClickEventGrid();
 	contadorDeTurnos=0;
