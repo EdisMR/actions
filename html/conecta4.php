@@ -51,171 +51,181 @@
 
 			<section class="grid-container">
 
-				<div>
+				<div class="columna1">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna2">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna3">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna4">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna5">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna6">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna7">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+
+
+
+				<div class="columna1">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna2">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna3">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna4">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna5">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna6">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna7">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+
+				<div class="columna1">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna2">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna3">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna4">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna5">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna6">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna7">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+
+
+				<div class="columna1">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna2">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna3">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna4">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna5">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna6">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna7">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+
+
+				<div class="columna1">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna2">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna3">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna4">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna5">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna6">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna7">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+
+
+				<div class="columna1">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna2">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna3">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna4">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna5">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna6">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
-				<div>
+				<div class="columna7">
 					<span class="ms-Icon" data-ocuppied="false"></span>
 				</div>
 
