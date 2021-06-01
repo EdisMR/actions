@@ -2,6 +2,7 @@ main{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap;
 }
 
 .definirJugadores{
@@ -10,10 +11,11 @@ main{
 
 	form{
 		div{
+			display: flex;
 			margin: 20px auto 20px auto;
 			color: white;
 			input{
-				max-width: 150px;
+				width: 100%;
 			}
 		}
 	}
@@ -42,7 +44,7 @@ main{
 	display: grid;
 	grid-template-columns: repeat(7,1fr);
 	grid-template-rows: repeat(5,1fr);
-	grid-gap: 5px;
+	grid-gap: 2px;
 	/* border: 2px solid red; */
 	
 	div{
@@ -65,5 +67,32 @@ main{
 	color: red;
 }
 .user2{
-	color: yellow;
+	color: rgb(241, 225, 0);
+}
+
+
+.innerTurnUser{
+	padding: 10px;
+	margin: 20px;
+	border: 1px solid steelblue;
+	border-radius: 10px;
+}
+
+.innerTurnUserAnimation{
+	animation-name: turnUserChange;
+	animation-duration: .5s;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+}
+
+@keyframes turnUserChange {
+	0%{
+		opacity: 0;
+		transform: rotateY(180deg);
+	}
+	100%{
+		opacity: 1;
+		transform: rotateY(360deg);
+	}
 }
