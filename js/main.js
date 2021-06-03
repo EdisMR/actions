@@ -157,3 +157,55 @@ function helpNodeAppear(){
 		elemento1.style.display="none";
 	},2000)
 }
+
+
+/* ****************************** */
+/* *********** DINO ************* */
+/* ****************************** */
+const dinoEd=document.getElementById("dino");
+
+window.addEventListener("contextmenu",dino,false);
+
+function dino(evento){
+	let e=evento;
+	e.preventDefault();
+
+	dinoEd.style.display="block";
+	dinoEd.style.left=positionDinoLeft(e.clientX)+"px";
+	dinoEd.style.top=positionDinoTop(e.clientY)+"px";
+
+	setTimeout(()=>{
+		dinoEd.style.display="none";
+	},500);
+}
+
+
+function positionDinoLeft(evVal){
+	let valor=evVal;
+	let mitadPantalla=window.screen.width/2;
+	let resultado=0;
+	let divWidth=document.getElementById("dino").clientWidth;
+
+	if(valor<mitadPantalla){
+		resultado=valor;
+	}
+	if(valor>mitadPantalla){
+		resultado=valor-divWidth;
+	}
+	return resultado;
+}
+
+function positionDinoTop(evVal){
+	let valor=evVal;
+	let mitadPantalla=window.screen.height/2;
+	let resultado=0;
+	let divHeight=document.getElementById("dino").clientHeight;
+
+	if(valor<mitadPantalla){
+		resultado=valor;
+	}
+	if(valor>mitadPantalla){
+		resultado=valor-divHeight;
+	}
+	return resultado;
+}

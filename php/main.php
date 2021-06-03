@@ -158,6 +158,9 @@ function footerHTML(){
 			</ul>
 	</footer>
 
+	<div id="dino">
+		<img src="/multimedia/icons/dino.svg"></svg>
+	</div>
 	<?php
 
 }
