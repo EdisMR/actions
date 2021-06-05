@@ -135,7 +135,7 @@
 						</div>
 						<div>
 							<figure>
-								<img src="https://picsum.photos/seed/picsum/300/300" alt="" title="carruseles">
+								<img src="multimedia/img/tictactoe.webp" alt="" title="carruseles">
 							</figure>
 						</div>
 					</section>

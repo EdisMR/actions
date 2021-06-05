@@ -4,6 +4,28 @@ main{
 	align-items: center;
 	flex-wrap: nowrap;
 	flex-direction: column;
+
+	background-image: linear-gradient(195deg, #424242, #141414,#333,#141414, #424242);
+    background-size:100vw 800vh;
+    background-repeat: no-repeat;
+    animation: backgroundGame 20s linear infinite;
+}
+@keyframes backgroundGame {
+    0%{
+        background-position:top;
+    }
+    25%{
+        background-position:center;
+    }
+    50%{
+        background-position:bottom;
+    }
+    75%{
+        background-position:center;
+    }
+    100%{
+        background-position:top;
+    }
 }
 
 .definirJugadores{
@@ -48,8 +70,7 @@ main{
 	display: grid;
 	grid-template-columns: repeat(7,1fr);
 	grid-template-rows: repeat(5,1fr);
-	grid-gap: 2px;
-	/* border: 2px solid red; */
+	grid-gap: 1px;
 	
 	div{
 		border: 2px solid rgba($color: black, $alpha: .3);
@@ -59,19 +80,19 @@ main{
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-color: transparent;
+		background-color: rgba(12, 45, 107,.5);
 	}
 }
 
 .divHover{
-	background-color: rgba($color: #aaa, $alpha: .2) !important;
+	background-color: rgba(12, 45, 107,.7) !important;
 }
 
 .user1{
-	color: red;
+	color: rgb(207, 0, 0);
 }
 .user2{
-	color: rgb(241, 225, 0);
+	color: rgb(189, 176, 0);
 }
 
 
@@ -82,6 +103,7 @@ main{
 	border-radius: 10px;
 	min-width: 150px;
 	text-align: center;
+	color: honeydew	;
 }
 
 .innerTurnUserAnimation{
