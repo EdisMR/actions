@@ -2,9 +2,27 @@ const formulario=document.forms[0];
 formulario.addEventListener("submit",defineUsers,false);
 
 const camposGrid=document.querySelectorAll(".grid-container div");
-
 const innerTurnDiv=document.querySelector(".innerTurnUser span");
 const innerTurnDivParent=document.querySelector(".innerTurnUser");
+
+/* Declarando matriz para guardar los divs y hacer con esto la evaluacion del ganador */
+const matrizGame=new Array(6);/* Filas */
+for(let i=0; i<matrizGame.length; i++) {
+    matrizGame[i] = new Array(7);/* Columnas */
+}
+
+/* Recorrer la matriz añadiendo los div de camposGrid */
+let contadorCamposGrid=0;
+for (let X=0;X < matrizGame.length;X++){
+	for (let Y=0;Y < matrizGame[X].length;Y++){
+		matrizGame[X][Y]=camposGrid[contadorCamposGrid];
+		
+		let n="columna" + (Y+1);
+		camposGrid[contadorCamposGrid].classList.add(n);
+		
+		contadorCamposGrid++;
+	}
+}
 
 var users={
 	user1:"",

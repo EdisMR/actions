@@ -51,181 +51,181 @@
 
 			<section class="grid-container">
 
-				<div class="columna1">
+				<div>
 					<span class="ms-Icon" data-occupied="false"></span>
 				</div>
 
-				<div class="columna2">
+				<div>
 					<span class="ms-Icon" data-occupied="false"></span>
 				</div>
 
-				<div class="columna3">
+				<div>
 					<span class="ms-Icon" data-occupied="false"></span>
 				</div>
 
-				<div class="columna4">
+				<div>
 					<span class="ms-Icon" data-occupied="false"></span>
 				</div>
 
-				<div class="columna5">
+				<div>
 					<span class="ms-Icon" data-occupied="false"></span>
 				</div>
 
-				<div class="columna6">
+				<div>
 					<span class="ms-Icon" data-occupied="false"></span>
 				</div>
 
-				<div class="columna7">
-					<span class="ms-Icon" data-occupied="false"></span>
-				</div>
-
-
-
-
-				<div class="columna1">
-					<span class="ms-Icon" data-occupied="false"></span>
-				</div>
-
-				<div class="columna2">
-					<span class="ms-Icon" data-occupied="false"></span>
-				</div>
-
-				<div class="columna3">
-					<span class="ms-Icon" data-occupied="false"></span>
-				</div>
-
-				<div class="columna4">
-					<span class="ms-Icon" data-occupied="false"></span>
-				</div>
-
-				<div class="columna5">
-					<span class="ms-Icon" data-occupied="false"></span>
-				</div>
-
-				<div class="columna6">
-					<span class="ms-Icon" data-occupied="false"></span>
-				</div>
-
-				<div class="columna7">
-					<span class="ms-Icon" data-occupied="false"></span>
-				</div>
-
-
-				<div class="columna1">
-					<span class="ms-Icon" data-occupied="false"></span>
-				</div>
-
-				<div class="columna2">
-					<span class="ms-Icon" data-occupied="false"></span>
-				</div>
-
-				<div class="columna3">
-					<span class="ms-Icon" data-occupied="false"></span>
-				</div>
-
-				<div class="columna4">
-					<span class="ms-Icon" data-occupied="false"></span>
-				</div>
-
-				<div class="columna5">
-					<span class="ms-Icon" data-occupied="false"></span>
-				</div>
-
-				<div class="columna6">
-					<span class="ms-Icon" data-occupied="false"></span>
-				</div>
-
-				<div class="columna7">
+				<div>
 					<span class="ms-Icon" data-occupied="false"></span>
 				</div>
 
 
 
-				<div class="columna1">
+
+				<div>
 					<span class="ms-Icon" data-occupied="false"></span>
 				</div>
 
-				<div class="columna2">
+				<div>
 					<span class="ms-Icon" data-occupied="false"></span>
 				</div>
 
-				<div class="columna3">
+				<div>
 					<span class="ms-Icon" data-occupied="false"></span>
 				</div>
 
-				<div class="columna4">
+				<div>
 					<span class="ms-Icon" data-occupied="false"></span>
 				</div>
 
-				<div class="columna5">
+				<div>
 					<span class="ms-Icon" data-occupied="false"></span>
 				</div>
 
-				<div class="columna6">
+				<div>
 					<span class="ms-Icon" data-occupied="false"></span>
 				</div>
 
-				<div class="columna7">
-					<span class="ms-Icon" data-occupied="false"></span>
-				</div>
-
-
-
-				<div class="columna1">
-					<span class="ms-Icon" data-occupied="false"></span>
-				</div>
-
-				<div class="columna2">
-					<span class="ms-Icon" data-occupied="false"></span>
-				</div>
-
-				<div class="columna3">
-					<span class="ms-Icon" data-occupied="false"></span>
-				</div>
-
-				<div class="columna4">
-					<span class="ms-Icon" data-occupied="false"></span>
-				</div>
-
-				<div class="columna5">
-					<span class="ms-Icon" data-occupied="false"></span>
-				</div>
-
-				<div class="columna6">
-					<span class="ms-Icon" data-occupied="false"></span>
-				</div>
-
-				<div class="columna7">
+				<div>
 					<span class="ms-Icon" data-occupied="false"></span>
 				</div>
 
 
-
-				<div class="columna1">
+				<div>
 					<span class="ms-Icon" data-occupied="false"></span>
 				</div>
 
-				<div class="columna2">
+				<div>
 					<span class="ms-Icon" data-occupied="false"></span>
 				</div>
 
-				<div class="columna3">
+				<div>
 					<span class="ms-Icon" data-occupied="false"></span>
 				</div>
 
-				<div class="columna4">
+				<div>
 					<span class="ms-Icon" data-occupied="false"></span>
 				</div>
 
-				<div class="columna5">
+				<div>
 					<span class="ms-Icon" data-occupied="false"></span>
 				</div>
 
-				<div class="columna6">
+				<div>
 					<span class="ms-Icon" data-occupied="false"></span>
 				</div>
 
-				<div class="columna7">
+				<div>
+					<span class="ms-Icon" data-occupied="false"></span>
+				</div>
+
+
+
+				<div>
+					<span class="ms-Icon" data-occupied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-occupied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-occupied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-occupied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-occupied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-occupied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-occupied="false"></span>
+				</div>
+
+
+
+				<div>
+					<span class="ms-Icon" data-occupied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-occupied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-occupied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-occupied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-occupied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-occupied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-occupied="false"></span>
+				</div>
+
+
+
+				<div>
+					<span class="ms-Icon" data-occupied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-occupied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-occupied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-occupied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-occupied="false"></span>
+				</div>
+
+				<div>
+					<span class="ms-Icon" data-occupied="false"></span>
+				</div>
+
+				<div>
 					<span class="ms-Icon" data-occupied="false"></span>
 				</div>
 
