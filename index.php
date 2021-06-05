@@ -84,7 +84,7 @@
 					</section>
 					<section class="card">
 						<div class="card-header">
-							<h4><a href="html/api.html" rel="noopener noreferrer">API en uso</a></h4>
+							<h4><a href="html/api.php" rel="noopener noreferrer">API en uso</a></h4>
 						</div>
 						<div class="card-content">
 							<ul>

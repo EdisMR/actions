@@ -18,7 +18,7 @@
 				<img src="../multimedia/img/pagina-en-construccion.gif" alt="">
 		</div>
 		<div>
-			<a href="../index.html" style="color: steelblue;">Volver a Inicio</a>
+			<a href="../index.php" style="color: steelblue;">Volver a Inicio</a>
 		</div>
 	</div>
 </body>
