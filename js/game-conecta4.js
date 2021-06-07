@@ -1,26 +1,31 @@
-const formulario=document.forms[0];
-formulario.addEventListener("submit",defineUsers,false);
+/* ************************************ */
+/* ***** PROCEDIMIENTOS INICIALES ******/
+/* ************************************ */
 
+const formulario=document.forms[0];
 const camposGrid=document.querySelectorAll(".grid-container div");
 const innerTurnDiv=document.querySelector(".innerTurnUser span");
 const innerTurnDivParent=document.querySelector(".innerTurnUser");
 
 /* Declarando matriz para guardar los divs y hacer con esto la evaluacion del ganador */
-const matrizGame=new Array(6);/* Filas */
-for(let i=0; i<matrizGame.length; i++) {
-    matrizGame[i] = new Array(7);/* Columnas */
+var matrizGame=new Array(7);
+for(let i=0; i<7; i++) {
+    matrizGame[i] = new Array(6);
 }
 
-/* Recorrer la matriz añadiendo los div de camposGrid */
+/* Recorrer la matriz añadiendo los div de camposGrid y el dataset */
 let contadorCamposGrid=0;
-for (let X=0;X < matrizGame.length;X++){
-	for (let Y=0;Y < matrizGame[X].length;Y++){
+for (let Y=0; Y< 6;Y++){
+	for (let X=0;X < 7;X++){
+
 		matrizGame[X][Y]=camposGrid[contadorCamposGrid];
-		
-		let n="columna" + (Y+1);
+
+		let n="columna" + (X+1);
 		camposGrid[contadorCamposGrid].classList.add(n);
-		
+		camposGrid[contadorCamposGrid].dataset.posx=X;
+		camposGrid[contadorCamposGrid].dataset.posy=Y;
 		contadorCamposGrid++;
+		/* debugger */
 	}
 }
 
@@ -31,6 +36,14 @@ var users={
 	icon:"ms-Icon--CircleFill",
 	turno:1,
 }
+
+/* ************************************************ */
+/* ********* FORMULARIO Y DESPUES DE ESTE ********* */
+/* ************************************************ */
+
+/* Formulario de usuarios del juego */
+
+formulario.addEventListener("submit",defineUsers,false);
 
 function defineUsers(ev){
 	e=ev;
@@ -49,6 +62,7 @@ function afterDefineUsers(){
 	document.querySelector(".game-container").classList.remove("d-none");
 	document.querySelector(".innerTurnUser").classList.remove("d-none")
 
+	/* sobre los divs */
 	camposGrid.forEach(elm=>{
 		elm.addEventListener("mouseover",addHoverGrid);
 		elm.addEventListener("mouseleave",removeHoverGrid);
@@ -59,7 +73,7 @@ function afterDefineUsers(){
 }
 
 
-
+/* El hover personalizado para las columnas */
 function addHoverGrid(elem){
 	let claseColumna=this.classList[0];
 	let elementos=document.querySelectorAll("."+claseColumna);
@@ -76,11 +90,19 @@ function removeHoverGrid(elem){
 	})
 }
 
+/* ******************************************************** */
+/* *************** CUANDO UN DIV ES CLICADO *************** */
+/* ******************************************************** */
 
-function divCLicked(){
+/* funcion del div cliqueado */
+function divCLicked(evt){
+	let e=evt;
+	let elemento=this;
+
 	if(llenarElemento()){
 		switchUser();
 		innerTurnUser();
+		evaluarGanador(elemento);
 	}
 }
 
@@ -116,6 +138,7 @@ function llenarElemento(){
 	return llenado;
 }
 
+/* Llenado del div para indicar de quien es el turno */
 function innerTurnUser(){
 	if(users.turno==1){
 		innerTurnDiv.innerHTML=users.user1;
@@ -125,7 +148,6 @@ function innerTurnUser(){
 	animateInnerUser();
 }
 
-
 function animateInnerUser(){
 	innerTurnDivParent.classList.add("innerTurnUserAnimation");
 }
@@ -134,4 +156,22 @@ innerTurnDivParent.addEventListener("animationend",afterAnimateInnerUser,false);
 
 function afterAnimateInnerUser(){
 	innerTurnDivParent.classList.remove("innerTurnUserAnimation");
+}
+
+/* ****************************************** */
+/* ************ EVALUAR GANADOR ************ */
+/* ****************************************** */
+function evaluarGanador(elem){
+	let elemento=elem;
+
+	console.log(elemento);/* Elemento clikeado */
+
+	console.log(matrizGame[elemento.dataset.posx][5]);/* ultimo elemento de columna seleccionada */
+}
+
+/* **************************************************** */
+/* ******* CUANDO SE HA ENCONTRADO UN GANADOR ******* */
+/* **************************************************** */
+function ganadorEncontrado(){
+	console.info("ganador encontrado");
 }

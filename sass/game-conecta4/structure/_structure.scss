@@ -80,19 +80,19 @@ main{
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-color: rgba(34, 111, 255, 0.6);
+		background-color: steelblue;
 	}
 }
 
 .divHover{
-	background-color: rgba(34, 111, 255, 0.7) !important;
+	background-color: rgb(86, 154, 209) !important;
 }
 
 .user1{
-	color: rgb(170, 0, 0);
+	color: hsl(0, 60%, 50%);
 }
 .user2{
-	color: rgb(189, 176, 0);
+	color: hsl(60, 70%, 60%);
 }
 
 
