@@ -8,15 +8,18 @@ const innerTurnDiv=document.querySelector(".innerTurnUser span");
 const innerTurnDivParent=document.querySelector(".innerTurnUser");
 
 /* Declarando matriz para guardar los divs y hacer con esto la evaluacion del ganador */
-var matrizGame=new Array(7);
-for(let i=0; i<7; i++) {
-    matrizGame[i] = new Array(6);
+const gameHorizontal=7;
+const gameVertical=6;
+
+var matrizGame=new Array(gameHorizontal);
+for(let i=0; i<gameHorizontal; i++) {
+    matrizGame[i] = new Array(gameVertical);
 }
 
 /* Recorrer la matriz añadiendo los div de camposGrid y el dataset */
 let contadorCamposGrid=0;
-for (let Y=0; Y< 6;Y++){
-	for (let X=0;X < 7;X++){
+for (let Y=0; Y< gameVertical;Y++){
+	for (let X=0;X < gameHorizontal;X++){
 
 		matrizGame[X][Y]=camposGrid[contadorCamposGrid];
 
@@ -25,7 +28,6 @@ for (let Y=0; Y< 6;Y++){
 		camposGrid[contadorCamposGrid].dataset.posx=X;
 		camposGrid[contadorCamposGrid].dataset.posy=Y;
 		contadorCamposGrid++;
-		/* debugger */
 	}
 }
 
@@ -98,11 +100,12 @@ function removeHoverGrid(elem){
 function divCLicked(evt){
 	let e=evt;
 	let elemento=this;
-
-	if(llenarElemento()){
+	let elementoLlenar
+	if(elementoLlenar=defineUltimoElementoVacio(elemento)){
+		llenarElemento(elementoLlenar)
 		switchUser();
 		innerTurnUser();
-		evaluarGanador(elemento);
+		evaluarGanador(elementoLlenar);
 	}
 }
 
@@ -111,31 +114,16 @@ function switchUser(){
 }
 
 /* Llenar elemento desocupado */
-function llenarElemento(){
-	let llenado;
-
-	/* Verificar si el ultimo elemento esta ocupado, sino llenar */
-	let arrayColumna=Array.from(document.querySelectorAll(".divHover"));
-
-	for(let x=arrayColumna.length-1;x>=0;x--){
-
-		let ocupado=Boolean(arrayColumna[x].children[0].dataset.occupied=="true");
-
-		if(ocupado){ /* caso en que esta ocupado */
-			llenado=false;
-		}else{/* caso en que NO esta ocupado */
-			llenado=true;
-			arrayColumna[x].children[0].classList.add(users.icon);
-			if(users.turno==1){
-				arrayColumna[x].classList.add("user2");
-			}else{
-				arrayColumna[x].classList.add("user1");
-			}
-			arrayColumna[x].children[0].dataset.occupied="true";
-			break;
-		}
+function llenarElemento(divLlenar){
+	let divParaLlenar=divLlenar;
+	
+	divParaLlenar.children[0].classList.add(users.icon);
+	if(users.turno==1){
+		divParaLlenar.classList.add("user2");
+	}else{
+		divParaLlenar.classList.add("user1");
 	}
-	return llenado;
+	divParaLlenar.children[0].dataset.occupied="true";
 }
 
 /* Llenado del div para indicar de quien es el turno */
@@ -162,11 +150,24 @@ function afterAnimateInnerUser(){
 /* ************ EVALUAR GANADOR ************ */
 /* ****************************************** */
 function evaluarGanador(elem){
-	let elemento=elem;
+	let elementoLlenado=elem;
+	let hayGanador=false;
+}
 
-	console.log(elemento);/* Elemento clikeado */
+/* Definir el ultimo elemento que fue llenado, para evaluar grupos */
+function defineUltimoElementoVacio(elm){
+	let elemento=elm;
+	let ultimo;
+	var y=gameVertical - 1;
 
-	console.log(matrizGame[elemento.dataset.posx][5]);/* ultimo elemento de columna seleccionada */
+	for(y;y>=0;y--){
+		if(matrizGame[elemento.dataset.posx][y].children[0].dataset.occupied=="false"){
+			ultimo=matrizGame[elemento.dataset.posx][y];
+			break
+		}
+	}
+
+	return ultimo;
 }
 
 /* **************************************************** */

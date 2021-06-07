@@ -9,6 +9,10 @@ main{
     background-size:100vw 800vh;
     background-repeat: no-repeat;
     animation: backgroundGame 20s linear infinite;
+
+	margin: 0px;
+	padding: 0px;
+	height: 100vh;
 }
 @keyframes backgroundGame {
     0%{
