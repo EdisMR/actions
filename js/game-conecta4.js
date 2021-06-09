@@ -103,9 +103,9 @@ function divCLicked(evt){
 	let elementoLlenar
 	if(elementoLlenar=defineUltimoElementoVacio(elemento)){
 		llenarElemento(elementoLlenar)
+		evaluarGanador(elementoLlenar);
 		switchUser();
 		innerTurnUser();
-		evaluarGanador(elementoLlenar);
 	}
 }
 
@@ -152,6 +152,29 @@ function afterAnimateInnerUser(){
 function evaluarGanador(elem){
 	let elementoLlenado=elem;
 	let hayGanador=false;
+
+	let posicionX=elem.dataset.posx;
+	let posicionY=elem.dataset.posy;
+	let tipoUser;
+	if(users.turno==0){
+		tipoUser="user1";
+	}
+	if(users.turno==1){
+		tipoUser="user2";
+	}
+
+	if(
+		evaluaHorizontal(posicionX,posicionY,tipoUser) ||
+		evaluaVertical(posicionX,posicionY,tipoUser) ||
+		evaluaCreciente(posicionX,posicionY,tipoUser) ||
+		evaluaDecreciente(posicionX,posicionY,tipoUser)
+	){
+		console.log("Hay Ganador");
+		console.dirxml(elementoLlenado);
+	}
+
+
+	return hayGanador;
 }
 
 /* Definir el ultimo elemento que fue llenado, para evaluar grupos */
@@ -169,6 +192,94 @@ function defineUltimoElementoVacio(elm){
 
 	return ultimo;
 }
+
+
+function evaluaHorizontal(valX,valY,tipoU){
+	let result=false;
+	let valorX=valX;
+	let valorY=valY;
+	let tipoTurno=tipoU;/* Si es User1 o User2 */
+
+	/* Crear array para guardar la columna horizontal */
+	var arrayTemp=new Array(gameHorizontal);
+	for(var x=0;x<arrayTemp.length;x++){
+		arrayTemp[x]=matrizGame[x][valorY];
+	}
+
+	/* Recorrido del array de cuatro en cuatro para verificar si hay cuatro en linea */
+	let limiteSuperiorRecorrido=gameHorizontal-4;
+	for(let x=0;x<=limiteSuperiorRecorrido;x++){
+		/* array de ClassList en array[X] */
+		let arrayClassList1=Array.from(arrayTemp[x].classList);
+		let arrayClassList2=Array.from(arrayTemp[x+1].classList);
+		let arrayClassList3=Array.from(arrayTemp[x+2].classList);
+		let arrayClassList4=Array.from(arrayTemp[x+3].classList);
+		if(/* Evaluar si los 4 elementos contienen la clase tipoTurno */
+			arrayClassList1.some(index => index == tipoTurno) &&
+			arrayClassList2.some(index => index == tipoTurno) &&
+			arrayClassList3.some(index => index == tipoTurno) &&
+			arrayClassList4.some(index => index == tipoTurno)
+		){
+			result=true;
+			break;
+		}
+	}
+
+	return result;
+}
+
+function evaluaVertical(valX,valY,tipoU){
+	let result=false;
+	let valorX=valX;
+	let valorY=valY;
+	let tipoTurno=tipoU;/* Si es User1 o User2 */
+
+	/* Crear array para guardar la columna horizontal */
+	var arrayTemp=new Array(gameVertical);
+	for(var x=0;x<arrayTemp.length;x++){
+		arrayTemp[x]=matrizGame[valorX][x];
+	}
+	/* Recorrido del array de cuatro en cuatro para verificar si hay cuatro en linea */
+	let limiteSuperiorRecorrido=gameVertical-4;
+	for(let x=0;x<=limiteSuperiorRecorrido;x++){
+		/* array de ClassList en array[X] */
+		let arrayClassList1=Array.from(arrayTemp[x].classList);
+		let arrayClassList2=Array.from(arrayTemp[x+1].classList);
+		let arrayClassList3=Array.from(arrayTemp[x+2].classList);
+		let arrayClassList4=Array.from(arrayTemp[x+3].classList);
+		if(/* Evaluar si los 4 elementos contienen la clase tipoTurno */
+			arrayClassList1.some(index => index == tipoTurno) &&
+			arrayClassList2.some(index => index == tipoTurno) &&
+			arrayClassList3.some(index => index == tipoTurno) &&
+			arrayClassList4.some(index => index == tipoTurno)
+		){
+			result=true;
+			break;
+		}
+	}
+	
+	return result;
+}
+
+function evaluaCreciente(valX,valY,tipoU){
+	let result=false;
+	let valorX=valX;
+	let valorY=valY;
+	let tipoTurno=tipoU;/* Si es User1 o User2 */
+
+	
+	return result;
+}
+
+function evaluaDecreciente(valX,valY,tipoU){
+	let result=false;
+	let valorX=valX;
+	let valorY=valY;
+	let tipoTurno=tipoU;/* Si es User1 o User2 */
+
+	return result;
+}
+
 
 /* **************************************************** */
 /* ******* CUANDO SE HA ENCONTRADO UN GANADOR ******* */
