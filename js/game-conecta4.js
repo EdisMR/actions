@@ -74,10 +74,25 @@ function afterDefineUsers(){
 	innerTurnUser();
 }
 
+function removeListerDivs(){
+	/* sobre los divs */
+	camposGrid.forEach(elm=>{
+		elm.removeEventListener("mouseover",addHoverGrid);
+		elm.removeEventListener("mouseleave",removeHoverGrid);
+		elm.removeEventListener("click",divCLicked);
+	})
+
+}
+
 
 /* El hover personalizado para las columnas */
 function addHoverGrid(elem){
-	let claseColumna=this.classList[0];
+	let claseColumna;	
+	try{
+		claseColumna=this.classList[0];
+	}catch(e){
+		claseColumna=elem.classList[0];
+	}
 	let elementos=document.querySelectorAll("."+claseColumna);
 	elementos.forEach(elm=>{
 		elm.classList.add("divHover");
@@ -85,7 +100,12 @@ function addHoverGrid(elem){
 }
 
 function removeHoverGrid(elem){
-	let claseColumna=this.classList[0];
+	let claseColumna;	
+	try{
+		claseColumna=this.classList[0];
+	}catch(e){
+		claseColumna=elem.classList[0];
+	}
 	let elementos=document.querySelectorAll("."+claseColumna);
 	elementos.forEach(elm=>{
 		elm.classList.remove("divHover");
@@ -101,11 +121,25 @@ function divCLicked(evt){
 	let e=evt;
 	let elemento=this;
 	let elementoLlenar
-	if(elementoLlenar=defineUltimoElementoVacio(elemento)){
-		llenarElemento(elementoLlenar)
-		evaluarGanador(elementoLlenar);
+	let hayGanador;
+	let tipoUser;
+	if(users.turno==0){
+		tipoUser="user1";
+	}
+	if(users.turno==1){
+		tipoUser="user2";
+	}
+
+	elementoLlenar=defineUltimoElementoVacio(elemento)
+	llenarElemento(elementoLlenar)
+	hayGanador=evaluarGanador(elementoLlenar,tipoUser);
+	if(!hayGanador){
 		switchUser();
 		innerTurnUser();
+	}else{
+		ganadorEncontrado();
+		removeListerDivs();
+		removeHoverGrid(elementoLlenar);
 	}
 }
 
@@ -149,19 +183,13 @@ function afterAnimateInnerUser(){
 /* ****************************************** */
 /* ************ EVALUAR GANADOR ************ */
 /* ****************************************** */
-function evaluarGanador(elem){
+function evaluarGanador(elem,user){
 	let elementoLlenado=elem;
 	let hayGanador=false;
 
-	let posicionX=elem.dataset.posx;
-	let posicionY=elem.dataset.posy;
-	let tipoUser;
-	if(users.turno==0){
-		tipoUser="user1";
-	}
-	if(users.turno==1){
-		tipoUser="user2";
-	}
+	let posicionX=elementoLlenado.dataset.posx;
+	let posicionY=elementoLlenado.dataset.posy;
+	let tipoUser=user;
 
 	if(
 		evaluaHorizontal(posicionX,posicionY,tipoUser) ||
@@ -169,8 +197,7 @@ function evaluarGanador(elem){
 		evaluaCreciente(posicionX,posicionY,tipoUser) ||
 		evaluaDecreciente(posicionX,posicionY,tipoUser)
 	){
-		console.log("Hay Ganador");
-		console.dirxml(elementoLlenado);
+		hayGanador=true;
 	}
 
 
@@ -285,5 +312,16 @@ function evaluaDecreciente(valX,valY,tipoU){
 /* ******* CUANDO SE HA ENCONTRADO UN GANADOR ******* */
 /* **************************************************** */
 function ganadorEncontrado(){
-	console.info("ganador encontrado");
+	let name;
+	let color;
+	if(users.turno==1){
+		name=users.user1;
+		color="hsl(60, 70%, 60%)";
+	}
+	if(users.turno==0){
+		name=users.user2;
+		color="hsl(0, 60%, 50%)";
+	}
+	innerTurnDivParent.style.backgroundColor=color;
+	innerTurnDivParent.innerHTML=`Ha ganado ${name}`;
 }
