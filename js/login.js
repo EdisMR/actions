@@ -18,7 +18,7 @@ fetch(window.location.origin+"/php/cookieEval.php")
 	function(response){
 		return response.text();
 	}
-)
+	)
 .then(
 	function(resp){
 		window.evalResult=JSON.parse(resp);
@@ -27,7 +27,7 @@ fetch(window.location.origin+"/php/cookieEval.php")
 		evaluar();
 		addScript();
 	}
-)
+	)
 
 
 function addScript(){

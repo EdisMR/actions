@@ -115,7 +115,7 @@
 						</div>
 						<div>
 							<figure>
-								<img src="https://picsum.photos/seed/picsum/300/300" alt="" title="formulario">
+								<img src="multimedia/img/conecta4.webp" alt="Juego Conecta 4" title="formulario">
 							</figure>
 						</div>
 					</section>
@@ -135,7 +135,7 @@
 						</div>
 						<div>
 							<figure>
-								<img src="multimedia/img/tictactoe.webp" alt="" title="carruseles">
+								<img src="multimedia/img/tictactoe.webp" alt="Juego Tic tac toe, o Gato" title="carruseles">
 							</figure>
 						</div>
 					</section>

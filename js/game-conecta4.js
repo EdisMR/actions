@@ -4,8 +4,11 @@
 
 const formulario=document.forms[0];
 const camposGrid=document.querySelectorAll(".grid-container div");
-const innerTurnDiv=document.querySelector(".innerTurnUser span");
+var innerTurnDiv=document.querySelector(".innerTurnUser span");
 const innerTurnDivParent=document.querySelector(".innerTurnUser");
+const buttonResetParent=document.querySelector(".buttonReset");
+const buttonReset=document.querySelector(".buttonReset button");
+
 
 /* Declarando matriz para guardar los divs y hacer con esto la evaluacion del ganador */
 const gameHorizontal=7;
@@ -39,6 +42,9 @@ var users={
 	turno:1,
 }
 
+buttonReset.addEventListener("click",resetGame);
+
+
 /* ************************************************ */
 /* ********* FORMULARIO Y DESPUES DE ESTE ********* */
 /* ************************************************ */
@@ -62,7 +68,7 @@ function defineUsers(ev){
 function afterDefineUsers(){
 	document.querySelector(".definirJugadores").classList.add("d-none");
 	document.querySelector(".game-container").classList.remove("d-none");
-	document.querySelector(".innerTurnUser").classList.remove("d-none")
+	innerTurnDivParent.classList.remove("d-none")
 
 	/* sobre los divs */
 	camposGrid.forEach(elm=>{
@@ -137,6 +143,7 @@ function divCLicked(evt){
 		switchUser();
 		innerTurnUser();
 	}else{
+		buttonResetParent.classList.remove("d-none")
 		ganadorEncontrado();
 		removeListerDivs();
 		removeHoverGrid(elementoLlenar);
@@ -152,11 +159,7 @@ function llenarElemento(divLlenar){
 	let divParaLlenar=divLlenar;
 	
 	divParaLlenar.children[0].classList.add(users.icon);
-	if(users.turno==1){
-		divParaLlenar.classList.add("user2");
-	}else{
-		divParaLlenar.classList.add("user1");
-	}
+	divParaLlenar.classList.add(retornaClaseUser());
 	divParaLlenar.children[0].dataset.occupied="true";
 }
 
@@ -308,6 +311,17 @@ function evaluaDecreciente(valX,valY,tipoU){
 }
 
 
+function retornaClaseUser(){
+	let resultado;
+	if(users.turno==0){
+		resultado="user1";
+	}
+	if(users.turno==1){
+		resultado="user2";
+	}
+	return resultado;
+}
+
 /* **************************************************** */
 /* ******* CUANDO SE HA ENCONTRADO UN GANADOR ******* */
 /* **************************************************** */
@@ -324,4 +338,24 @@ function ganadorEncontrado(){
 	}
 	innerTurnDivParent.style.backgroundColor=color;
 	innerTurnDivParent.innerHTML=`Ha ganado ${name}`;
+}
+
+function resetGame(){
+	buttonResetParent.classList.add("d-none");
+
+	camposGrid.forEach(elm=>{
+		elm.classList.remove("user1");
+		elm.classList.remove("user2");
+		elm.children[0].classList.remove(users.icon);
+		elm.children[0].dataset.occupied="false";
+	})
+
+	innerTurnDivParent.style.backgroundColor="initial";
+	innerTurnDivParent.innerHTML=`
+		<div>Turno de <span></span></div>
+	`;
+	innerTurnDiv = document.querySelector(".innerTurnUser span");
+	
+	afterDefineUsers();
+	innerTurnUser();
 }

@@ -95,6 +95,9 @@ formulario.addEventListener("submit",datosDeForm,true);
 function datosDeForm(e){
 	evento=e;e.preventDefault();
 
+	formulario.style.display="none";
+	document.getElementById("afterForm").style.display="initial";
+
 	let valordeInput=formulario.inputL.value;
 	let coordenadas=valordeInput.split(",");
 

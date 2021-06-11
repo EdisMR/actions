@@ -238,6 +238,12 @@
 			<div>Turno de <span></span></div>
 		</section>
 
+		<section class="buttonReset d-none">
+			<div>
+				<button>Reiniciar juego</button>
+			</div>
+		</section>
+
 
 	</main>
 	<?php

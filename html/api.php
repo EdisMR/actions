@@ -46,6 +46,8 @@
 
 
 				<article class="formContainer">
+					<img src="../multimedia/img/spinner-angular.svg" width="40px" height="40px" id="afterForm">
+
 					<form>
 						<div class="formItem">
 							<div class="textInp">
