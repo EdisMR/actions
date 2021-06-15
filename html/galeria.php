@@ -7,9 +7,8 @@
 	<title>EdisAnthony - Galería</title>
 	<link rel="shortcut icon" href="../multimedia/img/me.ico" type="image/x-icon">
 
-	
-	<link rel="preload" href="../js/login.js" as="script">
-	<script src="../js/login.js"></script>
+	<script defer src="../js/main.js"></script>
+
 
 </head>
 <body>

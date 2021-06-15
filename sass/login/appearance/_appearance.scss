@@ -15,5 +15,8 @@ form{
 		&[type=password]{
 			
 		}
+		&:disabled{
+			opacity: .5;
+		}
 	}
 }

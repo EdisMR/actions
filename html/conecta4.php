@@ -10,8 +10,7 @@
 	<link rel="stylesheet" href="../css/global/global.css">
 	<link rel="stylesheet" href="../css/game-conecta4/game-conecta4.css">
 	
-	<link rel="preload" href="../js/login.js" as="script">
-	<script src="../js/login.js"></script>
+	<script defer src="../js/main.js"></script>
 
 	<script defer src="../js/game-conecta4.js"></script>
 </head>

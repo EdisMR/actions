@@ -10,8 +10,8 @@
 	<link rel="stylesheet" href="css/global/global.css">
 	<link rel="stylesheet" href="css/site-index/indexMainTag.css">
 	
-	<link rel="preload" href="js/login.js" as="script">
-	<script src="js/login.js"></script>
+	<script defer src="js/main.js"></script>
+
 </head>
 
 <body>
@@ -121,7 +121,7 @@
 					</section>
 					<section class="card">
 						<div>
-							<h4><a href="##" rel="noopener noreferrer">Conejo aleatorio</a></h4>
+							<h4><a href="##" rel="noopener noreferrer">Hormiga de Langton</a></h4>
 						</div>
 						<div>
 							<figure>
@@ -141,7 +141,7 @@
 					</section>
 					<section class="card">
 						<div>
-							<h4><a href="##" rel="noopener noreferrer">Trileros</a></h4>
+							<h4><a href="##" rel="noopener noreferrer">Memoria</a></h4>
 						</div>
 						<div>
 							<figure>

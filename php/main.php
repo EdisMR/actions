@@ -1,5 +1,9 @@
 <?php
 
+if( !isset($_COOKIE["access"]) || $_COOKIE["access"]!="432289"){
+	header("Location: /html/login.php");
+}
+
 function headerHTML(){
 ?>
 	<header class="glass">

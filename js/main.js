@@ -1,10 +1,8 @@
 function removeLoader(){
-	if(window.evalResult){
-		let quienes=Array.from(document.getElementsByClassName("loader"))
-		quienes.forEach(elm=>{
-			elm.style.display="none";
-		})
-	}
+	let quienes=Array.from(document.getElementsByClassName("loader"))
+	quienes.forEach(elm=>{
+		elm.style.display="none";
+	})
 }
 removeLoader();
 
@@ -209,3 +207,4 @@ function positionDinoTop(evVal){
 	}
 	return resultado;
 }
+

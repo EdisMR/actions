@@ -39,6 +39,9 @@ img{
 		transition: top .2s;
 		top: -10px;
 	}
+	img{
+		min-height: 200px;
+	}
 }
 
 .card-header{

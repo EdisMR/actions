@@ -8,10 +8,8 @@
 	<title>EdisAnthony - Uso de API</title>
 	<link rel="shortcut icon" href="../multimedia/img/me.ico" type="image/x-icon">
 
-	<link rel="preload" href="../js/login.js" as="script">
-	<script src="../js/login.js"></script>
-
 	<script defer src="../js/api.js"></script>
+	<script defer src="../js/main.js"></script>
 
 
 	<link rel="stylesheet" href="../css/global/global.css">

@@ -7,15 +7,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Ingresar</title>
 	<link rel="shortcut icon" href="../multimedia/img/me.ico" type="image/x-icon">
-	
+
 	<link rel="stylesheet" href="../css/login/login.css">
-	
-	<link rel="preload" href="../js/login.js" as="script">
-	<script src="../js/login.js"></script>
 
 
 </head>
-
+<?php
+if( isset($_COOKIE["access"]) && $_COOKIE["access"]=="432289"){
+	header("Location: /index.php");
+}
+?>
 <body>
 	<div class="loader">
 	</div>
@@ -24,29 +25,28 @@
 
 		<span>Contraseña:</span><input type="password" name="inputPass" autocomplete="off" required autofocus>
 
-		<input type="submit" value="Enviar">
+		<input type="submit" value="Enviar" id="buttonEnviar">
 
 	</form>
-	
+
 
 	<script>
-		formulario=document.forms[0];
-		formulario.addEventListener("submit",function(e){
+
+		formulario = document.forms[0];
+		formulario.addEventListener("submit", function(e) {
 			e.preventDefault();
+			document.getElementById("buttonEnviar").disabled=true;
+
 			const data = new FormData(formulario);
+
 			fetch('../php/cookieEval.php', {
 				method: 'POST',
 				body: data
-			}).then(()=>{
+			})
+			.then((e) => {
 				window.location.reload();
 			})
 		})
-
-		setInterval(()=>{
-			if(window.evalResult){
-				window.location.pathname="/";
-			}
-		},2000);
 	</script>
 </body>
 

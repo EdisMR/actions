@@ -34,6 +34,11 @@ function solicitarDatos(){
 			/* console.log("Datos Solicitados"); */
 		}
 	)
+	.catch(error=>{
+		/* console.log(error); */
+		formulario.style.display="initial";
+		document.getElementById("afterForm").style.display="none";
+	})
 }
 
 
