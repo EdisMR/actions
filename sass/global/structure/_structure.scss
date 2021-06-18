@@ -61,8 +61,8 @@ body{
 	display: grid;
 	grid-template-columns: auto 1fr;
 	grid-template-rows: 1fr auto;
-	user-select: none;
 	scroll-behavior: smooth;
+	user-select: none;
 	/* margin: 0px;
 	padding: 0px;
 	font-family: sans-serif; */
@@ -125,7 +125,7 @@ header{
 	justify-content: space-around;
 	align-items: center;
 	margin-top: 20px;
-	padding-left: 0px;
+	padding-left: 10px;
 	padding-right: 10px;
 	button{
 		display: none;

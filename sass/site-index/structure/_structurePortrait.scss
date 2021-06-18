@@ -11,3 +11,35 @@
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
+
+.tituloPortada{
+	position: absolute;
+	left: 1rem;
+	top: 1rem;
+	font-size: 1rem;
+	max-width: 80vw;
+}
+
+$texnoItemsSize:50px;
+
+.tecno-item{
+	padding: 5px;
+	margin: 5px;
+	border-radius: 50%;
+	figure{
+		img{
+			width: $texnoItemsSize;
+			height: $texnoItemsSize;
+		}
+	}
+}
+
+.tecno-texto{
+	width: $texnoItemsSize;
+	height: $texnoItemsSize;
+	
+	span{
+		font-size: 9px;
+
+	}
+}
