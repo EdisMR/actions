@@ -1,8 +1,11 @@
 <?php
 
-if( !isset($_COOKIE["access"]) || $_COOKIE["access"]!="432289"){
-	header("Location: /html/login.php");
+function redirector(){
+	if( !(isset($_COOKIE["access"])) || !($_COOKIE["access"]=="432289")){
+		header("Location: /html/login.php");
+	}
 }
+redirector();
 
 function headerHTML(){
 ?>

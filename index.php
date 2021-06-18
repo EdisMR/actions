@@ -206,6 +206,13 @@
 					</div>
 
 					<div class="tecno-item">
+						<!-- PHP -->
+						<figure>
+							<img src="multimedia/icons/php.webp" alt="">
+						</figure>
+					</div>
+
+					<div class="tecno-item">
 						<!-- SEO -->
 						<figure>
 							<img src="multimedia/icons/seo.webp" alt="">

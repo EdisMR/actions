@@ -23,23 +23,25 @@
 $texnoItemsSize:50px;
 
 .tecno-item{
-	padding: 5px;
-	margin: 5px;
+	padding: 10px;
+	margin: 10px;
 	border-radius: 50%;
+	width: $texnoItemsSize;
+	height: $texnoItemsSize;
+
 	figure{
-		img{
-			width: $texnoItemsSize;
-			height: $texnoItemsSize;
+		width: 100%;
+		height: 100%;
+		img,svg{
+			width: 100%;
+			height: 100%;
 		}
 	}
 }
 
 .tecno-texto{
-	width: $texnoItemsSize;
-	height: $texnoItemsSize;
 	
 	span{
-		font-size: 9px;
-
+		font-size: 10px;
 	}
 }
