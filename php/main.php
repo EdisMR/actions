@@ -1,11 +1,15 @@
 <?php
 
-function redirector(){
+function redirectorAlHeader(){
 	if( !(isset($_COOKIE["access"])) || !($_COOKIE["access"]=="432289")){
-		header("Location: /html/login.php");
+		/* header("Location: /html/login.php"); */
+		?>
+		
+		<script>window.location.pathname="/html/login.php"</script>
+		
+		<?php
 	}
 }
-redirector();
 
 function headerHTML(){
 ?>

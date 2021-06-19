@@ -19,6 +19,7 @@
 <body>
 	<?php
 		include_once "../php/main.php";
+		redirectorAlHeader();
 		headerHTML();
 	?>
 	<div class="loader">

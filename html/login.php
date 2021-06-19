@@ -14,7 +14,9 @@
 </head>
 <?php
 if( isset($_COOKIE["access"]) && $_COOKIE["access"]=="432289"){
-	header("Location: /index.php");
+	?>
+		<script>window.location.pathname="/index.php"</script>
+	<?php
 }
 ?>
 <body>
