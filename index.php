@@ -18,7 +18,7 @@
 
 	<?php
 	include_once "php/main.php";
-	redirectorAlHeader();
+	redirector();
 	headerHTML();
 	?>
 
@@ -64,6 +64,7 @@
 							<ul>
 								<li>Validar formulario mediante API de formularios de Javascript</li>
 								<li>Animaciones de ayuda en caso de ingresar información inválida</li>
+								<li>Tratamiento de tipos de datos ingresados para evitar entradas inválidas</li>
 								<li>Formulario haciendo uso de etiquetas HTML5 y etiquetas semánticas</li>
 							</ul>
 						</div>
@@ -74,8 +75,9 @@
 						</div>
 						<div class="card-content">
 							<ul>
-								<li>Galería de imágenes, con dos modos diferentes</li>
-								<li>Mostrar imagen seleccionada en modo ampliado</li>
+								<li>Galería de imágenes que muestra los proyectos realizados</li>
+								<li>La galería tiene dos modos diferentes, el modo de imágenes en una grilla y el modo de vista amplia</li>
+								<li>Al tocar una imagen, se mostrará en modo amplio con su descripción correspondiente</li>
 								<li>Animaciones estáticas y dinámicas mediante CSS y JS</li>
 							</ul>
 						</div>
@@ -101,7 +103,7 @@
 							<ul>
 								<li>Solicitar datos mediante una API del tiempo meteorológico</li>
 								<li>Estilo se adapta al viewport para mostrar la información de forma cómoda</li>
-								<li>Funcionamiento mediante programación Javascript con uso de promesas, API Fetch y CSS con SASS</li>
+								<li>Programación Javascript con uso del API de promesas, API Fetch y manejo de errores de la petición http</li>
 							</ul>
 						</div>
 					</section>

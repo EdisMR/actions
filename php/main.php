@@ -1,6 +1,6 @@
 <?php
 
-function redirectorAlHeader(){
+function redirector(){
 	if( !(isset($_COOKIE["access"])) || !($_COOKIE["access"]=="432289")){
 		/* header("Location: /html/login.php"); */
 		?>
