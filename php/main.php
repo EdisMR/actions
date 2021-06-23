@@ -19,7 +19,7 @@ function headerHTML(){
 		<section class="block">
 			<article class="header-title">
 				<div>
-					<h1><!-- EdisAnthony -->Titulo</h1>
+					<h1>XitusDev<!-- Titulo --></h1>
 				</div>
 				<div>
 					<button>

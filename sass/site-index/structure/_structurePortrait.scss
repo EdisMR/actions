@@ -20,7 +20,7 @@
 	max-width: 80vw;
 }
 
-$texnoItemsSize:50px;
+$texnoItemsSize:60px;
 
 .tecno-item{
 	padding: 10px;
@@ -44,4 +44,8 @@ $texnoItemsSize:50px;
 	span{
 		font-size: 10px;
 	}
+}
+
+#tecnologias-items-container,.bio{
+	width: 90%;
 }

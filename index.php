@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
-	<title>EdisAnthony</title>
+	<title>XitusDev</title>
 	<link rel="shortcut icon" href="multimedia/img/me.ico" type="image/x-icon">
 	<link rel="stylesheet" href="css/global/global.css">
 	<link rel="stylesheet" href="css/site-index/indexMainTag.css">
@@ -32,12 +32,12 @@
 			<article class="index-portada">
 				<div class="tituloPortada">
 					<h1>
-						<!-- EdisAnthony -->
-						Lorem Ipsum
+						XitusDev
+						<!-- Lorem Ipsum -->
 					</h1>
 					<p>
-						<!-- Programador y desarrollador web -->
-						sit amet consectetur adipisicing
+						Programador web
+						<!-- sit amet consectetur -->
 					</p>
 				</div>
 				<figure>
@@ -115,10 +115,28 @@
 		<section class="block">
 			<article class="block">
 				<div>
-					<h2 id="tecnologias">Tecnologías que uso</h2>
+					<h2 id="tecnologias">Acerca de mí</h2>
 				</div>
 			</article>
-			<article class="block">
+			<article class="block tecnologias-bio-container">
+				<div class="bio">
+					<p>
+						Mi nombre es Edis Mercado (XitusDev), de San José, Costa Rica. Soy desarrollador web 
+						enfocado en el desarrollo de interfaces para el cliente final. 
+						Tengo más de 5 años de experiencia codificando, inicié programando en C++ en la 
+						Universidad Nacional de Costa Rica, donde tomé experiencia en el uso de las 
+						matemáticas para la programación, la lógica de programación y el desarrollo de 
+						estrategias para resolver los problemas planteados.
+						Ingresé al Instituto Nacional de Aprendizaje, donde estudié Photoshop, Access, 
+						Microsoft Office, y donde inició mi pasión por el desarrollo web, ya que ingresé a un 
+						programa de Desarrollo Web.
+						Después de cursar las bases del desarrollo web, continué formandome para el 
+						desarrollo frontend, y aprendiendo a utilizar herramientas como SASS, GIT, AJAX, 
+						PHP, entre otras. Los conocimientos que he adquirido se reflejan en el grupo de 
+						iconos contiguo a este párrafo. Puedes contactarme o ver más detalles en los links 
+						que aparecen abajo en el centro.
+					</p>
+				</div>
 				<div id="tecnologias-items-container">
 
 					<div class="tecno-item">
@@ -144,17 +162,6 @@
 						<!-- CSS -->
 						<figure>
 							<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="102.3716mm" height="144.49777mm" viewBox="0 0 362.73401 511.99998" id="svg3476" version="1.1" inkscape:version="0.91 r13725" sodipodi:docname="CSS3.svg">
-								<defs id="defs3478" />
-								<sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="0.35" inkscape:cx="181.367" inkscape:cy="256" inkscape:document-units="px" inkscape:current-layer="layer1" showgrid="false" fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0" inkscape:window-width="1366" inkscape:window-height="704" inkscape:window-x="0" inkscape:window-y="27" inkscape:window-maximized="1" />
-								<metadata id="metadata3481">
-									<rdf:RDF>
-										<cc:Work rdf:about="">
-											<dc:format>image/svg+xml</dc:format>
-											<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-											<dc:title></dc:title>
-										</cc:Work>
-									</rdf:RDF>
-								</metadata>
 								<g inkscape:label="Calque 1" inkscape:groupmode="layer" id="layer1" transform="translate(-193.633,-276.3622)">
 									<g id="g3013" transform="translate(119,276.3622)">
 										<polygon id="polygon2989" points="437.367,100.62 404.321,470.819 255.778,512 107.644,470.877 74.633,100.62 " style="fill:#264de4" />
@@ -268,7 +275,7 @@
 					</section>
 					<section class="card">
 						<div>
-							<h4><a href="##" rel="noopener noreferrer">Hormiga de Langton</a></h4>
+							<h4><a href="##" rel="noopener noreferrer">Conejo Aleatorio</a></h4>
 						</div>
 						<div>
 							<figure>
