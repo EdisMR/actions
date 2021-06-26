@@ -1,0 +1,48 @@
+@import "videoing-icons";
+
+* {
+	user-select: none
+}
+
+div {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+	background-color: #E6F59E;
+	min-height: 110vh
+}
+
+figure {
+	display: inline-block;
+	margin: 0px
+}
+
+video {
+	width: 800px;
+	max-width: 90vw;
+}
+
+section {
+	border-radius: 100px;
+	background-color: #3CA868;
+	display: flex;
+	flex-wrap: nowrap
+}
+
+button {
+	flex: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 5px;
+	padding: 5px;
+	font-size: 30px;
+	border-radius: 50%
+}
