@@ -8,15 +8,14 @@
 }
 
 .index-portada{
+	background-color: #F5FCCC;
 	position: relative;
 	figure{
+		display: flex;
+		justify-content: flex-end;
 		img{
 			max-height: 600px;
-			@supports(aspect-ratio: 1/1){
-				max-height: initial;
-				aspect-ratio: 16/9;
-			}
-			object-fit: cover;
+			width: auto;
 			overflow: hidden;
 		}
 	}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
@@ -36,12 +36,12 @@
 						<!-- Lorem Ipsum -->
 					</h1>
 					<p>
-						Programador web
+						Web Developer
 						<!-- sit amet consectetur -->
 					</p>
 				</div>
 				<figure>
-					<img src="https://picsum.photos/seed/picsum/300/300" alt="" title="Portada">
+					<img src="multimedia/img/portada-4.webp" alt="" title="Portada">
 				</figure>
 			</article>
 		</section>
@@ -51,59 +51,60 @@
 		<section class="block">
 			<article class="block">
 				<div>
-					<h2 id="index-paginas">Paginas en este sitio</h2>
+					<h2 id="index-paginas">Pages on this site</h2>
 				</div>
 			</article>
 			<article class="block">
 				<div class="main-index-grid col2y1">
 					<section class="card">
 						<div class="card-header">
-							<h4><a href="html/formulario.php" rel="noopener noreferrer">Formulario</a></h4>
+							<h4><a href="html/formulario.php" rel="noopener noreferrer">Form</a></h4>
 						</div>
 						<div class="card-content">
 							<ul>
-								<li>Validar formulario mediante API de formularios de Javascript</li>
-								<li>Animaciones de ayuda en caso de ingresar información inválida</li>
-								<li>Tratamiento de tipos de datos ingresados para evitar entradas inválidas</li>
-								<li>Formulario haciendo uso de etiquetas HTML5 y etiquetas semánticas</li>
+								<li>Validate a form using the Javascript Form API</li>
+								<li>Animations to help to the user in invalid input case</li>
+								<li>Treatment of types of data entered to avoid invalid entries</li>
+								<li>Form created using HTML5 tags and semantic tags</li>
 							</ul>
 						</div>
 					</section>
 					<section class="card">
 						<div class="card-header">
-							<h4><a href="##" rel="noopener noreferrer">Galería</a></h4>
+							<h4><a href="html/galeria.php" rel="noopener noreferrer">Gallery</a></h4>
 						</div>
 						<div class="card-content">
 							<ul>
-								<li>Galería de imágenes que muestra los proyectos realizados</li>
-								<li>La galería tiene dos modos diferentes, el modo de imágenes en una grilla y el modo de vista amplia</li>
-								<li>Al tocar una imagen, se mostrará en modo amplio con su descripción correspondiente</li>
-								<li>Animaciones estáticas y dinámicas mediante CSS y JS</li>
+								<li>Image gallery to show the realized projects</li>
+								<li>The gallery have two different views, Grid view and the long size view</li>
+								<li>When touching an image while Grid view, you'll see the long size view with the corresponding description</li>
+								<li>Static and dynamic animations using CSS y JS</li>
+								<li>Note: page under development</li>
 							</ul>
 						</div>
 					</section>
 					<section class="card">
 						<div class="card-header">
-							<h4><a href="html/carruseles.php" rel="noopener noreferrer">Carrusel/Presentacion</a></h4>
+							<h4><a href="html/carruseles.php" rel="noopener noreferrer">Carousel / Presentation</a></h4>
 						</div>
 						<div class="card-content">
 							<ul>
-								<li>Carrusel de imágenes, similar a las transiciones de las presentaciones</li>
-								<li>Varios tipos de carruseles independientes entre sí</li>
-								<li>Transiciones amigables con el usuario</li>
-								<li>Controles de carrusel que no afectan a los controles de otros carruseles</li>
+								<li>Image carousel, similar to slideshow transitions</li>
+								<li>Several types of carousels independent of each other</li>
+								<li>User friendly transitions</li>
+								<li>Carousel controls that don't affect controls on other carousels</li>
 							</ul>
 						</div>
 					</section>
 					<section class="card">
 						<div class="card-header">
-							<h4><a href="html/api.php" rel="noopener noreferrer">API en uso</a></h4>
+							<h4><a href="html/api.php" rel="noopener noreferrer">API in use</a></h4>
 						</div>
 						<div class="card-content">
 							<ul>
-								<li>Solicitar datos mediante una API del tiempo meteorológico</li>
-								<li>Estilo se adapta al viewport para mostrar la información de forma cómoda</li>
-								<li>Programación Javascript con uso del API de promesas, API Fetch y manejo de errores de la petición http</li>
+								<li>Request data using a weather API</li>
+								<li>Style adapts to the viewport to display information comfortably</li>
+								<li>Javascript programming with use of the Promise API, Fetch API and error handling of the http request</li>
 							</ul>
 						</div>
 					</section>
@@ -115,26 +116,16 @@
 		<section class="block">
 			<article class="block">
 				<div>
-					<h2 id="tecnologias">Acerca de mí</h2>
+					<h2 id="tecnologias">About me</h2>
 				</div>
 			</article>
 			<article class="block tecnologias-bio-container">
 				<div class="bio">
 					<p>
-						Mi nombre es Edis Mercado (XitusDev), de San José, Costa Rica. Soy desarrollador web 
-						enfocado en el desarrollo de interfaces para el cliente final. 
-						Tengo más de 5 años de experiencia codificando, inicié programando en C++ en la 
-						Universidad Nacional de Costa Rica, donde tomé experiencia en el uso de las 
-						matemáticas para la programación, la lógica de programación y el desarrollo de 
-						estrategias para resolver los problemas planteados.
-						Ingresé al Instituto Nacional de Aprendizaje, donde estudié Photoshop, Access, 
-						Microsoft Office, y donde inició mi pasión por el desarrollo web, ya que ingresé a un 
-						programa de Desarrollo Web.
-						Después de cursar las bases del desarrollo web, continué formandome para el 
-						desarrollo frontend, y aprendiendo a utilizar herramientas como SASS, GIT, AJAX, 
-						PHP, entre otras. Los conocimientos que he adquirido se reflejan en el grupo de 
-						iconos contiguo a este párrafo. Puedes contactarme o ver más detalles en los links 
-						que aparecen abajo en el centro.
+					My name is Edis Mercado (XitusDev), from San José, Costa Rica. I am a web developer focused on the interfaces development for the end customer.
+I have more than 5 years of experience on writing code, I started programming in C ++ at the National University of Costa Rica (UNA), where I gained experience using mathematics for programming, the programming logic and the strategies development to solve the problems raised.
+I entered the National Learning Institute (INA), where I studied Photoshop, Access, Microsoft Office, and where my passion for web development began, since I entered a Web Development program.
+After studying the basics of web development, I continued training for frontend development, and learning to use tools such as SASS, GIT, AJAX, PHP, among others. The knowledge I have gained is reflected in the group of icons next to this paragraph. You can contact me or see more details in the links that appear in the bottom of the screen.
 					</p>
 				</div>
 				<div id="tecnologias-items-container">
@@ -183,70 +174,70 @@
 					<div class="tecno-item">
 						<!-- JS -->
 						<figure>
-							<img src="multimedia/icons/js.webp" alt="">
+							<img src="multimedia/icons/js.webp" alt="javascript">
 						</figure>
 					</div>
 
 					<div class="tecno-item">
 						<!-- Git -->
 						<figure>
-							<img src="multimedia/icons/git.webp" alt="">
+							<img src="multimedia/icons/git.webp" alt="git">
 						</figure>
 					</div>
 
 					<div class="tecno-item">
 						<!-- Github -->
 						<figure>
-							<img src="multimedia/icons/GitHub.webp" alt="">
+							<img src="multimedia/icons/GitHub.webp" alt="github">
 						</figure>
 					</div>
 
 					<div class="tecno-item">
 						<!-- Responsive Web Design -->
 						<figure>
-							<img src="multimedia/icons/rwd.webp" alt="">
+							<img src="multimedia/icons/rwd.webp" alt="responsive web design">
 						</figure>
 					</div>
 
 					<div class="tecno-item">
 						<!-- Bootstrap -->
 						<figure>
-							<img src="multimedia/icons/bootstrap-logo.webp" alt="">
+							<img src="multimedia/icons/bootstrap-logo.webp" alt="Bootstrap">
 						</figure>
 					</div>
 
 					<div class="tecno-item">
 						<!-- PHP -->
 						<figure>
-							<img src="multimedia/icons/php.webp" alt="">
+							<img src="multimedia/icons/php.webp" alt="PHP">
 						</figure>
 					</div>
 
 					<div class="tecno-item">
 						<!-- SEO -->
 						<figure>
-							<img src="multimedia/icons/seo.webp" alt="">
+							<img src="multimedia/icons/seo.webp" alt="SEO">
 						</figure>
 					</div>
 
 					<div class="tecno-item">
 						<!-- Accesibilidad Web -->
 						<figure>
-							<img src="multimedia/icons/w3c.webp" alt="">
+							<img src="multimedia/icons/w3c.webp" alt="Web Accesibility">
 						</figure>
 					</div>
 
 					<div class="tecno-item">
 						<!-- Animaciones CSS y JS -->
 						<div class="tecno-texto">
-							<span>Animaciones CSS y JS</span>
+							<span>CSS and JS Animations</span>
 						</div>
 					</div>
 
 					<div class="tecno-item">
 						<!-- REGEX -->
 						<div class="tecno-texto">
-							<span>REGEX (Expresiones Regulares)</span>
+							<span>REGEX (Regular expressions)</span>
 						</div>
 					</div>
 
@@ -256,50 +247,56 @@
 
 		<!-- GRID2 -->
 		<section class="block">
+		
 			<article class="block">
 				<div>
-					<h2 id="juegos-html">Juegos HTML5</h2>
+					<h2 id="juegos-html">HTML5 games</h2>
 				</div>
 			</article>
+
 			<article class="block">
 				<div class="main-index-grid col4y2">
+					
 					<section class="card">
 						<div>
-							<h4><a href="html/conecta4.php" rel="noopener noreferrer">Conecta 4</a></h4>
+							<h4><a href="html/conecta4.php" rel="noopener noreferrer">Connect 4</a></h4>
 						</div>
 						<div>
 							<figure>
-								<img src="multimedia/img/conecta4.webp" alt="Juego Conecta 4" title="formulario">
+								<img src="multimedia/img/conecta4.webp" alt="Connect four game" title="formulario">
 							</figure>
 						</div>
 					</section>
+					
 					<section class="card">
 						<div>
-							<h4><a href="##" rel="noopener noreferrer">Conejo Aleatorio</a></h4>
+							<h4><a href="##" rel="noopener noreferrer">Random Rabbit</a></h4>
 						</div>
 						<div>
 							<figure>
-								<img src="https://picsum.photos/seed/picsum/300/300" alt="" title="galeria">
+								<img src="https://picsum.photos/seed/picsum/300/300" alt="random rabbit" title="galeria">
 							</figure>
 						</div>
 					</section>
+					
 					<section class="card">
 						<div>
 							<h4><a href="html/tictactoe.php" rel="noopener noreferrer">Tic tac toe</a></h4>
 						</div>
 						<div>
 							<figure>
-								<img src="multimedia/img/tictactoe.webp" alt="Juego Tic tac toe, o Gato" title="carruseles">
+								<img src="multimedia/img/tictactoe.webp" alt="Tic tac toe" title="carruseles">
 							</figure>
 						</div>
 					</section>
+					
 					<section class="card">
 						<div>
-							<h4><a href="##" rel="noopener noreferrer">Memoria</a></h4>
+							<h4><a href="##" rel="noopener noreferrer">Memory game</a></h4>
 						</div>
 						<div>
 							<figure>
-								<img src="https://picsum.photos/seed/picsum/300/300" alt="" title="API en uso">
+								<img src="https://picsum.photos/seed/picsum/300/300" alt="Memory game">
 							</figure>
 						</div>
 					</section>

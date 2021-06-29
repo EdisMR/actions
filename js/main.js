@@ -139,7 +139,7 @@ function accesibilitySwitch() {
 /* HELP en enlaces # */
 let ayuda=document.createElement("div");
 ayuda.setAttribute("id","helpNode")
-ayuda.innerHTML="<p>Sitio en construcción</p>";
+ayuda.innerHTML="<p>Site under construction</p>";
 document.body.appendChild(ayuda);
 
 var enlacesGato=document.querySelectorAll("a[href = '##']");

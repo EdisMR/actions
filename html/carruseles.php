@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
@@ -37,7 +37,7 @@
 			</p>
 			<p>
 				Es posible manipular el carrusel mediante los controles añadidos, o por medio de scroll manual, para lo cual se desliza con el dedo, 
-				y en el caso de las computadoras se hace con Shift+Scroll
+				y en el caso de una computadora, el scroll manual se hace con Shift+Scroll
 			</p>
 		</section>
 

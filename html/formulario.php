@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
-	<title>EdisAnthony - Formulario</title>
+	<title>XitusDev - Form</title>
 	<link rel="shortcut icon" href="../multimedia/img/me.ico" type="image/x-icon">
 	<link rel="stylesheet" href="../css/global/global.css">
 	<link rel="stylesheet" href="../css/form-main/form-main.css">
@@ -33,16 +33,13 @@
 
 			<article class="block">
 				<div class="infoPadding">
-					<h2>Muestra de formulario</h2>
+					<h2>Sample form</h2>
 				</div>
 			</article>
 			<article class="block">
 				<div class="infoPadding">
 					<p>
-						El formulario tiene como finalidad, mostrar validaciones realizadas por medio de programacion
-						Javascript. Los datos de este
-						formulario no serán enviados a ningún servicio ni servidor de datos. Al enviar el formulario
-						será redirigido nuevamente a este formulario.
+					The purpose of the form is to show validations made using Javascript programming. The data in this form will not be sent to any service or data server. By submitting the form you will be redirected back to this form.
 					</p>
 				</div>
 			</article>
@@ -66,7 +63,7 @@
 							<div class="block">
 								<!-- BEM del header card input -->
 								<div class="formHeaderCard inputPadding">
-									<h3>Datos Personales</h3>
+									<h3>Personal information</h3>
 								</div>
 							</div>
 
@@ -77,7 +74,7 @@
 
 									<!-- BEM del nombre con input -->
 									<div class="itemInput">
-										<div class="descriptionInput">Un nombre y dos apellidos:&nbsp;</div>
+										<div class="descriptionInput">One name and two last names:&nbsp;</div>
 
 										<!-- class goodInput badInput -->
 										<div class="inputC">
@@ -89,7 +86,7 @@
 
 									<!-- BEM del nombre con input -->
 									<div class="itemInput">
-										<div class="descriptionInput">Fecha de nacimiento:&nbsp;</div>
+										<div class="descriptionInput">Birthday:&nbsp;</div>
 										<div class="inputC">
 											<input type="date" step="1" placeholder="Fecha de nacimiento"
 												name="fechaNac" required autocomplete="off">
@@ -98,7 +95,7 @@
 
 									<!-- BEM del nombre con input -->
 									<div class="itemInput">
-										<div class="descriptionInput">Su edad calculada:&nbsp;</div>
+										<div class="descriptionInput">Your calculated age:&nbsp;</div>
 										<div class="inputC">
 											<input type="number" placeholder="Calculada con la fecha de nacimiento"
 												name="edad" disabled autocomplete="off">
@@ -123,7 +120,7 @@
 							<div class="block">
 								<!-- BEM del header card input -->
 								<div class="formHeaderCard inputPadding">
-									<h3>Información de contacto</h3>
+									<h3>Contact information</h3>
 								</div>
 							</div>
 
@@ -134,16 +131,16 @@
 
 									<!-- BEM del nombre con input -->
 									<div class="itemInput">
-										<div class="descriptionInput">Número de teléfono:&nbsp;</div>
+										<div class="descriptionInput">Telephone number:&nbsp;</div>
 										<div class="inputC">
-											<input type="tel" placeholder="Sólo formato de CR (+506)" name="telefono"
+											<input type="tel" placeholder="Only CR format (+50612345678)" name="telefono"
 												pattern="^\+506\d{8}$" required autocomplete="off">
 										</div>
 									</div>
 
 									<!-- BEM del nombre con input -->
 									<div class="itemInput">
-										<div class="descriptionInput">Correo electrónico 1:&nbsp;</div>
+										<div class="descriptionInput">Email 1:&nbsp;</div>
 										<div class="inputC">
 											<input type="email" placeholder="Correo de contacto 1"
 												pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" name="correo1" required
@@ -153,7 +150,7 @@
 
 									<!-- BEM del nombre con input -->
 									<div class="itemInput">
-										<div class="descriptionInput">Correo electrónico 2:&nbsp;</div>
+										<div class="descriptionInput">Email 2:&nbsp;</div>
 										<div class="inputC">
 											<input type="email" placeholder="Correo de contacto 2"
 												pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" name="correo2" required
@@ -181,8 +178,16 @@
 
 				<article class="block">
 					<div class="buttonContainer">
-						<button type="reset">Borrar datos</button>
-						<button type="submit">Enviar datos</button>
+						<button type="reset">
+							<!-- Reset -->
+							<span class="ms-Icon ms-Icon--Reset"></span>
+						</button>
+
+						<button type="submit">
+							<!-- Send -->
+							<span class="ms-Icon ms-Icon--AcceptMedium"></span>
+						</button>
+
 					</div>
 				</article>
 			</form>

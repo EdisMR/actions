@@ -43,7 +43,7 @@ function headerHTML(){
 								<span class="ms-Icon ms-Icon--Home"></span>
 							</div>
 							<div>
-								Inicio
+								Home
 							</div>
 						</a>
 					</li>
@@ -53,17 +53,17 @@ function headerHTML(){
 								<span class="ms-Icon ms-Icon--OfficeFormsLogo24"></span>
 							</div>
 							<div>
-								Formulario
+								Form
 							</div>
 						</a>
 					</li>
 					<li>
-						<a href="##" rel="noopener noreferrer">
+						<a href="/html/galeria.php" rel="noopener noreferrer">
 							<div>
 								<span class="ms-Icon ms-Icon--SamsungGallery"></span>
 							</div>
 							<div>
-								Galería
+								Gallery
 							</div>
 						</a>
 					</li>
@@ -73,7 +73,7 @@ function headerHTML(){
 								<span class="ms-Icon ms-Icon--PanoIndicator"></span>
 							</div>
 							<div>
-								Carruseles
+								Carousel
 							</div>
 						</a>
 					</li>
@@ -83,7 +83,7 @@ function headerHTML(){
 								<span class="ms-Icon ms-Icon--AzureAPIManagement"></span>
 							</div>
 							<div>
-								API en uso
+								API in use
 							</div>
 						</a>
 					</li>
@@ -93,7 +93,7 @@ function headerHTML(){
 								<span class="ms-Icon ms-Icon--Game"></span>
 							</div>
 							<div>
-								Juegos HTML5
+								HTML5 games
 							</div>
 						</a>
 					</li>
@@ -103,7 +103,7 @@ function headerHTML(){
 								<span class="ms-Icon ms-Icon--AccessibiltyChecker"></span>
 							</div>
 							<div>
-								Accesibilidad
+								Accessibility
 							</div>
 						</a>
 					</li>
@@ -116,11 +116,11 @@ function headerHTML(){
 		<section class="block">
 			<article class="header-events">
 				<div>
-					<p>Posicion del mouse:</p>
+					<p>Mouse position:</p>
 					<span class="inner-event"></span>
 				</div>
 				<div>
-					<p>Tecla presionada:</p>
+					<p>Key pressed:</p>
 					<span class="inner-event"></span>
 				</div>
 			</article>
@@ -137,7 +137,7 @@ function footerHTML(){
 	<footer>
 			<ul class="glass">
 				<li>
-					<a href="https://github.com/EdisAnthony" target="_blank" rel="noopener noreferrer" title="Git">
+					<a href="https://github.com/XitusDev" target="_blank" rel="noopener noreferrer" title="Git">
 						<div>
 							<span class="ms-Icon ms-Icon--GitGraph"></span>
 						</div>
@@ -172,6 +172,7 @@ function footerHTML(){
 	<div id="dino">
 		<img src="/multimedia/icons/dino.svg"></svg>
 	</div>
+	
 	<?php
 
 }
