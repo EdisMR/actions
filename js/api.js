@@ -10,7 +10,7 @@ var datosCapture;
 
 /* Url para el fetch */
 function defineUrlSolicitud(){
-	return `https://api.openweathermap.org/data/2.5/weather?lat=${api.lat}&lon=${api.lon}&appid=${api.apiKey}&lang=sp&units=${api.units}`;
+	return `https://api.openweathermap.org/data/2.5/weather?lat=${api.lat}&lon=${api.lon}&appid=${api.apiKey}&lang=en&units=${api.units}`;
 }
 
 /* URL de la imagen */
@@ -31,7 +31,7 @@ function solicitarDatos(){
 	).then(
 		function(resp){
 			afterFetch(resp);
-			/* console.log("Datos Solicitados"); */
+			/* console.log(resp); */
 		}
 	)
 	.catch(error=>{

@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
-	<title>EdisAnthony</title>
+	<title>XitusDev - Tic Tac Toe</title>
 	<link rel="shortcut icon" href="../multimedia/img/me.ico" type="image/x-icon">
 	<link rel="stylesheet" href="../css/global/global.css">
 	<link rel="stylesheet" href="../css/game-tictactoe/game-tictactoe.css">
@@ -36,7 +36,7 @@
 					<span>O -> </span><input type="text" name="user2" minlength="1" maxlength="30" autocomplete="off" pattern="^([\w]{1,20}[\s]{0,1}){1,3}$">
 				</div>
 				<div class="btnSubmit">
-					<button type="submit">Iniciar</button>
+					<button type="submit">Start</button>
 				</div>
 			</form>
 		</section>
@@ -46,7 +46,7 @@
 		<section id="juego" class="d-None">
 			
 			<section class="turno">
-				Turno de <span>User1</span>
+				<span>User1</span>'s shift
 			</section>
 
 			<div id="grid">
@@ -92,12 +92,12 @@
 
 		<!-- PARA MOSTRAR GANADOR -->
 		<div class="resetGame d-None">
-			<button>Reiniciar juego</button>
+			<button>Restart game</button>
 		</div>
 		<section id="mostrarGanador" class="d-None">
 
 			<div class="ventanaGanador">
-				<p>EL GANADOR ES</p>
+				<p>The winner is</p>
 				<p class="ganadorInner">Alguien</p>
 			</div>
 

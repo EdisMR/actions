@@ -48,6 +48,16 @@ function headerHTML(){
 						</a>
 					</li>
 					<li>
+						<a href="/index.php#tecnologias" rel="noopener noreferrer">
+							<div>
+								<span class="ms-Icon ms-Icon--Contact"></span>
+							</div>
+							<div>
+								About me
+							</div>
+						</a>
+					</li>
+					<li>
 						<a href="/html/formulario.php" rel="noopener noreferrer">
 							<div>
 								<span class="ms-Icon ms-Icon--OfficeFormsLogo24"></span>
@@ -100,10 +110,10 @@ function headerHTML(){
 					<li>
 						<a href="##" rel="noopener noreferrer" id="accesibilityButton">
 							<div>
-								<span class="ms-Icon ms-Icon--AccessibiltyChecker"></span>
+								<span class="ms-Icon ms-Icon--Settings"></span>
 							</div>
 							<div>
-								Accessibility
+								Settings
 							</div>
 						</a>
 					</li>

@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
-	<title>EdisAnthony - Uso de API</title>
+	<title>XitusDev - Uso de API</title>
 	<link rel="shortcut icon" href="../multimedia/img/me.ico" type="image/x-icon">
 
 	<script defer src="../js/api.js"></script>
@@ -35,11 +35,11 @@
 
 				<article class="textContainer">
 					<article class="textItem">
-						<p class="bigHelp">Ingrese los datos de la localización para obtener la información</p>
+						<p class="bigHelp">Write the latitude and longitude to obtain the information</p>
 					</article>
 
 					<article class="textItem">
-						<p class="btnSendHelper">ejemplo: <span>9.936633, -84.107593</span></p>
+						<p class="btnSendHelper">example: <span>9.936633, -84.107593</span></p>
 					</article>
 				</article>
 
@@ -50,10 +50,10 @@
 					<form>
 						<div class="formItem">
 							<div class="textInp">
-								<p>Latitud y longitud </p>
+								<p>Latitude and Longitude</p>
 							</div>
 							<div class="inputContainer">
-								<input type="text" name="inputL" autocomplete="off" placeholder="Ir a Google Maps"
+								<input type="text" name="inputL" autocomplete="off" placeholder="You can use Google Maps"
 									required pattern="^[\-]{0,1}\d{1,}\.\d{1,},\s[\-]{0,1}\d{1,}\.\d{1,}$">
 							</div>
 						</div>
@@ -87,19 +87,19 @@
 						<div class="titulo">...</div>
 						<div class="subtitulo">
 							<div>
-								Latitud: <span class="lat">...</span>
+								Latitude: <span class="lat">...</span>
 							</div>
 							<div>
-								Longitud: <span class="long">...</span>
+								Longitude: <span class="long">...</span>
 							</div>
 						</div>
 					</div>
 
 					<div class="cardBody">
-						<div class="feels">Sensacion termica: <span>...</span>°C</div>
-						<div class="sunrise">Amanecer: <span>...</span>h</div>
-						<div class="sunset">Atardecer: <span>...</span>h</div>
-						<div class="humidity">Humedad: <span>...</span>%</div>
+						<div class="feels">Thermal sensation: <span>...</span>°C</div>
+						<div class="sunrise">Sunrise: <span>...</span>h</div>
+						<div class="sunset">Sunset: <span>...</span>h</div>
+						<div class="humidity">Humidity: <span>...</span>%</div>
 					</div>
 
 				</article>
@@ -123,8 +123,8 @@
 				</article>
 
 				<article class="mostrarFooter">
-					<button>Actualizar</button>
-					<p class="notaPie">Datos proporcionados por OpenWeatherMap</p>
+					<button>Update</button>
+					<p class="notaPie">Data provided by OpenWeatherMap</p>
 				</article>
 
 			</section>

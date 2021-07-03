@@ -44,7 +44,8 @@
 					</div>
 					<div class="carousel-itemPart">
 						<h3>Title and page cover</h3>
-						<p>The images</p>
+						<p>In the page cover is the logo and a representative product of ASIPROFE.</p>
+						<p>The menu in the top is only in the left (in mobile and pc screen), and a share menu in the right</p>
 					</div>
 				</article>
 				<!-- FIN DEL ITEM -->
@@ -60,8 +61,10 @@
 						</figure>
 					</div>
 					<div class="carousel-itemPart">
-						<h3>Titulo de item</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quaerat fugit quod necessitatibus sint laboriosam cumque unde praesentium ipsam ullam.</p>
+						<h3>Location and the footer</h3>
+						<p>
+							A Google Maps iframe to show the location of ASIPROFE, and, in the footer you can contact ASIPROFE by clicking a link
+						</p>
 					</div>
 				</article>
 				<!-- FIN DEL ITEM -->
@@ -74,10 +77,6 @@
 						<figure>
 							<img src="../multimedia/img/galeria-proyectos/asiprofe (2).webp" alt="copa">
 						</figure>
-					</div>
-					<div class="carousel-itemPart">
-						<h3>Titulo de item</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quaerat fugit quod necessitatibus sint laboriosam cumque unde praesentium ipsam ullam.</p>
 					</div>
 				</article>
 				<!-- FIN DEL ITEM -->
@@ -92,10 +91,6 @@
 							<img src="../multimedia/img/galeria-proyectos/asiprofe (3).webp" alt="copa">
 						</figure>
 					</div>
-					<div class="carousel-itemPart">
-						<h3>Titulo de item</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quaerat fugit quod necessitatibus sint laboriosam cumque unde praesentium ipsam ullam.</p>
-					</div>
 				</article>
 				<!-- FIN DEL ITEM -->
 
@@ -109,8 +104,8 @@
 						</figure>
 					</div>
 					<div class="carousel-itemPart">
-						<h3>Titulo de item</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quaerat fugit quod necessitatibus sint laboriosam cumque unde praesentium ipsam ullam.</p>
+						<h3>Gallery</h3>
+						<p>The gallery shows some photos about ASIPROFE, and, when you click on an image, the image will be shown in a fullscreen mode with a description of the image.</p>
 					</div>
 				</article>
 				<!-- FIN DEL ITEM -->
@@ -125,8 +120,9 @@
 						</figure>
 					</div>
 					<div class="carousel-itemPart">
-						<h3>Titulo de item</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quaerat fugit quod necessitatibus sint laboriosam cumque unde praesentium ipsam ullam.</p>
+						<h3>Slideshow</h3>
+						<p>This slideshow pretends to show a description of the image. This is a fullscreen view, but, if you finish the fullscreen mode you'll be in the slideshow mode.</p>
+						<p>A button in the bottom helps you to return to the gallery mode</p>
 					</div>
 				</article>
 				<!-- FIN DEL ITEM -->

@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
-	<title>EdisAnthony - Conecta4</title>
+	<title>XitusDev - Connect 4</title>
 	<link rel="shortcut icon" href="../multimedia/img/me.ico" type="image/x-icon">
 	<link rel="stylesheet" href="../css/global/global.css">
 	<link rel="stylesheet" href="../css/game-conecta4/game-conecta4.css">
@@ -28,10 +28,10 @@
 		<section class="definirJugadores">
 			<form>
 				<div>
-					<span>Jugador 1 (amarillo): </span><input type="text" name="user1" minlength="1" maxlength="30" autocomplete="off" pattern="^([\w]{1,20}[\s]{0,1}){1,3}$" required>
+					<span>Player 1 (yellow): </span><input type="text" name="user1" minlength="1" maxlength="30" autocomplete="off" pattern="^([\w]{1,20}[\s]{0,1}){1,3}$" required>
 				</div>
 				<div>
-					<span>Jugador 2 (rojo): </span><input type="text" name="user2" minlength="1" maxlength="30" autocomplete="off" pattern="^([\w]{1,20}[\s]{0,1}){1,3}$" required>
+					<span>Player 2 (red): </span><input type="text" name="user2" minlength="1" maxlength="30" autocomplete="off" pattern="^([\w]{1,20}[\s]{0,1}){1,3}$" required>
 				</div>
 				<div class="resetearInputs">
 					<button type="reset"><span class="ms-Icon ms-Icon--Reset"></span></button>
@@ -235,12 +235,12 @@
 		</section>
 
 		<section class="innerTurnUser d-none">
-			<div>Turno de <span></span></div>
+			<div><span></span>'s shift</div>
 		</section>
 
 		<section class="buttonReset d-none">
 			<div>
-				<button>Reiniciar juego</button>
+				<button>Restart game</button>
 			</div>
 		</section>
 

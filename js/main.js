@@ -9,6 +9,9 @@ removeLoader();
 /* ****************************************** */
 /* ******** EVENTOS DE MOUSE Y TECLADO ***** */
 /* ***************************************** */
+
+window.addEventListener("hashchange",menuSwitchMain,false);
+
 window.addEventListener("mousemove", mouseMovement, false)
 function mouseMovement(e) {
 	let evento = e;

@@ -78,7 +78,7 @@
 
 										<!-- class goodInput badInput -->
 										<div class="inputC">
-											<input type="text" placeholder="Con dos apellidos" name="nombre"
+											<input type="text" placeholder="Write two last names" name="nombre"
 												pattern="^[A-Za-z]{2,20}\W[A-Za-z]{2,20}\W[A-Za-z]{2,20}$" required
 												autocomplete="off">
 										</div>
@@ -88,7 +88,7 @@
 									<div class="itemInput">
 										<div class="descriptionInput">Birthday:&nbsp;</div>
 										<div class="inputC">
-											<input type="date" step="1" placeholder="Fecha de nacimiento"
+											<input type="date" step="1" placeholder="Your Birthday"
 												name="fechaNac" required autocomplete="off">
 										</div>
 									</div>
@@ -97,7 +97,7 @@
 									<div class="itemInput">
 										<div class="descriptionInput">Your calculated age:&nbsp;</div>
 										<div class="inputC">
-											<input type="number" placeholder="Calculada con la fecha de nacimiento"
+											<input type="number" placeholder="It is calculated with your birthday"
 												name="edad" disabled autocomplete="off">
 										</div>
 									</div>
@@ -142,7 +142,7 @@
 									<div class="itemInput">
 										<div class="descriptionInput">Email 1:&nbsp;</div>
 										<div class="inputC">
-											<input type="email" placeholder="Correo de contacto 1"
+											<input type="email" placeholder="Email 1"
 												pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" name="correo1" required
 												autocomplete="off">
 										</div>
@@ -152,7 +152,7 @@
 									<div class="itemInput">
 										<div class="descriptionInput">Email 2:&nbsp;</div>
 										<div class="inputC">
-											<input type="email" placeholder="Correo de contacto 2"
+											<input type="email" placeholder="Email 2"
 												pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" name="correo2" required
 												autocomplete="off">
 										</div>

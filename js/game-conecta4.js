@@ -337,7 +337,7 @@ function ganadorEncontrado(){
 		color="hsl(0, 60%, 50%)";
 	}
 	innerTurnDivParent.style.backgroundColor=color;
-	innerTurnDivParent.innerHTML=`Ha ganado ${name}`;
+	innerTurnDivParent.innerHTML=`The winner is ${name}`;
 }
 
 function resetGame(){
@@ -352,7 +352,7 @@ function resetGame(){
 
 	innerTurnDivParent.style.backgroundColor="initial";
 	innerTurnDivParent.innerHTML=`
-		<div>Turno de <span></span></div>
+		<div><span></span>'s shift</div>
 	`;
 	innerTurnDiv = document.querySelector(".innerTurnUser span");
 	
