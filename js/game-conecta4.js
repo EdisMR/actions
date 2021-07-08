@@ -297,6 +297,8 @@ function evaluaCreciente(valX,valY,tipoU){
 	let valorY=valY;
 	let tipoTurno=tipoU;/* Si es User1 o User2 */
 
+	console.log(valorX,valorY);
+
 	
 	return result;
 }
