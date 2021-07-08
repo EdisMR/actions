@@ -11,6 +11,12 @@ function redirector(){
 	}
 }
 
+function loader(){
+	?>
+		<div class="loader"></div>
+	<?php
+}
+
 function headerHTML(){
 ?>
 	<header class="glass">

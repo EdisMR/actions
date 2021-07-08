@@ -16,6 +16,7 @@
 	<?php
 		include_once "../php/main.php";
 		redirector();
+		loader();
 		headerHTML();
 	?>
 

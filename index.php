@@ -19,11 +19,11 @@
 	<?php
 	include_once "php/main.php";
 	redirector();
+	loader();
 	headerHTML();
+
 	?>
 
-	<div class="loader">
-	</div>
 
 	<main>
 
@@ -230,7 +230,7 @@ After studying the basics of web development, I continued training for frontend 
 					<div class="tecno-item">
 						<!-- Animaciones CSS y JS -->
 						<div class="tecno-texto">
-							<span>CSS and JS Animations</span>
+							<span>Static and dynamic Animations</span>
 						</div>
 					</div>
 
