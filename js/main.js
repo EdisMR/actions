@@ -172,33 +172,17 @@ function dino(evento){
 	e.preventDefault();
 
 	dinoEd.style.display="block";
-	dinoEd.style.left=positionDinoLeft(e.clientX)+"px";
-	dinoEd.style.top=positionDinoTop(e.clientY)+"px";
+	dinoEd.style.left=positionDino(e.clientX,(window.screen.width/2))+"px";
+	dinoEd.style.top=positionDino(e.clientY,(window.screen.height/2))+"px";
 
 	setTimeout(()=>{
 		dinoEd.style.display="none";
 	},500);
 }
 
-
-function positionDinoLeft(evVal){
+function positionDino(evVal,mitadP){
 	let valor=evVal;
-	let mitadPantalla=window.screen.width/2;
-	let resultado=0;
-	let divWidth=document.getElementById("dino").clientWidth;
-
-	if(valor<mitadPantalla){
-		resultado=valor;
-	}
-	if(valor>mitadPantalla){
-		resultado=valor-divWidth;
-	}
-	return resultado;
-}
-
-function positionDinoTop(evVal){
-	let valor=evVal;
-	let mitadPantalla=window.screen.height/2;
+	let mitadPantalla=mitadP;
 	let resultado=0;
 	let divHeight=document.getElementById("dino").clientHeight;
 
@@ -210,4 +194,3 @@ function positionDinoTop(evVal){
 	}
 	return resultado;
 }
-

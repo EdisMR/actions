@@ -10,7 +10,7 @@ const buttonResetParent=document.querySelector(".buttonReset");
 const buttonReset=document.querySelector(".buttonReset button");
 
 
-/* Declarando matriz para guardar los divs y hacer con esto la evaluacion del ganador */
+/* Declarando matriz para guardar los divs que lo conforman */
 const gameHorizontal=7;
 const gameVertical=6;
 
@@ -19,7 +19,7 @@ for(let i=0; i<gameHorizontal; i++) {
     matrizGame[i] = new Array(gameVertical);
 }
 
-/* Recorrer la matriz añadiendo los div de camposGrid y el dataset */
+/* Recorrer la matriz para añadir los div a esas casillas, y añadiendo el dataset a los div */
 let contadorCamposGrid=0;
 for (let Y=0; Y< gameVertical;Y++){
 	for (let X=0;X < gameHorizontal;X++){
@@ -42,11 +42,22 @@ var users={
 	turno:1,
 }
 
+function retornaClaseUser(){
+	let resultado;
+	if(users.turno==0){
+		resultado="user1";
+	}
+	if(users.turno==1){
+		resultado="user2";
+	}
+	return resultado;
+}
+
 buttonReset.addEventListener("click",resetGame);
 
 
 /* ************************************************ */
-/* ********* FORMULARIO Y DESPUES DE ESTE ********* */
+/* ********* FORMULARIO Y DESPUES DE ********* */
 /* ************************************************ */
 
 /* Formulario de usuarios del juego */
@@ -128,17 +139,11 @@ function divCLicked(evt){
 	let elemento=this;
 	let elementoLlenar
 	let hayGanador;
-	let tipoUser;
-	if(users.turno==0){
-		tipoUser="user1";
-	}
-	if(users.turno==1){
-		tipoUser="user2";
-	}
+	let tipoUser=retornaClaseUser();
 
 	elementoLlenar=defineUltimoElementoVacio(elemento)
 	llenarElemento(elementoLlenar)
-	hayGanador=evaluarGanador(elementoLlenar,tipoUser);
+	hayGanador=evaluarGanador(elementoLlenar);
 	if(!hayGanador){
 		switchUser();
 		innerTurnUser();
@@ -173,12 +178,11 @@ function innerTurnUser(){
 	animateInnerUser();
 }
 
+/* Animacion cuando llenamos el div con la info del turno */
 function animateInnerUser(){
 	innerTurnDivParent.classList.add("innerTurnUserAnimation");
 }
-
 innerTurnDivParent.addEventListener("animationend",afterAnimateInnerUser,false);
-
 function afterAnimateInnerUser(){
 	innerTurnDivParent.classList.remove("innerTurnUserAnimation");
 }
@@ -186,19 +190,18 @@ function afterAnimateInnerUser(){
 /* ****************************************** */
 /* ************ EVALUAR GANADOR ************ */
 /* ****************************************** */
-function evaluarGanador(elem,user){
+function evaluarGanador(elem){
 	let elementoLlenado=elem;
 	let hayGanador=false;
 
 	let posicionX=elementoLlenado.dataset.posx;
 	let posicionY=elementoLlenado.dataset.posy;
-	let tipoUser=user;
 
 	if(
-		evaluaHorizontal(posicionX,posicionY,tipoUser) ||
-		evaluaVertical(posicionX,posicionY,tipoUser) ||
-		evaluaCreciente(posicionX,posicionY,tipoUser) ||
-		evaluaDecreciente(posicionX,posicionY,tipoUser)
+		evaluaHorizontal(posicionX,posicionY) ||
+		evaluaVertical(posicionX,posicionY) ||
+		evaluaCreciente(posicionX,posicionY) ||
+		evaluaDecreciente(posicionX,posicionY)
 	){
 		hayGanador=true;
 	}
@@ -224,11 +227,11 @@ function defineUltimoElementoVacio(elm){
 }
 
 
-function evaluaHorizontal(valX,valY,tipoU){
+function evaluaHorizontal(valX,valY){
 	let result=false;
 	let valorX=valX;
 	let valorY=valY;
-	let tipoTurno=tipoU;/* Si es User1 o User2 */
+	let tipoTurno=retornaClaseUser();/* Si es User1 o User2 */
 
 	/* Crear array para guardar la columna horizontal */
 	var arrayTemp=new Array(gameHorizontal);
@@ -258,11 +261,11 @@ function evaluaHorizontal(valX,valY,tipoU){
 	return result;
 }
 
-function evaluaVertical(valX,valY,tipoU){
+function evaluaVertical(valX,valY){
 	let result=false;
 	let valorX=valX;
 	let valorY=valY;
-	let tipoTurno=tipoU;/* Si es User1 o User2 */
+	let tipoTurno=retornaClaseUser();/* Si es User1 o User2 */
 
 	/* Crear array para guardar la columna horizontal */
 	var arrayTemp=new Array(gameVertical);
@@ -291,38 +294,27 @@ function evaluaVertical(valX,valY,tipoU){
 	return result;
 }
 
-function evaluaCreciente(valX,valY,tipoU){
+function evaluaCreciente(valX,valY){
 	let result=false;
+
+	/* Importante destacar que el X y Y son del item llenado */
 	let valorX=valX;
 	let valorY=valY;
-	let tipoTurno=tipoU;/* Si es User1 o User2 */
-
-	console.log(valorX,valorY);
-
+	let tipoTurno=retornaClaseUser();/* Si es User1 o User2 */
 	
 	return result;
 }
 
-function evaluaDecreciente(valX,valY,tipoU){
+function evaluaDecreciente(valX,valY){
+	/* Importante destacar que el X y Y son del item llenado */
 	let result=false;
 	let valorX=valX;
 	let valorY=valY;
-	let tipoTurno=tipoU;/* Si es User1 o User2 */
+	let tipoTurno=retornaClaseUser();/* Si es User1 o User2 */
 
 	return result;
 }
 
-
-function retornaClaseUser(){
-	let resultado;
-	if(users.turno==0){
-		resultado="user1";
-	}
-	if(users.turno==1){
-		resultado="user2";
-	}
-	return resultado;
-}
 
 /* **************************************************** */
 /* ******* CUANDO SE HA ENCONTRADO UN GANADOR ******* */

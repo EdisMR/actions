@@ -123,8 +123,8 @@
 				<div class="bio">
 					<p>
 					My name is Edis Mercado (XitusDev), from San José, Costa Rica. I am a web developer focused on the interfaces development for the end customer.
-I have more than 5 years of experience on writing code, I started programming in C ++ at the National University of Costa Rica (UNA), where I gained experience using mathematics for programming, the programming logic and the strategies development to solve the problems raised.
-I entered the National Learning Institute (INA), where I studied Photoshop, Access, Microsoft Office, and where my passion for web development began, since I entered a Web Development program.
+I have more than 5 years of experience on writing code, I started programming in C++ at the National University of Costa Rica (UNA), where I gained experience using mathematics for programming, the programming logic and the development strategies to solve a programming situation.
+I entered the National Learning Institute (INA), where I studied Photoshop, Access, Microsoft Office, and where my passion for web development began since I entered to the Web Development program.
 After studying the basics of web development, I continued training for frontend development, and learning to use tools such as SASS, GIT, AJAX, PHP, among others. The knowledge I have gained is reflected in the group of icons next to this paragraph. You can contact me or see more details in the links that appear in the bottom of the screen.
 					</p>
 				</div>

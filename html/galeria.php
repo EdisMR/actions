@@ -24,6 +24,9 @@
 	<main>
 		
 
+	<section class="portada-proyectos">
+		<h1>Projects Gallery</h1>
+	</section>
 
 	<section class="carousel-container">
 		
