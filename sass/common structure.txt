@@ -1,6 +1,6 @@
 /main
     main.scss
-    _dev.scss
+    _mainDev.scss
 
     /appearance
         _appearance.scss

@@ -189,6 +189,11 @@ function footerHTML(){
 		<img src="/multimedia/icons/dino.svg"></svg>
 	</div>
 	
+	<div id="helpNode">
+		<p>Site under<br> construction</p>
+	</div>
+
+
 	<?php
 
 }

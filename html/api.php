@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
-	<title>XitusDev - Uso de API</title>
+	<title>XitusDev - Using an API</title>
 	<link rel="shortcut icon" href="../multimedia/img/me.ico" type="image/x-icon">
 
 	<script defer src="../js/api.js"></script>

@@ -10,8 +10,6 @@ removeLoader();
 /* ******** EVENTOS DE MOUSE Y TECLADO ***** */
 /* ***************************************** */
 
-window.addEventListener("hashchange",menuSwitchMain,false);
-
 window.addEventListener("mousemove", mouseMovement, false)
 function mouseMovement(e) {
 	let evento = e;
@@ -38,6 +36,9 @@ var headerButton = {
 
 if (screen.orientation.type == "portrait-primary") {
 	window.removeEventListener("keyup", keyEvent, false);
+	window.addEventListener("hashchange",closeMenu,false);
+	
+
 	/* Variables */
 	headerButton.btn = document.querySelector(".header-title button")
 	headerButton.headerEnlaces = document.querySelector(".header-enlaces");
@@ -132,30 +133,28 @@ wsppFBTN.addEventListener("click", function () { window.open("https://" + wsppF[
 /* ******************** ACCESIBILIDAD ************ */
 /* ********************************************** */
 const btnAccesibilidad = document.getElementById("accesibilityButton");
-btnAccesibilidad.addEventListener("click", accesibilitySwitch, false);
+btnAccesibilidad.addEventListener("click", ()=>{accesibilitySwitch();closeMenu()}, false);
 
 function accesibilitySwitch() {
 	console.log("accesibilitySwitch");
 }
 
 
-/* HELP en enlaces # */
-let ayuda=document.createElement("div");
-ayuda.setAttribute("id","helpNode")
-ayuda.innerHTML="<p>Site under construction</p>";
-document.body.appendChild(ayuda);
+/* HELP en enlaces sin funcionamiento */
+let ayuda=document.getElementById("helpNode");
 
-var enlacesGato=document.querySelectorAll("a[href = '##']");
+var enlacesGato=document.querySelectorAll('[href="##"]');
 enlacesGato.forEach(elm=>{
 	elm.parentNode.addEventListener("click",helpNodeAppear,false);
 })
 
-function helpNodeAppear(){
-	let elemento1=document.getElementById("helpNode");
-	elemento1.style.display="inline-block";
+function helpNodeAppear(e){
+	ayuda.style.display="inline-block";
+	ayuda.classList.add("animateHelpNode")
 
 	setTimeout(()=>{
-		elemento1.style.display="none";
+		ayuda.style.display="none";
+		ayuda.classList.remove("animateHelpNode")
 	},2000)
 }
 
@@ -166,14 +165,16 @@ function helpNodeAppear(){
 const dinoEd=document.getElementById("dino");
 
 window.addEventListener("contextmenu",dino,false);
+const mitadPantallaHoriz=window.screen.width/2;
+const mitadPantallaVert=window.screen.height/2;
 
 function dino(evento){
 	let e=evento;
 	e.preventDefault();
 
 	dinoEd.style.display="block";
-	dinoEd.style.left=positionDino(e.clientX,(window.screen.width/2))+"px";
-	dinoEd.style.top=positionDino(e.clientY,(window.screen.height/2))+"px";
+	dinoEd.style.left=positionDino(e.clientX,mitadPantallaHoriz)+"px";
+	dinoEd.style.top=positionDino(e.clientY,mitadPantallaVert)+"px";
 
 	setTimeout(()=>{
 		dinoEd.style.display="none";
