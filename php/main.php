@@ -29,11 +29,6 @@ function headerHTML(){
 				</div>
 				<div>
 					<button>
-						<!-- Down -->
-						&#x25BC;
-
-						<!-- Up -->
-						<!-- &#x25B2; -->
 					</button>
 				</div>
 			</article>

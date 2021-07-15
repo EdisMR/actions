@@ -11,17 +11,16 @@ removeLoader();
 /* ***************************************** */
 
 window.addEventListener("mousemove", mouseMovement, false)
+window.addEventListener("keyup", keyEvent, false);
+let innerMouse = Array.from(document.querySelectorAll(".header-events .inner-event"))[0];
+let innerKey = Array.from(document.querySelectorAll(".header-events .inner-event"))[1];
+
 function mouseMovement(e) {
-	let evento = e;
-	let innerMouse = Array.from(document.querySelectorAll(".header-events .inner-event"))[0];
-	innerMouse.innerHTML = "X=" + parseInt(evento.clientX) + ", Y=" + parseInt(evento.clientY);
+	innerMouse.innerHTML = `X=${parseInt(e.clientX)}, Y=${parseInt(e.clientY)}`;
 }
 
-window.addEventListener("keyup", keyEvent, false);
 function keyEvent(e) {
-	evento = e;
-	let innerKey = Array.from(document.querySelectorAll(".header-events .inner-event"))[1];
-	innerKey.innerHTML = '"' + evento.key + '"';
+	innerKey.innerHTML = e.key;
 }
 
 /* ****************************************** */
@@ -32,20 +31,33 @@ var headerButton = {
 	disp: false, /* Determina si el menu esta oculto o no */
 	headerEnlaces: null, /* Contenedor de enlaces del menu */
 	headerLi: null, /* Cada uno de los enlaces del menu */
+	iconoArriba:"&#x25B2;",
+	iconoAbajo:"&#x25BC;",
 };
 
 if (screen.orientation.type == "portrait-primary") {
 	window.removeEventListener("keyup", keyEvent, false);
-	window.addEventListener("hashchange",closeMenu,false);
 	
-
 	/* Variables */
 	headerButton.btn = document.querySelector(".header-title button")
 	headerButton.headerEnlaces = document.querySelector(".header-enlaces");
 	headerButton.headerLi = Array.from(document.querySelectorAll(".header-enlaces a"));
-
+	
+	headerButton.btn.innerHTML=headerButton.iconoAbajo;	
 	headerButton.btn.addEventListener("click", menuSwitchMain, false);
+	
+	headerButton.headerLi.forEach(elm=>{
+		elm.addEventListener("click",closeMenu,false)
+	})
+
+	headerButton.headerLi.forEach(elm=>{
+		elm.addEventListener("animationend",()=>{
+			elm.style.opacity="1";
+		},false)
+	})
 }
+
+
 
 function menuSwitchMain() {
 	/* Mostrar menu */
@@ -60,20 +72,16 @@ function menuSwitchMain() {
 
 function openMenu() {
 	headerButton.disp = true;
-
 	headerButton.headerEnlaces.classList.add("showMenu");
 
 	/* AGREGAR ANIMACION */
 	headerButton.headerLi.forEach((elm,index)=>{
 		elm.style.animationDelay=(index/16)+"s";
 		elm.classList.add("animatedItem");
-		elm.addEventListener("animationend",()=>{
-			elm.style.opacity="1";
-		},false)
 	})
 
 	/* Llenar boton con el icono */
-	headerButton.btn.innerHTML = "&#x25B2;";
+	headerButton.btn.innerHTML = headerButton.iconoArriba;
 
 }
 
@@ -91,7 +99,7 @@ function closeMenu() {
 	})
 
 	/* Quitar animacion y Llenar boton con el icono */
-		headerButton.btn.innerHTML = "&#x25BC;";
+		headerButton.btn.innerHTML = headerButton.iconoAbajo;
 	}
 }
 
