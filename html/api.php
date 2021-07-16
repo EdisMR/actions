@@ -38,6 +38,7 @@
 
 					<article class="textItem">
 						<p class="btnSendHelper">example: <span>9.936633, -84.107593</span></p>
+						<button id="myLocation">Use my location</button>
 					</article>
 				</article>
 

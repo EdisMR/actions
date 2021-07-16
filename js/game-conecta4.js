@@ -202,9 +202,9 @@ function evaluarGanador(elem){
 		evaluaVertical(posicionX,posicionY) ||
 		evaluaCreciente(posicionX,posicionY) ||
 		evaluaDecreciente(posicionX,posicionY)
-	){
-		hayGanador=true;
-	}
+		){
+			hayGanador=true;
+		}
 
 
 	return hayGanador;
