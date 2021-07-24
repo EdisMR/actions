@@ -234,6 +234,7 @@
 
 	<?php
 		footerHTML();
+		settingsModal();
 	?>
 </body>
 </html>

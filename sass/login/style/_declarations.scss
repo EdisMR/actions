@@ -1,0 +1,49 @@
+body{
+	margin: 0;
+	padding: 0;
+	display: grid;
+	place-items: center;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	user-select: none;
+	background-color: rgb(32, 32, 32);
+}
+
+*{
+	font-size: 1.2rem;
+	font-family:sans-serif;
+	color: white;
+}
+
+form{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 500px;
+	background-color: rgba(0, 128, 255, 0.164);
+	span{
+		display: inline-block;
+		margin: 0;
+		padding: 5px;
+		border: 1px solid white;
+		
+	}
+	input{
+		padding: 5px;
+		border: none;
+		background-color: transparent;
+		border: 1px solid white;
+		&[type=password]{
+			max-width: 100px;
+			overflow: hidden;
+		}
+		&[type=submit]{
+			cursor: pointer;
+		}
+		&:disabled{
+			opacity: .5;
+		}
+	}
+}

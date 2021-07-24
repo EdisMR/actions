@@ -2,12 +2,10 @@
     main.scss
     _mainDev.scss
 
-    /appearance
-        _appearance.scss
+    /style
         _colorsDark.scss
         _colorsLight.scss
-
-    /structure
-        _structure.scss
-        _structurePortrait.scss
+        _declarations.scss
+        _declarationsPortrait.scss
         _normalize.scss
+        _fontsInline.scss

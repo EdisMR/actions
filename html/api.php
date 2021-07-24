@@ -133,6 +133,7 @@
 
 	<?php
 		footerHTML();
+		settingsModal();
 	?>
 </body>
 

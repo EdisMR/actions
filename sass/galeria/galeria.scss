@@ -1,14 +1,13 @@
-@import "appearance/carousel-fabric-icons-inline";
+@import "style/carousel-fabric-icons-inline";
 
-@import "structure/structure";
-
-@import "appearance/appearance";
+@import "style/declarations";
 
 @media (prefers-color-scheme : light){
-	@import "appearance/colorsLight";
+	@import "style/colorsLight";
 }
 
 @media (prefers-color-scheme : dark){
-	@import "appearance/colorsDark";
+	@import "style/colorsDark";
 }
-//@import "carouselDev";
+
+/* @import "galeriaDev"; */

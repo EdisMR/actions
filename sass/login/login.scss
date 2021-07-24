@@ -1,17 +1,16 @@
-@import "structure/structure";
+@import "style/declarations";
 
 @media (orientation:portrait){
-	@import "structure/structure-portrait";
+	@import "style/declarationsPortrait";
 }
 
-@import "appearance/appearance";
 
 @media (prefers-color-scheme:light){
-	@import "appearance/colorsLight";
+	@import "style/colorsLight";
 }
 
 @media (prefers-color-scheme:dark){
-	@import "appearance/colorsDark";
+	@import "style/colorsDark";
 }
 
 //@import "loginDev";

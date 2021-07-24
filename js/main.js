@@ -79,26 +79,28 @@ function openMenu() {
 		elm.style.animationDelay=(index/16)+"s";
 		elm.classList.add("animatedItem");
 	})
-
+	headerButton.headerEnlaces.style.height=`${headerButton.headerEnlaces.scrollHeight+30}px`;
+	
 	/* Llenar boton con el icono */
 	headerButton.btn.innerHTML = headerButton.iconoArriba;
-
+	
 }
 
 function closeMenu() {
 	if (headerButton.disp == true) {
 		headerButton.disp = false;
+		
+		headerButton.headerEnlaces.classList.remove("showMenu");
+		
+		/* QUITAR ANIMACION */
+		headerButton.headerLi.forEach(elm=>{
+			elm.style.display="auto";
+			elm.classList.remove("animatedItem");
+			elm.style.opacity="0";
+		})
+		headerButton.headerEnlaces.style.height=0+"px";
 
-	headerButton.headerEnlaces.classList.remove("showMenu");
-
-	/* QUITAR ANIMACION */
-	headerButton.headerLi.forEach(elm=>{
-		elm.style.display="auto";
-		elm.classList.remove("animatedItem");
-		elm.style.opacity="0";
-	})
-
-	/* Quitar animacion y Llenar boton con el icono */
+	/* Llenar boton con el icono */
 		headerButton.btn.innerHTML = headerButton.iconoAbajo;
 	}
 }
@@ -138,14 +140,13 @@ wsppFBTN.addEventListener("click", function () { window.open("https://" + wsppF[
 
 
 /* ********************************************** */
-/* ******************** ACCESIBILIDAD ************ */
+/* ******************** CONFIGURACIONES ************ */
 /* ********************************************** */
-const btnAccesibilidad = document.getElementById("accesibilityButton");
-btnAccesibilidad.addEventListener("click", ()=>{accesibilitySwitch();closeMenu()}, false);
-
-function accesibilitySwitch() {
-	console.log("accesibilitySwitch");
+var settingsVars={
+	displayed:false,
 }
+
+/* Aqui las configuraciones */
 
 
 /* HELP en enlaces sin funcionamiento */
@@ -202,4 +203,37 @@ function positionDino(evVal,mitadP){
 		resultado=valor-divHeight;
 	}
 	return resultado;
+}
+
+
+
+/* ************************************ */
+/* ************* BIG FONT ************* */
+/* ************************************ */
+var fontElm={
+	elementosTodos:null,
+	valoresIniciales:null,
+	bigFont:false,
+}
+fontElm.elementosTodos=Array.from(document.querySelectorAll("*"));
+fontElm.valoresIniciales=fontElm.elementosTodos.map(elm=>{
+	return window.getComputedStyle(elm).fontSize;
+})
+
+function bigFont(){
+	fontElm.bigFont==false?applyBigFont():removeBigFont();
+}
+
+function applyBigFont(){
+	fontElm.elementosTodos.forEach((elm,index)=>{
+		elm.style.fontSize=`calc(5px + ${fontElm.valoresIniciales[index]})`;
+	});
+	fontElm.bigFont=true;
+}
+
+function removeBigFont(){
+	fontElm.elementosTodos.forEach((elm,index)=>{
+		elm.style.fontSize=`${fontElm.valoresIniciales[index]}`;
+	});
+	fontElm.bigFont=false;
 }

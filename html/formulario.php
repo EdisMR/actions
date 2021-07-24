@@ -8,7 +8,7 @@
 	<title>XitusDev - Form</title>
 	<link rel="shortcut icon" href="../multimedia/img/me.ico" type="image/x-icon">
 	<link rel="stylesheet" href="../css/global/global.css">
-	<link rel="stylesheet" href="../css/form-main/form-main.css">
+	<link rel="stylesheet" href="../css/form-main/form.css">
 
 	<script defer src="../js/form.js"></script>
 
@@ -178,12 +178,12 @@
 					<div class="buttonContainer">
 						<button type="reset">
 							<!-- Reset -->
-							<span class="ms-Icon ms-Icon--Reset"></span>
+							Reset <span class="ms-Icon ms-Icon--Reset"></span>
 						</button>
 
 						<button type="submit">
 							<!-- Send -->
-							<span class="ms-Icon ms-Icon--AcceptMedium"></span>
+							Send <span class="ms-Icon ms-Icon--AcceptMedium"></span>
 						</button>
 
 					</div>
@@ -199,6 +199,7 @@
 
 	<?php
 		footerHTML();
+		settingsModal();
 	?>
 </body>
 

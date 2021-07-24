@@ -1,5 +1,4 @@
 /* CONSTRUCTION STRUCTURE */
-@import "style/normalize";
 @import "style/declarations";
 @media screen and (orientation: portrait){
 	@import "style/declarationsPortrait";
@@ -7,16 +6,11 @@
 
 /* COLORS */
 @media (prefers-color-scheme:light){
-	@import "style/colorsLight";
+	@import "appearance/colorsLight";
 }
 
 @media (prefers-color-scheme:dark){
-	@import "style/colorsDark";
+	@import "appearance/colorsDark";
 }
 
-/* FONTS - ICONS */
-@import "style/fabric-icons-inline";
-
-
-/* DEVELOPMENT PROCESS VISUALIZATIONS */
-//@import "globalDev";
+//@import "gameTictactoeDev";

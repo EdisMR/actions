@@ -378,6 +378,7 @@
 
 	<?php
 		footerHTML();
+		settingsModal();
 	?>
 </body>
 

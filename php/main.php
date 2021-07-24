@@ -1,23 +1,28 @@
 <?php
 
-function redirector(){
-	if( !(isset($_COOKIE["access"])) || !($_COOKIE["access"]=="432289")){
+function redirector()
+{
+	if (!(isset($_COOKIE["access"])) || !($_COOKIE["access"] == "432289")) {
 		/* header("Location: /html/login.php"); */
-		?>
-		
-		<script>window.location.pathname="/html/login.php"</script>
-		
-		<?php
+?>
+
+		<script>
+			window.location.pathname = "/html/login.php"
+		</script>
+
+	<?php
 	}
 }
 
-function loader(){
+function loader()
+{
 	?>
-		<div class="loader"></div>
-	<?php
+	<div class="loader"></div>
+<?php
 }
 
-function headerHTML(){
+function headerHTML()
+{
 ?>
 	<header class="glass">
 
@@ -25,7 +30,9 @@ function headerHTML(){
 		<section class="block">
 			<article class="header-title">
 				<div>
-					<h1>XitusDev<!-- Titulo --></h1>
+					<h1>XitusDev
+						<!-- Titulo -->
+					</h1>
 				</div>
 				<div>
 					<button>
@@ -109,7 +116,7 @@ function headerHTML(){
 						</a>
 					</li>
 					<li>
-						<a href="##" rel="noopener noreferrer" id="accesibilityButton">
+						<a rel="noopener noreferrer" id="settingsButton">
 							<div>
 								<span class="ms-Icon ms-Icon--Settings"></span>
 							</div>
@@ -138,59 +145,97 @@ function headerHTML(){
 		</section>
 
 	</header>
-	
-	<?php
+
+<?php
 }
 
 
-function footerHTML(){
+function footerHTML()
+{
 ?>
 	<footer>
-			<ul class="glass">
-				<li>
-					<a href="https://github.com/XitusDev" target="_blank" rel="noopener noreferrer" title="Git">
-						<div>
-							<span class="ms-Icon ms-Icon--GitGraph"></span>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a title="email"><!-- EMAIL -->
-						<div>
-							<span class="ms-Icon ms-Icon--Mail"></span>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a title="whatsapp"><!-- WHATSAPP -->
-						<div>
-							<figure>
-								<img src="/multimedia/icons/logo-whatsapp.svg" alt="">
-							</figure>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="/index.php" rel="noopener noreferrer" title="Website">
-						<div>
-							<span class="ms-Icon ms-Icon--Website"></span>
-						</div>
-					</a>
-				</li>
-			</ul>
+		<ul class="glass">
+			<li>
+				<a href="https://github.com/XitusDev" target="_blank" rel="noopener noreferrer" title="Git">
+					<div>
+						<span class="ms-Icon ms-Icon--GitGraph"></span>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a title="email">
+					<!-- EMAIL -->
+					<div>
+						<span class="ms-Icon ms-Icon--Mail"></span>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a title="whatsapp">
+					<!-- WHATSAPP -->
+					<div>
+						<figure>
+							<img src="/multimedia/icons/logo-whatsapp.svg" alt="">
+						</figure>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="/index.php" rel="noopener noreferrer" title="Website">
+					<div>
+						<span class="ms-Icon ms-Icon--Website"></span>
+					</div>
+				</a>
+			</li>
+		</ul>
 	</footer>
 
 	<div id="dino">
 		<img src="/multimedia/icons/dino.svg"></svg>
 	</div>
-	
+
 	<div id="helpNode">
 		<p>Site under<br> construction</p>
 	</div>
 
 
-	<?php
+<?php
 
+}
+
+
+function settingsModal()
+{
+?>
+
+<!-- Aqui el HTML -->
+<section id="modalSettings" class="d-none">
+	<div class="settings-priorization"></div>
+
+	<article class="settingsContainer">
+
+		<section class="block">
+			<div class="settingsHeader">
+				<span>Settings</span>
+			</div>
+		</section>
+
+
+		<section class="block">
+
+		</section>
+
+
+		<section class="block">
+
+		</section>
+
+
+	</article>
+
+</section>
+
+<?php
 }
 
 ?>

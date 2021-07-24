@@ -1,0 +1,136 @@
+form{
+}
+
+.infoPadding{
+	padding-left: 20px;
+	padding-right: 20px;
+	p{
+		font-size: 15px;
+	}
+}
+
+.inputGroupContainer{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 40px;
+	justify-content: center;
+}
+
+.buttonContainer{
+	display: flex;
+	flex-wrap: nowrap;
+	margin: 40px;
+	justify-content: center;
+	button{
+		padding: 5px;
+		border-radius: 0px;
+		border-width: 1px;
+		margin:auto 10px ;
+		color: rgb(102, 102, 102);
+		&[type="submit"]{
+			&:hover{
+				color: white;
+				background-color: rgb(0, 185, 0);
+			}
+			&:active{
+				background-color: rgb(20, 151, 20);
+			}
+		}
+		&[type="reset"]{			
+			&:hover{
+				background-color: rgb(206, 65, 65);
+				color: white;
+			}
+			&:active{
+				background-color: rgb(167, 17, 17);
+			}
+		}
+	}
+}
+
+.cardInputGroup{
+	width: 400px;
+	background-color: rgba(70, 130, 180,.9);
+	color: #eee;
+	&:first-child{
+		margin-right: 20px !important;
+	}
+}
+
+.formHeaderCard{
+	padding-bottom: 0px !important;
+	h3{
+		margin: 0px;
+	}
+}
+
+.inputPadding{
+	padding: 20px;
+}
+
+.itemInput{
+	margin: 10px auto;
+	width: 100%;
+}
+
+.descriptionInput{
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	white-space: nowrap;
+}
+
+.inputC{
+	display: flex;
+	width: 100%;
+	flex-wrap: nowrap;
+	align-content: stretch;
+	margin: 0px;
+	padding: 0px;
+	input{
+		flex-basis: 100%;
+		border: 2px solid transparent;
+		border: 2px solid transparent;
+		&:disabled{
+			background-color: azure;
+			color: black;
+		}
+	}
+}
+
+.goodInput,.badInput{
+	position: relative;
+	&::before{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		height: 25px;
+		width: 30px;
+		top: 0px;
+		right: 0px;
+		z-index: 10;
+	}
+}
+
+.goodInput{
+	input{
+		border: 2px solid rgb(0,150,00) !important;
+	}
+	&::before{
+		content:"✔";
+		color: whitesmoke;
+		background-color: rgba(0, 202, 61, 0.7);
+	}
+}
+.badInput{
+	position: relative;
+	input{
+		border:2px solid red !important;
+	}
+	&::before{
+		content:"❌";
+		color: rgb(255, 255, 255);
+		background-color: rgba(207, 31, 31, 0.7);
+	}
+}

@@ -122,10 +122,10 @@
 			<article class="block tecnologias-bio-container">
 				<div class="bio">
 					<p>
-					My name is Edis Mercado (XitusDev), from San José, Costa Rica. I am a web developer focused on the interfaces development for the end customer.
-I have more than 5 years of experience on writing code, I started programming in C++ at the National University of Costa Rica (UNA), where I gained experience using mathematics for programming, the programming logic and the development strategies to solve a programming situation.
-I entered the National Learning Institute (INA), where I studied Photoshop, Access, Microsoft Office, and where my passion for web development began since I entered to the Web Development program.
-After studying the basics of web development, I continued training for frontend development, and learning to use tools such as SASS, GIT, AJAX, PHP, among others. The knowledge I have gained is reflected in the group of icons next to this paragraph. You can contact me or see more details in the links that appear in the bottom of the screen.
+					I'm XitusDev (Edis Mercado) from San José, Costa Rica. I am a web developer focused on the interfaces development for the end customer.<br>
+I have more than 5 years of experience on writing code, I started programming in C++ at the National University of Costa Rica (UNA), where I gained experience using mathematics for programming, the programming logic and the development strategies to solve a programming situation.<br>
+I entered the National Learning Institute (INA), where I studied Photoshop, Access, Microsoft Office, and where my passion for web development began since I entered to the Web Development program.<br>
+After studying the basics of web development, I continued training for frontend development, and learning to use tools such as SASS, GIT, AJAX, PHP, among others.<br>The majority of the knowledge I have gained is reflected in the group of icons next to this paragraph (but is an incomplete list). You can contact me or see more details in the links that appear in the bottom of the screen.
 					</p>
 				</div>
 				<div id="tecnologias-items-container">
@@ -170,7 +170,7 @@ After studying the basics of web development, I continued training for frontend 
 
 						</figure>
 					</div>
-
+					
 					<div class="tecno-item">
 						<!-- JS -->
 						<figure>
@@ -191,11 +191,18 @@ After studying the basics of web development, I continued training for frontend 
 							<img src="multimedia/icons/GitHub.webp" alt="github">
 						</figure>
 					</div>
+					
+					<div class="tecno-item">
+						<!-- JS -->
+						<figure>
+							<img src="multimedia/icons/sass.webp" alt="sass">
+						</figure>
+					</div>
 
 					<div class="tecno-item">
 						<!-- Responsive Web Design -->
 						<figure>
-							<img src="multimedia/icons/rwd.webp" alt="responsive web design">
+							<img src="multimedia/icons/rwd1.webp" alt="responsive web design">
 						</figure>
 					</div>
 
@@ -210,6 +217,13 @@ After studying the basics of web development, I continued training for frontend 
 						<!-- PHP -->
 						<figure>
 							<img src="multimedia/icons/php.webp" alt="PHP">
+						</figure>
+					</div>
+
+					<div class="tecno-item">
+						<!-- PHP -->
+						<figure>
+							<img src="multimedia/icons/wordpress1.svg" alt="Wordpress">
 						</figure>
 					</div>
 
@@ -259,7 +273,7 @@ After studying the basics of web development, I continued training for frontend 
 					
 					<section class="card">
 						<div>
-							<h4><a href="html/conecta4.php" rel="noopener noreferrer">Connect 4</a></h4>
+							<h4><a href="html/gameConecta4.php" rel="noopener noreferrer">Connect 4</a></h4>
 						</div>
 						<div>
 							<figure>
@@ -281,7 +295,7 @@ After studying the basics of web development, I continued training for frontend 
 					
 					<section class="card">
 						<div>
-							<h4><a href="html/tictactoe.php" rel="noopener noreferrer">Tic tac toe</a></h4>
+							<h4><a href="html/gameTictactoe.php" rel="noopener noreferrer">Tic tac toe</a></h4>
 						</div>
 						<div>
 							<figure>
@@ -307,6 +321,7 @@ After studying the basics of web development, I continued training for frontend 
 
 	<?php
 	footerHTML();
+	settingsModal();
 	?>
 </body>
 

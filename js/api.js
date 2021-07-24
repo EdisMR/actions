@@ -129,6 +129,9 @@ buttonMyLocation.addEventListener("click",localizar,false);
 
 function localizar() {
 	if ("geolocation" in navigator) {
+		/* aniadir loader */
+		buttonMyLocation.disabled=true;
+		buttonMyLocation.innerText="Locating";
 		navigator.geolocation.getCurrentPosition(function (position) {
 			afterLocalization(position.coords.latitude, position.coords.longitude);
 		});
@@ -142,4 +145,6 @@ function localizar() {
 function afterLocalization(lat, lon) {
 	let texto=lat+", "+lon;
 	formulario.inputL.value=texto;
+	buttonMyLocation.removeEventListener("click",localizar,false);
+	buttonMyLocation.style.display="none";
 }
