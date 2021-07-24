@@ -209,7 +209,7 @@ function settingsModal()
 ?>
 
 <!-- Aqui el HTML -->
-<section id="modalSettings" class="d-none">
+<section id="modalSettings" class="d-none"><!-- d-none -->
 	<div class="settings-priorization"></div>
 
 	<article class="settingsContainer">
@@ -223,11 +223,124 @@ function settingsModal()
 
 		<section class="block">
 
+			<div class="settingsBody"><!-- Contiene los items de settings -->
+
+				<div class="block">
+					<div class="settingsBodyItem"> <!-- cada uno de los tres grupos -->
+						<div class="block">
+							<div class="stItemtitle"> <!-- titulo del grupo -->
+								<span>Colors</span>
+							</div>
+						</div>
+
+
+						<div class="block">
+							<div class="settingItemContainer"> <!-- Contiene a los cuadros de control -->
+
+								<div class="settingItem"><!-- Cada cuadro de control -->
+									<div class="block">
+										<div class="settingItemType">Theme</div>
+									</div>
+									<div class="block">
+										<div class="settingItemControl">
+											<span>Light</span><span class="settingItemIcon settingItemInactive"></span><span>Dark</span>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+
+
+				<div class="block">
+					<div class="settingsBodyItem"> <!-- cada uno de los tres grupos -->
+						<div class="block">
+							<div class="stItemtitle"> <!-- titulo del grupo -->
+								<span>Accesibility</span>
+							</div>
+						</div>
+
+
+						<div class="block">
+							<div class="settingItemContainer"> <!-- Contiene a los cuadros de control -->
+
+								<div class="settingItem"><!-- Cada cuadro de control -->
+									<div class="block">
+										<div class="settingItemType">High contrast</div>
+									</div>
+									<div class="block">
+										<div class="settingItemControl">
+											<span>Off</span><span class="settingItemIcon settingItemInactive"></span><span>On</span>
+										</div>
+									</div>
+								</div>
+								
+								
+								<div class="settingItem"><!-- Cada cuadro de control -->
+									<div class="block">
+										<div class="settingItemType">Big font</div>
+									</div>
+									<div class="block">
+										<div class="settingItemControl">
+											<span>Off</span><span class="settingItemIcon settingItemInactive"></span><span>On</span>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+
+
+				<div class="block">
+					<div class="settingsBodyItem"> <!-- cada uno de los tres grupos -->
+						<div class="block">
+							<div class="stItemtitle"> <!-- titulo del grupo -->
+								<span>Language</span>
+							</div>
+						</div>
+
+
+						<div class="block">
+							<div class="settingItemContainer"> <!-- Contiene a los cuadros de control -->
+
+								<div class="settingItem"><!-- Cada cuadro de control -->
+									<div class="block">
+										<div class="settingItemType">Bilingual</div>
+									</div>
+									<div class="block">
+										<div class="settingItemControl">
+											<span>English</span><span class="settingItemIcon settingItemInactive"></span><span>Spanish</span>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+
+					</div>
+				</div>
+
+
+
+
+			</div>
+
 		</section>
 
 
 		<section class="block">
-
+			<div class="settingsFooter">
+				<button id="settingsClose">Close</button>
+			</div>
 		</section>
 
 

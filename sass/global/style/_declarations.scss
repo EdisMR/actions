@@ -346,13 +346,126 @@ footer{
 		height: auto;
 	}
 }
-/* **************************** */
-/* ********** MODAL ********** */
-/* **************************** */
+
+
+/* ************************************* */
+/* ********** SETTINGS MODAL ********** */
+/* ************************************* */
 
 .d-none{
 	display: none !important;
 }
 
 
+.settings-priorization{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden !important;
+	z-index: 110;
+	background-color: black;
+	opacity: .7;
+}
 
+.settingsContainer{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 40vw;
+	min-height: 50vh;
+	opacity: 1;
+	background-color: steelblue;
+	z-index: 120;
+	*{
+		color: #eee;
+	}
+
+}
+
+.settingsHeader{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	background-color: #333;
+	font-size: 25px;
+}
+
+
+.settingsBody{
+}
+
+.settingsBodyItem{
+	padding: 30px;
+	&:hover{
+		background-color: rgb(86, 139, 182);
+	}
+}
+
+.stItemtitle{
+}
+
+.settingItemContainer{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.settingItem{
+	border: 1px solid black;
+	margin: 20px;
+}
+
+.settingItemType{
+	padding: 10px;
+	background-color: #333;
+}
+
+.settingItemControl{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: nowrap;
+	span{
+		margin: 10px;
+	}
+}
+
+/* Icono: 300x117 */
+$iconWidth:300px;
+$iconHeight:117px;
+.settingItemIcon{
+	display: inline-block;
+	background-image: url("../../../multimedia/icons/switch.svg");
+	width: $iconWidth*.2;
+	height: $iconHeight*.2;
+}
+
+
+.settingsFooter{
+	padding: 20px;
+	display: flex;
+	justify-content: flex-end;
+	
+}
+#settingsClose{
+	color: #333;
+	background-color: #ccc;
+	border: none;
+	border-radius: 10px;
+	padding: 5px;
+	&:hover{
+		background-color: #eee;
+	}
+	&:active{
+		background-color: #aaa;
+	}
+}
+
+.settingItemInactive{
+	transform: rotatey(180deg);
+}

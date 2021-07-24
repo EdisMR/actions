@@ -143,10 +143,25 @@ wsppFBTN.addEventListener("click", function () { window.open("https://" + wsppF[
 /* ******************** CONFIGURACIONES ************ */
 /* ********************************************** */
 var settingsVars={
+	parentDisplay:document.getElementById("modalSettings"),
+	buttonOpen:document.getElementById("settingsButton"),
+	closeButton:document.getElementById("settingsClose"),
 	displayed:false,
 }
 
 /* Aqui las configuraciones */
+settingsVars.buttonOpen.addEventListener("click",displaySettings,false);
+settingsVars.closeButton.addEventListener("click",hideSettings,false);
+
+function displaySettings(){
+	settingsVars.parentDisplay.classList.remove("d-none")
+	settingsVars.displayed=true;
+}
+
+function hideSettings(){
+	settingsVars.parentDisplay.classList.add("d-none")
+	settingsVars.displayed=false;
+}
 
 
 /* HELP en enlaces sin funcionamiento */

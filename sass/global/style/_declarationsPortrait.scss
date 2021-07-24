@@ -141,7 +141,23 @@ footer{
 	}
 }
 
-#settings-modal{
-	width: 80vw;
-	min-height: 60vh;
+
+/* ************************************* */
+/* ********** SETTINGS MODAL ********** */
+/* ************************************* */
+
+.settingsHeader{
+	padding: 15px;
+}
+
+.settingsContainer{
+	width: 85vw;
+}
+
+.settingsBodyItem{
+	padding: 10px;
+}
+
+.settingItem{
+	margin: 10px;
 }
