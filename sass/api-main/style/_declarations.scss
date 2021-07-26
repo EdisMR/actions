@@ -240,6 +240,8 @@ main{
 #afterForm{
 	display: none;
 	animation: rotar .5s linear 0s infinite;
+	border-radius: 50%;
+	overflow: hidden;
 }
 
 @keyframes rotar {

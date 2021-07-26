@@ -243,7 +243,7 @@ function settingsModal()
 									</div>
 									<div class="block">
 										<div class="settingItemControl">
-											<span>Light</span><span class="settingItemIcon settingItemInactive"></span><span>Dark</span>
+											<span>Light</span><span class="settingItemIcon settingItemInactive" id="buttonTheme"></span><span>Dark</span>
 										</div>
 									</div>
 								</div>
@@ -274,7 +274,7 @@ function settingsModal()
 									</div>
 									<div class="block">
 										<div class="settingItemControl">
-											<span>Off</span><span class="settingItemIcon settingItemInactive"></span><span>On</span>
+											<span>Off</span><span class="settingItemIcon" id="buttonHighContrast"></span><span>On</span>
 										</div>
 									</div>
 								</div>
@@ -286,7 +286,7 @@ function settingsModal()
 									</div>
 									<div class="block">
 										<div class="settingItemControl">
-											<span>Off</span><span class="settingItemIcon settingItemInactive"></span><span>On</span>
+											<span>Off</span><span class="settingItemIcon settingItemInactive" id="buttonBigFont"></span><span>On</span>
 										</div>
 									</div>
 								</div>
@@ -317,7 +317,7 @@ function settingsModal()
 									</div>
 									<div class="block">
 										<div class="settingItemControl">
-											<span>English</span><span class="settingItemIcon settingItemInactive"></span><span>Spanish</span>
+											<span>English</span><span class="settingItemIcon settingItemInactive" id="buttonBilingual"></span><span>Spanish</span>
 										</div>
 									</div>
 								</div>

@@ -1,10 +1,6 @@
-function removeLoader(){
-	let quienes=Array.from(document.getElementsByClassName("loader"))
-	quienes.forEach(elm=>{
-		elm.style.display="none";
-	})
-}
-removeLoader();
+var settingsDiv=document.createElement("script");
+settingsDiv.setAttribute("src","/js/settings.js");
+document.head.appendChild(settingsDiv)
 
 /* ****************************************** */
 /* ******** EVENTOS DE MOUSE Y TECLADO ***** */
@@ -138,32 +134,6 @@ const wsppFBTN = document.querySelector("footer a[title='whatsapp']");
 wsppFBTN.addEventListener("click", function () { window.open("https://" + wsppF[0] + wsppF[1]); }, false);
 
 
-
-/* ********************************************** */
-/* ******************** CONFIGURACIONES ************ */
-/* ********************************************** */
-var settingsVars={
-	parentDisplay:document.getElementById("modalSettings"),
-	buttonOpen:document.getElementById("settingsButton"),
-	closeButton:document.getElementById("settingsClose"),
-	displayed:false,
-}
-
-/* Aqui las configuraciones */
-settingsVars.buttonOpen.addEventListener("click",displaySettings,false);
-settingsVars.closeButton.addEventListener("click",hideSettings,false);
-
-function displaySettings(){
-	settingsVars.parentDisplay.classList.remove("d-none")
-	settingsVars.displayed=true;
-}
-
-function hideSettings(){
-	settingsVars.parentDisplay.classList.add("d-none")
-	settingsVars.displayed=false;
-}
-
-
 /* HELP en enlaces sin funcionamiento */
 let ayuda=document.getElementById("helpNode");
 
@@ -218,37 +188,4 @@ function positionDino(evVal,mitadP){
 		resultado=valor-divHeight;
 	}
 	return resultado;
-}
-
-
-
-/* ************************************ */
-/* ************* BIG FONT ************* */
-/* ************************************ */
-var fontElm={
-	elementosTodos:null,
-	valoresIniciales:null,
-	bigFont:false,
-}
-fontElm.elementosTodos=Array.from(document.querySelectorAll("*"));
-fontElm.valoresIniciales=fontElm.elementosTodos.map(elm=>{
-	return window.getComputedStyle(elm).fontSize;
-})
-
-function bigFont(){
-	fontElm.bigFont==false?applyBigFont():removeBigFont();
-}
-
-function applyBigFont(){
-	fontElm.elementosTodos.forEach((elm,index)=>{
-		elm.style.fontSize=`calc(5px + ${fontElm.valoresIniciales[index]})`;
-	});
-	fontElm.bigFont=true;
-}
-
-function removeBigFont(){
-	fontElm.elementosTodos.forEach((elm,index)=>{
-		elm.style.fontSize=`${fontElm.valoresIniciales[index]}`;
-	});
-	fontElm.bigFont=false;
 }
