@@ -128,14 +128,16 @@ buttonMyLocation.addEventListener("click",localizar,false);
 
 
 function localizar() {
-	if ("geolocation" in navigator) {
-		/* aniadir loader */
-		buttonMyLocation.disabled=true;
-		buttonMyLocation.innerText="Locating";
-		navigator.geolocation.getCurrentPosition(function (position) {
-			afterLocalization(position.coords.latitude, position.coords.longitude);
-		});
-	}else{
+	try{
+		if ("geolocation" in navigator) {
+			/* aniadir loader */
+			buttonMyLocation.disabled=true;
+			buttonMyLocation.innerText="Locating";
+			navigator.geolocation.getCurrentPosition(function (position) {
+				afterLocalization(position.coords.latitude, position.coords.longitude);	
+			})
+		}
+	}catch(e){
 		alert("No es posible realizar la operacion");
 		buttonMyLocation.removeEventListener("click",localizar,false);
 		buttonMyLocation.style.display="none";

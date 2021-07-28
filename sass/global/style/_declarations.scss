@@ -315,7 +315,8 @@ footer{
 	position: fixed;
 	left: 40vw;
 	top: 40vh;
-	box-shadow: 10px 10px 15px rgba(56, 56, 56, 0.377)
+	box-shadow: 10px 10px 15px rgba(56, 56, 56, 0.377);
+	z-index:150;
 }
 
 .animateHelpNode{
@@ -402,7 +403,7 @@ footer{
 }
 
 .settingsBodyItem{
-	padding: 30px;
+	padding: 20px;
 	&:hover{
 		background-color: rgb(86, 139, 182);
 	}
@@ -438,6 +439,11 @@ footer{
 	}
 }
 
+#buttonBilingual{
+	pointer-events: none;
+	opacity: .5;
+}
+
 /* Icono: 300x117 */
 $iconWidth:300px;
 $iconHeight:117px;
@@ -448,7 +454,7 @@ $iconHeight:117px;
 	height: $iconHeight*.2;
 	border-radius: 20px;
 	border:1px solid transparent;
-	background-color: rgb(21, 165, 134);
+	background-color: rgb(21, 165, 134) !important;
 	&:hover{
 		border-color: whitesmoke;
 	}
@@ -481,5 +487,15 @@ $iconHeight:117px;
 
 .settingItemInactive{
 	transform: rotatey(180deg);
-	background-color: rgb(165, 21, 69);
+	background-color: rgb(165, 21, 69) !important;
+}
+
+.accesibilityBorder{
+	border: 1px solid yellow !important;
+	color: yellow !important;
+	*{
+		span,p,h1,h2,h3,h4,a{
+		background-color: black;
+		color: yellow !important;
+	}}
 }

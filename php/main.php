@@ -24,7 +24,7 @@ function loader()
 function headerHTML()
 {
 ?>
-	<header class="glass">
+	<header class="glass" data-accesibilityborder="true">
 
 		<!-- title -->
 		<section class="block">
@@ -45,7 +45,7 @@ function headerHTML()
 		<section class="block">
 			<nav class="header-enlaces">
 				<ul>
-					<li>
+					<li data-accesibilityborder="true">
 						<a href="/index.php" rel="noopener noreferrer">
 							<div>
 								<span class="ms-Icon ms-Icon--Home"></span>
@@ -55,7 +55,7 @@ function headerHTML()
 							</div>
 						</a>
 					</li>
-					<li>
+					<li data-accesibilityborder="true">
 						<a href="/index.php#tecnologias" rel="noopener noreferrer">
 							<div>
 								<span class="ms-Icon ms-Icon--Contact"></span>
@@ -65,7 +65,7 @@ function headerHTML()
 							</div>
 						</a>
 					</li>
-					<li>
+					<li data-accesibilityborder="true">
 						<a href="/html/formulario.php" rel="noopener noreferrer">
 							<div>
 								<span class="ms-Icon ms-Icon--OfficeFormsLogo24"></span>
@@ -75,7 +75,7 @@ function headerHTML()
 							</div>
 						</a>
 					</li>
-					<li>
+					<li data-accesibilityborder="true">
 						<a href="/html/galeria.php" rel="noopener noreferrer">
 							<div>
 								<span class="ms-Icon ms-Icon--SamsungGallery"></span>
@@ -85,7 +85,7 @@ function headerHTML()
 							</div>
 						</a>
 					</li>
-					<li>
+					<li data-accesibilityborder="true">
 						<a href="/html/carruseles.php" rel="noopener noreferrer">
 							<div>
 								<span class="ms-Icon ms-Icon--PanoIndicator"></span>
@@ -95,7 +95,7 @@ function headerHTML()
 							</div>
 						</a>
 					</li>
-					<li>
+					<li data-accesibilityborder="true">
 						<a href="/html/api.php" rel="noopener noreferrer">
 							<div>
 								<span class="ms-Icon ms-Icon--AzureAPIManagement"></span>
@@ -105,7 +105,7 @@ function headerHTML()
 							</div>
 						</a>
 					</li>
-					<li>
+					<li data-accesibilityborder="true">
 						<a href="/index.php#juegos-html" rel="noopener noreferrer">
 							<div>
 								<span class="ms-Icon ms-Icon--Game"></span>
@@ -115,7 +115,7 @@ function headerHTML()
 							</div>
 						</a>
 					</li>
-					<li>
+					<li data-accesibilityborder="true">
 						<a rel="noopener noreferrer" id="settingsButton">
 							<div>
 								<span class="ms-Icon ms-Icon--Settings"></span>
@@ -153,7 +153,7 @@ function headerHTML()
 function footerHTML()
 {
 ?>
-	<footer>
+	<footer data-accesibilityborder="true">
 		<ul class="glass">
 			<li>
 				<a href="https://github.com/XitusDev" target="_blank" rel="noopener noreferrer" title="Git">
@@ -212,7 +212,7 @@ function settingsModal()
 <section id="modalSettings" class="d-none"><!-- d-none -->
 	<div class="settings-priorization"></div>
 
-	<article class="settingsContainer">
+	<article class="settingsContainer" data-accesibilityborder="true">
 
 		<section class="block">
 			<div class="settingsHeader">
