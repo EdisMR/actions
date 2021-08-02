@@ -56,7 +56,7 @@
 			</article>
 			<article class="block">
 				<div class="main-index-grid col2y1">
-					<section class="card">
+					<section class="card" data-accesibilityborder="true">
 						<div class="card-header">
 							<h4><a href="html/formulario.php" rel="noopener noreferrer">Form</a></h4>
 						</div>
@@ -69,7 +69,7 @@
 							</ul>
 						</div>
 					</section>
-					<section class="card">
+					<section class="card" data-accesibilityborder="true">
 						<div class="card-header">
 							<h4><a href="html/galeria.php" rel="noopener noreferrer">Gallery</a></h4>
 						</div>
@@ -83,7 +83,7 @@
 							</ul>
 						</div>
 					</section>
-					<section class="card">
+					<section class="card" data-accesibilityborder="true">
 						<div class="card-header">
 							<h4><a href="html/carruseles.php" rel="noopener noreferrer">Carousel / Presentation</a></h4>
 						</div>
@@ -96,7 +96,7 @@
 							</ul>
 						</div>
 					</section>
-					<section class="card">
+					<section class="card" data-accesibilityborder="true">
 						<div class="card-header">
 							<h4><a href="html/api.php" rel="noopener noreferrer">API in use</a></h4>
 						</div>
@@ -120,7 +120,7 @@
 				</div>
 			</article>
 			<article class="block tecnologias-bio-container">
-				<div class="bio">
+				<div class="bio" data-accesibilityborder="true">
 					<p>
 					I'm XitusDev (Edis Mercado) from San José, Costa Rica. I am a web developer focused on the interfaces development for the end customer.<br>
 I have more than 5 years of experience on writing code, I started programming in C++ at the National University of Costa Rica (UNA), where I gained experience using mathematics for programming, the programming logic and the development strategies to solve a programming situation.<br>
@@ -271,7 +271,7 @@ After studying the basics of web development, I continued training for frontend 
 			<article class="block">
 				<div class="main-index-grid col4y2">
 					
-					<section class="card">
+					<section class="card" data-accesibilityborder="true">
 						<div>
 							<h4><a href="html/gameConecta4.php" rel="noopener noreferrer">Connect 4</a></h4>
 						</div>
@@ -282,7 +282,7 @@ After studying the basics of web development, I continued training for frontend 
 						</div>
 					</section>
 					
-					<section class="card">
+					<section class="card" data-accesibilityborder="true">
 						<div>
 							<h4><a href="##" rel="noopener noreferrer">Random Rabbit</a></h4>
 						</div>
@@ -293,7 +293,7 @@ After studying the basics of web development, I continued training for frontend 
 						</div>
 					</section>
 					
-					<section class="card">
+					<section class="card" data-accesibilityborder="true">
 						<div>
 							<h4><a href="html/gameTictactoe.php" rel="noopener noreferrer">Tic tac toe</a></h4>
 						</div>
@@ -304,7 +304,7 @@ After studying the basics of web development, I continued training for frontend 
 						</div>
 					</section>
 					
-					<section class="card">
+					<section class="card" data-accesibilityborder="true">
 						<div>
 							<h4><a href="##" rel="noopener noreferrer">Memory game</a></h4>
 						</div>
