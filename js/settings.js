@@ -219,8 +219,5 @@ function removeBigFont(){
 }
 
 
-
-
-
 /* eliminar loader */
 document.body.removeChild(document.querySelector(".loader"))

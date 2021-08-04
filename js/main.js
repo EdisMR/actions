@@ -1,11 +1,6 @@
-var settingsDiv=document.createElement("script");
-settingsDiv.setAttribute("src","/js/settings.js");
-document.head.appendChild(settingsDiv)
-
 /* ****************************************** */
 /* ******** EVENTOS DE MOUSE Y TECLADO ***** */
 /* ***************************************** */
-
 window.addEventListener("mousemove", mouseMovement, false)
 window.addEventListener("keyup", keyEvent, false);
 let innerMouse = Array.from(document.querySelectorAll(".header-events .inner-event"))[0];
@@ -189,3 +184,8 @@ function positionDino(evVal,mitadP){
 	}
 	return resultado;
 }
+
+/* Añadir script de settings */
+var settingsDiv=document.createElement("script");
+settingsDiv.setAttribute("src","/js/settings.js");
+document.head.appendChild(settingsDiv)

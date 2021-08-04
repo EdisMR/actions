@@ -135,7 +135,6 @@ function removeHoverGrid(elem) {
 
 /* funcion del div cliqueado */
 function divCLicked(evt) {
-	console.time("divCliked")
 	let e = evt;
 	let elemento = this;
 	let elementoLlenar
@@ -153,7 +152,6 @@ function divCLicked(evt) {
 		removeListerDivs();
 		removeHoverGrid(elementoLlenar);
 	}
-	console.timeEnd("divCliked")
 }
 
 function switchUser() {
@@ -214,10 +212,9 @@ function defineUltimoElementoVacio(elm) {
 }
 
 function evaluarGanador(elem) {
-	let elementoLlenado = elem;
 	let hayGanador = false;
-	let valorX = parseInt(elementoLlenado.dataset.posx);
-	let valorY = parseInt(elementoLlenado.dataset.posy);
+	let valorX = parseInt(elem.dataset.posx);
+	let valorY = parseInt(elem.dataset.posy);
 
 /* Horizontal */
 	/* caso1 */
@@ -391,12 +388,12 @@ function evaluarGanador(elem) {
 
 function buscarClaseEnReferencia(valX,valY){
 	let resultadoF=false;
-	let contadorErrores=0;
+	let contadorErrores=false;/* No hay errores */
 
 	try {matrizGame[valX][valY].classList} 
-	catch (error) {contadorErrores++}
+	catch (error) {contadorErrores=true}
 
-	if(contadorErrores==0){
+	if(contadorErrores==false){
 
 		let clases=Array.from(matrizGame[valX][valY].classList);
 		
