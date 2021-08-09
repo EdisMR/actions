@@ -168,12 +168,13 @@ header{
 				color: white;
 				div{
 					display: inline-block;
-					span{
+					span,button{
 						background-color: rgba(255, 255, 255, 0.2);
 						padding: 5px;
 						border-radius: 50%;
 						font-size: 30px;
 						margin-right: 10px;
+						color: inherit;
 					}
 				}
 			}
@@ -436,12 +437,14 @@ footer{
 	flex-wrap: nowrap;
 	span{
 		margin: 10px;
+		cursor: pointer;
 	}
 }
 
 #buttonBilingual{
-	pointer-events: none;
 	opacity: .5;
+	cursor: not-allowed;
+	pointer-events: none;
 }
 
 /* Icono: 300x117 */

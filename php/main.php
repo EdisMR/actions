@@ -118,7 +118,7 @@ function headerHTML()
 					<li data-accesibilityborder="true">
 						<a rel="noopener noreferrer" id="settingsButton">
 							<div>
-								<span class="ms-Icon ms-Icon--Settings"></span>
+								<button class="ms-Icon ms-Icon--Settings"></button>
 							</div>
 							<div>
 								Settings
@@ -274,7 +274,7 @@ function settingsModal()
 									</div>
 									<div class="block">
 										<div class="settingItemControl">
-											<span>Off</span><span class="settingItemIcon" id="buttonHighContrast"></span><span>On</span>
+											<span>Off</span><span class="settingItemIcon settingItemInactive" id="buttonHighContrast"></span><span>On</span>
 										</div>
 									</div>
 								</div>
@@ -325,12 +325,8 @@ function settingsModal()
 							</div>
 						</div>
 
-
 					</div>
 				</div>
-
-
-
 
 			</div>
 

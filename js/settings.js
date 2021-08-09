@@ -215,6 +215,7 @@ function removeBigFont(){
 	let arrayTodos=Array.from(document.querySelectorAll("*"));
 	arrayTodos.forEach(elm=>{
 		elm.style.fontSize=elm.dataset.initialfont
+		elm.removeAttribute("data-initialfont");
 	})
 }
 

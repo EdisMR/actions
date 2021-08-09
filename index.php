@@ -9,7 +9,6 @@
 	<link rel="shortcut icon" href="multimedia/img/me.ico" type="image/x-icon">
 	<link rel="stylesheet" href="css/global/global.css">
 	<link rel="stylesheet" href="css/site-index/indexMainTag.css">
-
 	<script defer src="js/main.js"></script>
 
 </head>
