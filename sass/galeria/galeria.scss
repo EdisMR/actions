@@ -1,7 +1,3 @@
-@import "style/carousel-fabric-icons-inline";
-
-@import "style/declarations";
-
 @media (prefers-color-scheme : light){
 	@import "style/colorsLight";
 }
@@ -9,5 +5,9 @@
 @media (prefers-color-scheme : dark){
 	@import "style/colorsDark";
 }
+
+@import "style/carousel-fabric-icons-inline";
+
+@import "style/declarations";
 
 /* @import "galeriaDev"; */

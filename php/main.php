@@ -225,36 +225,6 @@ function settingsModal()
 
 			<div class="settingsBody"><!-- Contiene los items de settings -->
 
-				<div class="block">
-					<div class="settingsBodyItem"> <!-- cada uno de los tres grupos -->
-						<div class="block">
-							<div class="stItemtitle"> <!-- titulo del grupo -->
-								<span>Colors</span>
-							</div>
-						</div>
-
-
-						<div class="block">
-							<div class="settingItemContainer"> <!-- Contiene a los cuadros de control -->
-
-								<div class="settingItem"><!-- Cada cuadro de control -->
-									<div class="block">
-										<div class="settingItemType">Theme</div>
-									</div>
-									<div class="block">
-										<div class="settingItemControl">
-											<span>Light</span><span class="settingItemIcon settingItemInactive" id="buttonTheme"></span><span>Dark</span>
-										</div>
-									</div>
-								</div>
-
-							</div>
-						</div>
-
-
-					</div>
-				</div>
-
 
 				<div class="block">
 					<div class="settingsBodyItem"> <!-- cada uno de los tres grupos -->

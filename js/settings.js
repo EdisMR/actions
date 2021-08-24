@@ -8,7 +8,6 @@ var settingsVars={
 	closeButton:document.getElementById("settingsClose"),
 
 	/* Botones controladores de las configuraciones */
-	buttonTheme:document.getElementById("buttonTheme"),
 	buttonHighContrast:document.getElementById("buttonHighContrast"),
 	buttonBigFont:document.getElementById("buttonBigFont"),
 	buttonBilingual:document.getElementById("buttonBilingual"),
@@ -30,18 +29,6 @@ function hideSettings(){
 /* ******************************************* */
 /* ********** LocalStorage para settings ********** */
 /* ******************************************* */
-if(!localStorage.darkThemeBoolean){
-	localStorage.darkThemeBoolean="false"
-}else{
-	/* Si es true, aplicar esta configuracion */
-	if(localStorage.darkThemeBoolean=="true"){
-		applyDarkTheme();
-	}
-	/* Si es false, aplicar esta configuracion */
-	if(localStorage.darkThemeBoolean=="false"){
-		removeDarkTheme();
-	}
-}
 
 if(!localStorage.highContrastBoolean){
 	localStorage.highContrastBoolean="false"
@@ -85,7 +72,6 @@ if(!localStorage.bigFontBoolean){
 /* ************************************* */
 /* ******** LISTENERS de controles ******** */
 /* ************************************* */
-settingsVars.buttonTheme.addEventListener("click",switchDarkTheme,false)
 settingsVars.buttonHighContrast.addEventListener("click",switchHighContrast,false)
 settingsVars.buttonBigFont.addEventListener("click",switchBigFont,false)
 settingsVars.buttonBilingual.addEventListener("click",switchSpanish,false)
@@ -94,21 +80,7 @@ settingsVars.buttonBilingual.addEventListener("click",switchSpanish,false)
 /* ******************************* */
 /* ******** Funciones switch ******** */
 /* ******************************* */
-function switchDarkTheme(){
-	if(localStorage.darkThemeBoolean=="true"){
-		/* Pasar a false */
-		removeDarkTheme();
-		localStorage.darkThemeBoolean="false";
-	}else{
 
-		if(localStorage.darkThemeBoolean=="false"){
-			/* Pasar a true */
-			applyDarkTheme();
-			localStorage.darkThemeBoolean="true";
-		}
-	}
-	helpNodeAppear()
-}
 function switchHighContrast(){
 	if(localStorage.highContrastBoolean=="true"){
 		/* Pasar a false */
@@ -157,9 +129,6 @@ function switchBigFont(){
 /* ************************** */
 /* ****** Funciones apply ****** */
 /* ************************** */
-function applyDarkTheme(){
-	settingsVars.buttonTheme.classList.remove("settingItemInactive");
-}
 
 function applyHighContrast(){
 	settingsVars.buttonHighContrast.classList.remove("settingItemInactive");
@@ -191,10 +160,6 @@ function applyBigFont(){
 /* ****************************** */
 /* ******* Funciones remove ******* */
 /* ****************************** */
-
-function removeDarkTheme(){
-	settingsVars.buttonTheme.classList.add("settingItemInactive");
-}
 
 function removeHighContrast(){
 	settingsVars.buttonHighContrast.classList.add("settingItemInactive");

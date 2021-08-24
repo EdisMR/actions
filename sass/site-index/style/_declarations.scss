@@ -13,6 +13,7 @@
 
 .index-portada{
 	background-color: #F5FCCC;
+	color: #333;
 	position: relative;
 	figure{
 		display: flex;
@@ -120,7 +121,7 @@ $texnoItemsSize:60px;
 	margin: 10px;
 	transition: background-color .4s;
 	&:hover{
-		background-color: rgb(215, 237, 255);
+		background-color: rgba($color: #00a2ff, $alpha: .2)
 	}
 	&:active{
 		outline: 2px solid #eee;

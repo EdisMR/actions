@@ -5,6 +5,8 @@ window.addEventListener("mousemove", mouseMovement, false)
 window.addEventListener("keyup", keyEvent, false);
 let innerMouse = Array.from(document.querySelectorAll(".header-events .inner-event"))[0];
 let innerKey = Array.from(document.querySelectorAll(".header-events .inner-event"))[1];
+const mitadPantallaHoriz=window.screen.width/2;
+const mitadPantallaVert=window.screen.height/2;
 
 function mouseMovement(e) {
 	innerMouse.innerHTML = `X=${parseInt(e.clientX)}, Y=${parseInt(e.clientY)}`;
@@ -154,8 +156,6 @@ function helpNodeAppear(e){
 const dinoEd=document.getElementById("dino");
 
 window.addEventListener("contextmenu",dino,false);
-const mitadPantallaHoriz=window.screen.width/2;
-const mitadPantallaVert=window.screen.height/2;
 
 function dino(evento){
 	let e=evento;

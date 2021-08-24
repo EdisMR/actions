@@ -1,10 +1,3 @@
-/* CONSTRUCTION STRUCTURE */
-@import "style/normalize";
-@import "style/declarations";
-@media screen and (orientation: portrait){
-	@import "style/declarationsPortrait";
-}
-
 /* COLORS */
 @media (prefers-color-scheme:light){
 	@import "style/colorsLight";
@@ -12,6 +5,14 @@
 
 @media (prefers-color-scheme:dark){
 	@import "style/colorsDark";
+}
+
+/* CONSTRUCTION STRUCTURE */
+@import "style/normalize";
+@import "style/declarations";
+
+@media screen and (orientation: portrait){
+	@import "style/declarationsPortrait";
 }
 
 /* FONTS - ICONS */
