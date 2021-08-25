@@ -1,10 +1,8 @@
-@import "style/declarations";
-
-@media (prefers-color-scheme : light){
-	@import "style/colorsLight";
-}
+@import "style/colors";
 
 @media (prefers-color-scheme : dark){
 	@import "style/colorsDark";
 }
+
+@import "style/declarations";
 //@import "apiDev";

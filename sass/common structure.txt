@@ -3,8 +3,8 @@
     _mainDev.scss
 
     /style
+        _colors.scss
         _colorsDark.scss
-        _colorsLight.scss
         _declarations.scss
         _declarationsPortrait.scss
         _normalize.scss

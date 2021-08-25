@@ -1,15 +1,12 @@
-@import "style/declarations";
-
-@media (orientation:portrait){
-	@import "style/declarationsPortrait";
-}
-
-@media (prefers-color-scheme:light){
-	@import "style/colorsLight";
-}
+@import "style/colors";
 
 @media (prefers-color-scheme:dark){
 	@import "style/colorsDark";
 }
 
+@import "style/declarations";
+
+@media (orientation:portrait){
+	@import "style/declarationsPortrait";
+}
 //@import "formDev";

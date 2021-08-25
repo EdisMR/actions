@@ -1,16 +1,15 @@
-/* CONSTRUCTION STRUCTURE */
-@import "style/declarations";
-@media screen and (orientation: portrait){
-	@import "style/declarationsPortrait";
-}
-
 /* COLORS */
-@media (prefers-color-scheme:light){
-	@import "style/colorsLight";
-}
+@import "style/colors";
 
 @media (prefers-color-scheme:dark){
 	@import "style/colorsDark";
+}
+
+/* CONSTRUCTION STRUCTURE */
+@import "style/declarations";
+
+@media screen and (orientation: portrait){
+	@import "style/declarationsPortrait";
 }
 
 //@import "gameTictactoeDev";
