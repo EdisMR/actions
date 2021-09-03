@@ -1,0 +1,49 @@
+* {
+	user-select: none
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	background-color: #E6F59E;
+	overflow: hidden;
+	figure {
+		display: inline-block;
+		margin: 0px
+	}
+}
+
+
+video {
+	width: 800px;
+	max-width: 90vw;
+}
+
+.buttonsSection {
+	border-radius: 100px;
+	background-color: #3CA868;
+	display: flex;
+	flex-wrap: nowrap;
+	button {
+		flex: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 5px !important;
+		padding: 5px !important;
+		border-radius: 50%;
+		font-size: 30px !important;
+	}
+}
+
+
+
+.advice{
+	margin-bottom: 10px;
+	color: #333;
+}

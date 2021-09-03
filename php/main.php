@@ -16,7 +16,7 @@ function redirector()
 
 function loader()
 {
-	?>
+?>
 	<div class="loader"></div>
 <?php
 }
@@ -111,7 +111,7 @@ function headerHTML()
 								<span class="ms-Icon ms-Icon--Game"></span>
 							</div>
 							<div>
-								HTML5 games
+								HTML5 Projects
 							</div>
 						</a>
 					</li>

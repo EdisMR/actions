@@ -6,7 +6,7 @@
 
 @import "style/declarations";
 
-@media (orientation:portrait){
+@media screen and (orientation:portrait){
 	@import "style/declarationsPortrait";
 }
 

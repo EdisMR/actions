@@ -173,3 +173,12 @@
 .carousel-btn-next{
 	
 }
+
+@media screen and (min-width:600px) {
+	main{
+		scroll-snap-type: y mandatory;
+	}
+	.centrador{
+		scroll-snap-align: center;
+	}
+}

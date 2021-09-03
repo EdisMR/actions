@@ -1,13 +1,17 @@
+/* COLORS */
 @import "style/colors";
 
 @media (prefers-color-scheme:dark){
 	@import "style/colorsDark";
 }
 
+/* CONSTRUCTION STRUCTURE */
+
 @import "style/declarations";
 
-@media screen and (orientation:portrait){
+@media screen and (orientation: portrait){
 	@import "style/declarationsPortrait";
 }
 
-//@import "loginDev";
+/* FONTS - ICONS */
+@import "style/videoing-icons";

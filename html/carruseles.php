@@ -28,7 +28,7 @@
 
 	<main>
 
-		<section class="portada">
+		<section class="portada centrador">
 			<h1>Carousel</h1>
 			<p>
 			It is important to note that these carousels and their operation was developed completely by myself (XitusDev).
@@ -39,7 +39,7 @@
 			</p>
 		</section>
 
-		<section class="carousel-block-container">
+		<section class="carousel-block-container centrador">
 
 
 			<section class="carousel-container">
@@ -122,7 +122,7 @@
 
 
 
-		<section class="carousel-block-container">
+		<section class="carousel-block-container centrador">
 
 			<section class="carousel-container">
 
@@ -260,7 +260,7 @@
 
 
 
-		<section class="carousel-block-container">
+		<section class="carousel-block-container centrador">
 
 			<section class="carousel-container carousel-No-controls">
 

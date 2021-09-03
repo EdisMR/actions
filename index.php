@@ -26,7 +26,7 @@
 	<main>
 
 		<!-- PORTADA -->
-		<section class="block">
+		<section class="block centrador" style="margin-top: 0px;">
 			<article class="index-portada">
 				<div class="tituloPortada">
 					<h1>
@@ -46,7 +46,7 @@
 
 
 		<!-- GRID1 -->
-		<section class="block">
+		<section class="block centrador">
 			<article class="block">
 				<div>
 					<h2 id="index-paginas">Pages on this site</h2>
@@ -111,7 +111,7 @@
 		</section>
 
 		<!-- Seccion de tecnologias que uso -->
-		<section class="block">
+		<section class="block centrador">
 			<article class="block">
 				<div>
 					<h2 id="tecnologias">About me</h2>
@@ -258,11 +258,11 @@ After studying the basics of web development, I continued training for frontend 
 		</section>
 
 		<!-- GRID2 -->
-		<section class="block">
+		<section class="block centrador">
 		
 			<article class="block">
 				<div>
-					<h2 id="juegos-html">HTML5 games</h2>
+					<h2 id="juegos-html">HTML5 Projects</h2>
 				</div>
 			</article>
 
@@ -279,18 +279,7 @@ After studying the basics of web development, I continued training for frontend 
 							</figure>
 						</div>
 					</section>
-					
-					<section class="card" data-accesibilityborder="true">
-						<div>
-							<h4><a href="##" rel="noopener noreferrer">Random Rabbit</a></h4>
-						</div>
-						<div>
-							<figure>
-								<img src="https://picsum.photos/seed/picsum/300/300" alt="random rabbit" title="galeria">
-							</figure>
-						</div>
-					</section>
-					
+
 					<section class="card" data-accesibilityborder="true">
 						<div>
 							<h4><a href="html/gameTictactoe.php" rel="noopener noreferrer">Tic tac toe</a></h4>
@@ -304,11 +293,22 @@ After studying the basics of web development, I continued training for frontend 
 					
 					<section class="card" data-accesibilityborder="true">
 						<div>
-							<h4><a href="##" rel="noopener noreferrer">Memory game</a></h4>
+							<h4><a href="html/calculator.php" rel="noopener noreferrer">String Based Calculator</a></h4>
 						</div>
 						<div>
 							<figure>
-								<img src="https://picsum.photos/seed/picsum/300/300" alt="Memory game">
+								<img src="https://picsum.photos/seed/picsum/300/300" alt="random rabbit" title="galeria">
+							</figure>
+						</div>
+					</section>
+					
+					<section class="card" data-accesibilityborder="true">
+						<div>
+							<h4><a href="html/videoIng/" rel="noopener noreferrer">Video Player - Broccoli</a></h4>
+						</div>
+						<div>
+							<figure>
+								<img src="multimedia/img/broccoli.webp" alt="Broccoli Video">
 							</figure>
 						</div>
 					</section>

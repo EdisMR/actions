@@ -18,7 +18,7 @@
 }
 
 .index-portada{
-	background-color: #F5FCCC;
+	background-image: linear-gradient(90deg,#CCD9D0,#E3EEC9,#F3FEC8,#F3FEC8,#F3FEC8,#F3FEC8,#F3FEC8,#F3FEC8,#F3FEC8,#F3FEC8);
 	color: #333;
 	position: relative;
 	figure{
@@ -160,4 +160,16 @@ $texnoItemsSize:60px;
 	display: inline-block;
 	width: 45%;
 	text-align: justify;
+}
+
+
+@media screen and (min-width:600px) {
+	main{
+		scroll-snap-type: y mandatory;
+	}
+	.centrador{
+		margin-top: 100px;
+		margin-bottom: 100px;
+		scroll-snap-align: center;
+	}
 }
