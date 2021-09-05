@@ -1,8 +1,8 @@
 $sizeBorderRadius:10px;
-$backgroundCalcContainer:lavender;
-$backgroundButtons:hsl(240, 100%, 77%);
-$backgroundButtonsHover:hsl(240, 100%, 85%);
-$backgroundButtonsActive:hsl(240, 100%, 70%);
+$backgroundCalcContainer:rgb(212, 226, 255);
+$backgroundButtons:hsl(204, 79%, 55%);
+$backgroundButtonsHover:hsl(204, 79%, 65%);
+$backgroundButtonsActive:hsl(204, 79%, 45%);
 $backgroundButtonAC:hsl(44, 100%, 60%);
 $backgroundButtonACHover:hsl(44, 100%, 80%);
 $backgroundButtonACActive:hsl(44, 100%, 55%);
@@ -40,10 +40,11 @@ $backgroundButtonACActive:hsl(44, 100%, 55%);
 		height: 50px;
 		word-break: break-all;
 		word-wrap: break-word;
-		font-size: 30px;
+		font-size: 20px;
 		border-top-left-radius: $sizeBorderRadius;
 		border-bottom-left-radius: $sizeBorderRadius;
 		outline: none;
+		border-right:none;
 	}
 	
 	button{
@@ -64,7 +65,7 @@ $backgroundButtonACActive:hsl(44, 100%, 55%);
 	justify-content: center;
 	align-items: flex-start;
 	margin: 20px;
-	font-size: 30px;
+	font-size: 25px;
 	color: #333;
 }
 
@@ -90,11 +91,13 @@ $backgroundButtonACActive:hsl(44, 100%, 55%);
 		border: 1px solid royalblue;
 		font-size: 30px;
 		cursor: pointer;
+		border: 2px inset transparent;
 		&:hover{
 			background-color: $backgroundButtonsHover;
 		}
 		&:active{
 			background-color: $backgroundButtonsActive;
+			border-color:#333;
 		}
 	}
 }
