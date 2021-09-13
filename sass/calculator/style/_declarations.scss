@@ -28,96 +28,45 @@ $backgroundButtonACActive:hsl(44, 100%, 55%);
 	border-radius: $sizeBorderRadius;
 }
 
-.resultsContainer{
-	display: flex;
-	flex-wrap: nowrap;
-	color: #333;
-
-	input{
-		padding: 10px;
-		width: 100%;
-		max-width: 100%;
-		height: 50px;
-		word-break: break-all;
-		word-wrap: break-word;
-		font-size: 20px;
-		border-top-left-radius: $sizeBorderRadius;
-		border-bottom-left-radius: $sizeBorderRadius;
-		outline: none;
-		border-right:none;
-	}
-	
-	button{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 50px;
-		font-size: 40px;
-		border-top-right-radius: $sizeBorderRadius;
-		border-bottom-right-radius: $sizeBorderRadius;
-
-	}
-}
-
-.showResult{
-	flex: none;
+.inputContainer,.buttonsContainer,.resultContainer{
 	display: flex;
 	justify-content: center;
-	align-items: flex-start;
-	margin: 20px;
-	font-size: 25px;
-	color: #333;
+	align-items: center;
+}
+
+.inputContainer{
+	input{
+		display: flex;
+		width: 100%;
+		height: 40px;
+		padding: 10px;
+		font-size: 20px;
+		border-radius: $sizeBorderRadius;
+		outline: none;
+	}
 }
 
 .buttonsContainer{
-	
-}
+	margin-top: 30px;
+	button{
+		margin: 10px;
+		padding: 20px;
+		border-radius: $sizeBorderRadius;
 
-.gridCalc{
-	display: grid;
-	grid-template-columns: repeat(4,1fr);
-	grid-template-rows: repeat(5,1fr);
-	gap: 5px;
-	width: 100%;
-	height: 100%;
-	div{
-		color: #eee;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: auto;
-		height: 60px;
-		background-color: $backgroundButtons;
-		border: 1px solid royalblue;
-		font-size: 30px;
-		cursor: pointer;
-		border: 2px inset transparent;
 		&:hover{
-			background-color: $backgroundButtonsHover;
+			background-color: rgb(197, 220, 252);
 		}
+		
 		&:active{
-			background-color: $backgroundButtonsActive;
-			border-color:#333;
+			background-color: rgb(183, 209, 245);
+			zoom: .99;
 		}
 	}
 }
 
-.twoCol{
-	grid-column-start: 1;
-	grid-column-end: 3;
-}
-
-#controlAC{
-	color: #444;
-	background-color: $backgroundButtonAC;
-	&:hover{background-color: $backgroundButtonACHover;}
-	&:active{background-color: $backgroundButtonACActive;}
-}
-
-#controlPlus{
-	border-bottom-right-radius: $sizeBorderRadius;
-}
-
-#control0{
-	border-bottom-left-radius: $sizeBorderRadius;
+.resultContainer{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	color: #333;
+	font-size: 25px;
 }
