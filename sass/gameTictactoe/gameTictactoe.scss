@@ -8,7 +8,7 @@
 /* CONSTRUCTION STRUCTURE */
 @import "style/declarations";
 
-@media screen and (orientation: portrait){
+@media screen and (orientation:portrait) and (max-device-aspect-ratio:1/1){
 	@import "style/declarationsPortrait";
 }
 
