@@ -7,7 +7,7 @@ function redirector()
 ?>
 
 		<script>
-			window.location.pathname = "/html/login.php"
+			window.location.pathname = "/login/"
 		</script>
 
 	<?php
@@ -46,7 +46,7 @@ function headerHTML()
 			<nav class="header-enlaces">
 				<ul>
 					<li data-accesibilityborder="true">
-						<a href="/index.php" rel="noopener noreferrer">
+						<a href="/" rel="noopener noreferrer">
 							<div>
 								<span class="ms-Icon ms-Icon--Home"></span>
 							</div>
@@ -86,7 +86,7 @@ function headerHTML()
 						</a>
 					</li>
 					<li data-accesibilityborder="true">
-						<a href="/carruseles/" rel="noopener noreferrer">
+						<a href="/carrusel/" rel="noopener noreferrer">
 							<div>
 								<span class="ms-Icon ms-Icon--PanoIndicator"></span>
 							</div>
@@ -175,7 +175,7 @@ function footerHTML()
 					<!-- WHATSAPP -->
 					<div>
 						<figure>
-							<img src="assets/logo-whatsapp.svg" alt="">
+							<img src="/global/assets/logo-whatsapp.svg" alt="">
 						</figure>
 					</div>
 				</a>
@@ -191,7 +191,7 @@ function footerHTML()
 	</footer>
 
 	<div id="dino">
-		<img src="assets/dino.svg"></svg>
+		<img src="/global/assets/dino.svg"></svg>
 	</div>
 
 	<div id="helpNode">
@@ -316,5 +316,20 @@ function settingsModal()
 
 <?php
 }
+
+?>
+
+
+<?php
+
+function headHTML(){
+	?>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+	<link rel="shortcut icon" href="/global/assets/me.ico" type="image/x-icon">
+	<link rel="stylesheet" href="/global/sass/global.css">
+	<script defer src="/global/script/main.js"></script>
+	<?php
+	}
 
 ?>

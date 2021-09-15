@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
 	<title>XitusDev - Gallery</title>
-	<link rel="shortcut icon" href="../multimedia/img/me.ico" type="image/x-icon">
-	<link rel="stylesheet" href="../css/global/global.css">
-	<script defer src="../js/main.js"></script>
-	<script defer src="../js/carousel-portafolio.js"></script>
-	<link rel="stylesheet" href="../css/galeria/galeria.css">
+	<?php
+		include_once "../global/global.php";
+		headHTML();
+	?>
+	<link rel="stylesheet" href="./sass/galeria.css">
+	<script defer src="./script/carousel-portafolio.js"></script>
 
 </head>
 <body>
 	<?php
-		include_once "../php/main.php";
 		redirector();
 		loader();
 		headerHTML();
@@ -42,7 +40,7 @@
 				<article class="carousel-item">
 					<div class="carousel-itemPart">
 						<figure>
-							<img src="../multimedia/img/galeria-proyectos/asiprofe (4).webp" alt="copa">
+							<img src="./assets/asiprofe (4).webp" alt="copa">
 						</figure>
 					</div>
 					<div class="carousel-itemPart">
@@ -60,7 +58,7 @@
 				<article class="carousel-item">
 					<div class="carousel-itemPart">
 						<figure>
-							<img src="../multimedia/img/galeria-proyectos/asiprofe (5).webp" alt="copa">
+							<img src="./assets/asiprofe (5).webp" alt="copa">
 						</figure>
 					</div>
 					<div class="carousel-itemPart">
@@ -78,7 +76,7 @@
 				<article class="carousel-item">
 					<div class="carousel-itemPart">
 						<figure>
-							<img src="../multimedia/img/galeria-proyectos/asiprofe (2).webp" alt="copa">
+							<img src="./assets/asiprofe (2).webp" alt="copa">
 						</figure>
 					</div>
 				</article>
@@ -91,7 +89,7 @@
 				<article class="carousel-item">
 					<div class="carousel-itemPart">
 						<figure>
-							<img src="../multimedia/img/galeria-proyectos/asiprofe (3).webp" alt="copa">
+							<img src="./assets/asiprofe (3).webp" alt="copa">
 						</figure>
 					</div>
 				</article>
@@ -103,7 +101,7 @@
 				<article class="carousel-item">
 					<div class="carousel-itemPart">
 						<figure>
-							<img src="../multimedia/img/galeria-proyectos/asiprofe (6).webp" alt="copa">
+							<img src="./assets/asiprofe (6).webp" alt="copa">
 						</figure>
 					</div>
 					<div class="carousel-itemPart">
@@ -119,7 +117,7 @@
 				<article class="carousel-item">
 					<div class="carousel-itemPart">
 						<figure>
-							<img src="../multimedia/img/galeria-proyectos/asiprofe (1).webp" alt="copa">
+							<img src="./assets/asiprofe (1).webp" alt="copa">
 						</figure>
 					</div>
 					<div class="carousel-itemPart">
@@ -172,7 +170,7 @@
 				<article class="carousel-item">
 					<div class="carousel-itemPart">
 						<figure>
-							<img src="../multimedia/img/galeria-proyectos/mascarillas (1).webp" alt="header">
+							<img src="./assets/mascarillas (1).webp" alt="header">
 						</figure>
 					</div>
 					<div class="carousel-itemPart">
@@ -191,7 +189,7 @@
 				<article class="carousel-item">
 					<div class="carousel-itemPart">
 						<figure>
-							<img src="../multimedia/img/galeria-proyectos/mascarillas (2).webp" alt="copa">
+							<img src="./assets/mascarillas (2).webp" alt="copa">
 						</figure>
 					</div>
 					<div class="carousel-itemPart">

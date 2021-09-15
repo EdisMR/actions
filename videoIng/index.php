@@ -2,22 +2,19 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
-	<link rel="shortcut icon" href="/multimedia/img/me.ico" type="image/x-icon">
 	<title>XitusDev - Broccoli Video</title>
-	<script defer src="controls.js"></script>
-	<link rel="stylesheet" href="css/videoIng.css">
 
-	<script defer src="../../js/main.js"></script>
-	<link rel="stylesheet" href="../../css/global/global.css">
+	<?php
+		include_once "../global/global.php";
+		headHTML();
+	?>
 
+<link rel="stylesheet" href="./sass/videoIng.css">
+<script defer src="./script/controls.js"></script>
 </head>
 
 <body>
 <?php
-		include_once "../../php/main.php";
 		redirector();
 		loader();
 		headerHTML();
@@ -26,7 +23,7 @@
 	<main>
 		<span class="advice">Advice: this page was a practice, isn't related with a real business and corresponding rights are for original creators of photos, music and images used in the video</span>
 		<figure>
-			<video src="../../multimedia/videos/Secuencia 02-3 1.mp4" title="video" alt="Video" poster="../../multimedia/img/post.webp" preload></video>
+			<video src="./assets/Secuencia 02-3 1.mp4" title="video" alt="Video" poster="./assets/post.webp" preload></video>
 		</figure>
 		<section class="buttonsSection">
 			<button disabled id="play">

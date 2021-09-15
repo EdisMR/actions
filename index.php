@@ -3,19 +3,20 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
 	<title>XitusDev</title>
-	<link rel="shortcut icon" href="multimedia/img/me.ico" type="image/x-icon">
-	<link rel="stylesheet" href="css/global/global.css">
-	<link rel="stylesheet" href="css/site-index/indexMainTag.css">
-	<script defer src="js/main.js"></script>
+
+	<?php
+		include_once "global/global.php";
+		headHTML();
+	?>
+
+	<link rel="stylesheet" href="./index/sass/index.css">
 
 </head>
 
 <body>
 
 	<?php
-	include_once "php/main.php";
 	redirector();
 	loader();
 	headerHTML();
@@ -39,7 +40,7 @@
 					</p>
 				</div>
 				<figure>
-					<img src="multimedia/img/portada-4.webp" alt="" title="Portada">
+					<img src="index/assets/portada-4.webp" alt="" title="Portada">
 				</figure>
 			</article>
 		</section>
@@ -56,7 +57,7 @@
 				<div class="main-index-grid col2y1">
 					<section class="card" data-accesibilityborder="true">
 						<div class="card-header">
-							<h4><a href="html/formulario.php" rel="noopener noreferrer">Form</a></h4>
+							<h4><a href="/formulario/" rel="noopener noreferrer">Form</a></h4>
 						</div>
 						<div class="card-content">
 							<ul>
@@ -69,7 +70,7 @@
 					</section>
 					<section class="card" data-accesibilityborder="true">
 						<div class="card-header">
-							<h4><a href="html/galeria.php" rel="noopener noreferrer">Gallery</a></h4>
+							<h4><a href="/galeria/" rel="noopener noreferrer">Gallery</a></h4>
 						</div>
 						<div class="card-content">
 							<ul>
@@ -83,7 +84,7 @@
 					</section>
 					<section class="card" data-accesibilityborder="true">
 						<div class="card-header">
-							<h4><a href="html/carruseles.php" rel="noopener noreferrer">Carousel / Presentation</a></h4>
+							<h4><a href="/carrusel/" rel="noopener noreferrer">Carousel / Presentation</a></h4>
 						</div>
 						<div class="card-content">
 							<ul>
@@ -96,7 +97,7 @@
 					</section>
 					<section class="card" data-accesibilityborder="true">
 						<div class="card-header">
-							<h4><a href="html/api.php" rel="noopener noreferrer">API in use</a></h4>
+							<h4><a href="/api/" rel="noopener noreferrer">API in use</a></h4>
 						</div>
 						<div class="card-content">
 							<ul>
@@ -120,10 +121,10 @@
 			<article class="block tecnologias-bio-container">
 				<div class="bio" data-accesibilityborder="true">
 					<p>
-					I'm XitusDev (Edis Mercado) from San José, Costa Rica. I am a web developer focused on the interfaces development for the end customer.<br>
-I have more than 5 years of experience on writing code, I started programming in C++ at the National University of Costa Rica (UNA), where I gained experience using mathematics for programming, the programming logic and the development strategies to solve a programming situation.<br>
-I entered the National Learning Institute (INA), where I studied Photoshop, Access, Microsoft Office, and where my passion for web development began since I entered to the Web Development program.<br>
-After studying the basics of web development, I continued training for frontend development, and learning to use tools such as SASS, GIT, AJAX, PHP, among others.<br>The majority of the knowledge I have gained is reflected in the group of icons next to this paragraph (but is an incomplete list). You can contact me or see more details in the links that appear in the bottom of the screen.
+						I'm XitusDev (Edis Mercado) from San José, Costa Rica. I am a web developer focused on the interfaces development for the end customer.<br>
+						I have more than 5 years of experience on writing code, I started programming in C++ at the National University of Costa Rica (UNA), where I gained experience using mathematics for programming, the programming logic and the development strategies to solve a programming situation.<br>
+						I entered the National Learning Institute (INA), where I studied Photoshop, Access, Microsoft Office, and where my passion for web development began since I entered to the Web Development program.<br>
+						After studying the basics of web development, I continued training for frontend development, and learning to use tools such as SASS, GIT, AJAX, PHP, among others.<br>The majority of the knowledge I have gained is reflected in the group of icons next to this paragraph (but is an incomplete list). You can contact me or see more details in the links that appear in the bottom of the screen.
 					</p>
 				</div>
 				<div id="tecnologias-items-container">
@@ -168,74 +169,74 @@ After studying the basics of web development, I continued training for frontend 
 
 						</figure>
 					</div>
-					
+
 					<div class="tecno-item">
 						<!-- JS -->
 						<figure>
-							<img src="multimedia/icons/js.webp" alt="javascript">
+							<img src="index/assets/icons/js.webp" alt="javascript">
 						</figure>
 					</div>
 
 					<div class="tecno-item">
 						<!-- Git -->
 						<figure>
-							<img src="multimedia/icons/git.webp" alt="git">
+							<img src="index/assets/icons/git.webp" alt="git">
 						</figure>
 					</div>
 
 					<div class="tecno-item">
 						<!-- Github -->
 						<figure>
-							<img src="multimedia/icons/GitHub.webp" alt="github">
+							<img src="index/assets/icons/GitHub.webp" alt="github">
 						</figure>
 					</div>
-					
+
 					<div class="tecno-item">
 						<!-- JS -->
 						<figure>
-							<img src="multimedia/icons/sass.webp" alt="sass">
+							<img src="index/assets/icons/sass.webp" alt="sass">
 						</figure>
 					</div>
 
 					<div class="tecno-item">
 						<!-- Responsive Web Design -->
 						<figure>
-							<img src="multimedia/icons/rwd1.webp" alt="responsive web design">
+							<img src="index/assets/icons/rwd1.webp" alt="responsive web design">
 						</figure>
 					</div>
 
 					<div class="tecno-item">
 						<!-- Bootstrap -->
 						<figure>
-							<img src="multimedia/icons/bootstrap-logo.webp" alt="Bootstrap">
+							<img src="index/assets/icons/bootstrap-logo.webp" alt="Bootstrap">
 						</figure>
 					</div>
 
 					<div class="tecno-item">
 						<!-- PHP -->
 						<figure>
-							<img src="multimedia/icons/php.webp" alt="PHP">
+							<img src="index/assets/icons/php.webp" alt="PHP">
 						</figure>
 					</div>
 
 					<div class="tecno-item">
 						<!-- PHP -->
 						<figure>
-							<img src="multimedia/icons/wordpress1.svg" alt="Wordpress">
+							<img src="index/assets/icons/wordpress1.svg" alt="Wordpress">
 						</figure>
 					</div>
 
 					<div class="tecno-item">
 						<!-- SEO -->
 						<figure>
-							<img src="multimedia/icons/seo.webp" alt="SEO">
+							<img src="index/assets/icons/seo.webp" alt="SEO">
 						</figure>
 					</div>
 
 					<div class="tecno-item">
 						<!-- Accesibilidad Web -->
 						<figure>
-							<img src="multimedia/icons/w3c.webp" alt="Web Accesibility">
+							<img src="index/assets/icons/w3c.webp" alt="Web Accesibility">
 						</figure>
 					</div>
 
@@ -259,7 +260,7 @@ After studying the basics of web development, I continued training for frontend 
 
 		<!-- GRID2 -->
 		<section class="block centrador">
-		
+
 			<article class="block">
 				<div>
 					<h2 id="juegos-html">HTML5 Projects</h2>
@@ -268,32 +269,32 @@ After studying the basics of web development, I continued training for frontend 
 
 			<article class="block">
 				<div class="main-index-grid col4y2">
-					
+
 					<section class="card" data-accesibilityborder="true">
 						<div>
-							<h4><a href="html/gameConecta4.php" rel="noopener noreferrer">Connect 4</a></h4>
+							<h4><a href="/gameConecta4/" rel="noopener noreferrer">Connect 4</a></h4>
 						</div>
 						<div>
 							<figure>
-								<img src="multimedia/img/conecta4.webp" alt="Connect four game" title="formulario">
+								<img src="index/assets/conecta4.webp" alt="Connect four game" title="formulario">
 							</figure>
 						</div>
 					</section>
 
 					<section class="card" data-accesibilityborder="true">
 						<div>
-							<h4><a href="html/gameTictactoe.php" rel="noopener noreferrer">Tic tac toe</a></h4>
+							<h4><a href="/gameTictactoe/" rel="noopener noreferrer">Tic tac toe</a></h4>
 						</div>
 						<div>
 							<figure>
-								<img src="multimedia/img/tictactoe.webp" alt="Tic tac toe" title="carruseles">
+								<img src="index/assets/tictactoe.webp" alt="Tic tac toe" title="carruseles">
 							</figure>
 						</div>
 					</section>
-					
+
 					<section class="card" data-accesibilityborder="true">
 						<div>
-							<h4><a href="html/calculator.php" rel="noopener noreferrer">String Based Calculator</a></h4>
+							<h4><a href="/calculator/" rel="noopener noreferrer">String Based Calculator</a></h4>
 						</div>
 						<div>
 							<figure>
@@ -301,14 +302,14 @@ After studying the basics of web development, I continued training for frontend 
 							</figure>
 						</div>
 					</section>
-					
+
 					<section class="card" data-accesibilityborder="true">
 						<div>
-							<h4><a href="html/videoIng/" rel="noopener noreferrer">Video Player - Broccoli</a></h4>
+							<h4><a href="/videoIng/" rel="noopener noreferrer">Video Player - Broccoli</a></h4>
 						</div>
 						<div>
 							<figure>
-								<img src="multimedia/img/broccoli.webp" alt="Broccoli Video">
+								<img src="index/assets/broccoli.webp" alt="Broccoli Video">
 							</figure>
 						</div>
 					</section>

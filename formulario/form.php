@@ -1,5 +1,5 @@
 <?php
 
-header("Location: /html/formulario.php")
+header("Location: /formulario/")
 
 ?>

@@ -2,23 +2,20 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
 	<title>XitusDev - Using an API</title>
-	<link rel="shortcut icon" href="../multimedia/img/me.ico" type="image/x-icon">
 
-	<script defer src="../js/api.js"></script>
-	<script defer src="../js/main.js"></script>
-
-
-	<link rel="stylesheet" href="../css/global/global.css">
-	<link rel="stylesheet" href="../css/api-main/api.css">
+	<?php
+		include_once "../global/global.php";
+		headHTML();
+	?>
+	
+	<link rel="stylesheet" href="./sass/api.css">
+	<script defer src="./script/api.js"></script>
 
 </head>
 
 <body>
 	<?php
-		include_once "../php/main.php";
 		redirector();
 		loader();
 		headerHTML();
@@ -43,7 +40,7 @@
 
 
 				<article class="formContainer">
-					<img src="../multimedia/img/spinner-angular.svg" width="40px" height="40px" id="afterForm">
+					<img src="./assets/spinner-angular.svg" width="40px" height="40px" id="afterForm">
 
 					<form>
 						<div class="formItem">

@@ -2,22 +2,21 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
 	<title>XitusDev - Form</title>
-	<link rel="shortcut icon" href="../multimedia/img/me.ico" type="image/x-icon">
-	<link rel="stylesheet" href="../css/global/global.css">
-	<link rel="stylesheet" href="../css/form-main/form.css">
+	
+	<?php
+		include_once "../global/global.php";
+		headHTML();
+	?>
+	
 
-	<script defer src="../js/form.js"></script>
-
-	<script defer src="../js/main.js"></script>
+	<link rel="stylesheet" href="./sass/form.css">
+	<script defer src="./script/form.js"></script>
 
 </head>
 
 <body>
 	<?php
-		include_once "../php/main.php";
 		redirector();
 		loader();
 		headerHTML();
@@ -46,7 +45,7 @@
 
 
 		<section class="block">
-			<form class="block" action="../php/form.php" method="post">
+			<form class="block" action="./form.php" method="post">
 				<!--  -->
 				<article class="block">
 

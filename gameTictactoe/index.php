@@ -2,21 +2,18 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
 	<title>XitusDev - Tic Tac Toe</title>
-	<link rel="shortcut icon" href="../multimedia/img/me.ico" type="image/x-icon">
-	<link rel="stylesheet" href="../css/global/global.css">
-	<link rel="stylesheet" href="../css/gameTictactoe/gameTictactoe.css">
-	
-	<script defer src="../js/main.js"></script>
+	<?php
+		include_once "../global/global.php";
+		headHTML();
+	?>
 
-	<script defer src="../js/game-tictactoe.js"></script>
+	<link rel="stylesheet" href="./sass/gameTictactoe.css">
+	<script defer src="./script/game-tictactoe.js"></script>
 </head>
 
 <body>
 	<?php
-		include_once "../php/main.php";
 		redirector();
 		loader();
 		headerHTML();

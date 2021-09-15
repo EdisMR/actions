@@ -5,9 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>XitusDev - Log in</title>
-	<link rel="shortcut icon" href="../multimedia/img/me.ico" type="image/x-icon">
-
-	<link rel="stylesheet" href="../css/login/login.css">
+	<link rel="shortcut icon" href="/global/assets/me.ico" type="image/x-icon">
+	<link rel="stylesheet" href="./sass/login.css">
 
 
 </head>
@@ -15,7 +14,7 @@
 if (isset($_COOKIE["access"]) && $_COOKIE["access"] == "432289") {
 ?>
 	<script>
-		window.location.pathname = "/index.php"
+		window.location.pathname = "/"
 	</script>
 <?php
 }
@@ -40,7 +39,7 @@ if (isset($_COOKIE["access"]) && $_COOKIE["access"] == "432289") {
 
 			const data = new FormData(formulario);
 
-			fetch('../php/cookieEval.php', {
+			fetch('/global/cookieEval.php', {
 					method: 'POST',
 					body: data
 				})

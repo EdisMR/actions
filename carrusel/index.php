@@ -2,24 +2,20 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
 	<title>XitusDev - Carousel</title>
-	<link rel="shortcut icon" href="../multimedia/img/me.ico" type="image/x-icon">
-	<link rel="stylesheet" href="../css/global/global.css">
+	
+	<?php
+		include_once "../global/global.php";
+		headHTML();
+	?>
 
-	<script defer src="../js/carousel.js"></script>
-	<link rel="stylesheet" href="../css/carousel/carousel.css">
-
-
-	<script defer src="../js/main.js"></script>
-
+	<script defer src="./script/carousel.js"></script>
+	<link rel="stylesheet" href="./sass/carousel.css">
 
 </head>
 
 <body>
 	<?php
-		include_once "../php/main.php";
 		redirector();
 		loader();
 		headerHTML();
@@ -220,7 +216,7 @@
 						<article class="carousel-item">
 							<div class="carousel-itemPart">
 								<figure>
-									<video src="../multimedia/videos/vid.mp4" alt="vid">
+									<video src="./assets/vid.mp4" alt="vid">
 								</figure>
 							</div>
 							<div class="carousel-itemPart">

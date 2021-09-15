@@ -2,21 +2,17 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
 	<title>XitusDev - Connect 4</title>
-	<link rel="shortcut icon" href="../multimedia/img/me.ico" type="image/x-icon">
-	<link rel="stylesheet" href="../css/global/global.css">
-	<link rel="stylesheet" href="../css/gameConecta4/gameConecta4.css">
-	
-	<script defer src="../js/main.js"></script>
-
-	<script defer src="../js/game-conecta4.js"></script>
+	<?php
+		include_once "../global/global.php";
+		headHTML();
+	?>
+	<link rel="stylesheet" href="./sass/gameConecta4.css">
+	<script defer src="./script/game-conecta4.js"></script>
 </head>
 
 <body>
 	<?php
-		include_once "../php/main.php";
 		redirector();
 		loader();
 		headerHTML();
