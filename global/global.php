@@ -181,7 +181,7 @@ function footerHTML()
 				</a>
 			</li>
 			<li>
-				<a href="/index.php" rel="noopener noreferrer" title="Website">
+				<a href="/" rel="noopener noreferrer" title="Website">
 					<div>
 						<span class="ms-Icon ms-Icon--Website"></span>
 					</div>
