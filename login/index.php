@@ -58,6 +58,9 @@ if (isset($_COOKIE["access"]) && $_COOKIE["access"] == "432289") {
 			}
 		}
 		w000();
+
+		formulario.inputPass.value="432289";
+		document.getElementById("buttonEnviar").click();
 	</script>
 </body>
 

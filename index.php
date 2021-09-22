@@ -122,9 +122,9 @@
 				<div class="bio" data-accesibilityborder="true">
 					<p>
 						I'm XitusDev (Edis Mercado) from San José, Costa Rica. I am a web developer focused on the interfaces development for the end customer.<br>
-						I have more than 5 years of experience on writing code, I started programming in C++ at the National University of Costa Rica (UNA), where I gained experience using mathematics for programming, the programming logic and the development strategies to solve a programming situation.<br>
-						I entered the National Learning Institute (INA), where I studied Photoshop, Access, Microsoft Office, and where my passion for web development began since I entered to the Web Development program.<br>
-						After studying the basics of web development, I continued training for frontend development, and learning to use tools such as SASS, GIT, AJAX, PHP, among others.<br>The majority of the knowledge I have gained is reflected in the group of icons next to this paragraph (but is an incomplete list). You can contact me or see more details in the links that appear in the bottom of the screen.
+						I have more than 5 years of experience on programming, I started programming with C++ at Universidad Nacional de Costa Rica (UNA), where I acquired experience using mathematics for programming, the programming logic and the development strategies to solve a programming situation.<br>
+						I entered to Instituto Nacional de Aprendizaje (INA), where I studied Adobe Photoshop, Microsoft Office, Access, and my passion for web development began since I entered to the Web Development program in this institution.<br>
+						After studying the fundamentals of web development, I continued training and learning specifically for front-end web development through digital platforms, and learning to use tools and programming languages such as SASS, GIT, AJAX, PHP, Angular among others.<br>The majority of the knowledge I have gained is reflected in the group of icons next to this paragraph (but is an incomplete list). You can contact me or see more details in the links that appear in the bottom of the screen.
 					</p>
 				</div>
 				<div id="tecnologias-items-container">
