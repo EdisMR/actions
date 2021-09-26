@@ -9,7 +9,7 @@
 
 @import "style/declarations";
 
-@media screen and (orientation: portrait){
+@media screen and (max-width:750px){
 	@import "style/declarationsPortrait";
 }
 

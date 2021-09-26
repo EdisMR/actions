@@ -32,7 +32,7 @@
 			<div id="calcContainer">
 				<form>
 					<article class="inputContainer">
-						<input type="text" name="operationInput" autocomplete="off" autofocus placeholder="Example: (26+(234*2))/(5-3)" pattern="^[\d\+\-\*\/\(\)]{0,}$">
+						<input type="text" name="operationInput" autocomplete="off" autofocus placeholder="Example: (26+(234*2))/(5-3)" pattern="^[\d\+\-\*\/\(\)\.]{0,}$">
 					</article>
 					<article class="buttonsContainer">
 						<button type="reset">Reset</button>
@@ -40,13 +40,13 @@
 					</article>
 					<article class="resultContainer">
 						<div>
-							Result: <span id="resultInner">0</span>
+							Result: <span id="resultInner"></span>
 						</div>
 					</article>
 
 				</form>
-				<div style="color: black;">
-							Note: Actually you can only solve divisions.
+				<div style="color: #555;">
+							Note: You can solve Addition, subtraction, multiplication and division.
 						</div>
 			</div>
 
