@@ -447,11 +447,11 @@ footer{
 	}
 }
 
-#buttonBilingual{
+/* #buttonBilingual{
 	opacity: .5;
 	cursor: not-allowed;
 	pointer-events: none;
-}
+} */
 
 /* Icono: 300x117 */
 $iconWidth:300px;
@@ -506,4 +506,15 @@ $iconHeight:117px;
 		background-color: black !important;
 		color: yellow !important;
 	}
+}
+
+[data-text]{
+	
+}
+
+.menuItemText{
+	display: inline-block;
+	border: none;
+	background: unset !important;
+	font-size: unset !important;
 }

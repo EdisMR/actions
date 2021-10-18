@@ -43,19 +43,6 @@ if(!localStorage.highContrastBoolean){
 	}
 }
 
-if(!localStorage.spanishBoolean){
-	localStorage.spanishBoolean=false
-}else{
-	/* Si es true, aplicar esta configuracion */
-	if(localStorage.spanishBoolean=="true"){
-		applySpanish();
-	}
-	/* Si es false, aplicar esta configuracion */
-	if(localStorage.spanishBoolean=="false"){
-		removeSpanish();
-	}
-}
-
 if(!localStorage.bigFontBoolean){
 	localStorage.bigFontBoolean="false"
 }else{
@@ -69,12 +56,14 @@ if(!localStorage.bigFontBoolean){
 	}
 }
 
+
+
 /* ************************************* */
 /* ******** LISTENERS de controles ******** */
 /* ************************************* */
 settingsVars.buttonHighContrast.addEventListener("click",switchHighContrast,false)
 settingsVars.buttonBigFont.addEventListener("click",switchBigFont,false)
-settingsVars.buttonBilingual.addEventListener("click",switchSpanish,false)
+settingsVars.buttonBilingual.addEventListener("click",switchLang,false)
 
 
 /* ******************************* */
@@ -96,21 +85,25 @@ function switchHighContrast(){
 	}
 	helpNodeAppear()
 }
-function switchSpanish(){
-	if(localStorage.spanishBoolean=="true"){
-		/* Pasar a false */
-		removeSpanish()
-		localStorage.spanishBoolean="false";
+
+
+function switchLang(){
+	if(localStorage.lang=="spa"){
+		/* Pasar a eng */
+		defineLang("eng")
+		settingsVars.buttonBilingual.classList.remove("settingItemInactive");
 	}else{
 
-		if(localStorage.spanishBoolean=="false"){
-			/* Pasar a true */
-			applySpanish()
-			localStorage.spanishBoolean="true";
+		if(localStorage.lang=="eng"){
+			/* Pasar a spa */
+		defineLang("spa")
+		settingsVars.buttonBilingual.classList.add("settingItemInactive");
 		}
 	}
-	helpNodeAppear()
+
+	window.location.reload()
 }
+
 function switchBigFont(){
 	if(localStorage.bigFontBoolean=="true"){
 		/* Pasar a false */
@@ -140,9 +133,6 @@ function applyHighContrast(){
 	})
 }
 
-function applySpanish(){
-	settingsVars.buttonBilingual.classList.remove("settingItemInactive");
-}
 
 function applyBigFont(){
 	settingsVars.buttonBigFont.classList.remove("settingItemInactive");
@@ -171,9 +161,6 @@ function removeHighContrast(){
 	})
 }
 
-function removeSpanish(){
-	settingsVars.buttonBilingual.classList.add("settingItemInactive");
-}
 
 function removeBigFont(){
 	settingsVars.buttonBigFont.classList.add("settingItemInactive");
@@ -182,6 +169,92 @@ function removeBigFont(){
 		elm.style.fontSize=elm.dataset.initialfont
 		elm.removeAttribute("data-initialfont");
 	})
+}
+
+
+
+
+
+
+
+
+/* LANGUAGES */
+//! SPA para español
+//! ENG para ingles
+
+/* Si no se define el lenguaje, se definira el idioma tomando el del navegador */
+
+function defineLang(idiomText=""){
+	if(idiomText==""){
+		if(window.navigator.language.includes("es")) {localStorage.lang="spa";}
+		if(window.navigator.language.includes("eng")){ localStorage.lang="eng";}
+	}else{
+		localStorage.lang=idiomText
+	}
+}
+/* La funcion idiomHTMLInner() recibe como parametro un objeto con las urls del fetch hacia el 
+archivo json de cada lenguaje, con los items spa y eng como keys. Esta funcion sera llamada
+para llenar los span correspondientes al idioma. el identificador en el html es un data-text="key" */
+
+/* Funcion para llenar el texto */
+function idiomHTMLInner(urls):void{
+	let urlParaFetch="";
+	let htmlLang="";
+	if(localStorage.lang==null || localStorage.lang==""){
+		defineLang();
+	}
+	if(localStorage.lang=="spa"){
+		urlParaFetch=urls.spa;
+		htmlLang="es"
+	}
+	
+	if(localStorage.lang=="eng"){
+		urlParaFetch=urls.eng;
+		htmlLang="eng"
+	}
+
+
+	/* Traer json de esta url */	
+	fetch(urlParaFetch)
+
+	.then(
+		/* Retornar como un JSON */
+		fetchResult=>{
+			return fetchResult.text();
+		}
+	)
+	.then(
+		textoResult=>{
+			return JSON.parse(textoResult)
+		}
+	)
+	.then(
+		jsonParseado=>{
+			/* Configurar lang en html */
+			document.firstElementChild.setAttribute("lang",htmlLang)
+
+			/* Llamar a todos los span */
+			let todosSpan=Array.from(document.querySelectorAll("[data-text]"));
+			for(let x in todosSpan){
+				if(jsonParseado[todosSpan[x].dataset.text]!=null){
+					todosSpan[x].innerHTML=jsonParseado[todosSpan[x].dataset.text]
+				}
+			}
+		}
+	)
+}
+
+
+idiomHTMLInner({
+	spa: window.location.origin+"/global/lang/spa.json",
+	eng: window.location.origin+"/global/lang/eng.json",
+})
+
+if(localStorage.lang=="eng"){
+	settingsVars.buttonBilingual.classList.add("settingItemInactive");
+}
+if(localStorage.lang=="spa"){
+	settingsVars.buttonBilingual.classList.remove("settingItemInactive");
 }
 
 

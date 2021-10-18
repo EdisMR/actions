@@ -118,7 +118,9 @@
 				</article>
 
 				<article class="mostrarFooter">
-					<button>Update</button>
+					<button id="updateLoc">Update</button>
+					<button id="copyLoc">Copy location</button>
+					<button id="toGmaps">Location on Google Maps</button>
 					<p class="notaPie">Data provided by OpenWeatherMap</p>
 				</article>
 

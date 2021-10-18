@@ -1,3 +1,8 @@
+/* Variables globales */
+var globals={
+	fetchRes:"",
+}
+
 /* ****************************************** */
 /* ******** EVENTOS DE MOUSE Y TECLADO ***** */
 /* ***************************************** */
@@ -28,7 +33,7 @@ var headerButton = {
 	iconoAbajo:"&#x25BC;",
 };
 
-if (screen.orientation.type == "portrait-primary") {
+if (document.body.clientWidth<750 || screen.width<750) {
 	window.removeEventListener("keyup", keyEvent, false);
 	
 	/* Variables */

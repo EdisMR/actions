@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>XitusDev - Carousel</title>
+	<title data-text="title">XitusDev - Carousel</title>
 	
 	<?php
 		include_once "../global/global.php";
@@ -25,7 +25,7 @@
 	<main>
 
 		<section class="portada centrador">
-			<h1>Carousel</h1>
+			<h1 data-text="t1">Carousel</h1>
 			<p>
 			It is important to note that these carousels and their operation was developed completely by myself (XitusDev).
 			</p>

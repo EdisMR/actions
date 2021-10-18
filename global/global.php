@@ -51,7 +51,7 @@ function headerHTML()
 								<span class="ms-Icon ms-Icon--Home"></span>
 							</div>
 							<div>
-								Home
+								<span data-text="astart" class="menuItemText"></span>
 							</div>
 						</a>
 					</li>
@@ -61,7 +61,7 @@ function headerHTML()
 								<span class="ms-Icon ms-Icon--Contact"></span>
 							</div>
 							<div>
-								About me
+								<span data-text="aabout" class="menuItemText"></span>
 							</div>
 						</a>
 					</li>
@@ -71,7 +71,7 @@ function headerHTML()
 								<span class="ms-Icon ms-Icon--OfficeFormsLogo24"></span>
 							</div>
 							<div>
-								Form
+								<span data-text="aform" class="menuItemText"></span>
 							</div>
 						</a>
 					</li>
@@ -81,7 +81,7 @@ function headerHTML()
 								<span class="ms-Icon ms-Icon--SamsungGallery"></span>
 							</div>
 							<div>
-								Gallery
+								<span data-text="agallery" class="menuItemText"></span>
 							</div>
 						</a>
 					</li>
@@ -91,7 +91,7 @@ function headerHTML()
 								<span class="ms-Icon ms-Icon--PanoIndicator"></span>
 							</div>
 							<div>
-								Carousel
+								<span data-text="acarousel" class="menuItemText"></span>
 							</div>
 						</a>
 					</li>

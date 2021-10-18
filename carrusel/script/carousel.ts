@@ -179,4 +179,11 @@ window.onload=()=> {
 			carouseles[index] = new carousel(item);
 		})
 	}
+
+
+	idiomHTMLInner({
+		spa: window.location.origin+"/carrusel/lang/spa.json",
+		eng: window.location.origin+"/carrusel/lang/eng.json",
+	})
 }
+

@@ -15,26 +15,26 @@ function defineUrlSolicitud() {
 
 /* URL de la imagen */
 function defineUrlImagen() {
-	return `http://openweathermap.org/img/wn/${datosCapture.weather[0].icon}.png`;
+	return `https://openweathermap.org/img/wn/${datosCapture.weather[0].icon}.png`;
 }
 
 
 /* Funcion principal del fetch */
 function solicitarDatos() {
 	fetch(
-			defineUrlSolicitud(), {
-				method: "get",
-			}
-		).then(
-			function (response) {
-				return response.json();
-			}
-		).then(
-			function (resp) {
-				afterFetch(resp);
-				/* console.log(resp); */
-			}
-		)
+		defineUrlSolicitud(), {
+		method: "get",
+	}
+	).then(
+		function (response) {
+			return response.json();
+		}
+	).then(
+		function (resp) {
+			afterFetch(resp);
+			/* console.log(resp); */
+		}
+	)
 		.catch(error => {
 			/* console.log(error); */
 			formulario.style.display = "initial";
@@ -86,10 +86,10 @@ function afterFetch(respuesta) {
 	datosCapture = respuesta;
 	innerDatos();
 
-	let cardMostrar = document.querySelector(".mostrar");
+	let cardMostrar: HTMLElement = document.querySelector(".mostrar");
 	cardMostrar.style.display = "grid";
 
-	let cardSolicitar = document.querySelector(".solicitar");
+	let cardSolicitar: HTMLElement = document.querySelector(".solicitar");
 	cardSolicitar.style.display = "none";
 }
 
@@ -98,55 +98,66 @@ function afterFetch(respuesta) {
 const formulario = document.forms[0];
 formulario.addEventListener("submit", datosDeForm, true);
 
-function datosDeForm(e) {
-	evento = e;
+function datosDeForm(e: Event) {
 	e.preventDefault();
 
 	formulario.style.display = "none";
 	document.getElementById("afterForm").style.display = "initial";
 
-	let valordeInput = formulario.inputL.value;
-	let coordenadas = valordeInput.split(",");
-
-	coordenadas[0] = parseFloat(coordenadas[0]);
-	coordenadas[1] = parseFloat(coordenadas[1]);
-
-	api.lat = coordenadas[0];
-	api.lon = coordenadas[1];
-
 	solicitarDatos();
 }
 
-const buttonActualizar = document.querySelector(".mostrarFooter button");
-buttonActualizar.addEventListener("click", solicitarDatos, false);
+
+
 
 /* ******************************************** */
 /* ****** Funcion para localizar al usuario ********** */
 /* ******************************************** */
-buttonMyLocation=document.getElementById("myLocation");
-buttonMyLocation.addEventListener("click",localizar,false);
-
+const buttonMyLocation:HTMLButtonElement = document.getElementById("myLocation");
+buttonMyLocation.addEventListener("click", localizar, false);
 
 function localizar() {
-	try{
-		if ("geolocation" in navigator) {
-			/* aniadir loader */
-			buttonMyLocation.disabled=true;
-			buttonMyLocation.innerText="Locating";
-			navigator.geolocation.getCurrentPosition(function (position) {
-				afterLocalization(position.coords.latitude, position.coords.longitude);	
-			})
+	/* aniadir loader */
+	buttonMyLocation.disabled = true;
+	buttonMyLocation.innerText = "Locating";
+	navigator.geolocation.getCurrentPosition(
+		function (position) {
+			api.lat=position.coords.latitude;
+			api.lon=position.coords.longitude;
+			let texto = api.lat + ", " + api.lon;
+			formulario.inputL.value = texto;
+			buttonMyLocation.style.display = "none";
+		},
+		function (error) {
+			alert("No es posible realizar la operacion");
+			buttonMyLocation.style.display = "none";
+		},
+		{
+			enableHighAccuracy: true,
+			timeout: 5000,
 		}
-	}catch(e){
-		alert("No es posible realizar la operacion");
-		buttonMyLocation.removeEventListener("click",localizar,false);
-		buttonMyLocation.style.display="none";
-	}
+	)
+	buttonMyLocation.removeEventListener("click", localizar, false);
 }
 
-function afterLocalization(lat, lon) {
-	let texto=lat+", "+lon;
-	formulario.inputL.value=texto;
-	buttonMyLocation.removeEventListener("click",localizar,false);
-	buttonMyLocation.style.display="none";
+let btncopiarLocalizacion=document.getElementById("copyLoc");
+btncopiarLocalizacion.addEventListener("click",copiarLocalizacion,false);
+function copiarLocalizacion(){
+	navigator.clipboard.writeText(`${api.lat}, ${api.lon}`)
+	.then(()=>{btncopiarLocalizacion.disabled=true;	})
+	.catch(err=>{console.log(err);})
 }
+
+const buttonActualizar = document.querySelector("#updateLoc");
+buttonActualizar.addEventListener(
+		"click",
+		()=>{solicitarDatos();btncopiarLocalizacion.disabled=false;},
+		false
+	);
+
+const btnToGmaps=document.getElementById("toGmaps")
+btnToGmaps.addEventListener(
+	"click",
+	()=>{window.open(`https://www.google.com/maps/search/${api.lat},${api.lon}`)},
+	false
+)

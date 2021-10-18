@@ -6,7 +6,7 @@
 
 @import "style/declarations";
 
-@media screen and (orientation:portrait) and (min-device-aspect-ratio:3/4){
+@media screen and (max-width:750px){
 	@import "style/declarationsPortrait";
 }
 //@import "formDev";

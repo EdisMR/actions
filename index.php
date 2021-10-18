@@ -298,7 +298,7 @@
 						</div>
 						<div>
 							<figure>
-								<img src="https://picsum.photos/seed/picsum/300/300" alt="random rabbit" title="galeria">
+								<img src="index/assets//calculadora.webp" alt="random rabbit" title="Calculator">
 							</figure>
 						</div>
 					</section>

@@ -2,10 +2,12 @@ const messages={
 	error:"ERROR"
 }
 const formulario: HTMLFormElement = document.forms[0];
-formulario.addEventListener("submit", /* calculatorMainProcess */ calculatorMainProcess, false)
+formulario.addEventListener("submit", calculatorMainProcess, false)
+formulario.addEventListener("reset", resetResult, false)
 
 const inputTag: HTMLInputElement = formulario.operationInput;
 var inputValue: string = "";
+inputTag.addEventListener("input", resetResult, false)
 
 const resultInnerTag: HTMLElement = document.getElementById("resultInner")
 var resultValue: string = "";
@@ -58,19 +60,15 @@ function division(operacion: string): string {
 	switch(arrayEvaluar.length){
 
 		case 1:{
-			/* Si es un numero, retornar el numero sin cambios */
-			if(!isNaN(Number(arrayEvaluar[0]))){resultado=arrayEvaluar[0]}
-
 			/* Si NO es un numero, retornar la operacion que contiene */
 			if(isNaN(Number(arrayEvaluar[0]))){resultado=resta(arrayEvaluar[0])}
-		}break;
-
-		case 3:{
-			resultado=messages.error;
+			
+			/* Si es un numero, retornar el numero sin cambios */
+			if(!isNaN(Number(arrayEvaluar[0]))){resultado=arrayEvaluar[0]}
 		}break;
 
 		case 2:{
-			if(resultado=="" && arrayEvaluar[1]=="0"){
+			if(arrayEvaluar[1]=="0"){
 				resultado=messages.error;
 			}
 
@@ -92,6 +90,8 @@ function division(operacion: string): string {
 		
 		default:resultado=messages.error;
 	}
+
+	if(resultado=="" || arrayEvaluar.length>=3) resultado=messages.error;
 	return resultado
 }
 
@@ -101,7 +101,64 @@ function division(operacion: string): string {
 
 
 function resta(operacion: string): string {
-	let result: string = "2";
+	let result: string = "";
+
+	let exprEvaluar:string=removeParenthesis(operacion);
+
+	let arrayEvaluar:string[]=exprEvaluar.split("-")
+
+	switch(arrayEvaluar.length){
+
+		case 1:{
+			/* Si NO es un numero, retornar la operacion que contiene */
+			if(isNaN(Number(arrayEvaluar[0]))){result=suma(arrayEvaluar[0])}
+
+			/* Si es un numero, retornar el numero sin cambios */
+			if(!isNaN(Number(arrayEvaluar[0]))){result=arrayEvaluar[0]}
+
+		}break;
+
+		case 2:{
+			/* Si alguno es una expresion, resolverla */
+			if(arrayEvaluar.some(x=>{return isNaN(Number(x))})){
+				arrayEvaluar[0]=suma(arrayEvaluar[0])
+				arrayEvaluar[1]=suma(arrayEvaluar[1])
+			}
+
+			if(arrayEvaluar[0]==arrayEvaluar[1]){
+				result="0";
+			}
+
+			/* SI ambos son numeros, retornar solucion */
+			if(result=="" && !isNaN(Number(arrayEvaluar[0])) && !isNaN(Number(arrayEvaluar[1]))){
+				let a=Number(arrayEvaluar[0]);
+				let b=Number(arrayEvaluar[1]);
+
+				result=(a-b).toString()
+			}
+			
+		}break;
+
+		default: result="";
+	}
+
+	if(arrayEvaluar.length>=3){
+
+		let tempArray=arrayEvaluar.map(elm=>{
+			return suma(elm);
+		})
+
+		if(tempArray.every(elmx=>{return !isNaN(Number(elmx))})){
+			let tempRes=Number(tempArray[0]);
+			for(let x=1;x<=tempArray.length;x++){
+				tempRes=tempRes-Number(tempArray[x]);
+			}
+			result=tempRes.toString();
+		}
+	}
+
+	if(result==""){result=messages.error}
+
 	return result;
 }
 
@@ -111,8 +168,115 @@ function resta(operacion: string): string {
 
 
 function suma(operacion:string):string {
-	let result: string = "1";
+	let result: string = "";
+	
+	let exprEvaluar:string=removeParenthesis(operacion);
+
+	let arrayEvaluar:string[]=exprEvaluar.split("+")
+
+	switch(arrayEvaluar.length){
+
+		case 1:{
+			/* Si NO es un numero, retornar la operacion que contiene */
+			if(isNaN(Number(arrayEvaluar[0]))){result=multiplicar(arrayEvaluar[0])}
+
+			/* Si es un numero, retornar el numero sin cambios */
+			if(!isNaN(Number(arrayEvaluar[0]))){result=arrayEvaluar[0]}
+
+		}break;
+
+		case 2:{
+			/* Si alguno es una expresion, resolverla */
+			if(arrayEvaluar.some(x=>{return isNaN(Number(x))})){
+				arrayEvaluar[0]=multiplicar(arrayEvaluar[0])
+				arrayEvaluar[1]=multiplicar(arrayEvaluar[1])
+			}
+
+			/* SI ambos son numeros, retornar solucion */
+			if(result=="" && !isNaN(Number(arrayEvaluar[0])) && !isNaN(Number(arrayEvaluar[1]))){
+				let a=Number(arrayEvaluar[0]);
+				let b=Number(arrayEvaluar[1]);
+
+				result=(a+b).toString()
+			}
+			
+		}break;
+
+		default: result="";
+	}
+
+	if(arrayEvaluar.length>=3){
+
+		let tempArray=arrayEvaluar.map(elm=>{
+			return multiplicar(elm);
+		})
+
+		if(tempArray.every(elmx=>{return !isNaN(Number(elmx))})){
+			let tempRes=Number(tempArray[0]);
+			for(let x=1;x<=tempArray.length;x++){
+				tempRes=tempRes+Number(tempArray[x]);
+			}
+			result=tempRes.toString();
+		}
+	}
+
+	if(result==""){result=messages.error}
+
 	return result;
+}
+
+
+
+
+
+
+
+
+function multiplicar(evaluar:string):string{
+	let resultado:string="";
+
+	let exprEvaluar:string=removeParenthesis(evaluar);
+
+	let arrayEvaluar:string[]=exprEvaluar.split("*")
+
+	switch(arrayEvaluar.length){
+
+		case 1:{
+			/* Si es un numero, retornar el numero sin cambios */
+			if(!isNaN(Number(arrayEvaluar[0]))){resultado=arrayEvaluar[0]}
+
+		}break;
+
+		case 2:{
+
+			/* SI ambos son numeros, retornar solucion */
+			if(!isNaN(Number(arrayEvaluar[0])) && !isNaN(Number(arrayEvaluar[1]))){
+				let a=Number(arrayEvaluar[0]);
+				let b=Number(arrayEvaluar[1]);
+
+				resultado=(a*b).toString()
+			}
+			
+		}break;
+
+		default: resultado="";
+	}
+
+	if(arrayEvaluar.length>=3){
+
+		if(arrayEvaluar.every(elmx=>{return !isNaN(Number(elmx))})){
+			let tempRes=Number(arrayEvaluar[0]);
+			for(let x=1;x<=arrayEvaluar.length;x++){
+				tempRes=tempRes*Number(arrayEvaluar[x]);
+			}
+			resultado=tempRes.toString();
+		}
+	}
+
+	if(resultado==""){resultado=messages.error}
+
+	return resultado;
+
 }
 
 
@@ -126,6 +290,17 @@ function suma(operacion:string):string {
 function setInputValue(): void {
 	inputValue = inputTag.value;
 }
+
+
+
+
+
+function resetResult(){
+	resultValue=""
+	resultInnerTag.innerText=""
+}
+
+
 
 
 
@@ -148,9 +323,7 @@ function determinateLastParenthesis(analize: string): string {
 
 
 function removeParenthesis(valor:string):string{
-	let resultado="";
-
-	resultado=valor.replace("(","")
+	let resultado=valor.replace("(","")
 	resultado=resultado.replace(")","")
 
 	return resultado;

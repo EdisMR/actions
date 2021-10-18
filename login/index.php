@@ -6,8 +6,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>XitusDev - Log in</title>
 	<link rel="shortcut icon" href="/global/assets/me.ico" type="image/x-icon">
+
+	<link rel="stylesheet" href="/global/sass/global.css">
 	<link rel="stylesheet" href="./sass/login.css">
 
+	<script defer src="./script/login.js"></script>
 
 </head>
 <?php
@@ -18,9 +21,17 @@ if (isset($_COOKIE["access"]) && $_COOKIE["access"] == "432289") {
 	</script>
 <?php
 }
+
+
+include_once "../global/global.php";
+
 ?>
 
 <body>
+
+<header></header>
+<main>
+
 
 	<form>
 
@@ -29,39 +40,11 @@ if (isset($_COOKIE["access"]) && $_COOKIE["access"] == "432289") {
 		<input type="submit" value="Send" id="buttonEnviar">
 
 	</form>
+	</main>
+	<?php
+	footerHTML();
+	?>
 
-
-	<script>
-		formulario = document.forms[0];
-		formulario.addEventListener("submit", function(e) {
-			e.preventDefault();
-			document.getElementById("buttonEnviar").disabled = true;
-
-			const data = new FormData(formulario);
-
-			fetch('/global/cookieEval.php', {
-					method: 'POST',
-					body: data
-				})
-				.then((e) => {
-					window.location.reload();
-				})
-		})
-
-
-		function w000() {
-			try {
-				let Y = document.querySelector("body a[href*='000webhost']").parentNode;
-				document.body.removeChild(Y);
-			} catch (e) {
-				/* console.log(e); */
-			}
-		}
-		w000();
-
-		formulario.inputPass.value="432289";
-		document.getElementById("buttonEnviar").click();
-	</script>
 </body>
 
 </html>
