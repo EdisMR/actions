@@ -3,6 +3,19 @@
 	"aabout":"About Me",
 	"aform":"Form",
 	"agallery":"Gallery",
-	"acarousel":"Carousel"
-
+	"acarousel":"Carousel",
+	"aapi":"API in use",
+	"aprojects":"HTML5 Projects",
+	"asettings":"Settings",
+	"amousep":"Mouse position:",
+	"akeyp":"Key pressed:",
+	"aunderconst":"Site under<br> construction",
+	"aaccesibility":"Accesibility",
+	"ahighcontrast":"High contrast",
+	"abigfont":"Big typography",
+	"alang":"Language",
+	"abilingual":"Bilingual",
+	"asetenglish":"English",
+	"asetspanish":"Spanish",
+	"aclosebtn":"Close"
 }

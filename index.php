@@ -11,6 +11,7 @@
 	?>
 
 	<link rel="stylesheet" href="./index/sass/index.css">
+	<script defer src="index/script/index.js"></script>
 
 </head>
 
@@ -34,8 +35,8 @@
 						XitusDev
 						<!-- Lorem Ipsum -->
 					</h1>
-					<p>
-						Web Developer
+					<p data-text="bwebdev">
+						
 						<!-- sit amet consectetur -->
 					</p>
 				</div>
@@ -50,21 +51,21 @@
 		<section class="block centrador">
 			<article class="block">
 				<div>
-					<h2 id="index-paginas">Pages on this site</h2>
+					<h2 id="index-paginas" data-text="bpages"></h2>
 				</div>
 			</article>
 			<article class="block">
 				<div class="main-index-grid col2y1">
 					<section class="card" data-accesibilityborder="true">
 						<div class="card-header">
-							<h4><a href="/formulario/" rel="noopener noreferrer">Form</a></h4>
+							<h4><a href="/formulario/" rel="noopener noreferrer" data-text="bform"></a></h4>
 						</div>
 						<div class="card-content">
 							<ul>
-								<li>Validate a form using the Javascript Form API</li>
-								<li>Animations to help to the user in invalid input case</li>
-								<li>Treatment of types of data entered to avoid invalid entries</li>
-								<li>Form created using HTML5 tags and semantic tags</li>
+								<li data-text="bformlist1"></li>
+								<li data-text="bformlist2"></li>
+								<li data-text="bformlist3"></li>
+								<li data-text="bformlist4"></li>
 							</ul>
 						</div>
 					</section>

@@ -90,14 +90,14 @@ function switchHighContrast(){
 function switchLang(){
 	if(localStorage.lang=="spa"){
 		/* Pasar a eng */
-		defineLang("eng")
 		settingsVars.buttonBilingual.classList.remove("settingItemInactive");
+		defineLang("eng")
 	}else{
 
 		if(localStorage.lang=="eng"){
 			/* Pasar a spa */
+			settingsVars.buttonBilingual.classList.add("settingItemInactive");
 		defineLang("spa")
-		settingsVars.buttonBilingual.classList.add("settingItemInactive");
 		}
 	}
 
@@ -186,8 +186,16 @@ function removeBigFont(){
 
 function defineLang(idiomText=""){
 	if(idiomText==""){
-		if(window.navigator.language.includes("es")) {localStorage.lang="spa";}
-		if(window.navigator.language.includes("eng")){ localStorage.lang="eng";}
+		if(window.navigator.language.includes("es")) {
+			localStorage.lang="spa";
+			alertify.alert("Te doy la bienvenida a mi sitio. El idioma fue configurado automáticamente pero puedes cambiarlo en Configuraciones.<br>Por favor considera que el sitio está en desarrollo por lo que las traducciones no están terminadas.", function(){
+			});
+		}
+		if(window.navigator.language.includes("eng")){
+			localStorage.lang="eng";
+			alertify.alert("Welcome to my website. The language was set automatically, but you can change it on Settings.<br>Please consider that the website is on construction so, some translations are not completed", function(){
+			});
+		}
 	}else{
 		localStorage.lang=idiomText
 	}

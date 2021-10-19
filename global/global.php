@@ -101,7 +101,7 @@ function headerHTML()
 								<span class="ms-Icon ms-Icon--AzureAPIManagement"></span>
 							</div>
 							<div>
-								API in use
+								<span data-text="aapi" class="menuItemText"></span>
 							</div>
 						</a>
 					</li>
@@ -111,7 +111,7 @@ function headerHTML()
 								<span class="ms-Icon ms-Icon--Game"></span>
 							</div>
 							<div>
-								HTML5 Projects
+								<span data-text="aprojects" class="menuItemText"></span>
 							</div>
 						</a>
 					</li>
@@ -121,7 +121,7 @@ function headerHTML()
 								<button class="ms-Icon ms-Icon--Settings"></button>
 							</div>
 							<div>
-								Settings
+								<span data-text="asettings" class="menuItemText"></span>
 							</div>
 						</a>
 					</li>
@@ -134,11 +134,11 @@ function headerHTML()
 		<section class="block">
 			<article class="header-events">
 				<div>
-					<p>Mouse position:</p>
+					<p data-text="amousep"></p>
 					<span class="inner-event"></span>
 				</div>
 				<div>
-					<p>Key pressed:</p>
+					<p data-text="akeyp"></p>
 					<span class="inner-event"></span>
 				</div>
 			</article>
@@ -195,7 +195,7 @@ function footerHTML()
 	</div>
 
 	<div id="helpNode">
-		<p>Site under<br> construction</p>
+		<p data-text="aunderconst"></p>
 	</div>
 
 
@@ -216,7 +216,7 @@ function settingsModal()
 
 		<section class="block">
 			<div class="settingsHeader">
-				<span>Settings</span>
+				<span data-text="asettings"></span>
 			</div>
 		</section>
 
@@ -230,7 +230,7 @@ function settingsModal()
 					<div class="settingsBodyItem"> <!-- cada uno de los tres grupos -->
 						<div class="block">
 							<div class="stItemtitle"> <!-- titulo del grupo -->
-								<span>Accesibility</span>
+								<span data-text="aaccesibility"></span>
 							</div>
 						</div>
 
@@ -240,7 +240,7 @@ function settingsModal()
 
 								<div class="settingItem"><!-- Cada cuadro de control -->
 									<div class="block">
-										<div class="settingItemType">High contrast</div>
+										<div class="settingItemType" data-text="ahighcontrast"></div>
 									</div>
 									<div class="block">
 										<div class="settingItemControl">
@@ -252,7 +252,7 @@ function settingsModal()
 								
 								<div class="settingItem"><!-- Cada cuadro de control -->
 									<div class="block">
-										<div class="settingItemType">Big font</div>
+										<div class="settingItemType" data-text="abigfont"></div>
 									</div>
 									<div class="block">
 										<div class="settingItemControl">
@@ -273,7 +273,7 @@ function settingsModal()
 					<div class="settingsBodyItem"> <!-- cada uno de los tres grupos -->
 						<div class="block">
 							<div class="stItemtitle"> <!-- titulo del grupo -->
-								<span>Language</span>
+								<span data-text="alang"></span>
 							</div>
 						</div>
 
@@ -283,11 +283,11 @@ function settingsModal()
 
 								<div class="settingItem"><!-- Cada cuadro de control -->
 									<div class="block">
-										<div class="settingItemType">Bilingual</div>
+										<div class="settingItemType" data-text="abilingual"></div>
 									</div>
 									<div class="block">
 										<div class="settingItemControl">
-											<span>English</span><span class="settingItemIcon settingItemInactive" id="buttonBilingual"></span><span>Spanish</span>
+											<span data-text="asetenglish"></span><span class="settingItemIcon settingItemInactive" id="buttonBilingual"></span><span data-text="asetspanish"></span>
 										</div>
 									</div>
 								</div>
@@ -305,7 +305,7 @@ function settingsModal()
 
 		<section class="block">
 			<div class="settingsFooter">
-				<button id="settingsClose">Close</button>
+				<button id="settingsClose" data-text="aclosebtn"></button>
 			</div>
 		</section>
 
@@ -328,6 +328,7 @@ function headHTML(){
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
 	<link rel="shortcut icon" href="/global/assets/me.ico" type="image/x-icon">
 	<link rel="stylesheet" href="/global/sass/global.css">
+	<script src="/global/script/alertify.min.js"></script>
 	<script defer src="/global/script/main.js"></script>
 	<?php
 	}

@@ -3,5 +3,19 @@
 	"aabout":"Acerca de mí",
 	"aform":"Formulario",
 	"agallery":"Galería",
-	"acarousel":"Carrusel"
+	"acarousel":"Carrusel",
+	"aapi":"API en uso",
+	"aprojects":"Proyectos HTML5",
+	"asettings":"Configuraciones",
+	"amousep":"Posición del mouse:",
+	"akeyp":"Tecla presionada:",
+	"aunderconst":"Sitio en<br> construcción",
+	"aaccesibility":"Accesibilidad",
+	"ahighcontrast":"Alto contraste",
+	"abigfont":"Tipografía grande",
+	"alang":"Lenguaje",
+	"abilingual":"Bilingüe",
+	"asetenglish":"Inglés",
+	"asetspanish":"Español",
+	"aclosebtn":"Cerrar"
 }

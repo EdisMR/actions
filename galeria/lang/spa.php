@@ -1,0 +1,3 @@
+$variable=[
+	"algo"->"algo valor"
+]
