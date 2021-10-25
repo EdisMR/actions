@@ -6,8 +6,8 @@
 	<title>XitusDev</title>
 
 	<?php
-		include_once "global/global.php";
-		headHTML();
+	include_once "global/global.php";
+	headHTML();
 	?>
 
 	<link rel="stylesheet" href="./index/sass/index.css">
@@ -36,7 +36,7 @@
 						<!-- Lorem Ipsum -->
 					</h1>
 					<p data-text="bwebdev">
-						
+
 						<!-- sit amet consectetur -->
 					</p>
 				</div>
