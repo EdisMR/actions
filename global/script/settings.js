@@ -1,4 +1,3 @@
-"use strict";
 /* ********************************************** */
 /* ******************** CONFIGURACIONES ************ */
 /* ********************************************** */
@@ -10,7 +9,7 @@ var settingsVars = {
     /* Botones controladores de las configuraciones */
     buttonHighContrast: document.getElementById("buttonHighContrast"),
     buttonBigFont: document.getElementById("buttonBigFont"),
-    buttonBilingual: document.getElementById("buttonBilingual"),
+    buttonBilingual: document.getElementById("buttonBilingual")
 };
 /* Settings to Display */
 settingsVars.buttonOpen.addEventListener("click", displaySettings, false);
@@ -108,8 +107,8 @@ function switchBigFont() {
 /* ************************** */
 function applyHighContrast() {
     settingsVars.buttonHighContrast.classList.remove("settingItemInactive");
-    let arrayTodos = Array.from(document.querySelectorAll("*"));
-    arrayTodos.forEach(elm => {
+    var arrayTodos = Array.from(document.querySelectorAll("*"));
+    arrayTodos.forEach(function (elm) {
         if (elm.dataset.accesibilityborder == "true") {
             elm.classList.add("accesibilityBorder");
         }
@@ -117,12 +116,12 @@ function applyHighContrast() {
 }
 function applyBigFont() {
     settingsVars.buttonBigFont.classList.remove("settingItemInactive");
-    let arrayTodos = Array.from(document.querySelectorAll("*"));
-    arrayTodos.forEach(elm => {
+    var arrayTodos = Array.from(document.querySelectorAll("*"));
+    arrayTodos.forEach(function (elm) {
         elm.dataset.initialfont = getComputedStyle(elm).fontSize;
     });
-    arrayTodos.forEach(elm => {
-        elm.style.fontSize = `calc(${elm.dataset.initialfont} + 5px)`;
+    arrayTodos.forEach(function (elm) {
+        elm.style.fontSize = "calc(" + elm.dataset.initialfont + " + 5px)";
     });
 }
 /* ****************************** */
@@ -130,8 +129,8 @@ function applyBigFont() {
 /* ****************************** */
 function removeHighContrast() {
     settingsVars.buttonHighContrast.classList.add("settingItemInactive");
-    let arrayTodos = Array.from(document.querySelectorAll("*"));
-    arrayTodos.forEach(elm => {
+    var arrayTodos = Array.from(document.querySelectorAll("*"));
+    arrayTodos.forEach(function (elm) {
         if (elm.dataset.accesibilityborder == "true") {
             elm.classList.remove("accesibilityBorder");
         }
@@ -139,8 +138,8 @@ function removeHighContrast() {
 }
 function removeBigFont() {
     settingsVars.buttonBigFont.classList.add("settingItemInactive");
-    let arrayTodos = Array.from(document.querySelectorAll("*"));
-    arrayTodos.forEach(elm => {
+    var arrayTodos = Array.from(document.querySelectorAll("*"));
+    arrayTodos.forEach(function (elm) {
         elm.style.fontSize = elm.dataset.initialfont;
         elm.removeAttribute("data-initialfont");
     });
@@ -149,7 +148,8 @@ function removeBigFont() {
 //! SPA para español
 //! ENG para ingles
 /* Si no se define el lenguaje, se definira el idioma tomando el del navegador */
-function defineLang(idiomText = "") {
+function defineLang(idiomText) {
+    if (idiomText === void 0) { idiomText = ""; }
     if (idiomText == "") {
         if (window.navigator.language.includes("es")) {
             localStorage.lang = "spa";
@@ -171,8 +171,15 @@ archivo json de cada lenguaje, con los items spa y eng como keys. Esta funcion s
 para llenar los span correspondientes al idioma. el identificador en el html es un data-text="key" */
 /* Funcion para llenar el texto */
 function idiomHTMLInner(urls) {
-    let urlParaFetch = "";
-    let htmlLang = "";
+    var myHeaders = new Headers();
+    myHeaders.append('pragma', 'no-cache');
+    myHeaders.append('cache-control', 'no-cache');
+    var myInit = {
+        method: 'GET',
+        headers: myHeaders
+    };
+    var urlParaFetch = "";
+    var htmlLang = "";
     if (localStorage.lang == null || localStorage.lang == "") {
         defineLang();
     }
@@ -185,21 +192,21 @@ function idiomHTMLInner(urls) {
         htmlLang = "eng";
     }
     /* Traer json de esta url */
-    fetch(urlParaFetch)
+    fetch(urlParaFetch, myInit)
         .then(
     /* Retornar como un JSON */
-    fetchResult => {
+    function (fetchResult) {
         return fetchResult.text();
     })
-        .then(textoResult => {
+        .then(function (textoResult) {
         return JSON.parse(textoResult);
     })
-        .then(jsonParseado => {
+        .then(function (jsonParseado) {
         /* Configurar lang en html */
         document.firstElementChild.setAttribute("lang", htmlLang);
         /* Llamar a todos los span */
-        let todosSpan = Array.from(document.querySelectorAll("[data-text]"));
-        for (let x in todosSpan) {
+        var todosSpan = Array.from(document.querySelectorAll("[data-text]"));
+        for (var x in todosSpan) {
             if (jsonParseado[todosSpan[x].dataset.text] != null) {
                 todosSpan[x].innerHTML = jsonParseado[todosSpan[x].dataset.text];
             }
@@ -208,7 +215,7 @@ function idiomHTMLInner(urls) {
 }
 idiomHTMLInner({
     spa: window.location.origin + "/global/lang/spa.json",
-    eng: window.location.origin + "/global/lang/eng.json",
+    eng: window.location.origin + "/global/lang/eng.json"
 });
 if (localStorage.lang == "eng") {
     settingsVars.buttonBilingual.classList.add("settingItemInactive");

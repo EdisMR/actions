@@ -206,6 +206,17 @@ para llenar los span correspondientes al idioma. el identificador en el html es 
 
 /* Funcion para llenar el texto */
 function idiomHTMLInner(urls):void{
+
+	var myHeaders = new Headers();
+	myHeaders.append('pragma', 'no-cache');
+	myHeaders.append('cache-control', 'no-cache');
+
+	var myInit = {
+	method: 'GET',
+	headers: myHeaders,
+};
+
+
 	let urlParaFetch="";
 	let htmlLang="";
 	if(localStorage.lang==null || localStorage.lang==""){
@@ -223,7 +234,7 @@ function idiomHTMLInner(urls):void{
 
 
 	/* Traer json de esta url */	
-	fetch(urlParaFetch)
+	fetch(urlParaFetch,myInit)
 
 	.then(
 		/* Retornar como un JSON */
