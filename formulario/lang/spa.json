@@ -1,0 +1,15 @@
+{
+	"ctitle":"XitusDev - Formulario",
+	"csample":"Formulario de muestra",
+	"cpurpose":"El propósito del formulario es mostrar las validaciones realizadas mediante programación Javascript. Los datos de este formulario no serán enviados a ningún servicio o servidor de datos. Al enviar el formulario, volverá a esta página.",
+	"cpersonalinfo":"Información personal",
+	"cformnames":"Un nombre y dos apellidos:&nbsp;",
+	"cbirth":"Fecha de nacimiento:&nbsp;",
+	"cformcalc":"Su edad calculada:&nbsp;",
+	"ccontact":"Información de contacto",
+	"ctelephone":"Número de teléfono:&nbsp;",
+	"cemail1":"Correo electrónico 1:&nbsp;",
+	"cemail2":"Correo electrónico 2:&nbsp;",
+	"cbtnreset":"Reiniciar",
+	"cbtnsend":"Enviar"
+}

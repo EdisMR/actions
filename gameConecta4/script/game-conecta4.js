@@ -51,7 +51,7 @@ buttonReset.addEventListener("click", resetGame);
 /* Formulario de usuarios del juego */
 formulario.addEventListener("submit", defineUsers, false);
 function defineUsers(ev) {
-    e = ev;
+    let e = ev;
     e.preventDefault();
     if (formulario.user1.value != formulario.user2.value) {
         formulario.removeEventListener("submit", defineUsers, false);

@@ -4,7 +4,6 @@
 <head>
 	<title>XitusDev - Gallery</title>
 	<?php
-		include_once "../lang/spa.php";
 		include_once "../global/global.php";
 		headHTML();
 	?>

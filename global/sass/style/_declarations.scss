@@ -518,6 +518,9 @@ $iconHeight:117px;
 	font-size: unset !important;
 }
 
-.alertify{
-	color:#333;
+
+div.ajs-message,.alertify-notifier{
+	background-color: #eee !important;
+	color: black !important;
+	font-size: 20px;
 }

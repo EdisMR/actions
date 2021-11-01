@@ -1,0 +1,15 @@
+{
+	"ctitle":"XitusDev - Form",
+	"csample":"Sample form",
+	"cpurpose":"The purpose of the form is to show validations made using Javascript programming. The data in this form will not be sent to any service or data server. By submitting the form you will be redirected back to this form.",
+	"cpersonalinfo":"Personal information",
+	"cformnames":"One name and two last names:&nbsp;",
+	"cbirth":"Birthday:&nbsp;",
+	"cformcalc":"Your calculated age:&nbsp;",
+	"ccontact":"Contact information",
+	"ctelephone":"Telephone number:&nbsp;",
+	"cemail1":"Email 1:&nbsp;",
+	"cemail2":"Email 2:&nbsp;",
+	"cbtnreset":"Reset",
+	"cbtnsend":"Send"
+}

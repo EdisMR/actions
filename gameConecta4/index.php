@@ -8,7 +8,7 @@
 		headHTML();
 	?>
 	<link rel="stylesheet" href="./sass/gameConecta4.css">
-	<script defer src="./script/game-conecta4.js"></script>
+	<script defer src="script/game-conecta4.js"></script>
 </head>
 
 <body>

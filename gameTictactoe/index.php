@@ -9,7 +9,7 @@
 	?>
 
 	<link rel="stylesheet" href="./sass/gameTictactoe.css">
-	<script defer src="./script/game-tictactoe.js"></script>
+	<script defer src="script/game-tictactoe.js"></script>
 </head>
 
 <body>

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>XitusDev - Using an API</title>
+	<title data-text="ftitle"></title>
 
 	<?php
 		include_once "../global/global.php";
@@ -29,12 +29,12 @@
 
 				<article class="textContainer">
 					<article class="textItem">
-						<p class="bigHelp">Write the latitude and longitude to obtain the information</p>
+						<p class="bigHelp" data-text="fbigintro"></p>
 					</article>
 
 					<article class="textItem">
 						<p class="btnSendHelper">example: <span>9.936633, -84.107593</span></p>
-						<button id="myLocation">Use my location</button>
+						<button id="myLocation" data-text="fmylocation"></button>
 					</article>
 				</article>
 
@@ -45,7 +45,7 @@
 					<form>
 						<div class="formItem">
 							<div class="textInp">
-								<p>Latitude and Longitude</p>
+								<p data-text="flatlong"></p>
 							</div>
 							<div class="inputContainer">
 								<input type="text" name="inputL" autocomplete="off" placeholder="You can use Google Maps"
@@ -118,10 +118,10 @@
 				</article>
 
 				<article class="mostrarFooter">
-					<button id="updateLoc">Update</button>
-					<button id="copyLoc">Copy location</button>
-					<button id="toGmaps">Location on Google Maps</button>
-					<p class="notaPie">Data provided by OpenWeatherMap</p>
+					<button id="updateLoc" data-text="fmostrarupdate"></button>
+					<button id="copyLoc" data-text="fmostrarcopy"></button>
+					<button id="toGmaps" data-text="fmostrarlocation"></button>
+					<p class="notaPie" data-text="fmostrardata"></p>
 				</article>
 
 			</section>

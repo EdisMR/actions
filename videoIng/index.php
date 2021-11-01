@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>XitusDev - Broccoli Video</title>
+	<title data-text="etitle"></title>
 
 	<?php
 		include_once "../global/global.php";
@@ -21,7 +21,7 @@
 	?>
 
 	<main>
-		<span class="advice">Advice: this page was a practice, isn't related with a real business and corresponding rights are for original creators of photos, music and images used in the video</span>
+		<span class="advice" data-text="eadvice"></span>
 		<figure>
 			<video src="./assets/Secuencia 02-3 1.mp4" title="video" alt="Video" poster="./assets/post.webp" preload></video>
 		</figure>

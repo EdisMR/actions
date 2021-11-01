@@ -1,3 +1,0 @@
-$variable=[
-	"algo"->"algo valor"
-]

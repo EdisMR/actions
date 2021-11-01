@@ -81,3 +81,11 @@ formulario.addEventListener("submit", formularioEnviado);
 function formularioEnviado() {
     formulario.edad.disabled = false;
 }
+window.addEventListener("load", solicitaTexto, false);
+function solicitaTexto() {
+    window.removeEventListener("load", solicitaTexto, false);
+    idiomHTMLInner({
+        spa: window.location.origin + "/formulario/lang/spa.json",
+        eng: window.location.origin + "/formulario/lang/eng.json",
+    });
+}

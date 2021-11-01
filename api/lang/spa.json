@@ -1,0 +1,10 @@
+{
+	"ftitle":"XitusDev - Usando una API",
+	"fbigintro":"Digite la latitud y la longitud para obtener la información",
+	"fmylocation":"Usar mi ubicación",
+	"flatlong":"Latitud y Longitud",
+	"fmostrarupdate":"Actualizar",
+	"fmostrarcopy":"Copiar localización",
+	"fmostrarlocation":"Ubicación en Google Maps",
+	"fmostrardata":"Información proveida pór OpenWeatherMap"
+}

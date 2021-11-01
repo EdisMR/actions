@@ -244,3 +244,11 @@ function removeParenthesis(valor) {
 function innerFinalResult() {
     resultInnerTag.innerText = resultValue;
 }
+window.addEventListener("load", solicitaTexto, false);
+function solicitaTexto() {
+    window.removeEventListener("load", solicitaTexto, false);
+    idiomHTMLInner({
+        spa: window.location.origin + "/calculator/lang/spa.json",
+        eng: window.location.origin + "/calculator/lang/eng.json",
+    });
+}

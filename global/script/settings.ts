@@ -186,15 +186,24 @@ function removeBigFont(){
 
 function defineLang(idiomText=""){
 	if(idiomText==""){
+
 		if(window.navigator.language.includes("es")) {
 			localStorage.lang="spa";
-			alertify.alert("Te doy la bienvenida a mi sitio. El idioma fue configurado automáticamente pero puedes cambiarlo en Configuraciones.<br>Por favor considera que el sitio está en desarrollo por lo que las traducciones no están terminadas.", function(){
-			});
+
+			alertify.set('notifier','delay', 5);
+			alertify.set('notifier','position', 'top-center');
+			alertify.message("Por favor considera que el sitio está en desarrollo por lo que las traducciones no están terminadas.");
+			alertify.message("Puedes cambiarlo en Configuraciones.");
+			alertify.message('Idioma configurado automáticamente.');
 		}
 		if(window.navigator.language.includes("eng")){
 			localStorage.lang="eng";
-			alertify.alert("Welcome to my website. The language was set automatically, but you can change it on Settings.<br>Please consider that the website is on construction so, some translations are not completed", function(){
-			});
+
+			alertify.set('notifier','delay', 5);
+			alertify.set('notifier','position', 'top-center');
+			alertify.message("Please consider that the website is on construction so, some translations are not completed")
+			alertify.message("You can change it on Settings.")
+			alertify.message("Language was set automatically.")
 		}
 	}else{
 		localStorage.lang=idiomText

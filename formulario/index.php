@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>XitusDev - Form</title>
+	<title data-text="ctitle"></title>
 	
 	<?php
 		include_once "../global/global.php";
@@ -29,13 +29,13 @@
 
 			<article class="block">
 				<div class="infoPadding">
-					<h2>Sample form</h2>
+					<h2 data-text="csample"></h2>
 				</div>
 			</article>
 			<article class="block">
 				<div class="infoPadding">
-					<p>
-					The purpose of the form is to show validations made using Javascript programming. The data in this form will not be sent to any service or data server. By submitting the form you will be redirected back to this form.
+					<p data-text="cpurpose">
+					
 					</p>
 				</div>
 			</article>
@@ -59,7 +59,7 @@
 							<div class="block">
 								<!-- BEM del header card input -->
 								<div class="formHeaderCard inputPadding">
-									<h3>Personal information</h3>
+									<h3 data-text="cpersonalinfo"></h3>
 								</div>
 							</div>
 
@@ -70,7 +70,7 @@
 
 									<!-- BEM del nombre con input -->
 									<div class="itemInput">
-										<div class="descriptionInput">One name and two last names:&nbsp;</div>
+										<div class="descriptionInput" data-text="cformnames"></div>
 
 										<!-- class goodInput badInput -->
 										<div class="inputC">
@@ -82,7 +82,7 @@
 
 									<!-- BEM del nombre con input -->
 									<div class="itemInput">
-										<div class="descriptionInput">Birthday:&nbsp;</div>
+										<div class="descriptionInput" data-text="cbirth"></div>
 										<div class="inputC">
 											<input type="date" step="1" placeholder="Your Birthday"
 												name="fechaNac" required autocomplete="off">
@@ -91,7 +91,7 @@
 
 									<!-- BEM del nombre con input -->
 									<div class="itemInput">
-										<div class="descriptionInput">Your calculated age:&nbsp;</div>
+										<div class="descriptionInput" data-text="cformcalc"></div>
 										<div class="inputC">
 											<input type="number" placeholder="It is calculated with your birthday"
 												name="edad" disabled autocomplete="off">
@@ -116,7 +116,7 @@
 							<div class="block">
 								<!-- BEM del header card input -->
 								<div class="formHeaderCard inputPadding">
-									<h3>Contact information</h3>
+									<h3 data-text="ccontact"></h3>
 								</div>
 							</div>
 
@@ -127,7 +127,7 @@
 
 									<!-- BEM del nombre con input -->
 									<div class="itemInput">
-										<div class="descriptionInput">Telephone number:&nbsp;</div>
+										<div class="descriptionInput" data-text="ctelephone"></div>
 										<div class="inputC">
 											<input type="tel" placeholder="Only CR format (+50612345678)" name="telefono"
 												pattern="^\+506\d{8}$" required autocomplete="off">
@@ -136,7 +136,7 @@
 
 									<!-- BEM del nombre con input -->
 									<div class="itemInput">
-										<div class="descriptionInput">Email 1:&nbsp;</div>
+										<div class="descriptionInput" data-text="cemail1"></div>
 										<div class="inputC">
 											<input type="email" placeholder="Email 1"
 												pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" name="correo1" required
@@ -146,7 +146,7 @@
 
 									<!-- BEM del nombre con input -->
 									<div class="itemInput">
-										<div class="descriptionInput">Email 2:&nbsp;</div>
+										<div class="descriptionInput" data-text="cemail2"></div>
 										<div class="inputC">
 											<input type="email" placeholder="Email 2"
 												pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" name="correo2" required
@@ -176,12 +176,12 @@
 					<div class="buttonContainer">
 						<button type="reset">
 							<!-- Reset -->
-							Reset <span class="ms-Icon ms-Icon--Reset"></span>
+							<span data-text="cbtnreset"></span><span class="ms-Icon ms-Icon--Reset"></span>
 						</button>
 
 						<button type="submit">
 							<!-- Send -->
-							Send <span class="ms-Icon ms-Icon--AcceptMedium"></span>
+							<span data-text="cbtnsend"></span><span class="ms-Icon ms-Icon--AcceptMedium"></span>
 						</button>
 
 					</div>

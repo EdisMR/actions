@@ -35,3 +35,14 @@ function stopVideo():void{
 	restartState();
 }
 restartState();
+
+
+window.addEventListener("load",solicitaTexto,false);
+
+function solicitaTexto(){
+	window.removeEventListener("load",solicitaTexto,false);
+	idiomHTMLInner({
+		spa: window.location.origin+"/videoIng/lang/spa.json",
+		eng: window.location.origin+"/videoIng/lang/eng.json",
+	})
+}

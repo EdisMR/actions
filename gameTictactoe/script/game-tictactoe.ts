@@ -20,7 +20,7 @@ var contadorDeTurnos=0;
 /* Definir usuarios del juego con el form */
 formulario.addEventListener("submit",defineUsers,false);
 function defineUsers(e){
-	evento=e;
+	let evento=e;
 	evento.preventDefault();
 
 	if(formulario.user1.value!=formulario.user2.value){

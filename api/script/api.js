@@ -116,3 +116,11 @@ const buttonActualizar = document.querySelector("#updateLoc");
 buttonActualizar.addEventListener("click", () => { solicitarDatos(); btncopiarLocalizacion.disabled = false; }, false);
 const btnToGmaps = document.getElementById("toGmaps");
 btnToGmaps.addEventListener("click", () => { window.open(`https://www.google.com/maps/search/${api.lat},${api.lon}`); }, false);
+window.addEventListener("load", solicitaTexto, false);
+function solicitaTexto() {
+    window.removeEventListener("load", solicitaTexto, false);
+    idiomHTMLInner({
+        spa: window.location.origin + "/api/lang/spa.json",
+        eng: window.location.origin + "/api/lang/eng.json",
+    });
+}

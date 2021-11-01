@@ -1,4 +1,5 @@
-var whereInner = document.getElementById("userInfo");
+"use strict";
+let whereInner = document.getElementById("userInfo");
 whereInner.insertAdjacentHTML("beforeend", "DocumentLastModified: " + document.lastModified);
 whereInner.insertAdjacentHTML("beforeend", "<br><br>brandName0: " + navigator.userAgentData.brands[0].brand);
 whereInner.insertAdjacentHTML("beforeend", "<br>brandVersion0: " + navigator.userAgentData.brands[0].version);
