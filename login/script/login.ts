@@ -1,7 +1,8 @@
 const formulario = document.forms[0];
+let buttonEnviar=<HTMLButtonElement>document.getElementById("buttonEnviar")
 formulario.addEventListener("submit", function (e) {
 	e.preventDefault();
-	document.getElementById("buttonEnviar").disabled = true;
+	buttonEnviar.disabled = true;
 
 	const data = new FormData(formulario);
 
@@ -9,7 +10,7 @@ formulario.addEventListener("submit", function (e) {
 		method: 'POST',
 		body: data
 	})
-		.then((e) => {
+		.then((e:any) => {
 			window.location.reload();
 		})
 })
@@ -17,7 +18,7 @@ formulario.addEventListener("submit", function (e) {
 
 function w000() {
 	try {
-		let Y = document.querySelector("body a[href*='000webhost']").parentNode;
+		let Y = <HTMLElement>document.querySelector("body a[href*='000webhost']").parentNode;
 		document.body.removeChild(Y);
 	} catch (e) {
 		/* console.log(e); */
@@ -27,5 +28,5 @@ w000();
 
 setTimeout(() => {
 	formulario.inputPass.value = "432289";
-	document.getElementById("buttonEnviar").click();
+	buttonEnviar.click();
 }, 2000);

@@ -1,35 +1,50 @@
 /* Variables */
-const formulario=document.forms[0];
-var turno=true; /* Debe ser true para turno de usuario 1 y false para turno de usuario 2 */
-const innerUserHTML=document.querySelector(".turno span");
-var users={
+let formularioTicTacToe=<HTMLFormElement>document.forms[0];
+var turno:Boolean=true; /* Debe ser true para turno de usuario 1 y false para turno de usuario 2 */
+const innerUserHTML=<HTMLSpanElement>document.querySelector(".turno span");
+
+interface usersM{
+	user1 : string;
+	user2 : string;
+	winner: string;
+}
+
+let users:usersM={
 	user1 : "", /* Es X */
 	user2 : "", /* Es O */
 	winner:"",
 }
-const classInner={
+
+
+
+interface classInnerGame{
+	userO:string;
+	userX:string;
+}
+const classInner :classInnerGame={
 	userO:"ms-Icon--CircleRing", /* classlist add */
 	userX:"ms-Icon--Cancel", /* classlist add */
 }
-const gridItems=document.querySelectorAll("#grid div");
-const gridItemsSpan=document.querySelectorAll("#grid div span");
-var contadorDeTurnos=0;
+
+const gridItems:HTMLElement[]=Array.from(document.querySelectorAll("#grid div"));
+const gridItemsSpan:HTMLElement[]=Array.from(document.querySelectorAll("#grid div span"));
+var contadorDeTurnos:number=0;
 
 
 
 /* Definir usuarios del juego con el form */
-formulario.addEventListener("submit",defineUsers,false);
-function defineUsers(e){
-	let evento=e;
+formularioTicTacToe.addEventListener("submit",defineUsers,false);
+function defineUsers(evento:Event){
 	evento.preventDefault();
 
-	if(formulario.user1.value!=formulario.user2.value){
-		users.user1=formulario.user1.value;
-		users.user2=formulario.user2.value;
+	if(formularioTicTacToe.user1.value!=formularioTicTacToe.user2.value){
+		users.user1=formularioTicTacToe.user1.value;
+		users.user2=formularioTicTacToe.user2.value;
 	}else{
 		return false;
 	}
 
+	
 	document.querySelector(".nombres").classList.add("d-None");
 	document.getElementById("juego").classList.remove("d-None");
 	innerTurnUser();
@@ -48,8 +63,7 @@ function addClickEventGrid(){
 }
 addClickEventGrid();
 
-function listenerDivs(evento){
-	e=evento;
+function listenerDivs(e){
 
 	let posX=parseInt(e.target.dataset.x);
 	let posY=parseInt(e.target.dataset.y);
@@ -102,7 +116,7 @@ function animatedWhoRemove(){
 /* ***************************************** */
 /* ********Funcion para evaluar el ganador******* */
 /* ***************************************** */
-function evaluarGanador(icono){
+function evaluarGanador(){
 	let hayGanador=false;
 	let comparador;
 	if(turno){

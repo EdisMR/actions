@@ -12,6 +12,7 @@ main{
     align-items:center;
     min-height: 90vh;
     flex-direction: column-reverse;
+    overflow: hidden !important;
 }
 @keyframes backgroundGame {
     0%{

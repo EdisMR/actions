@@ -1,8 +1,9 @@
 "use strict";
 const formulario = document.forms[0];
+let buttonEnviar = document.getElementById("buttonEnviar");
 formulario.addEventListener("submit", function (e) {
     e.preventDefault();
-    document.getElementById("buttonEnviar").disabled = true;
+    buttonEnviar.disabled = true;
     const data = new FormData(formulario);
     fetch('/global/cookieEval.php', {
         method: 'POST',
@@ -24,5 +25,5 @@ function w000() {
 w000();
 setTimeout(() => {
     formulario.inputPass.value = "432289";
-    document.getElementById("buttonEnviar").click();
+    buttonEnviar.click();
 }, 2000);

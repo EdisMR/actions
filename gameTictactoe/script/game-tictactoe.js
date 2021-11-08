@@ -1,9 +1,9 @@
 "use strict";
 /* Variables */
-const formulario = document.forms[0];
+let formularioTicTacToe = document.forms[0];
 var turno = true; /* Debe ser true para turno de usuario 1 y false para turno de usuario 2 */
 const innerUserHTML = document.querySelector(".turno span");
-var users = {
+let users = {
     user1: "",
     user2: "",
     winner: "",
@@ -12,17 +12,16 @@ const classInner = {
     userO: "ms-Icon--CircleRing",
     userX: "ms-Icon--Cancel", /* classlist add */
 };
-const gridItems = document.querySelectorAll("#grid div");
-const gridItemsSpan = document.querySelectorAll("#grid div span");
+const gridItems = Array.from(document.querySelectorAll("#grid div"));
+const gridItemsSpan = Array.from(document.querySelectorAll("#grid div span"));
 var contadorDeTurnos = 0;
 /* Definir usuarios del juego con el form */
-formulario.addEventListener("submit", defineUsers, false);
-function defineUsers(e) {
-    let evento = e;
+formularioTicTacToe.addEventListener("submit", defineUsers, false);
+function defineUsers(evento) {
     evento.preventDefault();
-    if (formulario.user1.value != formulario.user2.value) {
-        users.user1 = formulario.user1.value;
-        users.user2 = formulario.user2.value;
+    if (formularioTicTacToe.user1.value != formularioTicTacToe.user2.value) {
+        users.user1 = formularioTicTacToe.user1.value;
+        users.user2 = formularioTicTacToe.user2.value;
     }
     else {
         return false;
@@ -41,8 +40,7 @@ function addClickEventGrid() {
     });
 }
 addClickEventGrid();
-function listenerDivs(evento) {
-    e = evento;
+function listenerDivs(e) {
     let posX = parseInt(e.target.dataset.x);
     let posY = parseInt(e.target.dataset.y);
     if (e.target.dataset.occupied == "false") {
@@ -83,7 +81,7 @@ function animatedWhoRemove() {
 /* ***************************************** */
 /* ********Funcion para evaluar el ganador******* */
 /* ***************************************** */
-function evaluarGanador(icono) {
+function evaluarGanador() {
     let hayGanador = false;
     let comparador;
     if (turno) {

@@ -13,29 +13,28 @@ let innerKey = Array.from(document.querySelectorAll(".header-events .inner-event
 const mitadPantallaHoriz = window.screen.width / 2;
 const mitadPantallaVert = window.screen.height / 2;
 function mouseMovement(e) {
-    innerMouse.innerHTML = `X=${parseInt(e.clientX)}, Y=${parseInt(e.clientY)}`;
+    let valXmouse;
+    let valYmouse;
+    valXmouse = e.clientX.toString();
+    valYmouse = e.clientY.toString();
+    innerMouse.innerHTML = `X=${valXmouse}, Y=${valYmouse}`;
 }
 function keyEvent(e) {
     innerKey.innerHTML = e.key;
 }
-/* ****************************************** */
-/* ***** FUNCIONAMIENTO DE BOTON MENU ***** */
-/* ***************************************** */
+;
 var headerButton = {
-    btn: null,
+    btn: document.querySelector(".header-title button"),
     disp: false,
-    headerEnlaces: null,
-    headerLi: null,
+    headerEnlaces: document.querySelector(".header-enlaces"),
+    headerLi: Array.from(document.querySelectorAll(".header-enlaces a")),
     iconoArriba: "&#x25B2;",
     iconoAbajo: "&#x25BC;",
 };
 if (document.body.clientWidth < 750 || screen.width < 750) {
     window.removeEventListener("keyup", keyEvent, false);
-    /* Variables */
-    headerButton.btn = document.querySelector(".header-title button");
-    headerButton.headerEnlaces = document.querySelector(".header-enlaces");
-    headerButton.headerLi = Array.from(document.querySelectorAll(".header-enlaces a"));
-    headerButton.btn.innerHTML = headerButton.iconoAbajo;
+    let textNode = document.createTextNode(headerButton.iconoAbajo);
+    headerButton.btn.appendChild(textNode);
     headerButton.btn.addEventListener("click", menuSwitchMain, false);
     headerButton.headerLi.forEach(elm => {
         elm.addEventListener("click", closeMenu, false);
@@ -88,8 +87,9 @@ function closeMenu() {
 /* ***************************************** */
 function w000() {
     try {
-        let Y = document.querySelector("body a[href*='000webhost']").parentNode;
-        document.body.removeChild(Y);
+        let Y = document.querySelector("body a[href*='000webhost']");
+        let YY = Y.parentNode;
+        document.body.removeChild(YY);
     }
     catch (e) {
         /* console.log(e); */
@@ -110,11 +110,12 @@ const wsppFBTN = document.querySelector("footer a[title='whatsapp']");
 wsppFBTN.addEventListener("click", function () { window.open("https://" + wsppF[0] + wsppF[1]); }, false);
 /* HELP en enlaces sin funcionamiento */
 let ayuda = document.getElementById("helpNode");
-var enlacesGato = document.querySelectorAll('[href="##"]');
+var enlacesGato = Array.from(document.querySelectorAll('[href="##"]'));
 enlacesGato.forEach(elm => {
-    elm.parentNode.addEventListener("click", helpNodeAppear, false);
+    let elmParent = elm.parentNode;
+    elmParent.addEventListener("click", helpNodeAppear, false);
 });
-function helpNodeAppear(e) {
+function helpNodeAppear() {
     ayuda.style.display = "inline-block";
     ayuda.classList.add("animateHelpNode");
     setTimeout(() => {
@@ -127,8 +128,7 @@ function helpNodeAppear(e) {
 /* ****************************** */
 const dinoEd = document.getElementById("dino");
 window.addEventListener("contextmenu", dino, false);
-function dino(evento) {
-    let e = evento;
+function dino(e) {
     e.preventDefault();
     dinoEd.style.display = "block";
     dinoEd.style.left = positionDino(e.clientX, mitadPantallaHoriz) + "px";
@@ -141,7 +141,7 @@ function positionDino(evVal, mitadP) {
     let valor = evVal;
     let mitadPantalla = mitadP;
     let resultado = 0;
-    let divHeight = document.getElementById("dino").clientHeight;
+    let divHeight = dinoEd.clientHeight;
     if (valor < mitadPantalla) {
         resultado = valor;
     }

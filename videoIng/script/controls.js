@@ -1,5 +1,5 @@
 "use strict";
-const buttons = {
+let buttons = {
     play: document.getElementById("play"),
     pause: document.getElementById("pause"),
     stop: document.getElementById("stop"),

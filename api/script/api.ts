@@ -6,7 +6,7 @@ var api = {
 	units: "metric",
 }
 /* Para guardar los datos del fetch */
-var datosCapture;
+var datosCapture:any;
 
 /* Url para el fetch */
 function defineUrlSolicitud() {
@@ -37,8 +37,9 @@ function solicitarDatos() {
 	)
 		.catch(error => {
 			/* console.log(error); */
-			formulario.style.display = "initial";
-			document.getElementById("afterForm").style.display = "none";
+			let afterFormID=<HTMLElement>document.getElementById("afterForm");
+			formularioAPI.style.display = "initial";
+			afterFormID.style.display = "none";
 		})
 }
 
@@ -46,18 +47,18 @@ function solicitarDatos() {
 
 /* Los elementos html que se llenaran con la info */
 var htmlElements = {
-	country: document.querySelector(".cardHeader .titulo"),
-	lat: document.querySelector(".subtitulo .lat"),
-	long: document.querySelector(".subtitulo .long"),
-	feelsLike: document.querySelector(".cardBody .feels span"),
-	sunrise: document.querySelector(".cardBody .sunrise span"),
-	sunset: document.querySelector(".cardBody .sunset span"),
-	humidity: document.querySelector(".cardBody .humidity span"),
-	temp: document.querySelector(".temperatureItem .temp span"),
-	tempMax: document.querySelector(".temperatureItem .tempMax span"),
-	tempMin: document.querySelector(".temperatureItem .tempMin span"),
-	weatherImagen: document.querySelector(".cardImg img"),
-	imgDescription: document.querySelector(".cardImg .descrip"),
+	country: <HTMLElement>document.querySelector(".cardHeader .titulo"),
+	lat: <HTMLElement>document.querySelector(".subtitulo .lat"),
+	long: <HTMLElement>document.querySelector(".subtitulo .long"),
+	feelsLike: <HTMLElement>document.querySelector(".cardBody .feels span"),
+	sunrise: <HTMLElement>document.querySelector(".cardBody .sunrise span"),
+	sunset: <HTMLElement>document.querySelector(".cardBody .sunset span"),
+	humidity: <HTMLElement>document.querySelector(".cardBody .humidity span"),
+	temp: <HTMLElement>document.querySelector(".temperatureItem .temp span"),
+	tempMax: <HTMLElement>document.querySelector(".temperatureItem .tempMax span"),
+	tempMin: <HTMLElement>document.querySelector(".temperatureItem .tempMin span"),
+	weatherImagen: <HTMLImageElement>document.querySelector(".cardImg img"),
+	imgDescription: <HTMLElement>document.querySelector(".cardImg .descrip"),
 }
 
 /* Llenar el html con los datos */
@@ -67,10 +68,10 @@ function innerDatos() {
 	htmlElements.long.innerHTML = api.lon;
 	htmlElements.feelsLike.innerHTML = datosCapture.main.feels_like;
 
-	let sun1 = new Date(datosCapture.sys.sunrise * 1000);
+	let sun1:Date = new Date(datosCapture.sys.sunrise * 1000);
 	htmlElements.sunrise.innerHTML = sun1.getHours() + ":" + sun1.getMinutes();
 
-	let sun2 = new Date(datosCapture.sys.sunset * 1000);
+	let sun2:Date = new Date(datosCapture.sys.sunset * 1000);
 	htmlElements.sunset.innerHTML = sun2.getHours() + ":" + sun2.getMinutes();
 
 	htmlElements.humidity.innerHTML = datosCapture.main.humidity;
@@ -82,27 +83,28 @@ function innerDatos() {
 }
 
 
-function afterFetch(respuesta) {
+function afterFetch(respuesta:any) {
 	datosCapture = respuesta;
 	innerDatos();
 
-	let cardMostrar: HTMLElement = document.querySelector(".mostrar");
+	let cardMostrar = <HTMLElement>document.querySelector(".mostrar");
 	cardMostrar.style.display = "grid";
 
-	let cardSolicitar: HTMLElement = document.querySelector(".solicitar");
+	let cardSolicitar = <HTMLElement>document.querySelector(".solicitar");
 	cardSolicitar.style.display = "none";
 }
 
 
-/* FORMULARIO */
-const formulario = document.forms[0];
-formulario.addEventListener("submit", datosDeForm, true);
+/* FORMULARIOAPI */
+let formularioAPI = <HTMLElement>document.forms[0];
+formularioAPI.addEventListener("submit", datosDeForm, true);
 
 function datosDeForm(e: Event) {
 	e.preventDefault();
 
-	formulario.style.display = "none";
-	document.getElementById("afterForm").style.display = "initial";
+	let afterFormElm=<HTMLElement>document.getElementById("afterForm");
+	formularioAPI.style.display = "none";
+	afterFormElm.style.display = "initial";
 
 	solicitarDatos();
 }
@@ -113,7 +115,7 @@ function datosDeForm(e: Event) {
 /* ******************************************** */
 /* ****** Funcion para localizar al usuario ********** */
 /* ******************************************** */
-const buttonMyLocation:HTMLButtonElement = document.getElementById("myLocation");
+const buttonMyLocation = <HTMLButtonElement>document.getElementById("myLocation");
 buttonMyLocation.addEventListener("click", localizar, false);
 
 function localizar() {
@@ -122,10 +124,10 @@ function localizar() {
 	buttonMyLocation.innerText = "Locating";
 	navigator.geolocation.getCurrentPosition(
 		function (position) {
-			api.lat=position.coords.latitude;
-			api.lon=position.coords.longitude;
+			api.lat=position.coords.latitude.toString();
+			api.lon=position.coords.longitude.toString();
 			let texto = api.lat + ", " + api.lon;
-			formulario.inputL.value = texto;
+			formularioAPI.inputL.value = texto;
 			buttonMyLocation.style.display = "none";
 		},
 		function (error) {
@@ -140,7 +142,7 @@ function localizar() {
 	buttonMyLocation.removeEventListener("click", localizar, false);
 }
 
-let btncopiarLocalizacion=document.getElementById("copyLoc");
+let btncopiarLocalizacion=<HTMLButtonElement>document.getElementById("copyLoc");
 btncopiarLocalizacion.addEventListener("click",copiarLocalizacion,false);
 function copiarLocalizacion(){
 	navigator.clipboard.writeText(`${api.lat}, ${api.lon}`)
@@ -148,14 +150,14 @@ function copiarLocalizacion(){
 	.catch(err=>{console.log(err);})
 }
 
-const buttonActualizar = document.querySelector("#updateLoc");
+const buttonActualizar = <HTMLElement>document.querySelector("#updateLoc");
 buttonActualizar.addEventListener(
 		"click",
 		()=>{solicitarDatos();btncopiarLocalizacion.disabled=false;},
 		false
 	);
 
-const btnToGmaps=document.getElementById("toGmaps")
+const btnToGmaps=<HTMLButtonElement>document.getElementById("toGmaps")
 btnToGmaps.addEventListener(
 	"click",
 	()=>{window.open(`https://www.google.com/maps/search/${api.lat},${api.lon}`)},

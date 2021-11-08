@@ -28,8 +28,9 @@ function solicitarDatos() {
     })
         .catch(error => {
         /* console.log(error); */
-        formulario.style.display = "initial";
-        document.getElementById("afterForm").style.display = "none";
+        let afterFormID = document.getElementById("afterForm");
+        formularioAPI.style.display = "initial";
+        afterFormID.style.display = "none";
     });
 }
 /* Los elementos html que se llenaran con la info */
@@ -72,13 +73,14 @@ function afterFetch(respuesta) {
     let cardSolicitar = document.querySelector(".solicitar");
     cardSolicitar.style.display = "none";
 }
-/* FORMULARIO */
-const formulario = document.forms[0];
-formulario.addEventListener("submit", datosDeForm, true);
+/* FORMULARIOAPI */
+let formularioAPI = document.forms[0];
+formularioAPI.addEventListener("submit", datosDeForm, true);
 function datosDeForm(e) {
     e.preventDefault();
-    formulario.style.display = "none";
-    document.getElementById("afterForm").style.display = "initial";
+    let afterFormElm = document.getElementById("afterForm");
+    formularioAPI.style.display = "none";
+    afterFormElm.style.display = "initial";
     solicitarDatos();
 }
 /* ******************************************** */
@@ -91,10 +93,10 @@ function localizar() {
     buttonMyLocation.disabled = true;
     buttonMyLocation.innerText = "Locating";
     navigator.geolocation.getCurrentPosition(function (position) {
-        api.lat = position.coords.latitude;
-        api.lon = position.coords.longitude;
+        api.lat = position.coords.latitude.toString();
+        api.lon = position.coords.longitude.toString();
         let texto = api.lat + ", " + api.lon;
-        formulario.inputL.value = texto;
+        formularioAPI.inputL.value = texto;
         buttonMyLocation.style.display = "none";
     }, function (error) {
         alert("No es posible realizar la operacion");

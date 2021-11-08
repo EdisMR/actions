@@ -2,11 +2,11 @@
 const messages = {
     error: "ERROR"
 };
-const formulario = document.forms[0];
-formulario.addEventListener("submit", calculatorMainProcess, false);
-formulario.addEventListener("reset", resetResult, false);
-const inputTag = formulario.operationInput;
-var inputValue = "";
+let formularioCalc = document.forms[0];
+formularioCalc.addEventListener("submit", calculatorMainProcess, false);
+formularioCalc.addEventListener("reset", resetResult, false);
+let inputTag = formularioCalc.operationInput;
+let inputValue = "";
 inputTag.addEventListener("input", resetResult, false);
 const resultInnerTag = document.getElementById("resultInner");
 var resultValue = "";

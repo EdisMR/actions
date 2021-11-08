@@ -13,35 +13,46 @@ let innerKey = Array.from(document.querySelectorAll(".header-events .inner-event
 const mitadPantallaHoriz=window.screen.width/2;
 const mitadPantallaVert=window.screen.height/2;
 
-function mouseMovement(e) {
-	innerMouse.innerHTML = `X=${parseInt(e.clientX)}, Y=${parseInt(e.clientY)}`;
+function mouseMovement(e:MouseEvent) {
+	let valXmouse:string;
+	let valYmouse:string;
+
+	valXmouse=e.clientX.toString();
+	valYmouse=e.clientY.toString();
+
+	innerMouse.innerHTML = `X=${valXmouse}, Y=${valYmouse}`;
 }
 
-function keyEvent(e) {
+function keyEvent(e:KeyboardEvent) {
 	innerKey.innerHTML = e.key;
 }
 
 /* ****************************************** */
 /* ***** FUNCIONAMIENTO DE BOTON MENU ***** */
 /* ***************************************** */
-var headerButton = {
-	btn: null, /* Boton para activar el menu */
+interface headerButtons {
+	btn: HTMLButtonElement;
+	disp: Boolean;
+	headerEnlaces: HTMLElement;
+	headerLi: HTMLLIElement[];
+	iconoArriba:string;
+	iconoAbajo:string;
+};
+
+var headerButton:headerButtons = {
+	btn: <HTMLButtonElement>document.querySelector(".header-title button"), /* Boton para activar el menu */
 	disp: false, /* Determina si el menu esta oculto o no */
-	headerEnlaces: null, /* Contenedor de enlaces del menu */
-	headerLi: null, /* Cada uno de los enlaces del menu */
+	headerEnlaces: <HTMLElement>document.querySelector(".header-enlaces"), /* Contenedor de enlaces del menu */
+	headerLi: Array.from(document.querySelectorAll(".header-enlaces a")), /* Cada uno de los enlaces del menu */
 	iconoArriba:"&#x25B2;",
 	iconoAbajo:"&#x25BC;",
 };
 
 if (document.body.clientWidth<750 || screen.width<750) {
 	window.removeEventListener("keyup", keyEvent, false);
-	
-	/* Variables */
-	headerButton.btn = document.querySelector(".header-title button")
-	headerButton.headerEnlaces = document.querySelector(".header-enlaces");
-	headerButton.headerLi = Array.from(document.querySelectorAll(".header-enlaces a"));
-	
-	headerButton.btn.innerHTML=headerButton.iconoAbajo;	
+
+	let textNode=document.createTextNode(headerButton.iconoAbajo)
+	headerButton.btn.appendChild(textNode);	
 	headerButton.btn.addEventListener("click", menuSwitchMain, false);
 	
 	headerButton.headerLi.forEach(elm=>{
@@ -68,7 +79,7 @@ function menuSwitchMain() {
 	}
 }
 
-function openMenu() {
+function openMenu():void {
 	headerButton.disp = true;
 	headerButton.headerEnlaces.classList.add("showMenu");
 
@@ -84,7 +95,7 @@ function openMenu() {
 	
 }
 
-function closeMenu() {
+function closeMenu():void {
 	if (headerButton.disp == true) {
 		headerButton.disp = false;
 		
@@ -106,10 +117,11 @@ function closeMenu() {
 /* ****************************************** */
 /* ******************** 000 **************** */
 /* ***************************************** */
-function w000() {
+function w000():void {
 	try {
-		let Y = document.querySelector("body a[href*='000webhost']").parentNode;
-		document.body.removeChild(Y);
+		let Y=<HTMLElement>document.querySelector("body a[href*='000webhost']")
+		let YY=<Node>Y.parentNode;
+		document.body.removeChild(YY);
 	} catch (e) {
 		/* console.log(e); */
 	}
@@ -120,30 +132,32 @@ w000();
 /* **************************************************** */
 /* ******************** ENLACE DE EMAIL **************** */
 /* **************************************************** */
-const email = ["edisanthony", "gmail.com"];
-const emailBTN = document.querySelector("footer a[title='email']");
-emailBTN.addEventListener("click", function () { window.open("mailto:" + email[0] + "@" + email[1]); }, false);
-
+const email:string[] = ["edisanthony", "gmail.com"];
+const emailBTN = <HTMLElement>document.querySelector("footer a[title='email']");
+emailBTN.addEventListener("click", 
+	function () { window.open("mailto:" + email[0] + "@" + email[1]); }
+	, false);
 
 
 
 /* **************************************************** */
 /* ******************** ENLACE DE WHATSAPP ************ */
 /* **************************************************** */
-const wsppF = ["wa.me/", "50663062581"];
-const wsppFBTN = document.querySelector("footer a[title='whatsapp']");
+const wsppF:string[]= ["wa.me/", "50663062581"];
+const wsppFBTN = <HTMLElement>document.querySelector("footer a[title='whatsapp']");
 wsppFBTN.addEventListener("click", function () { window.open("https://" + wsppF[0] + wsppF[1]); }, false);
 
 
 /* HELP en enlaces sin funcionamiento */
-let ayuda=document.getElementById("helpNode");
+let ayuda=<HTMLElement>document.getElementById("helpNode");
 
-var enlacesGato=document.querySelectorAll('[href="##"]');
+var enlacesGato:HTMLElement[]=Array.from(document.querySelectorAll('[href="##"]'));
 enlacesGato.forEach(elm=>{
-	elm.parentNode.addEventListener("click",helpNodeAppear,false);
+	let elmParent=<Node>elm.parentNode
+	elmParent.addEventListener("click",helpNodeAppear,false);
 })
 
-function helpNodeAppear(e){
+function helpNodeAppear(){
 	ayuda.style.display="inline-block";
 	ayuda.classList.add("animateHelpNode")
 
@@ -157,12 +171,11 @@ function helpNodeAppear(e){
 /* ****************************** */
 /* *********** DINO ************* */
 /* ****************************** */
-const dinoEd=document.getElementById("dino");
+const dinoEd=<HTMLElement>document.getElementById("dino");
 
 window.addEventListener("contextmenu",dino,false);
 
-function dino(evento){
-	let e=evento;
+function dino(e:MouseEvent){
 	e.preventDefault();
 
 	dinoEd.style.display="block";
@@ -174,11 +187,11 @@ function dino(evento){
 	},500);
 }
 
-function positionDino(evVal,mitadP){
-	let valor=evVal;
-	let mitadPantalla=mitadP;
-	let resultado=0;
-	let divHeight=document.getElementById("dino").clientHeight;
+function positionDino(evVal:number,mitadP:number):number{
+	let valor:number=evVal;
+	let mitadPantalla:number=mitadP;
+	let resultado:number=0;
+	let divHeight:number=dinoEd.clientHeight;
 
 	if(valor<mitadPantalla){
 		resultado=valor;
@@ -190,6 +203,6 @@ function positionDino(evVal,mitadP){
 }
 
 /* Añadir script de settings */
-var settingsDiv=document.createElement("script");
+var settingsDiv=<HTMLScriptElement>document.createElement("script");
 settingsDiv.setAttribute("src","/global/script/settings.js");
 document.head.appendChild(settingsDiv)

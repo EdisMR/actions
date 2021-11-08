@@ -155,7 +155,6 @@ function defineLang(idiomText = "") {
             localStorage.lang = "spa";
             alertify.set('notifier', 'delay', 5);
             alertify.set('notifier', 'position', 'top-center');
-            alertify.message("Por favor considera que el sitio está en desarrollo por lo que las traducciones no están terminadas.");
             alertify.message("Puedes cambiarlo en Configuraciones.");
             alertify.message('Idioma configurado automáticamente.');
         }
@@ -163,7 +162,6 @@ function defineLang(idiomText = "") {
             localStorage.lang = "eng";
             alertify.set('notifier', 'delay', 5);
             alertify.set('notifier', 'position', 'top-center');
-            alertify.message("Please consider that the website is on construction so, some translations are not completed");
             alertify.message("You can change it on Settings.");
             alertify.message("Language was set automatically.");
         }

@@ -1,15 +1,15 @@
 const messages={
 	error:"ERROR"
 }
-const formulario: HTMLFormElement = document.forms[0];
-formulario.addEventListener("submit", calculatorMainProcess, false)
-formulario.addEventListener("reset", resetResult, false)
+let formularioCalc = <HTMLFormElement>document.forms[0];
+formularioCalc.addEventListener("submit", calculatorMainProcess, false)
+formularioCalc.addEventListener("reset", resetResult, false)
 
-const inputTag: HTMLInputElement = formulario.operationInput;
-var inputValue: string = "";
+let inputTag = <HTMLInputElement>formularioCalc.operationInput;
+let inputValue: string = "";
 inputTag.addEventListener("input", resetResult, false)
 
-const resultInnerTag: HTMLElement = document.getElementById("resultInner")
+const resultInnerTag = <HTMLElement>document.getElementById("resultInner")
 var resultValue: string = "";
 
 
@@ -295,7 +295,7 @@ function setInputValue(): void {
 
 
 
-function resetResult(){
+function resetResult():void{
 	resultValue=""
 	resultInnerTag.innerText=""
 }
@@ -332,7 +332,7 @@ function removeParenthesis(valor:string):string{
 
 
 
-function innerFinalResult() {
+function innerFinalResult():void{
 	resultInnerTag.innerText = resultValue;
 }
 

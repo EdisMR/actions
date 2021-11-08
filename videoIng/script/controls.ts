@@ -1,9 +1,15 @@
-const buttons={
-	play:document.getElementById("play"),
-	pause:document.getElementById("pause"),
-	stop:document.getElementById("stop"),
+interface buttonsControl{
+	play:HTMLButtonElement;
+	pause:HTMLButtonElement;
+	stop:HTMLButtonElement;
 }
-const video:HTMLVideoElement=document.querySelector("video")
+
+let buttons:buttonsControl={
+	play:<HTMLButtonElement>document.getElementById("play"),
+	pause:<HTMLButtonElement>document.getElementById("pause"),
+	stop:<HTMLButtonElement>document.getElementById("stop"),
+}
+const video=<HTMLVideoElement>document.querySelector("video")
 
 buttons.play.addEventListener("click",playVideo,false);
 buttons.pause.addEventListener("click",pauseVideo,false);

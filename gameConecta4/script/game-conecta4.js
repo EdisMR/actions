@@ -2,12 +2,14 @@
 /* ************************************ */
 /* ***** PROCEDIMIENTOS INICIALES ******/
 /* ************************************ */
-const formulario = document.forms[0];
-const camposGrid = document.querySelectorAll(".grid-container div");
-var innerTurnDiv = document.querySelector(".innerTurnUser span");
+let formularioConecta4 = document.forms[0];
+const camposGrid = Array.from(document.querySelectorAll(".grid-container div"));
+let innerTurnDiv = document.querySelector(".innerTurnUser span");
 const innerTurnDivParent = document.querySelector(".innerTurnUser");
 const buttonResetParent = document.querySelector(".buttonReset");
 const buttonReset = document.querySelector(".buttonReset button");
+const ElmDefinirJugaddores = document.querySelector(".definirJugadores");
+const gameContainer = document.querySelector(".game-container");
 /* Declarando matriz para guardar los divs que lo conforman */
 const gameHorizontal = 7;
 const gameVertical = 6;
@@ -35,7 +37,7 @@ var users = {
     turno: 1,
 };
 function retornaClaseUser() {
-    let resultado;
+    let resultado = "";
     if (users.turno == 0) {
         resultado = "user1";
     }
@@ -46,24 +48,24 @@ function retornaClaseUser() {
 }
 buttonReset.addEventListener("click", resetGame);
 /* ************************************************ */
-/* ********* FORMULARIO Y DESPUES DE ********* */
+/* ********* FORMULARIOConecta4 Y DESPUES DE ********* */
 /* ************************************************ */
 /* Formulario de usuarios del juego */
-formulario.addEventListener("submit", defineUsers, false);
+formularioConecta4.addEventListener("submit", defineUsers, false);
 function defineUsers(ev) {
     let e = ev;
     e.preventDefault();
-    if (formulario.user1.value != formulario.user2.value) {
-        formulario.removeEventListener("submit", defineUsers, false);
-        users.user1 = formulario.user1.value;
-        users.user2 = formulario.user2.value;
+    if (formularioConecta4.user1.value != formularioConecta4.user2.value) {
+        formularioConecta4.removeEventListener("submit", defineUsers, false);
+        users.user1 = formularioConecta4.user1.value;
+        users.user2 = formularioConecta4.user2.value;
         afterDefineUsers();
     }
     return false;
 }
 function afterDefineUsers() {
-    document.querySelector(".definirJugadores").classList.add("d-none");
-    document.querySelector(".game-container").classList.remove("d-none");
+    ElmDefinirJugaddores.classList.add("d-none");
+    gameContainer.classList.remove("d-none");
     innerTurnDivParent.classList.remove("d-none");
     /* sobre los divs */
     camposGrid.forEach(elm => {
@@ -112,8 +114,7 @@ function removeHoverGrid(elem) {
 /* *************** CUANDO UN DIV ES CLICADO *************** */
 /* ******************************************************** */
 /* funcion del div cliqueado */
-function divCLicked(evt) {
-    let e = evt;
+function divCLicked() {
     let elemento = this;
     let elementoLlenar;
     let hayGanador;
@@ -167,8 +168,7 @@ function afterAnimateInnerUser() {
     Recibe el elemento clicado y define el elemento a llenar,
     recorriendo Y de abajo hacia arriba (con X estatico)
 */
-function defineUltimoElementoVacio(elm) {
-    let elemento = elm;
+function defineUltimoElementoVacio(elemento) {
     let ultimo;
     var y = gameVertical - 1;
     for (y; y >= 0; y--) {
@@ -324,8 +324,8 @@ function buscarClaseEnReferencia(valX, valY) {
 /* ******* CUANDO SE HA ENCONTRADO UN GANADOR ******* */
 /* **************************************************** */
 function ganadorEncontrado() {
-    let name;
-    let color;
+    let name = "";
+    let color = "";
     if (users.turno == 1) {
         name = users.user1;
         color = "hsl(60, 70%, 60%)";
