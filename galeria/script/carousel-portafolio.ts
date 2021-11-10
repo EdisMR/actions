@@ -1,15 +1,36 @@
-var carouseles = new Array;
-class carousel {
-	constructor(elm) {
+var carouseles:any[]= new Array;
+
+class Carousel {
+
+	container :HTMLElement
+	body :HTMLElement
+	itemsContainer :HTMLElement
+	items :HTMLElement[];
+	btnContainer :HTMLElement
+	buttons :HTMLButtonElement[]
+	actual :HTMLElement
+	total :HTMLElement
+	videos :HTMLVideoElement[]
+	loopIterator: any
+	observer:IntersectionObserver
+
+	cuantosItems :number
+	itemActual :number
+	loopValid :boolean
+	intervalTime :number
+	scrollBodyItems :number
+	tamItem :number
+
+	constructor(elm:HTMLElement) {
 		/* VALORES DE ELEMENTOS HTML */
-		this.container = elm;
-		this.body = this.container.querySelector(".carousel-body");
-		this.itemsContainer = this.body.querySelector(".carousel-items");
+		this.container = <HTMLElement>elm;
+		this.body = <HTMLElement>this.container.querySelector(".carousel-body");
+		this.itemsContainer = <HTMLElement>this.body.querySelector(".carousel-items");
 		this.items = Array.from(this.itemsContainer.querySelectorAll(".carousel-item"));
-		this.btnContainer = this.container.querySelector(".carousel-controls");
+		this.btnContainer = <HTMLElement>this.container.querySelector(".carousel-controls");
 		this.buttons = Array.from(this.btnContainer.querySelectorAll("button"))
-		this.actual = this.btnContainer.querySelector(".carousel-innerActual");
-		this.total = this.btnContainer.querySelector(".carousel-innerTotal");
+		this.actual = <HTMLElement>this.btnContainer.querySelector(".carousel-innerActual");
+		this.total = <HTMLElement>this.btnContainer.querySelector(".carousel-innerTotal");
 		this.videos=Array.from(this.body.querySelectorAll("video"));
 
 		/* VALORES DE CALCULOS NECESARIOS */
@@ -55,13 +76,13 @@ class carousel {
 
 	/* Inicio de controles y funcionalidades */
 	inicio() {
-		this.total.innerText = this.cuantosItems;
+		this.total.innerText = (this.cuantosItems).toString();
 		this.itemsContainer.scrollTo(0, 0);
 		this.switchAuto(null, this.loopValid);
 
 		/* Añadir dataset para identificar item actial */
 		this.items.forEach((elm, index) => {
-			elm.dataset.carouselItem = index;
+			elm.dataset.carouselItem = index.toString();
 		})
 
 		if(this.container.clientWidth<600){
@@ -104,7 +125,7 @@ class carousel {
 
 
 	/* iterruptor de carrusel automatico */
-	switchAuto(e, cont = null) {
+	switchAuto(e:any, cont:any = null) {
 
 		let control = cont;
 
@@ -133,7 +154,7 @@ class carousel {
 
 
 	/* Modulo de activacion del intervalo y acciones relacionadas al intervalo */
-	interval(param) {
+	interval(param:boolean) {
 		if (param == true) {
 			this.loopValid = true;
 			this.loopIterator = setInterval(this.nextItem.bind(this), this.intervalTime);
@@ -152,18 +173,18 @@ class carousel {
 
 
 	/* Actualizar item actual, recibe datos del itersection observer */
-	actualizaActual = (entries) => {
-		entries.forEach((entry) => {
+	actualizaActual = (entries:any) => {
+		entries.forEach((entry:any) => {
 			if (entry.isIntersecting) {
 				this.itemActual=(parseInt(entry.target.dataset.carouselItem))+1;
 			}
 		})
 		/* Llenar info de item actual */
-		this.actual.innerHTML=this.itemActual;
+		this.actual.innerHTML=(this.itemActual).toString();
 	}
 
 
-	multimediaSwitch(evento) {
+	multimediaSwitch(evento:any) {
 		console.log(evento);
 		if(this.loopValid){
 			this.switchAuto(null,false);
@@ -176,7 +197,7 @@ function carouselOrder() {
 	let temp = Array.from(document.querySelectorAll(".carousel-container"));
 	if (temp.length > 0) {
 		temp.forEach((item, index) => {
-			carouseles[index] = new carousel(item);
+			carouseles[index] = new Carousel(<HTMLElement>item);
 		})
 	}
 }

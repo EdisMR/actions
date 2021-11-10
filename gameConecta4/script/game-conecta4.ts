@@ -2,13 +2,13 @@
 /* ***** PROCEDIMIENTOS INICIALES ******/
 /* ************************************ */
 
-let formularioConecta4 = <HTMLFormElement>document.forms[0];
+const formularioConecta4 = <HTMLFormElement>document.forms[0]
 const camposGrid: HTMLElement[] = Array.from(document.querySelectorAll(".grid-container div"))
-let innerTurnDiv = <HTMLElement>document.querySelector(".innerTurnUser span");
-const innerTurnDivParent = <HTMLElement>document.querySelector(".innerTurnUser");
-const buttonResetParent = <HTMLElement>document.querySelector(".buttonReset");
-const buttonReset = <HTMLButtonElement>document.querySelector(".buttonReset button");
-const ElmDefinirJugaddores=	<HTMLElement>document.querySelector(".definirJugadores")
+const innerTurnDiv = <HTMLElement>document.querySelector(".innerTurnUser span")
+const innerTurnDivParent = <HTMLElement>document.querySelector(".innerTurnUser")
+const buttonResetParent = <HTMLElement>document.querySelector(".buttonReset")
+const buttonReset :HTMLButtonElement= <HTMLButtonElement>document.querySelector(".buttonReset button")
+const ElmDefinirJugadores=	<HTMLElement>document.querySelector(".definirJugadores")
 const gameContainer=<HTMLElement>document.querySelector(".game-container")
 
 /* Declarando matriz para guardar los divs que lo conforman */
@@ -29,21 +29,19 @@ for (let Y = 0; Y < gameVertical; Y++) {
 
 		let n = "columna" + (X + 1);
 		camposGrid[contadorCamposGrid].classList.add(n);
-		camposGrid[contadorCamposGrid].dataset.posx = X;
-		camposGrid[contadorCamposGrid].dataset.posy = Y;
+		camposGrid[contadorCamposGrid].dataset.posx = X.toString();
+		camposGrid[contadorCamposGrid].dataset.posy = Y.toString();
 		contadorCamposGrid++;
 	}
 }
 
-interface usersI {
-	user1: string;
-	user2: string;
-	winner: string;
-	icon: string;
-	turno: number;
-}
-
-var users : usersI = {
+var Users : {
+		user1: string;
+		user2: string;
+		winner: string;
+		icon: string;
+		turno: number;
+} = {
 	user1: "",
 	user2: "",
 	winner: "",
@@ -53,10 +51,10 @@ var users : usersI = {
 
 function retornaClaseUser() :string{
 	let resultado:string="";
-	if (users.turno == 0) {
+	if (Users.turno == 0) {
 		resultado = "user1";
 	}
-	if (users.turno == 1) {
+	if (Users.turno == 1) {
 		resultado = "user2";
 	}
 	return resultado;
@@ -78,15 +76,15 @@ function defineUsers(ev:Event):Boolean{
 	e.preventDefault();
 	if (formularioConecta4.user1.value != formularioConecta4.user2.value) {
 		formularioConecta4.removeEventListener("submit", defineUsers, false);
-		users.user1 = formularioConecta4.user1.value;
-		users.user2 = formularioConecta4.user2.value;
+		Users.user1 = formularioConecta4.user1.value;
+		Users.user2 = formularioConecta4.user2.value;
 		afterDefineUsers();
 	}
 	return false;
 }
 
 function afterDefineUsers() {
-	ElmDefinirJugaddores.classList.add("d-none");
+	ElmDefinirJugadores.classList.add("d-none");
 	
 	gameContainer.classList.remove("d-none");
 	innerTurnDivParent.classList.remove("d-none")
@@ -164,24 +162,24 @@ function divCLicked() :void{
 }
 
 function switchUser() :void{
-	users.turno == 0 ? users.turno = 1 : users.turno = 0;
+	Users.turno == 0 ? Users.turno = 1 : Users.turno = 0;
 }
 
 /* Llenar elemento desocupado */
 function llenarElemento(divLlenar:HTMLElement) :void{
 	let divParaLlenar = divLlenar;
 
-	divParaLlenar.children[0].classList.add(users.icon);
+	divParaLlenar.children[0].classList.add(Users.icon);
 	divParaLlenar.classList.add(retornaClaseUser());
 	divParaLlenar.children[0].dataset.occupied = "true";
 }
 
 /* Llenado del div para indicar de quien es el turno */
 function innerTurnUser() :void{
-	if (users.turno == 1) {
-		innerTurnDiv.innerHTML = users.user1;
+	if (Users.turno == 1) {
+		innerTurnDiv.innerHTML = Users.user1;
 	} else {
-		innerTurnDiv.innerHTML = users.user2;
+		innerTurnDiv.innerHTML = Users.user2;
 	}
 	animateInnerUser();
 }
@@ -206,8 +204,8 @@ function afterAnimateInnerUser() :void{
 	recorriendo Y de abajo hacia arriba (con X estatico)
 */
 function defineUltimoElementoVacio(elemento:HTMLElement):HTMLElement{
-	let ultimo;
-	var y = gameVertical - 1;
+	let ultimo:any;
+	var y :any= gameVertical - 1;
 
 	for (y; y >= 0; y--) {
 		if (matrizGame[elemento.dataset.posx][y].children[0].dataset.occupied == "false") {
@@ -421,12 +419,12 @@ function buscarClaseEnReferencia(valX:number,valY:number):Boolean{
 function ganadorEncontrado() :void{
 	let name:string="";
 	let color:string="";
-	if (users.turno == 1) {
-		name = users.user1;
+	if (Users.turno == 1) {
+		name = Users.user1;
 		color = "hsl(60, 70%, 60%)";
 	}
-	if (users.turno == 0) {
-		name = users.user2;
+	if (Users.turno == 0) {
+		name = Users.user2;
 		color = "hsl(0, 60%, 50%)";
 	}
 	innerTurnDivParent.style.backgroundColor = color;
@@ -439,7 +437,7 @@ function resetGame():void{
 	camposGrid.forEach(elm => {
 		elm.classList.remove("user1");
 		elm.classList.remove("user2");
-		elm.children[0].classList.remove(users.icon);
+		elm.children[0].classList.remove(Users.icon);
 		elm.children[0].dataset.occupied = "false";
 	})
 

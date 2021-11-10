@@ -57,11 +57,11 @@ function validateInput(eventDisp = null, input = null) {
     }
     /* **************** Actualizar input de edad ************** */
     if (evento == formularioForm.fechaNac) {
-        let anioActual = parseInt(fechaActual.getFullYear());
+        let anioActual = parseInt(fechaActual.getFullYear().toString());
         let valorDateForm = formularioForm.fechaNac.value;
         let dateForm = new Date(valorDateForm);
-        let anioDeForm = parseInt(dateForm.getFullYear());
-        formularioForm.edad.value = parseInt(anioActual - anioDeForm);
+        let anioDeForm = parseInt(dateForm.getFullYear().toString());
+        formularioForm.edad.value = parseInt((anioActual - anioDeForm).toString());
     }
     return salida;
 }

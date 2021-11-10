@@ -1,10 +1,8 @@
-interface buttonsControl{
+let buttons:{
 	play:HTMLButtonElement;
 	pause:HTMLButtonElement;
 	stop:HTMLButtonElement;
-}
-
-let buttons:buttonsControl={
+}={
 	play:<HTMLButtonElement>document.getElementById("play"),
 	pause:<HTMLButtonElement>document.getElementById("pause"),
 	stop:<HTMLButtonElement>document.getElementById("stop"),

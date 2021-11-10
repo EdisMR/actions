@@ -33,8 +33,7 @@ var headerButton = {
 };
 if (document.body.clientWidth < 750 || screen.width < 750) {
     window.removeEventListener("keyup", keyEvent, false);
-    let textNode = document.createTextNode(headerButton.iconoAbajo);
-    headerButton.btn.appendChild(textNode);
+    headerButton.btn.innerHTML = headerButton.iconoAbajo;
     headerButton.btn.addEventListener("click", menuSwitchMain, false);
     headerButton.headerLi.forEach(elm => {
         elm.addEventListener("click", closeMenu, false);

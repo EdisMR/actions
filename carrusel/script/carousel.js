@@ -1,6 +1,23 @@
 "use strict";
 var carouseles = new Array;
-class carousel {
+class Carousel {
+    container;
+    body;
+    itemsContainer;
+    items;
+    btnContainer;
+    buttons;
+    actual;
+    total;
+    videos;
+    cuantosItems;
+    itemActual;
+    loopValid;
+    intervalTime;
+    scrollBodyItems;
+    tamItem;
+    loopIterator;
+    observer;
     constructor(elm) {
         /* VALORES DE ELEMENTOS HTML */
         this.container = elm;
@@ -44,12 +61,12 @@ class carousel {
     }
     /* Inicio de controles y funcionalidades */
     inicio() {
-        this.total.innerText = this.cuantosItems;
+        this.total.innerText = (this.cuantosItems).toString();
         this.itemsContainer.scrollTo(0, 0);
         this.switchAuto(null, this.loopValid);
         /* Añadir dataset para identificar item actial */
         this.items.forEach((elm, index) => {
-            elm.dataset.carouselItem = index;
+            elm.dataset.carouselItem = index.toString();
         });
         if (this.container.clientWidth < 600) {
             this.items.forEach(elm => {
@@ -135,7 +152,7 @@ class carousel {
             }
         });
         /* Llenar info de item actual */
-        this.actual.innerHTML = this.itemActual;
+        this.actual.innerHTML = (this.itemActual).toString();
     };
     multimediaSwitch(evento) {
         console.log(evento);
@@ -148,7 +165,7 @@ window.onload = () => {
     let temp = Array.from(document.querySelectorAll(".carousel-container"));
     if (temp.length > 0) {
         temp.forEach((item, index) => {
-            carouseles[index] = new carousel(item);
+            carouseles[index] = new Carousel(item);
         });
     }
     idiomHTMLInner({

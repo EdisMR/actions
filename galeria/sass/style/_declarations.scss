@@ -101,8 +101,7 @@
 	padding-top: 20px;
 	padding-bottom: 20px;
 	justify-content: center;
-	/* user-select: none; */
-
+	
 	button,span{
 		width: 30px;
 		height: 30px;
@@ -113,9 +112,14 @@
 		align-items: stretch;
 		justify-content: space-around;
 		margin: auto 5px;
+		transition-duration: .2s;
+		transform: scale(1);
 		&:disabled{
 			background-color: white;
 			opacity: 60%;
+		}
+		&:active{
+			transform: scale(0.8);
 		}
 	}
 }

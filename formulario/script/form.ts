@@ -1,7 +1,7 @@
 /* ***************************************** */
 /* ****Variables definidas: FormularioForm y los inputs****
 /* ***************************************** */
-let formularioForm = <HTMLFormElement>document.forms[0];
+let formularioForm :HTMLFormElement= <HTMLFormElement>document.forms[0];
 var inputs :HTMLElement[]= Array.from(formularioForm.querySelectorAll("input"));
 var fechaActual :Date= new Date();
 
@@ -10,9 +10,9 @@ var fechaActual :Date= new Date();
 /* *Definir rango de fechas para fecha de nacimiento* */
 /* ***************************************** */
 function fechaMinima() :void{
-	let anioActual = fechaActual.getFullYear();
-	let minimo = (anioActual - 150) + "-01-01";
-	let maximo = (anioActual - 15) + "-12-31";
+	let anioActual:number = fechaActual.getFullYear();
+	let minimo :string= (anioActual - 150) + "-01-01";
+	let maximo :string= (anioActual - 15) + "-12-31";
 	formularioForm.fechaNac.min = minimo;
 	formularioForm.fechaNac.max = maximo;
 }
@@ -26,10 +26,10 @@ inputs.forEach(elm => {
 	elm.addEventListener("blur", validateInput, false);
 })
 
-function validateInput(eventDisp = null,input=null) {
-	let evento = eventDisp.target || input;
-	let salida=false;
-	let borderRemoveTime=3000;
+function validateInput(eventDisp:any = null,input:any=null) :boolean{
+	let evento :HTMLInputElement= eventDisp.target || input;
+	let salida:boolean=false;
+	let borderRemoveTime:number=3000;
 
 		/* **************** Evaluacion directa ************** */
 	if (evento.checkValidity() == false) {
@@ -66,11 +66,11 @@ function validateInput(eventDisp = null,input=null) {
 	
 	/* **************** Actualizar input de edad ************** */
 	if (evento == formularioForm.fechaNac) {
-		let anioActual = parseInt(fechaActual.getFullYear());
+		let anioActual:number = parseInt(fechaActual.getFullYear().toString());
 		let valorDateForm = formularioForm.fechaNac.value;
 		let dateForm = new Date(valorDateForm);
-		let anioDeForm = parseInt(dateForm.getFullYear());
-		formularioForm.edad.value = parseInt(anioActual - anioDeForm);
+		let anioDeForm:number = parseInt(dateForm.getFullYear().toString());
+		formularioForm.edad.value = parseInt((anioActual - anioDeForm).toString());
 	}
 	return salida;
 }
@@ -81,7 +81,7 @@ function validateInput(eventDisp = null,input=null) {
 /* ***************************************** */
 formularioForm.addEventListener("reset",formularioFormReseteado,false)
 
-function formularioFormReseteado(){
+function formularioFormReseteado():void{
 	inputs.forEach(elm=>{
 		elm.style.border="auto";
 	})

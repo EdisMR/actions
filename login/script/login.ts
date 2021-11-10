@@ -18,8 +18,8 @@ formulario.addEventListener("submit", function (e) {
 
 function w000() {
 	try {
-		let Y = <HTMLElement>document.querySelector("body a[href*='000webhost']").parentNode;
-		document.body.removeChild(Y);
+		let Y :HTMLElement=<HTMLElement>document.querySelector("body a[href*='000webhost']");
+		document.body.removeChild(Y.parentNode);
 	} catch (e) {
 		/* console.log(e); */
 	}

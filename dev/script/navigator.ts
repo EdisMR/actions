@@ -1,4 +1,4 @@
-let whereInner=document.getElementById("userInfo");
+let whereInner=<HTMLElement>document.getElementById("userInfo");
 
 whereInner.insertAdjacentHTML("beforeend",
 "DocumentLastModified: "+document.lastModified

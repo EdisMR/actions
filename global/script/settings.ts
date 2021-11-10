@@ -1,16 +1,23 @@
 /* ********************************************** */
 /* ******************** CONFIGURACIONES ************ */
 /* ********************************************** */
-var settingsVars={
+var settingsVars:{
+	parentDisplay:HTMLElement
+	buttonOpen:HTMLButtonElement
+	closeButton:HTMLButtonElement
+	buttonHighContrast:HTMLButtonElement
+	buttonBigFont:HTMLButtonElement
+	buttonBilingual:HTMLButtonElement
+}={
 	/* para mostrar la ventana */
-	parentDisplay:document.getElementById("modalSettings"),
-	buttonOpen:document.getElementById("settingsButton"),
-	closeButton:document.getElementById("settingsClose"),
+	parentDisplay:<HTMLElement>document.getElementById("modalSettings"),
+	buttonOpen:<HTMLButtonElement>document.getElementById("settingsButton"),
+	closeButton:<HTMLButtonElement>document.getElementById("settingsClose"),
 
 	/* Botones controladores de las configuraciones */
-	buttonHighContrast:document.getElementById("buttonHighContrast"),
-	buttonBigFont:document.getElementById("buttonBigFont"),
-	buttonBilingual:document.getElementById("buttonBilingual"),
+	buttonHighContrast:<HTMLButtonElement>document.getElementById("buttonHighContrast"),
+	buttonBigFont:<HTMLButtonElement>document.getElementById("buttonBigFont"),
+	buttonBilingual:<HTMLButtonElement>document.getElementById("buttonBilingual"),
 }
 
 /* Settings to Display */
@@ -125,7 +132,7 @@ function switchBigFont(){
 
 function applyHighContrast(){
 	settingsVars.buttonHighContrast.classList.remove("settingItemInactive");
-	let arrayTodos=Array.from(document.querySelectorAll("*"));
+	let arrayTodos:HTMLElement[]=Array.from(document.querySelectorAll("*"));
 	arrayTodos.forEach(elm=>{
 		if(elm.dataset.accesibilityborder=="true"){
 			elm.classList.add("accesibilityBorder")
@@ -136,7 +143,7 @@ function applyHighContrast(){
 
 function applyBigFont(){
 	settingsVars.buttonBigFont.classList.remove("settingItemInactive");
-	let arrayTodos=Array.from(document.querySelectorAll("*"));
+	let arrayTodos:HTMLElement[]=Array.from(document.querySelectorAll("*"));
 	arrayTodos.forEach(elm=>{
 		elm.dataset.initialfont=getComputedStyle(elm).fontSize
 	})
@@ -153,7 +160,7 @@ function applyBigFont(){
 
 function removeHighContrast(){
 	settingsVars.buttonHighContrast.classList.add("settingItemInactive");
-	let arrayTodos=Array.from(document.querySelectorAll("*"));
+	let arrayTodos:HTMLElement[]=Array.from(document.querySelectorAll("*"));
 	arrayTodos.forEach(elm=>{
 		if(elm.dataset.accesibilityborder=="true"){
 			elm.classList.remove("accesibilityBorder")
@@ -164,15 +171,12 @@ function removeHighContrast(){
 
 function removeBigFont(){
 	settingsVars.buttonBigFont.classList.add("settingItemInactive");
-	let arrayTodos=Array.from(document.querySelectorAll("*"));
+	let arrayTodos:HTMLElement[]=Array.from(document.querySelectorAll("*"));
 	arrayTodos.forEach(elm=>{
 		elm.style.fontSize=elm.dataset.initialfont
 		elm.removeAttribute("data-initialfont");
 	})
 }
-
-
-
 
 
 
@@ -212,7 +216,7 @@ archivo json de cada lenguaje, con los items spa y eng como keys. Esta funcion s
 para llenar los span correspondientes al idioma. el identificador en el html es un data-text="key" */
 
 /* Funcion para llenar el texto */
-function idiomHTMLInner(urls):void{
+function idiomHTMLInner(urls:{spa:string;eng:string;}):void{
 
 	var myHeaders = new Headers();
 	myHeaders.append('pragma', 'no-cache');
