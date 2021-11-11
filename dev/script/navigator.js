@@ -19,3 +19,4 @@ whereInner.insertAdjacentHTML("beforeend", "<br>screenPixelDepth: " + screen.pix
 whereInner.insertAdjacentHTML("beforeend", "<br><br>Lang0: " + navigator.languages[0]);
 whereInner.insertAdjacentHTML("beforeend", "<br>Lang1: " + navigator.languages[1]);
 whereInner.insertAdjacentHTML("beforeend", "<br>Lang2: " + navigator.languages[2]);
+//# sourceMappingURL=navigator.js.map

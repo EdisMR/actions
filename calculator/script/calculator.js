@@ -10,12 +10,9 @@ let inputValue = "";
 inputTag.addEventListener("input", resetResult, false);
 const resultInnerTag = document.getElementById("resultInner");
 var resultValue = "";
-/* Funcion principal para manejar el calculo */
 function calculatorMainProcess(e) {
-    /* ETAPA INICIAL */
     e.preventDefault();
     setInputValue();
-    /* Etapa de evaluacion: hacer logica para controlar flujo de calculo de los parentesis y casos */
     let strActual = inputValue;
     let contador = 100;
     do {
@@ -28,10 +25,8 @@ function calculatorMainProcess(e) {
         console.log("Contador finalizado");
     }
     resultValue = strActual;
-    /* ETAPA DE CIERRE */
     innerFinalResult();
 }
-/* NOTA: Para validar si es un numero, probar Number(numero), este dará el numero, 0, o NaN*/
 function division(operacion) {
     let resultado = "";
     let exprEvaluar = removeParenthesis(operacion);
@@ -39,11 +34,9 @@ function division(operacion) {
     switch (arrayEvaluar.length) {
         case 1:
             {
-                /* Si NO es un numero, retornar la operacion que contiene */
                 if (isNaN(Number(arrayEvaluar[0]))) {
                     resultado = resta(arrayEvaluar[0]);
                 }
-                /* Si es un numero, retornar el numero sin cambios */
                 if (!isNaN(Number(arrayEvaluar[0]))) {
                     resultado = arrayEvaluar[0];
                 }
@@ -54,12 +47,10 @@ function division(operacion) {
                 if (arrayEvaluar[1] == "0") {
                     resultado = messages.error;
                 }
-                /* Si alguno es una expresion, resolverla */
                 if (resultado == "" && arrayEvaluar.some(x => { return isNaN(Number(x)); })) {
                     arrayEvaluar[0] = resta(arrayEvaluar[0]);
                     arrayEvaluar[1] = resta(arrayEvaluar[1]);
                 }
-                /* SI ambos son numeros, retornar solucion */
                 if (resultado == "" && !isNaN(Number(arrayEvaluar[0])) && !isNaN(Number(arrayEvaluar[1]))) {
                     let a = Number(arrayEvaluar[0]);
                     let b = Number(arrayEvaluar[1]);
@@ -80,11 +71,9 @@ function resta(operacion) {
     switch (arrayEvaluar.length) {
         case 1:
             {
-                /* Si NO es un numero, retornar la operacion que contiene */
                 if (isNaN(Number(arrayEvaluar[0]))) {
                     result = suma(arrayEvaluar[0]);
                 }
-                /* Si es un numero, retornar el numero sin cambios */
                 if (!isNaN(Number(arrayEvaluar[0]))) {
                     result = arrayEvaluar[0];
                 }
@@ -92,7 +81,6 @@ function resta(operacion) {
             break;
         case 2:
             {
-                /* Si alguno es una expresion, resolverla */
                 if (arrayEvaluar.some(x => { return isNaN(Number(x)); })) {
                     arrayEvaluar[0] = suma(arrayEvaluar[0]);
                     arrayEvaluar[1] = suma(arrayEvaluar[1]);
@@ -100,7 +88,6 @@ function resta(operacion) {
                 if (arrayEvaluar[0] == arrayEvaluar[1]) {
                     result = "0";
                 }
-                /* SI ambos son numeros, retornar solucion */
                 if (result == "" && !isNaN(Number(arrayEvaluar[0])) && !isNaN(Number(arrayEvaluar[1]))) {
                     let a = Number(arrayEvaluar[0]);
                     let b = Number(arrayEvaluar[1]);
@@ -134,11 +121,9 @@ function suma(operacion) {
     switch (arrayEvaluar.length) {
         case 1:
             {
-                /* Si NO es un numero, retornar la operacion que contiene */
                 if (isNaN(Number(arrayEvaluar[0]))) {
                     result = multiplicar(arrayEvaluar[0]);
                 }
-                /* Si es un numero, retornar el numero sin cambios */
                 if (!isNaN(Number(arrayEvaluar[0]))) {
                     result = arrayEvaluar[0];
                 }
@@ -146,12 +131,10 @@ function suma(operacion) {
             break;
         case 2:
             {
-                /* Si alguno es una expresion, resolverla */
                 if (arrayEvaluar.some(x => { return isNaN(Number(x)); })) {
                     arrayEvaluar[0] = multiplicar(arrayEvaluar[0]);
                     arrayEvaluar[1] = multiplicar(arrayEvaluar[1]);
                 }
-                /* SI ambos son numeros, retornar solucion */
                 if (result == "" && !isNaN(Number(arrayEvaluar[0])) && !isNaN(Number(arrayEvaluar[1]))) {
                     let a = Number(arrayEvaluar[0]);
                     let b = Number(arrayEvaluar[1]);
@@ -185,7 +168,6 @@ function multiplicar(evaluar) {
     switch (arrayEvaluar.length) {
         case 1:
             {
-                /* Si es un numero, retornar el numero sin cambios */
                 if (!isNaN(Number(arrayEvaluar[0]))) {
                     resultado = arrayEvaluar[0];
                 }
@@ -193,7 +175,6 @@ function multiplicar(evaluar) {
             break;
         case 2:
             {
-                /* SI ambos son numeros, retornar solucion */
                 if (!isNaN(Number(arrayEvaluar[0])) && !isNaN(Number(arrayEvaluar[1]))) {
                     let a = Number(arrayEvaluar[0]);
                     let b = Number(arrayEvaluar[1]);
@@ -217,7 +198,6 @@ function multiplicar(evaluar) {
     }
     return resultado;
 }
-/* Capturar el input hacia inputValue */
 function setInputValue() {
     inputValue = inputTag.value;
 }
@@ -225,7 +205,6 @@ function resetResult() {
     resultValue = "";
     resultInnerTag.innerText = "";
 }
-/* Buscar el ultimo parentesis que no contiene otro parentesis dentro */
 function determinateLastParenthesis(analize) {
     let result = "";
     let lastIndexParenthesis = analize.lastIndexOf("(");
@@ -252,3 +231,4 @@ function solicitaTexto() {
         eng: window.location.origin + "/calculator/lang/eng.json",
     });
 }
+//# sourceMappingURL=calculator.js.map

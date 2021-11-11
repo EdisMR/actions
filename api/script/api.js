@@ -1,22 +1,17 @@
 "use strict";
-/* Datos para la API */
 var api = {
     apiKey: "b96ba3199b2f0a04e4eaec52229ff2b1",
     lat: "",
     lon: "",
     units: "metric",
 };
-/* Para guardar los datos del fetch */
 var datosCapture;
-/* Url para el fetch */
 function defineUrlSolicitud() {
     return `https://api.openweathermap.org/data/2.5/weather?lat=${api.lat}&lon=${api.lon}&appid=${api.apiKey}&lang=en&units=${api.units}`;
 }
-/* URL de la imagen */
 function defineUrlImagen() {
     return `https://openweathermap.org/img/wn/${datosCapture.weather[0].icon}.png`;
 }
-/* Funcion principal del fetch */
 function solicitarDatos() {
     fetch(defineUrlSolicitud(), {
         method: "get",
@@ -24,16 +19,13 @@ function solicitarDatos() {
         return response.json();
     }).then(function (resp) {
         afterFetch(resp);
-        /* console.log(resp); */
     })
         .catch(error => {
-        /* console.log(error); */
         let afterFormID = document.getElementById("afterForm");
         formularioAPI.style.display = "initial";
         afterFormID.style.display = "none";
     });
 }
-/* Los elementos html que se llenaran con la info */
 var htmlElements = {
     country: document.querySelector(".cardHeader .titulo"),
     lat: document.querySelector(".subtitulo .lat"),
@@ -48,7 +40,6 @@ var htmlElements = {
     weatherImagen: document.querySelector(".cardImg img"),
     imgDescription: document.querySelector(".cardImg .descrip"),
 };
-/* Llenar el html con los datos */
 function innerDatos() {
     htmlElements.country.innerHTML = datosCapture.sys.country + " - " + datosCapture.name;
     htmlElements.lat.innerHTML = api.lat;
@@ -73,7 +64,6 @@ function afterFetch(respuesta) {
     let cardSolicitar = document.querySelector(".solicitar");
     cardSolicitar.style.display = "none";
 }
-/* FORMULARIOAPI */
 let formularioAPI = document.forms[0];
 formularioAPI.addEventListener("submit", datosDeForm, true);
 function datosDeForm(e) {
@@ -83,13 +73,9 @@ function datosDeForm(e) {
     afterFormElm.style.display = "initial";
     solicitarDatos();
 }
-/* ******************************************** */
-/* ****** Funcion para localizar al usuario ********** */
-/* ******************************************** */
 const buttonMyLocation = document.getElementById("myLocation");
 buttonMyLocation.addEventListener("click", localizar, false);
 function localizar() {
-    /* aniadir loader */
     buttonMyLocation.disabled = true;
     buttonMyLocation.innerText = "Locating";
     navigator.geolocation.getCurrentPosition(function (position) {
@@ -126,3 +112,4 @@ function solicitaTexto() {
         eng: window.location.origin + "/api/lang/eng.json",
     });
 }
+//# sourceMappingURL=api.js.map

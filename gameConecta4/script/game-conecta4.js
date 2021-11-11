@@ -1,23 +1,18 @@
 "use strict";
-/* ************************************ */
-/* ***** PROCEDIMIENTOS INICIALES ******/
-/* ************************************ */
 const formularioConecta4 = document.forms[0];
 const camposGrid = Array.from(document.querySelectorAll(".grid-container div"));
-const innerTurnDiv = document.querySelector(".innerTurnUser span");
+let innerTurnDiv = document.querySelector(".innerTurnUser span");
 const innerTurnDivParent = document.querySelector(".innerTurnUser");
 const buttonResetParent = document.querySelector(".buttonReset");
 const buttonReset = document.querySelector(".buttonReset button");
 const ElmDefinirJugadores = document.querySelector(".definirJugadores");
 const gameContainer = document.querySelector(".game-container");
-/* Declarando matriz para guardar los divs que lo conforman */
 const gameHorizontal = 7;
 const gameVertical = 6;
 var matrizGame = new Array(gameHorizontal);
 for (let i = 0; i < gameHorizontal; i++) {
     matrizGame[i] = new Array(gameVertical);
 }
-/* Recorrer la matriz para añadir los div a esas casillas, y añadiendo el dataset a los div */
 let contadorCamposGrid = 0;
 for (let Y = 0; Y < gameVertical; Y++) {
     for (let X = 0; X < gameHorizontal; X++) {
@@ -47,10 +42,6 @@ function retornaClaseUser() {
     return resultado;
 }
 buttonReset.addEventListener("click", resetGame);
-/* ************************************************ */
-/* ********* FORMULARIOConecta4 Y DESPUES DE ********* */
-/* ************************************************ */
-/* Formulario de usuarios del juego */
 formularioConecta4.addEventListener("submit", defineUsers, false);
 function defineUsers(ev) {
     let e = ev;
@@ -67,23 +58,20 @@ function afterDefineUsers() {
     ElmDefinirJugadores.classList.add("d-none");
     gameContainer.classList.remove("d-none");
     innerTurnDivParent.classList.remove("d-none");
-    /* sobre los divs */
     camposGrid.forEach(elm => {
-        elm.addEventListener("mouseover", addHoverGrid);
-        elm.addEventListener("mouseleave", removeHoverGrid);
-        elm.addEventListener("click", divCLicked);
+        elm.addEventListener("mouseover", addHoverGrid, false);
+        elm.addEventListener("mouseleave", removeHoverGrid, false);
+        elm.addEventListener("click", divCLicked, false);
     });
     innerTurnUser();
 }
 function removeListerDivs() {
-    /* sobre los divs */
     camposGrid.forEach(elm => {
         elm.removeEventListener("mouseover", addHoverGrid);
         elm.removeEventListener("mouseleave", removeHoverGrid);
         elm.removeEventListener("click", divCLicked);
     });
 }
-/* El hover personalizado para las columnas */
 function addHoverGrid(elem) {
     let claseColumna;
     try {
@@ -110,10 +98,6 @@ function removeHoverGrid(elem) {
         elm.classList.remove("divHover");
     });
 }
-/* ******************************************************** */
-/* *************** CUANDO UN DIV ES CLICADO *************** */
-/* ******************************************************** */
-/* funcion del div cliqueado */
 function divCLicked() {
     let elemento = this;
     let elementoLlenar;
@@ -135,14 +119,12 @@ function divCLicked() {
 function switchUser() {
     Users.turno == 0 ? Users.turno = 1 : Users.turno = 0;
 }
-/* Llenar elemento desocupado */
 function llenarElemento(divLlenar) {
     let divParaLlenar = divLlenar;
     divParaLlenar.children[0].classList.add(Users.icon);
     divParaLlenar.classList.add(retornaClaseUser());
     divParaLlenar.children[0].dataset.occupied = "true";
 }
-/* Llenado del div para indicar de quien es el turno */
 function innerTurnUser() {
     if (Users.turno == 1) {
         innerTurnDiv.innerHTML = Users.user1;
@@ -152,7 +134,6 @@ function innerTurnUser() {
     }
     animateInnerUser();
 }
-/* Animacion cuando llenamos el div con la info del turno */
 function animateInnerUser() {
     innerTurnDivParent.classList.add("innerTurnUserAnimation");
 }
@@ -160,14 +141,6 @@ innerTurnDivParent.addEventListener("animationend", afterAnimateInnerUser, false
 function afterAnimateInnerUser() {
     innerTurnDivParent.classList.remove("innerTurnUserAnimation");
 }
-/* ****************************************** */
-/* ************ EVALUAR GANADOR ************ */
-/* ****************************************** */
-/*
-    Definir el ultimo elemento que fue llenado, para evaluar grupos -
-    Recibe el elemento clicado y define el elemento a llenar,
-    recorriendo Y de abajo hacia arriba (con X estatico)
-*/
 function defineUltimoElementoVacio(elemento) {
     let ultimo;
     var y = gameVertical - 1;
@@ -183,116 +156,96 @@ function evaluarGanador(elem) {
     let hayGanador = false;
     let valorX = parseInt(elem.dataset.posx);
     let valorY = parseInt(elem.dataset.posy);
-    /* Horizontal */
-    /* caso1 */
     if (hayGanador == false &&
         buscarClaseEnReferencia(valorX + 1, valorY) == true &&
         buscarClaseEnReferencia(valorX + 2, valorY) == true &&
         buscarClaseEnReferencia(valorX + 3, valorY) == true) {
         hayGanador = true;
     }
-    /* caso2 */
     if (hayGanador == false &&
         buscarClaseEnReferencia(valorX - 1, valorY) == true &&
         buscarClaseEnReferencia(valorX + 1, valorY) == true &&
         buscarClaseEnReferencia(valorX + 2, valorY) == true) {
         hayGanador = true;
     }
-    /* caso3 */
     if (hayGanador == false &&
         buscarClaseEnReferencia(valorX - 2, valorY) == true &&
         buscarClaseEnReferencia(valorX - 1, valorY) == true &&
         buscarClaseEnReferencia(valorX + 1, valorY) == true) {
         hayGanador = true;
     }
-    /* caso4 */
     if (hayGanador == false &&
         buscarClaseEnReferencia(valorX - 1, valorY) == true &&
         buscarClaseEnReferencia(valorX - 2, valorY) == true &&
         buscarClaseEnReferencia(valorX - 3, valorY) == true) {
         hayGanador = true;
     }
-    /* Vertical */
-    /* caso1 */
     if (hayGanador == false &&
         buscarClaseEnReferencia(valorX, valorY + 1) == true &&
         buscarClaseEnReferencia(valorX, valorY + 2) == true &&
         buscarClaseEnReferencia(valorX, valorY + 3) == true) {
         hayGanador = true;
     }
-    /* caso2 */
     if (hayGanador == false &&
         buscarClaseEnReferencia(valorX, valorY - 1) == true &&
         buscarClaseEnReferencia(valorX, valorY + 1) == true &&
         buscarClaseEnReferencia(valorX, valorY + 2) == true) {
         hayGanador = true;
     }
-    /* caso3 */
     if (hayGanador == false &&
         buscarClaseEnReferencia(valorX, valorY - 2) == true &&
         buscarClaseEnReferencia(valorX, valorY - 1) == true &&
         buscarClaseEnReferencia(valorX, valorY + 1) == true) {
         hayGanador = true;
     }
-    /* caso4 */
     if (hayGanador == false &&
         buscarClaseEnReferencia(valorX, valorY - 1) == true &&
         buscarClaseEnReferencia(valorX, valorY - 2) == true &&
         buscarClaseEnReferencia(valorX, valorY - 3) == true) {
         hayGanador = true;
     }
-    /* Creciente */
-    /* Primer grupo */
     if (hayGanador == false &&
         buscarClaseEnReferencia(valorX + 1, valorY - 1) &&
         buscarClaseEnReferencia(valorX + 2, valorY - 2) &&
         buscarClaseEnReferencia(valorX + 3, valorY - 3)) {
         hayGanador = true;
     }
-    /* Segundo grupo */
     if (hayGanador == false &&
         buscarClaseEnReferencia(valorX - 1, valorY + 1) &&
         buscarClaseEnReferencia(valorX + 1, valorY - 1) &&
         buscarClaseEnReferencia(valorX + 2, valorY - 2)) {
         hayGanador = true;
     }
-    /* Tercer grupo */
     if (hayGanador == false &&
         buscarClaseEnReferencia(valorX - 2, valorY + 2) &&
         buscarClaseEnReferencia(valorX - 1, valorY + 1) &&
         buscarClaseEnReferencia(valorX + 1, valorY - 1)) {
         hayGanador = true;
     }
-    /* Cuarto grupo */
     if (hayGanador == false &&
         buscarClaseEnReferencia(valorX - 1, valorY + 1) &&
         buscarClaseEnReferencia(valorX - 2, valorY + 2) &&
         buscarClaseEnReferencia(valorX - 3, valorY + 3)) {
         hayGanador = true;
     }
-    /* Decreciente */
-    /* Primer grupo */
     if (hayGanador == false &&
         buscarClaseEnReferencia(valorX + 1, valorY + 1) &&
         buscarClaseEnReferencia(valorX + 2, valorY + 2) &&
         buscarClaseEnReferencia(valorX + 3, valorY + 3)) {
         hayGanador = true;
     }
-    /* Segundo grupo */
     if (hayGanador == false &&
         buscarClaseEnReferencia(valorX - 1, valorY - 1) &&
         buscarClaseEnReferencia(valorX + 1, valorY + 1) &&
         buscarClaseEnReferencia(valorX + 2, valorY + 2)) {
         hayGanador = true;
     }
-    /* Tercer grupo */
     if (hayGanador == false &&
         buscarClaseEnReferencia(valorX - 1, valorY - 1) &&
         buscarClaseEnReferencia(valorX - 2, valorY - 2) &&
         buscarClaseEnReferencia(valorX + 1, valorY + 1)) {
         hayGanador = true;
     }
-    /* Cuarto grupo */
     if (hayGanador == false &&
         buscarClaseEnReferencia(valorX - 1, valorY - 1) &&
         buscarClaseEnReferencia(valorX - 2, valorY - 2) &&
@@ -303,7 +256,7 @@ function evaluarGanador(elem) {
 }
 function buscarClaseEnReferencia(valX, valY) {
     let resultadoF = false;
-    let contadorErrores = false; /* No hay errores */
+    let contadorErrores = false;
     try {
         matrizGame[valX][valY].classList;
     }
@@ -320,9 +273,6 @@ function buscarClaseEnReferencia(valX, valY) {
     }
     return resultadoF;
 }
-/* **************************************************** */
-/* ******* CUANDO SE HA ENCONTRADO UN GANADOR ******* */
-/* **************************************************** */
 function ganadorEncontrado() {
     let name = "";
     let color = "";
@@ -339,7 +289,7 @@ function ganadorEncontrado() {
 }
 function resetGame() {
     buttonResetParent.classList.add("d-none");
-    camposGrid.forEach(elm => {
+    camposGrid.forEach((elm) => {
         elm.classList.remove("user1");
         elm.classList.remove("user2");
         elm.children[0].classList.remove(Users.icon);
@@ -353,3 +303,4 @@ function resetGame() {
     afterDefineUsers();
     innerTurnUser();
 }
+//# sourceMappingURL=game-conecta4.js.map

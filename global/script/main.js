@@ -1,11 +1,7 @@
 "use strict";
-/* Variables globales */
 var globals = {
     fetchRes: "",
 };
-/* ****************************************** */
-/* ******** EVENTOS DE MOUSE Y TECLADO ***** */
-/* ***************************************** */
 window.addEventListener("mousemove", mouseMovement, false);
 window.addEventListener("keyup", keyEvent, false);
 let innerMouse = Array.from(document.querySelectorAll(".header-events .inner-event"))[0];
@@ -45,45 +41,36 @@ if (document.body.clientWidth < 750 || screen.width < 750) {
     });
 }
 function menuSwitchMain() {
-    /* Mostrar menu */
     if (headerButton.disp == false) {
         openMenu();
     }
     else {
-        /* Ocultar menu */
         closeMenu();
     }
 }
 function openMenu() {
     headerButton.disp = true;
     headerButton.headerEnlaces.classList.add("showMenu");
-    /* AGREGAR ANIMACION */
     headerButton.headerLi.forEach((elm, index) => {
         elm.style.animationDelay = (index / 16) + "s";
         elm.classList.add("animatedItem");
     });
     headerButton.headerEnlaces.style.height = `${headerButton.headerEnlaces.scrollHeight + 30}px`;
-    /* Llenar boton con el icono */
     headerButton.btn.innerHTML = headerButton.iconoArriba;
 }
 function closeMenu() {
     if (headerButton.disp == true) {
         headerButton.disp = false;
         headerButton.headerEnlaces.classList.remove("showMenu");
-        /* QUITAR ANIMACION */
         headerButton.headerLi.forEach(elm => {
             elm.style.display = "auto";
             elm.classList.remove("animatedItem");
             elm.style.opacity = "0";
         });
         headerButton.headerEnlaces.style.height = 0 + "px";
-        /* Llenar boton con el icono */
         headerButton.btn.innerHTML = headerButton.iconoAbajo;
     }
 }
-/* ****************************************** */
-/* ******************** 000 **************** */
-/* ***************************************** */
 function w000() {
     try {
         let Y = document.querySelector("body a[href*='000webhost']");
@@ -91,23 +78,15 @@ function w000() {
         document.body.removeChild(YY);
     }
     catch (e) {
-        /* console.log(e); */
     }
 }
 w000();
-/* **************************************************** */
-/* ******************** ENLACE DE EMAIL **************** */
-/* **************************************************** */
 const email = ["edisanthony", "gmail.com"];
 const emailBTN = document.querySelector("footer a[title='email']");
 emailBTN.addEventListener("click", function () { window.open("mailto:" + email[0] + "@" + email[1]); }, false);
-/* **************************************************** */
-/* ******************** ENLACE DE WHATSAPP ************ */
-/* **************************************************** */
 const wsppF = ["wa.me/", "50663062581"];
 const wsppFBTN = document.querySelector("footer a[title='whatsapp']");
 wsppFBTN.addEventListener("click", function () { window.open("https://" + wsppF[0] + wsppF[1]); }, false);
-/* HELP en enlaces sin funcionamiento */
 let ayuda = document.getElementById("helpNode");
 var enlacesGato = Array.from(document.querySelectorAll('[href="##"]'));
 enlacesGato.forEach(elm => {
@@ -122,9 +101,6 @@ function helpNodeAppear() {
         ayuda.classList.remove("animateHelpNode");
     }, 2000);
 }
-/* ****************************** */
-/* *********** DINO ************* */
-/* ****************************** */
 const dinoEd = document.getElementById("dino");
 window.addEventListener("contextmenu", dino, false);
 function dino(e) {
@@ -149,7 +125,7 @@ function positionDino(evVal, mitadP) {
     }
     return resultado;
 }
-/* Añadir script de settings */
 var settingsDiv = document.createElement("script");
 settingsDiv.setAttribute("src", "/global/script/settings.js");
 document.head.appendChild(settingsDiv);
+//# sourceMappingURL=main.js.map

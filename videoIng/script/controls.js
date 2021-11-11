@@ -39,3 +39,4 @@ function solicitaTexto() {
         eng: window.location.origin + "/videoIng/lang/eng.json",
     });
 }
+//# sourceMappingURL=controls.js.map

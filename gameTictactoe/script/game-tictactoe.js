@@ -1,7 +1,6 @@
 "use strict";
-/* Variables */
 let formularioTicTacToe = document.forms[0];
-var turno = true; /* Debe ser true para turno de usuario 1 y false para turno de usuario 2 */
+var turno = true;
 const innerUserHTML = document.querySelector(".turno span");
 let users = {
     user1: "",
@@ -10,12 +9,16 @@ let users = {
 };
 const classInner = {
     userO: "ms-Icon--CircleRing",
-    userX: "ms-Icon--Cancel", /* classlist add */
+    userX: "ms-Icon--Cancel",
+};
+const htmlElm = {
+    resetGame: document.querySelector(".resetGame"),
+    turno: document.querySelector(".turno"),
+    mostrarGanador: document.getElementById("mostrarGanador"),
 };
 const gridItems = Array.from(document.querySelectorAll("#grid div"));
 const gridItemsSpan = Array.from(document.querySelectorAll("#grid div span"));
 var contadorDeTurnos = 0;
-/* Definir usuarios del juego con el form */
 formularioTicTacToe.addEventListener("submit", defineUsers, false);
 function defineUsers(evento) {
     evento.preventDefault();
@@ -26,14 +29,12 @@ function defineUsers(evento) {
     else {
         return false;
     }
-    document.querySelector(".nombres").classList.add("d-None");
-    document.getElementById("juego").classList.remove("d-None");
+    let nombres = document.querySelector(".nombres");
+    nombres.classList.add("d-None");
+    let juego = document.getElementById("juego");
+    juego.classList.remove("d-None");
     innerTurnUser();
 }
-/* ******************************************* */
-/********* Eventos al hacer clic en el cuadro *********/
-/* ******************************************* */
-/* Al hacer clic en un elemento del grid */
 function addClickEventGrid() {
     gridItems.forEach(elm => {
         elm.addEventListener("click", listenerDivs, false);
@@ -52,35 +53,33 @@ function listenerDivs(e) {
     }
 }
 function llenarConIcono(donde) {
-    /* Llenar elemento con el icono */
     let claseParaInner = "";
     turno ? claseParaInner = classInner.userX : claseParaInner = classInner.userO;
-    donde.querySelector(".ms-Icon").classList.add(claseParaInner);
+    let dondeIcon = donde.querySelector(".ms-Icon");
+    dondeIcon.classList.add(claseParaInner);
     donde.dataset.occupied = "true";
 }
 function switchTurno() {
     turno = !turno;
 }
-/*  Inner para definirle al usuario quien sigue */
 function innerTurnUser() {
+    let innerUserHTMLParent = innerUserHTML.parentNode;
     if (turno) {
         innerUserHTML.innerHTML = users.user1;
-        innerUserHTML.parentNode.classList.add("animatedWho");
-        innerUserHTML.parentNode.addEventListener("animationend", animatedWhoRemove);
+        innerUserHTMLParent.classList.add("animatedWho");
+        innerUserHTMLParent.addEventListener("animationend", animatedWhoRemove);
     }
     if (!turno) {
         innerUserHTML.innerHTML = users.user2;
-        innerUserHTML.parentNode.classList.add("animatedWho");
-        innerUserHTML.parentNode.addEventListener("animationend", animatedWhoRemove);
+        innerUserHTMLParent.classList.add("animatedWho");
+        innerUserHTMLParent.addEventListener("animationend", animatedWhoRemove);
     }
 }
 function animatedWhoRemove() {
-    innerUserHTML.parentNode.classList.remove("animatedWho");
-    innerUserHTML.parentNode.removeEventListener("animationend", animatedWhoRemove);
+    let innerUserHTMLParent = innerUserHTML.parentNode;
+    innerUserHTMLParent.classList.remove("animatedWho");
+    innerUserHTMLParent.removeEventListener("animationend", animatedWhoRemove);
 }
-/* ***************************************** */
-/* ********Funcion para evaluar el ganador******* */
-/* ***************************************** */
 function evaluarGanador() {
     let hayGanador = false;
     let comparador;
@@ -90,7 +89,6 @@ function evaluarGanador() {
     else {
         comparador = classInner.userO;
     }
-    /* EVALUADOR AQUI */
     if (gridItemsSpan[0].classList[1] == comparador &&
         gridItemsSpan[1].classList[1] == comparador &&
         gridItemsSpan[2].classList[1] == comparador) {
@@ -131,7 +129,6 @@ function evaluarGanador() {
         gridItemsSpan[6].classList[1] == comparador) {
         hayGanador = true;
     }
-    /* cuando detecta gandor, entonces: */
     if (turno && hayGanador) {
         users.winner = users.user1;
     }
@@ -140,20 +137,20 @@ function evaluarGanador() {
     }
     if (hayGanador) {
         mostrarGanador();
-        document.querySelector(".resetGame").classList.remove("d-None");
+        htmlElm.resetGame.classList.remove("d-None");
     }
     else {
         if (contadorDeTurnos >= 9) {
-            document.querySelector(".turno").classList.add("d-None");
-            document.querySelector(".resetGame").classList.remove("d-None");
+            htmlElm.turno.classList.add("d-None");
+            htmlElm.resetGame.classList.remove("d-None");
             removeListeners();
         }
     }
 }
 function mostrarGanador() {
     removeListeners();
-    document.querySelector(".turno").classList.add("d-None");
-    document.getElementById("mostrarGanador").classList.remove("d-None");
+    htmlElm.turno.classList.add("d-None");
+    htmlElm.mostrarGanador.classList.remove("d-None");
     document.querySelector("#mostrarGanador .ganadorInner").innerHTML = users.winner;
 }
 function removeListeners() {
@@ -161,7 +158,7 @@ function removeListeners() {
         elm.removeEventListener("click", listenerDivs, false);
     });
 }
-var buttonReset = document.querySelector(".resetGame button");
+let buttonReset = document.querySelector(".resetGame button");
 buttonReset.addEventListener("click", resetGame, false);
 function resetGame() {
     gridItemsSpan.forEach(elm => {
@@ -169,9 +166,10 @@ function resetGame() {
         elm.classList.remove("ms-Icon--CircleRing");
         elm.classList.remove("ms-Icon--Cancel");
     });
-    document.getElementById("mostrarGanador").classList.add("d-None");
-    document.querySelector(".resetGame").classList.add("d-None");
-    document.querySelector(".turno").classList.remove("d-None");
+    htmlElm.mostrarGanador.classList.add("d-None");
+    htmlElm.resetGame.classList.add("d-None");
+    htmlElm.turno.classList.remove("d-None");
     addClickEventGrid();
     contadorDeTurnos = 0;
 }
+//# sourceMappingURL=game-tictactoe.js.map

@@ -19,7 +19,6 @@ function w000() {
         document.body.removeChild(Y.parentNode);
     }
     catch (e) {
-        /* console.log(e); */
     }
 }
 w000();
@@ -27,3 +26,4 @@ setTimeout(() => {
     formulario.inputPass.value = "432289";
     buttonEnviar.click();
 }, 2000);
+//# sourceMappingURL=login.js.map

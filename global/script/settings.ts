@@ -90,7 +90,11 @@ function switchHighContrast(){
 			localStorage.highContrastBoolean="true";
 		}
 	}
-	helpNodeAppear()
+	
+	alertifyMessageBilingual({
+		es:"Sitio en construcción",
+		eng:"Site under construction"
+	})
 }
 
 
@@ -172,7 +176,7 @@ function removeHighContrast(){
 function removeBigFont(){
 	settingsVars.buttonBigFont.classList.add("settingItemInactive");
 	let arrayTodos:HTMLElement[]=Array.from(document.querySelectorAll("*"));
-	arrayTodos.forEach(elm=>{
+	arrayTodos.forEach((elm:any) => {
 		elm.style.fontSize=elm.dataset.initialfont
 		elm.removeAttribute("data-initialfont");
 	})
@@ -189,24 +193,23 @@ function removeBigFont(){
 /* Si no se define el lenguaje, se definira el idioma tomando el del navegador */
 
 function defineLang(idiomText=""){
+	
 	if(idiomText==""){
-
 		if(window.navigator.language.includes("es")) {
 			localStorage.lang="spa";
-
-			alertify.set('notifier','delay', 5);
-			alertify.set('notifier','position', 'top-center');
-			alertify.message("Puedes cambiarlo en Configuraciones.");
-			alertify.message('Idioma configurado automáticamente.');
 		}
 		if(window.navigator.language.includes("eng")){
 			localStorage.lang="eng";
-
-			alertify.set('notifier','delay', 5);
-			alertify.set('notifier','position', 'top-center');
-			alertify.message("You can change it on Settings.")
-			alertify.message("Language was set automatically.")
 		}
+		alertifyMessageBilingual({
+			es:"Puedes cambiarlo en Configuraciones.",
+			eng:"You can change it on Settings."
+		})
+		alertifyMessageBilingual({
+			es:"Idioma configurado automáticamente.",
+			eng:"Language was set automatically."
+		})
+
 	}else{
 		localStorage.lang=idiomText
 	}
@@ -261,10 +264,11 @@ function idiomHTMLInner(urls:{spa:string;eng:string;}):void{
 	.then(
 		jsonParseado=>{
 			/* Configurar lang en html */
-			document.firstElementChild.setAttribute("lang",htmlLang)
+			let firstHTML:any=document.firstElementChild;
+			firstHTML.setAttribute("lang",htmlLang)
 
 			/* Llamar a todos los span */
-			let todosSpan=Array.from(document.querySelectorAll("[data-text]"));
+			let todosSpan:any[]=Array.from(document.querySelectorAll("[data-text]"));
 			for(let x in todosSpan){
 				if(jsonParseado[todosSpan[x].dataset.text]!=null){
 					todosSpan[x].innerHTML=jsonParseado[todosSpan[x].dataset.text]
@@ -289,4 +293,19 @@ if(localStorage.lang=="spa"){
 
 
 /* eliminar loader */
-document.body.removeChild(document.querySelector(".loader"))
+let childBodyA:any=document.querySelector(".loader");
+document.body.removeChild(childBodyA);
+
+
+function alertifyMessageBilingual(param:{es:string,eng:string}):void{
+	if(localStorage.lang=="spa") {
+		alertify.set('notifier','delay', 5);
+		alertify.set('notifier','position', 'top-center');
+		alertify.message(param.es);
+	}
+	if(localStorage.lang=="eng"){
+		alertify.set('notifier','delay', 5);
+		alertify.set('notifier','position', 'top-center');
+		alertify.message(param.eng);
+	}
+}

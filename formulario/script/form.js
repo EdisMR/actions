@@ -1,13 +1,7 @@
 "use strict";
-/* ***************************************** */
-/* ****Variables definidas: FormularioForm y los inputs****
-/* ***************************************** */
 let formularioForm = document.forms[0];
 var inputs = Array.from(formularioForm.querySelectorAll("input"));
 var fechaActual = new Date();
-/* ***************************************** */
-/* *Definir rango de fechas para fecha de nacimiento* */
-/* ***************************************** */
 function fechaMinima() {
     let anioActual = fechaActual.getFullYear();
     let minimo = (anioActual - 150) + "-01-01";
@@ -16,9 +10,6 @@ function fechaMinima() {
     formularioForm.fechaNac.max = maximo;
 }
 fechaMinima();
-/* ***************************************** */
-/* ******* Listener de evento Blur de inputs ***** */
-/* ***************************************** */
 inputs.forEach(elm => {
     elm.addEventListener("blur", validateInput, false);
 });
@@ -26,7 +17,6 @@ function validateInput(eventDisp = null, input = null) {
     let evento = eventDisp.target || input;
     let salida = false;
     let borderRemoveTime = 3000;
-    /* **************** Evaluacion directa ************** */
     if (evento.checkValidity() == false) {
         salida = false;
         evento.parentNode.classList.add("badInput");
@@ -55,7 +45,6 @@ function validateInput(eventDisp = null, input = null) {
             }
         }
     }
-    /* **************** Actualizar input de edad ************** */
     if (evento == formularioForm.fechaNac) {
         let anioActual = parseInt(fechaActual.getFullYear().toString());
         let valorDateForm = formularioForm.fechaNac.value;
@@ -65,18 +54,12 @@ function validateInput(eventDisp = null, input = null) {
     }
     return salida;
 }
-/* ***************************************** */
-/* *********** FormularioForm Reseteado ************* */
-/* ***************************************** */
 formularioForm.addEventListener("reset", formularioFormReseteado, false);
 function formularioFormReseteado() {
     inputs.forEach(elm => {
         elm.style.border = "auto";
     });
 }
-/* ***************************************** */
-/* *********** FormularioForm enviado ************* */
-/* ***************************************** */
 formularioForm.addEventListener("submit", formularioFormEnviado);
 function formularioFormEnviado() {
     formularioForm.edad.disabled = false;
@@ -89,3 +72,4 @@ function solicitaTexto() {
         eng: window.location.origin + "/formulario/lang/eng.json",
     });
 }
+//# sourceMappingURL=form.js.map

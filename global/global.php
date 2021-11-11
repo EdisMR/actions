@@ -327,7 +327,7 @@ function headHTML(){
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
 	<link rel="shortcut icon" href="/global/assets/me.ico" type="image/x-icon">
-	<link rel="stylesheet" href="/global/sass/global.css">
+	<link rel="stylesheet" href="/global/css/compiled/global.css">
 	<script src="/global/script/alertify.min.js"></script>
 	<script defer src="/global/script/main.js"></script>
 	<?php

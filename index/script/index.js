@@ -7,3 +7,4 @@ function solicitaTexto() {
         eng: window.location.origin + "/index/lang/eng.json",
     });
 }
+//# sourceMappingURL=index.js.map

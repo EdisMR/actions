@@ -3,27 +3,34 @@ let formularioTicTacToe=<HTMLFormElement>document.forms[0];
 var turno:Boolean=true; /* Debe ser true para turno de usuario 1 y false para turno de usuario 2 */
 const innerUserHTML=<HTMLSpanElement>document.querySelector(".turno span");
 
-interface usersM{
+
+let users:{
 	user1 : string;
 	user2 : string;
 	winner: string;
-}
-
-let users:usersM={
+}={
 	user1 : "", /* Es X */
 	user2 : "", /* Es O */
-	winner:"",
+	winner:	"",
 }
 
 
-
-interface classInnerGame{
+const classInner :{
 	userO:string;
 	userX:string;
-}
-const classInner :classInnerGame={
+}={
 	userO:"ms-Icon--CircleRing", /* classlist add */
 	userX:"ms-Icon--Cancel", /* classlist add */
+}
+
+const htmlElm:{
+	resetGame:HTMLElement;
+	turno:HTMLElement;
+	mostrarGanador:HTMLElement;
+}={
+	resetGame:<HTMLElement>document.querySelector(".resetGame"),
+	turno:<HTMLElement>document.querySelector(".turno"),
+	mostrarGanador:<HTMLElement>document.getElementById("mostrarGanador"),
 }
 
 const gridItems:HTMLElement[]=Array.from(document.querySelectorAll("#grid div"));
@@ -45,8 +52,11 @@ function defineUsers(evento:Event){
 	}
 
 	
-	document.querySelector(".nombres").classList.add("d-None");
-	document.getElementById("juego").classList.remove("d-None");
+	let nombres:HTMLElement=<HTMLElement>document.querySelector(".nombres");
+	nombres.classList.add("d-None");
+
+	let juego:HTMLElement=<HTMLElement>document.getElementById("juego");
+	juego.classList.remove("d-None");
 	innerTurnUser();
 }
 
@@ -63,10 +73,10 @@ function addClickEventGrid(){
 }
 addClickEventGrid();
 
-function listenerDivs(e){
+function listenerDivs(e:any){
 
-	let posX=parseInt(e.target.dataset.x);
-	let posY=parseInt(e.target.dataset.y);
+	let posX:number=parseInt(e.target.dataset.x);
+	let posY:number=parseInt(e.target.dataset.y);
 
 	
 	
@@ -82,11 +92,13 @@ function listenerDivs(e){
 
 }
 
-function llenarConIcono(donde){
+function llenarConIcono(donde:HTMLElement){
 	/* Llenar elemento con el icono */
 	let claseParaInner="";
 	turno?claseParaInner=classInner.userX:claseParaInner=classInner.userO;
-	donde.querySelector(".ms-Icon").classList.add(claseParaInner);
+	
+	let dondeIcon:HTMLElement=<HTMLElement>donde.querySelector(".ms-Icon")
+	dondeIcon.classList.add(claseParaInner);
 	donde.dataset.occupied="true";
 }
 
@@ -96,21 +108,23 @@ function switchTurno(){
 
 /*  Inner para definirle al usuario quien sigue */
 function innerTurnUser(){
+	let innerUserHTMLParent:any=innerUserHTML.parentNode;
 	if(turno){
 		innerUserHTML.innerHTML=users.user1;
-		innerUserHTML.parentNode.classList.add("animatedWho");
-		innerUserHTML.parentNode.addEventListener("animationend",animatedWhoRemove)
+		innerUserHTMLParent.classList.add("animatedWho");
+		innerUserHTMLParent.addEventListener("animationend",animatedWhoRemove)
 	}
 	if(!turno){
 		innerUserHTML.innerHTML=users.user2;
-		innerUserHTML.parentNode.classList.add("animatedWho");
-		innerUserHTML.parentNode.addEventListener("animationend",animatedWhoRemove)
+		innerUserHTMLParent.classList.add("animatedWho");
+		innerUserHTMLParent.addEventListener("animationend",animatedWhoRemove)
 	}
 }
 
 function animatedWhoRemove(){
-	innerUserHTML.parentNode.classList.remove("animatedWho");
-	innerUserHTML.parentNode.removeEventListener("animationend",animatedWhoRemove);
+	let innerUserHTMLParent:any=innerUserHTML.parentNode
+	innerUserHTMLParent.classList.remove("animatedWho");
+	innerUserHTMLParent.removeEventListener("animationend",animatedWhoRemove);
 
 }
 /* ***************************************** */
@@ -190,11 +204,11 @@ function evaluarGanador(){
 	}
 	if(hayGanador){
 		mostrarGanador();
-		document.querySelector(".resetGame").classList.remove("d-None");
+		htmlElm.resetGame.classList.remove("d-None");
 	}else{
 		if(contadorDeTurnos>=9){
-			document.querySelector(".turno").classList.add("d-None");
-			document.querySelector(".resetGame").classList.remove("d-None");
+			htmlElm.turno.classList.add("d-None");
+			htmlElm.resetGame.classList.remove("d-None");
 			removeListeners();
 		}
 	}
@@ -203,8 +217,8 @@ function evaluarGanador(){
 function mostrarGanador(){
 	removeListeners();
 
-	document.querySelector(".turno").classList.add("d-None");
-	document.getElementById("mostrarGanador").classList.remove("d-None");
+	htmlElm.turno.classList.add("d-None");
+	htmlElm.mostrarGanador.classList.remove("d-None");
 	document.querySelector("#mostrarGanador .ganadorInner").innerHTML=users.winner;
 }
 
@@ -215,7 +229,7 @@ function removeListeners(){
 }
 
 
-var buttonReset=document.querySelector(".resetGame button");
+let buttonReset:HTMLButtonElement=<HTMLButtonElement>document.querySelector(".resetGame button");
 buttonReset.addEventListener("click",resetGame,false);
 function resetGame(){
 
@@ -225,10 +239,10 @@ function resetGame(){
 		elm.classList.remove("ms-Icon--Cancel");
 	})
 
-	document.getElementById("mostrarGanador").classList.add("d-None");
-	document.querySelector(".resetGame").classList.add("d-None");
+	htmlElm.mostrarGanador.classList.add("d-None");
+	htmlElm.resetGame.classList.add("d-None");
 
-	document.querySelector(".turno").classList.remove("d-None");
+	htmlElm.turno.classList.remove("d-None");
 
 	addClickEventGrid();
 	contadorDeTurnos=0;

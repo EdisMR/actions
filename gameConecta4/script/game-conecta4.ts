@@ -4,7 +4,7 @@
 
 const formularioConecta4 = <HTMLFormElement>document.forms[0]
 const camposGrid: HTMLElement[] = Array.from(document.querySelectorAll(".grid-container div"))
-const innerTurnDiv = <HTMLElement>document.querySelector(".innerTurnUser span")
+let innerTurnDiv = <HTMLElement>document.querySelector(".innerTurnUser span")
 const innerTurnDivParent = <HTMLElement>document.querySelector(".innerTurnUser")
 const buttonResetParent = <HTMLElement>document.querySelector(".buttonReset")
 const buttonReset :HTMLButtonElement= <HTMLButtonElement>document.querySelector(".buttonReset button")
@@ -91,9 +91,9 @@ function afterDefineUsers() {
 
 	/* sobre los divs */
 	camposGrid.forEach(elm => {
-		elm.addEventListener("mouseover", addHoverGrid);
-		elm.addEventListener("mouseleave", removeHoverGrid);
-		elm.addEventListener("click", divCLicked);
+		elm.addEventListener("mouseover", addHoverGrid,false);
+		elm.addEventListener("mouseleave", removeHoverGrid,false);
+		elm.addEventListener("click", divCLicked,false);
 	})
 
 	innerTurnUser();
@@ -111,7 +111,7 @@ function removeListerDivs() {
 
 
 /* El hover personalizado para las columnas */
-function addHoverGrid(elem:HTMLElement) {
+function addHoverGrid(elem:HTMLElement):void {
 	let claseColumna;
 	try {
 		claseColumna = this.classList[0];
@@ -124,7 +124,7 @@ function addHoverGrid(elem:HTMLElement) {
 	})
 }
 
-function removeHoverGrid(elem:HTMLElement) {
+function removeHoverGrid(elem:HTMLElement):void {
 	let claseColumna;
 	try {
 		claseColumna = this.classList[0];
@@ -203,7 +203,7 @@ function afterAnimateInnerUser() :void{
 	Recibe el elemento clicado y define el elemento a llenar,
 	recorriendo Y de abajo hacia arriba (con X estatico)
 */
-function defineUltimoElementoVacio(elemento:HTMLElement):HTMLElement{
+function defineUltimoElementoVacio(elemento:any):HTMLElement{
 	let ultimo:any;
 	var y :any= gameVertical - 1;
 
@@ -217,8 +217,8 @@ function defineUltimoElementoVacio(elemento:HTMLElement):HTMLElement{
 	return ultimo;
 }
 
-function evaluarGanador(elem:HTMLElement) :Boolean{
-	let hayGanador:Boolean = false;
+function evaluarGanador(elem:any) :boolean{
+	let hayGanador:boolean = false;
 	let valorX:number = parseInt(elem.dataset.posx);
 	let valorY:number= parseInt(elem.dataset.posy);
 
@@ -434,7 +434,7 @@ function ganadorEncontrado() :void{
 function resetGame():void{
 	buttonResetParent.classList.add("d-none");
 
-	camposGrid.forEach(elm => {
+	camposGrid.forEach((elm:any) => {
 		elm.classList.remove("user1");
 		elm.classList.remove("user2");
 		elm.children[0].classList.remove(Users.icon);

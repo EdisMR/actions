@@ -1,0 +1,24 @@
+/* COLORS */
+@import "../style/colors";
+
+@media (prefers-color-scheme:dark){
+	@import "../style/colorsDark";
+}
+
+@import "../extras/alertify";
+
+/* CONSTRUCTION STRUCTURE */
+@import "../extras/normalize";
+
+@import "../style/declarations";
+
+@media screen and (max-width:750px){
+	@import "../style/declarationsPortrait";
+}
+
+/* FONTS - ICONS */
+@import "../extras/fabric-icons-inline";
+
+
+/* DEVELOPMENT PROCESS VISUALIZATIONS */
+//@import "globalDev";
