@@ -21,7 +21,6 @@
 	redirector();
 	loader();
 	headerHTML();
-
 	?>
 
 

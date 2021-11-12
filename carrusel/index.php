@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title data-text="title">XitusDev - Carousel</title>
+	<title data-text="htitle"></title>
 	
 	<?php
 		include_once "../global/global.php";
@@ -25,13 +25,12 @@
 	<main>
 
 		<section class="portada centrador">
-			<h1 data-text="t1">Carousel</h1>
-			<p>
-			It is important to note that these carousels and their operation was developed completely by myself (XitusDev).
+			<h1 data-text="hportada"></h1>
+			<p data-text="hport1">
+			
 			</p>
-			<p>
-				It is possible to manipulate the carousel by using the added controls, or using the manual scroll: in a cellphone, slide with your finger, 
-				and in the case of a computer, manual scrolling is done with Shift key + Scroll
+			<p data-text="hportexplanation">
+				
 			</p>
 		</section>
 
@@ -42,7 +41,7 @@
 
 				<article class="carousel-header">
 					<div>
-						<h1>Image slideshow</h1>
+						<h1 data-text="slider1"></h1>
 					</div>
 				</article>
 
@@ -124,7 +123,7 @@
 
 				<article class="carousel-header">
 					<div>
-						<h1>Elements Carousel</h1>
+						<h1 data-text="slider2"></h1>
 					</div>
 				</article>
 
@@ -140,7 +139,7 @@
 								</figure>
 							</div>
 							<div class="carousel-itemPart">
-								<h3>Imagen and two paragraphs</h3>
+								<h3 data-text="parag1"></h3>
 								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihi llam.</p>
 							</div>
 						</article>
@@ -160,9 +159,8 @@
 								</figure>
 							</div>
 							<div class="carousel-itemPart">
-								<h3>Two images, one title and one paragraph</h3>
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quaerat fugit quod
-									necessitatibus sint laboriosam cumque unde praesentium ipsam ullam.</p>
+								<h3 data-text="parag3"></h3>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quaerat fugit quod necessitatibus sint laboriosam cumque unde praesentium ipsam ullam.</p>
 							</div>
 						</article>
 						<!-- FIN DEL ITEM -->
@@ -172,17 +170,17 @@
 						<article class="carousel-item">
 							
 							<div class="carousel-itemPart">
-								<h3>Title one with a paragraph</h3>
+								<h3 data-text="parag5"></h3>
 								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quaerat fugit quod
 									necessitatibus sint laboriosam cumque unde praesentium ipsam ullam.</p>
 							</div>
 							<div class="carousel-itemPart">
-								<h3>Title two with a paragraph</h3>
+								<h3 data-text="parag2"></h3>
 								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quaerat fugit quod
 									necessitatibus sint laboriosam cumque unde praesentium ipsam ullam.</p>
 							</div>
 							<div class="carousel-itemPart">
-								<h3>Title three with a paragraph</h3>
+								<h3 data-text="parag4"></h3>
 								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quaerat fugit quod
 									necessitatibus sint laboriosam cumque unde praesentium ipsam ullam.</p>
 							</div>
@@ -220,7 +218,7 @@
 								</figure>
 							</div>
 							<div class="carousel-itemPart">
-								<h3>A video, one título and a paragraph</h3>
+								<h3 data-text="parag6"></h3>
 								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quaerat fugit quod
 									necessitatibus sint laboriosam cumque unde praesentium ipsam ullam.</p>
 							</div>
@@ -262,7 +260,7 @@
 
 				<article class="carousel-header">
 					<div>
-						<h1>Manual scroll, without controls</h1>
+						<h1 data-text="slider3"></h1>
 					</div>
 				</article>
 
@@ -278,7 +276,7 @@
 								</figure>
 							</div>
 							<div class="carousel-itemPart">
-								<h3>Item title</h3>
+								<h3 data-text="parag7"></h3>
 								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quaerat fugit quod
 									necessitatibus sint laboriosam cumque unde praesentium ipsam ullam.</p>
 							</div>
@@ -289,7 +287,7 @@
 						<!-- ITEM -->
 						<article class="carousel-item">
 							<div class="carousel-itemPart">
-								<h3>Item title</h3>
+								<h3 data-text="parag7"></h3>
 								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quaerat fugit quod
 									necessitatibus sint laboriosam cumque unde praesentium ipsam ullam.</p>
 							</div>
@@ -305,7 +303,7 @@
 								</figure>
 							</div>
 							<div class="carousel-itemPart">
-								<h3>Item title</h3>
+								<h3 data-text="parag7"></h3>
 								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quaerat fugit quod
 									necessitatibus sint laboriosam cumque unde praesentium ipsam ullam.</p>
 							</div>
@@ -321,7 +319,7 @@
 								</figure>
 							</div>
 							<div class="carousel-itemPart">
-								<h3>Item title</h3>
+								<h3 data-text="parag7"></h3>
 								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quaerat fugit quod
 									necessitatibus sint laboriosam cumque unde praesentium ipsam ullam.</p>
 							</div>
@@ -337,7 +335,7 @@
 								</figure>
 							</div>
 							<div class="carousel-itemPart">
-								<h3>Item title</h3>
+								<h3 data-text="parag7"></h3>
 								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil quaerat fugit quod
 									necessitatibus sint laboriosam cumque unde praesentium ipsam ullam.</p>
 							</div>

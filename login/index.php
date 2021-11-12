@@ -7,7 +7,7 @@
 	<title>XitusDev - Log in</title>
 	<link rel="shortcut icon" href="/global/assets/me.ico" type="image/x-icon">
 
-	<link rel="stylesheet" href="/global/sass/global.css">
+	<link rel="stylesheet" href="/global/css/compiled/global.css">
 	<link rel="stylesheet" href="./sass/login.css">
 
 	<script defer src="./script/login.js"></script>

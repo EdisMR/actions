@@ -1,3 +1,16 @@
 {
-	"t1":"Carousel"
+	"htitle":"XitusDev - Carousel",
+	"hportada":"Carousel",
+	"hport1":"It is important to note that these carousels and their operation was developed completely by myself (XitusDev).",
+	"hportexplanation":"It is possible to manipulate the carousel by using the added controls, or using the manual scroll: in a cellphone, slide with your finger, and in the case of a computer, manual scrolling is done with Shift key + Scroll",
+	"slider1":"Image slideshow",
+	"slider2":"Elements Carousel",
+	"parag1":"Imagen and two paragraphs",
+	"parag2":"Title two with a paragraph",
+	"parag3":"Two images, one title and one paragraph",
+	"parag4":"Title three with a paragraph",
+	"parag5":"Title one with a paragraph",
+	"parag6":"A video, one título and a paragraph",
+	"slider3":"Manual scroll, without controls",
+	"parag7":"Item title"
 }

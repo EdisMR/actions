@@ -203,3 +203,13 @@ function carouselOrder() {
 }
 
 carouselOrder();
+
+window.addEventListener("load",afterLoad,false)
+
+function afterLoad():void{
+	window.removeEventListener("load",afterLoad,false)
+	idiomHTMLInner({
+		spa: window.location.origin+"/galeria/lang/spa.json",
+		eng: window.location.origin+"/galeria/lang/eng.json",
+	})
+}
