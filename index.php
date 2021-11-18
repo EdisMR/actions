@@ -81,19 +81,7 @@
 							</ul>
 						</div>
 					</section>
-					<section class="card" data-accesibilityborder="true">
-						<div class="card-header">
-							<h4><a href="/carrusel/" rel="noopener noreferrer" data-text="bcarouseltitle"></a></h4>
-						</div>
-						<div class="card-content">
-							<ul>
-								<li data-text="bcarouselitem1"></li>
-								<li data-text="bcarouselitem2"></li>
-								<li data-text="bcarouselitem3"></li>
-								<li data-text="bcarouselitem4"></li>
-							</ul>
-						</div>
-					</section>
+
 					<section class="card" data-accesibilityborder="true">
 						<div class="card-header">
 							<h4><a href="/api/" rel="noopener noreferrer" data-text="aapi"></a></h4>
@@ -106,6 +94,21 @@
 							</ul>
 						</div>
 					</section>
+
+					<section class="card" data-accesibilityborder="true">
+						<div class="card-header">
+							<h4><a href="/index.php#juegos-html" rel="noopener noreferrer" data-text="bcarouseltitle"></a></h4>
+						</div>
+						<div class="card-content">
+							<ul>
+								<li data-text="bcarouselitem1"></li>
+								<li data-text="bcarouselitem2"></li>
+								<li data-text="bcarouselitem3"></li>
+								<li data-text="bcarouselitem4"></li>
+							</ul>
+						</div>
+					</section>
+					
 				</div>
 			</article>
 		</section>
@@ -311,6 +314,10 @@
 				</div>
 			</article>
 		</section>
+
+		<!-- <section class="moreinfowebsite">
+			<a href="about/" data-text="moreinfosite"></a>
+		</section> -->
 	</main>
 
 	<?php

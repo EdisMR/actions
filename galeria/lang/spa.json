@@ -1,7 +1,7 @@
 {
 	"pagetitle":"XitusDev - Galería",
 	"portada1":"Galería de proyectos",
-	"about1":"La asociación ASIPROFEestá conformada por mujeres de La Legua, en Aserrí, quienes preparan varios productos basados en el café que ellas y su comunidad cosechan. este sitio fue realizado con php, html, sass, y javascript vanilla",
+	"about1":"La asociación ASIPROFE está conformada por mujeres de La Legua, en Aserrí, quienes preparan varios productos basados en el café que ellas y su comunidad cosechan. este sitio fue realizado con php, html, sass, y javascript vanilla",
 	"portada2":"Título y portada del sitio",
 	"parag1":"En la portada de la página está el logo y un producto representativo de ASIPROFE.",
 	"parag2":"El menú en la parte superior está solamente en la izquierda (en móbiles y en PC), y un menú para compartir situado a la derecha",
@@ -20,5 +20,13 @@
 	"parag10":"Puedes ver los beneficios de las mascarillasen la zona inferior, y la variedad de caracteristicas que las mascarillas Pura Vida ofrecen",
 	"portada8":"Detalles y un sitio adaptable",
 	"parag11":"Como puedes ver, tienes recomendaciones para lavar tu mascarilla Pura Vida, y una manera de prevenir dificultades al usar la mascarilla, por ejemplo el olor a jabón en tu mascarilla",
-	"parag12":"El sitio web es adaptable, y el menú a la derecha permanece en la derecha."
+	"parag12":"El sitio web es adaptable, y el menú a la derecha permanece en la derecha.",
+	"carousel00":"Comandos de teclado para Windows",
+	"carousel01":"Comandos de teclado que ayudan a trabajar mucho más rápido en Microsfot Windows. Este sitio web fue desarrolado usando HTML, CSS, Javascript, SASS y Typescript. <br>Es importante destacar que el funcionamiento de este sitio permite cambiar de idioma sin tener que volver a cargar el sitio web",
+	"carousel02":"Sitio web bilingüe",
+	"carousel03":"Este sitio web es bilingüe, en esta imagen puedes ver el sitio web en español",
+	"carousel04":"Configuraciones y opciones del sitio web",
+	"carousel05":"Entre las configuraciones se destaca el cambio del tamaño de texto, el modo de alto contraste y el cambio de idioma",
+	"carousel07":"Es importante notar que estos carruseles y su operación fue desarrollada completamente por mí mismo (XitusDev).",
+	"carousel08":"Es posible manipular el carrusel usando los controles añadidos, o usando el scroll manual: en un celular, arrastra con el dedo hacia un lado, y en el caso de una computadora, el scroll manual se realiza con la tecla Shift + Scroll"
 }

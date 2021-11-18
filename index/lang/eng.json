@@ -10,11 +10,11 @@
 	"bgalelist2":"The gallery have two different views, Grid view and the long size view",
 	"bgalelist3":"When touching an image while Grid view, you'll see the long size view with the corresponding description",
 	"bgalelist4":"Note: page under development",
-	"bcarouseltitle":"Carousel / Presentation",
-	"bcarouselitem1":"Image carousel, similar to slideshow transitions",
-	"bcarouselitem2":"Several types of carousels independent of each other",
-	"bcarouselitem3":"User friendly transitions",
-	"bcarouselitem4":"Carousel controls that don't affect controls on other carousels",
+	"bcarouseltitle":"HTML5 Projects",
+	"bcarouselitem1":"Projects and games developed completely from scratch, using Javascript programming",
+	"bcarouselitem2":"Games including Conecta4 and Tic Tac Toe",
+	"bcarouselitem3":"A plain text based calculator for performing basic combined operations",
+	"bcarouselitem4":"A video player developed for a video project for a fictitious Pyme",
 	"aapili1":"Request data using a weather API",
 	"aapili2":"Style adapts to the viewport to display information comfortably",
 	"aapili3":"Javascript programming with use of the Promise API, Fetch API and error handling of the http request",
@@ -24,5 +24,6 @@
 	"bgamesconnect":"Connect 4",
 	"bgamestic":"Tic tac toe",
 	"bgamescalc":"String Based Calculator",
-	"bgamesvideo":"Video Player - Broccoli"
+	"bgamesvideo":"Video Player - Broccoli",
+	"moreinfosite":"More information about this website"
 }

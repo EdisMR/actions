@@ -24,6 +24,8 @@
 
 	<section class="portada-proyectos">
 		<h1 data-text="portada1"></h1>
+		<p data-text="carousel07"></p>
+		<p data-text="carousel08"></p>
 	</section>
 
 	<section class="carousel-container">
@@ -149,6 +151,104 @@
 	</section>
 	<!-- FIN DE CAROUSEl -->
 
+
+
+	<section class="carousel-container">
+		
+		<article class="carousel-header">
+			<div><h1 data-text="carousel00"></h1></div>
+			<div data-text="carousel01"></div>
+		</article>
+		
+		<article class="carousel-body">
+			<section class="carousel-items">
+
+
+				<!-- ITEM -->
+				<article class="carousel-item">
+					<div class="carousel-itemPart">
+						<figure>
+							<img src="./assets/command (1).webp" alt="comand 1">
+						</figure>
+					</div>
+					<div class="carousel-itemPart">
+						<h3 data-text="carousel02"></h3>
+						<p data-text="carousel03"></p>
+					</div>
+				</article>
+				<!-- FIN DEL ITEM -->
+
+
+				
+
+				<!-- ITEM -->
+				<article class="carousel-item">
+					<div class="carousel-itemPart">
+						<figure>
+							<img src="./assets/command (2).webp" alt="copa">
+						</figure>
+					</div>
+					<div class="carousel-itemPart">
+						<h3 data-text="carousel04"></h3>
+						<p data-text="carousel05"></p>
+						<p data-text="carousel06"></p>
+					</div>
+				</article>
+				<!-- FIN DEL ITEM -->
+
+
+
+				<!-- ITEM -->
+				<article class="carousel-item">
+					<div class="carousel-itemPart">
+						<figure>
+							<img src="./assets/command (3).webp" alt="copa">
+						</figure>
+					</div>
+				</article>
+				<!-- FIN DEL ITEM -->
+
+
+
+				<!-- ITEM -->
+				<article class="carousel-item">
+					<div class="carousel-itemPart">
+						<figure>
+							<img src="./assets/command (4).webp" alt="copa">
+						</figure>
+					</div>
+				</article>
+				<!-- FIN DEL ITEM -->
+
+
+				<!-- ITEM -->
+				<article class="carousel-item">
+					<div class="carousel-itemPart">
+						<figure>
+							<img src="./assets/command (5).webp" alt="copa">
+						</figure>
+					</div>
+				</article>
+				<!-- FIN DEL ITEM -->
+
+			</section>
+		</article>
+		
+		<article class="carousel-controls">
+			<div class="carousel-buttons">
+				<button class="carousel-btn-previous"><span class="ms-Icon ms-Icon--ChevronLeftMed"></span></button>
+				<div class="carousel-Inner-howMany">
+					<span class="carousel-innerActual">5</span> <span>/</span>
+					<span class="carousel-innerTotal">8</span>
+				</div>
+				<button class="carousel-btn-pause"><span class="ms-Icon ms-Icon--Pause"></span></button>
+				<button class="carousel-btn-play"><span class="ms-Icon ms-Icon--Play"></span></button>
+				<button class="carousel-btn-next"><span class="ms-Icon ms-Icon--ChevronRightMed"></span></button>
+			</div>
+		</article>
+	</section>
+	<!-- FIN DE CAROUSEl -->
+	
 
 
 	<section class="carousel-container">

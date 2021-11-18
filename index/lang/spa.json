@@ -10,11 +10,11 @@
 	"bgalelist2":"La galería tiene dos vistas diferentes, Vista de cuadrícula y vista panorámica",
 	"bgalelist3":"Cuando tocas una imagen en la vista de cuadrícula, verás la vista panorámica con la descripción correspondiente",
 	"bgalelist4":"Nota: página en desarrollo",
-	"bcarouseltitle":"Carrusel / Presentación",
-	"bcarouselitem1":"Carrusel de imágenes, similar a una presentación de slides",
-	"bcarouselitem2":"Varios tipos de carrusel, independientes entre sí",
-	"bcarouselitem3":"Transiciones amigables con el usuario",
-	"bcarouselitem4":"Controles de carrusel que no afectan los controles de otro carrusel",
+	"bcarouseltitle":"Proyectos HTML5",
+	"bcarouselitem1":"Proyectos y juegos desarrollados completamente desde cero, mediante programación Javascript",
+	"bcarouselitem2":"Juegos entre los que se incluyen Conecta4 y Tic Tac Toe",
+	"bcarouselitem3":"Una calculadora basada en texto plano, para realizar operaciones combinadas basicas",
+	"bcarouselitem4":"Un reproductor de video desarrollado para un proyecto de video para una pyme ficticia",
 	"aapili1":"Solicitar información usando una API del tiempo meteorológico",
 	"aapili2":"Estilo adaptable al viewport para mostrar la información cómodamente",
 	"aapili3":"Programado en Javascript con el uso de la API Promesas, API Fetch y manejo de errores del la solicitud HTTP",
@@ -24,5 +24,6 @@
 	"bgamesconnect":"Conecta 4",
 	"bgamestic":"Tic tac toe",
 	"bgamescalc":"Calculadora basada en texto",
-	"bgamesvideo":"Reproductor de video - Broccoli"
+	"bgamesvideo":"Reproductor de video - Broccoli",
+	"moreinfosite":"Más información acerca de este sitio web"
 }

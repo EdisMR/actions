@@ -11,7 +11,7 @@ let users:{
 }={
 	user1 : "", /* Es X */
 	user2 : "", /* Es O */
-	winner:	"",
+	winner:	"", /* Who is the final winner */
 }
 
 
