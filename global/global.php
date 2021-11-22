@@ -17,8 +17,36 @@ function redirector()
 function loader()
 {
 	?>
+	<style>
+		.loader{
+			background-color: hsl(200deg, 20%, 15%);
+			display: grid;
+			place-items: center;
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			z-index: 120;
+			font-size: 100px;
+		}
+
+		.ball-grid-beat div{
+			background-color: #eee;
+		}
+	</style>
 	<div class="loader">
-		<span>...</span>
+		<div class="ball-grid-beat">
+
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
 	</div>
 <?php
 }
@@ -362,6 +390,9 @@ function headHTML()
 
 		gtag('config', 'G-7L6RHQNWLQ');
 	</script>
+
+	<link rel="preload" href="/global/css/extras/loaders.min.css" as="style">
+	<link rel="stylesheet" href="/global/css/extras/loaders.min.css">
 
 	<meta http-equiv="Cache-Control" content="max-age=43200">
 	<link rel="shortcut icon" href="/global/assets/me.ico" type="image/x-icon">

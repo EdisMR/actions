@@ -8,7 +8,7 @@ let Menuanimation = gsap.timeline()
     opacity: 0,
     x: -50,
     stagger: .1,
-    delay: 1
+    delay: 1,
 });
 window.addEventListener("mousemove", mouseMovement, false);
 window.addEventListener("keyup", keyEvent, false);
@@ -143,4 +143,10 @@ function positionDino(evVal, mitadP) {
 var settingsDiv = document.createElement("script");
 settingsDiv.setAttribute("src", "/global/script/settings.js");
 document.head.appendChild(settingsDiv);
+window.addEventListener("load", deleteLoader, false);
+function deleteLoader() {
+    window.removeEventListener("load", deleteLoader, false);
+    let childBodyA = document.querySelector(".loader");
+    document.body.removeChild(childBodyA);
+}
 //# sourceMappingURL=main.js.map

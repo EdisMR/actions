@@ -10,7 +10,7 @@ let Menuanimation=gsap.timeline()
 	opacity:0,
 	x:-50,
 	stagger:.1,
-	delay:1
+	delay:1,
 })
 
 /* ****************************************** */
@@ -231,3 +231,12 @@ function positionDino(evVal:number,mitadP:number):number{
 var settingsDiv=<HTMLScriptElement>document.createElement("script");
 settingsDiv.setAttribute("src","/global/script/settings.js");
 document.head.appendChild(settingsDiv)
+
+
+window.addEventListener("load",deleteLoader,false)
+
+function deleteLoader():void{
+	window.removeEventListener("load",deleteLoader,false)
+	let childBodyA:any=document.querySelector(".loader");
+	document.body.removeChild(childBodyA);
+}

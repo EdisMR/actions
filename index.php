@@ -18,8 +18,8 @@
 <body>
 
 	<?php
-	redirector();
 	loader();
+	redirector();
 	headerHTML();
 	?>
 

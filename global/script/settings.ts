@@ -334,9 +334,6 @@ if(localStorage.lang=="spa"){
 }
 
 
-/* eliminar loader */
-let childBodyA:any=document.querySelector(".loader");
-document.body.removeChild(childBodyA);
 
 
 function alertifyMessageBilingual(param:{es:string,eng:string}):void{
@@ -351,8 +348,3 @@ function alertifyMessageBilingual(param:{es:string,eng:string}):void{
 		alertify.message(param.eng);
 	}
 }
-
-gsap.from("body",{
-	opacity:0,
-	duration:1.5,
-})

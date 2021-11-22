@@ -218,8 +218,6 @@ if (localStorage.lang == "eng") {
 if (localStorage.lang == "spa") {
     settingsVars.buttonBilingual.classList.remove("settingItemInactive");
 }
-let childBodyA = document.querySelector(".loader");
-document.body.removeChild(childBodyA);
 function alertifyMessageBilingual(param) {
     if (localStorage.lang == "spa") {
         alertify.set('notifier', 'delay', 5);
@@ -232,8 +230,4 @@ function alertifyMessageBilingual(param) {
         alertify.message(param.eng);
     }
 }
-gsap.from("body", {
-    opacity: 0,
-    duration: 1.5,
-});
 //# sourceMappingURL=settings.js.map
