@@ -35,7 +35,22 @@ var headerButton = {
     iconoArriba: "&#x25B2;",
     iconoAbajo: "&#x25BC;",
 };
+let menuAnimationPortrait;
 if (document.body.clientWidth < 750 || screen.width < 750) {
+    menuAnimationPortrait = gsap.from(".header-enlaces li", {
+        rotationX: 90,
+        stagger: .2,
+        duration: .5,
+        paused: true,
+        onStart: function () {
+            headerButton.headerEnlaces.style.height = `${headerButton.headerEnlaces.scrollHeight + 50}px`;
+            headerButton.btn.innerHTML = headerButton.iconoArriba;
+        },
+        onReverseComplete: function () {
+            headerButton.headerEnlaces.style.height = "0px";
+            headerButton.btn.innerHTML = headerButton.iconoAbajo;
+        }
+    });
     window.removeEventListener("keyup", keyEvent, false);
     headerButton.btn.innerHTML = headerButton.iconoAbajo;
     headerButton.btn.addEventListener("click", menuSwitchMain, false);
@@ -62,24 +77,13 @@ function menuSwitchMain() {
 function openMenu() {
     headerButton.disp = true;
     headerButton.headerEnlaces.classList.add("showMenu");
-    headerButton.headerLi.forEach((elm, index) => {
-        elm.style.animationDelay = (index / 16) + "s";
-        elm.classList.add("animatedItem");
-    });
-    headerButton.headerEnlaces.style.height = `${headerButton.headerEnlaces.scrollHeight + 30}px`;
-    headerButton.btn.innerHTML = headerButton.iconoArriba;
+    menuAnimationPortrait.play();
 }
 function closeMenu() {
     if (headerButton.disp == true) {
         headerButton.disp = false;
         headerButton.headerEnlaces.classList.remove("showMenu");
-        headerButton.headerLi.forEach(elm => {
-            elm.style.display = "auto";
-            elm.classList.remove("animatedItem");
-            elm.style.opacity = "0";
-        });
-        headerButton.headerEnlaces.style.height = 0 + "px";
-        headerButton.btn.innerHTML = headerButton.iconoAbajo;
+        menuAnimationPortrait.reverse();
     }
 }
 function w000() {
@@ -139,5 +143,4 @@ function positionDino(evVal, mitadP) {
 var settingsDiv = document.createElement("script");
 settingsDiv.setAttribute("src", "/global/script/settings.js");
 document.head.appendChild(settingsDiv);
-Menuanimation;
 //# sourceMappingURL=main.js.map

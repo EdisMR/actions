@@ -8,6 +8,7 @@ var settingsVars:{
 	buttonHighContrast:HTMLButtonElement
 	buttonBigFont:HTMLButtonElement
 	buttonBilingual:HTMLButtonElement
+	settingsDisplayed:boolean
 }={
 	/* para mostrar la ventana */
 	parentDisplay:<HTMLElement>document.getElementById("modalSettings"),
@@ -18,6 +19,8 @@ var settingsVars:{
 	buttonHighContrast:<HTMLButtonElement>document.getElementById("buttonHighContrast"),
 	buttonBigFont:<HTMLButtonElement>document.getElementById("buttonBigFont"),
 	buttonBilingual:<HTMLButtonElement>document.getElementById("buttonBilingual"),
+
+	settingsDisplayed:false,
 }
 
 
@@ -39,9 +42,11 @@ settingsVars.buttonOpen.addEventListener("click",displaySettings,false);
 settingsVars.closeButton.addEventListener("click",hideSettings,false);
 function displaySettings(){
 	animationSettings.play()
+	settingsVars.settingsDisplayed=true
 }
 function hideSettings(){
 	animationSettings.reverse()
+	settingsVars.settingsDisplayed=false
 }
 
 
@@ -105,10 +110,7 @@ function switchHighContrast(){
 		}
 	}
 	
-	alertifyMessageBilingual({
-		es:"Sitio en construcción",
-		eng:"Site under construction"
-	})
+	
 }
 
 
@@ -141,6 +143,7 @@ function switchBigFont(){
 			localStorage.bigFontBoolean="true";
 		}
 	}
+	
 }
 
 
@@ -150,12 +153,19 @@ function switchBigFont(){
 
 function applyHighContrast(){
 	settingsVars.buttonHighContrast.classList.remove("settingItemInactive");
-	let arrayTodos:HTMLElement[]=Array.from(document.querySelectorAll("*"));
+	let arrayTodos:HTMLElement[]=Array.from(document.querySelectorAll("[data-text]"));
 	arrayTodos.forEach(elm=>{
-		if(elm.dataset.accesibilityborder=="true"){
-			elm.classList.add("accesibilityBorder")
-		}
+		elm.classList.add("highContrast")
 	})
+
+	if(settingsVars.settingsDisplayed){
+		alertifyMessageBilingual({
+			es:"Alto Contraste Aplicado",
+			eng:"High Contrast Applied"
+		})
+	}
+
+	
 }
 
 
@@ -168,6 +178,13 @@ function applyBigFont(){
 	arrayTodos.forEach(elm=>{
 		elm.style.fontSize=`calc(${elm.dataset.initialfont} + 5px)`
 	})
+
+	if(settingsVars.settingsDisplayed){
+		alertifyMessageBilingual({
+			es:"Tipografía grande Aplicada",
+			eng:"Big Typography Applied"
+		})
+	}
 }
 
 
@@ -178,12 +195,17 @@ function applyBigFont(){
 
 function removeHighContrast(){
 	settingsVars.buttonHighContrast.classList.add("settingItemInactive");
-	let arrayTodos:HTMLElement[]=Array.from(document.querySelectorAll("*"));
+	let arrayTodos:HTMLElement[]=Array.from(document.querySelectorAll("[data-text]"));
 	arrayTodos.forEach(elm=>{
-		if(elm.dataset.accesibilityborder=="true"){
-			elm.classList.remove("accesibilityBorder")
-		}
+		elm.classList.remove("highContrast")
 	})
+
+	if(settingsVars.settingsDisplayed){
+		alertifyMessageBilingual({
+			es:"Alto Contraste Removido",
+			eng:"High Contrast Removed"
+		})
+	}
 }
 
 
@@ -194,6 +216,12 @@ function removeBigFont(){
 		elm.style.fontSize=elm.dataset.initialfont
 		elm.removeAttribute("data-initialfont");
 	})
+	if(settingsVars.settingsDisplayed){
+		alertifyMessageBilingual({
+			es:"Letra grande Removed",
+			eng:"Big Typography removed"
+		})
+	}
 }
 
 

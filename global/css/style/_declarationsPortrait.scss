@@ -55,13 +55,13 @@ header{
 	padding-top: 0px;
 	padding-bottom: 0px;
 	margin-top: 0px;
-	transition: all .4s;
+	transition-duration: .2s;
 	ul{
 		li{
-			will-change: contents;
 			padding-left: 40px;
 			a{
-				display:flex;
+				display: flex;
+				margin-top: 10px;
 				font-size: 20px;
 				div{
 					font-size: inherit;
@@ -77,20 +77,6 @@ header{
 .showMenu{
 	padding-top: 20px;
 	overflow: initial;
-	ul{
-		li{
-			a{
-				display: flex;
-				opacity: 0;
-				margin-top: 10px;
-				div{
-					span{
-					}
-				}
-			}
-		}
-	}
-
 }
 
 
