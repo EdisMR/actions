@@ -3,6 +3,15 @@ var globals={
 	fetchRes:"",
 }
 
+/* Menu animation */
+let Menuanimation=gsap.from(".header-enlaces li",{
+	duration:.5,
+	opacity:0,
+	x:-10,
+	stagger:.1,
+	delay:1
+})
+
 /* ****************************************** */
 /* ******** EVENTOS DE MOUSE Y TECLADO ***** */
 /* ***************************************** */
@@ -63,6 +72,8 @@ if (document.body.clientWidth<750 || screen.width<750) {
 			elm.style.opacity="1";
 		},false)
 	})
+}else{
+	Menuanimation
 }
 
 
@@ -88,6 +99,7 @@ function openMenu():void {
 		elm.classList.add("animatedItem");
 	})
 	headerButton.headerEnlaces.style.height=`${headerButton.headerEnlaces.scrollHeight+30}px`;
+
 	
 	/* Llenar boton con el icono */
 	headerButton.btn.innerHTML = headerButton.iconoArriba;
@@ -205,3 +217,8 @@ function positionDino(evVal:number,mitadP:number):number{
 var settingsDiv=<HTMLScriptElement>document.createElement("script");
 settingsDiv.setAttribute("src","/global/script/settings.js");
 document.head.appendChild(settingsDiv)
+
+
+
+
+Menuanimation

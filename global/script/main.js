@@ -2,6 +2,13 @@
 var globals = {
     fetchRes: "",
 };
+let Menuanimation = gsap.from(".header-enlaces li", {
+    duration: .5,
+    opacity: 0,
+    x: -10,
+    stagger: .1,
+    delay: 1
+});
 window.addEventListener("mousemove", mouseMovement, false);
 window.addEventListener("keyup", keyEvent, false);
 let innerMouse = Array.from(document.querySelectorAll(".header-events .inner-event"))[0];
@@ -39,6 +46,9 @@ if (document.body.clientWidth < 750 || screen.width < 750) {
             elm.style.opacity = "1";
         }, false);
     });
+}
+else {
+    Menuanimation;
 }
 function menuSwitchMain() {
     if (headerButton.disp == false) {
@@ -128,4 +138,5 @@ function positionDino(evVal, mitadP) {
 var settingsDiv = document.createElement("script");
 settingsDiv.setAttribute("src", "/global/script/settings.js");
 document.head.appendChild(settingsDiv);
+Menuanimation;
 //# sourceMappingURL=main.js.map

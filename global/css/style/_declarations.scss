@@ -70,21 +70,23 @@ a,button{
 }
 
 .loader{
-	background-color: #333;
-	display: inline-block;
+	background-color: #1f292e;
+	display: grid;
+	place-items: center;
 	position: fixed;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
 	z-index: 120;
-	pointer-events: all !important;
+	font-size: 100px;
+	/* pointer-events: all !important;
 	background-color: rgb(179, 179, 179);
 	opacity: .5;
 	@supports (backdrop-filter: blur(5px)){
 		opacity: initial;
 		backdrop-filter: blur(5px);
 		background-color: rgba(0, 0, 0, .1);  
-	}
+	} */
 }
 
 @keyframes rotar{

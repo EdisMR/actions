@@ -17,7 +17,9 @@ function redirector()
 function loader()
 {
 	?>
-	<div class="loader"></div>
+	<div class="loader">
+		<span>...</span>
+	</div>
 <?php
 }
 
@@ -363,7 +365,7 @@ function headHTML()
 
 
 	<link rel="shortcut icon" href="/global/assets/me.ico" type="image/x-icon">
-	<script src="/global/script/anime-3.2.1.min.js"></script>
+	<script src="/global/script/gsap-3.8.0.min.js"></script>
 	<script src="/global/script/alertify.min.js"></script>
 	<script defer src="/global/script/main.js"></script>
 	<link rel="stylesheet" href="/global/css/compiled/global.css">

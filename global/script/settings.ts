@@ -20,6 +20,8 @@ var settingsVars:{
 	buttonBilingual:<HTMLButtonElement>document.getElementById("buttonBilingual"),
 }
 
+
+
 /* Settings to Display */
 settingsVars.buttonOpen.addEventListener("click",displaySettings,false);
 settingsVars.closeButton.addEventListener("click",hideSettings,false);

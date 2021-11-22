@@ -6,11 +6,12 @@ function afterLoad() {
         spa: window.location.origin + "/index/lang/spa.json",
         eng: window.location.origin + "/index/lang/eng.json",
     });
-    anime({
-        targets: '.header-enlaces li',
-        scale: [.2, 1],
-        easing: "easeOutExpo",
-        duration: 2000
-    });
 }
+gsap.from(".tituloPortada,.index-portada", {
+    duration: 2,
+    scale: .9,
+    rotationX: 90,
+    stagger: 1,
+    delay: .2
+});
 //# sourceMappingURL=index.js.map
