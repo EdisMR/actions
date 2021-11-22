@@ -363,7 +363,7 @@ function headHTML()
 		gtag('config', 'G-7L6RHQNWLQ');
 	</script>
 
-
+	<meta http-equiv="Cache-Control" content="max-age=43200">
 	<link rel="shortcut icon" href="/global/assets/me.ico" type="image/x-icon">
 	<script src="/global/script/gsap-3.8.0.min.js"></script>
 	<script src="/global/script/alertify.min.js"></script>

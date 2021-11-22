@@ -39,7 +39,7 @@ let menuAnimationPortrait;
 if (document.body.clientWidth < 750 || screen.width < 750) {
     menuAnimationPortrait = gsap.from(".header-enlaces li", {
         rotationX: 90,
-        stagger: .2,
+        stagger: .1,
         duration: .5,
         paused: true,
         onStart: function () {

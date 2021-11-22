@@ -143,8 +143,8 @@ function removeBigFont() {
     });
     if (settingsVars.settingsDisplayed) {
         alertifyMessageBilingual({
-            es: "Letra grande Removed",
-            eng: "Big Typography removed"
+            es: "Tipografía grande Removida",
+            eng: "Big Typography Removed"
         });
     }
 }
@@ -234,6 +234,6 @@ function alertifyMessageBilingual(param) {
 }
 gsap.from("body", {
     opacity: 0,
-    duration: 1,
+    duration: 1.5,
 });
 //# sourceMappingURL=settings.js.map
