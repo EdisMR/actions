@@ -21,15 +21,27 @@ var settingsVars:{
 }
 
 
+let animationSettings=gsap.from(".settingsContainer",{
+	y:-300,
+	rotationY:50,
+	duration:.5,
+	paused:true,
+	onStart:function(){
+		settingsVars.parentDisplay.classList.remove("d-none")
+	},
+	onReverseComplete:function(){
+		settingsVars.parentDisplay.classList.add("d-none")
+	}
+})
 
 /* Settings to Display */
 settingsVars.buttonOpen.addEventListener("click",displaySettings,false);
 settingsVars.closeButton.addEventListener("click",hideSettings,false);
 function displaySettings(){
-	settingsVars.parentDisplay.classList.remove("d-none")
+	animationSettings.play()
 }
 function hideSettings(){
-	settingsVars.parentDisplay.classList.add("d-none")
+	animationSettings.reverse()
 }
 
 
@@ -311,3 +323,8 @@ function alertifyMessageBilingual(param:{es:string,eng:string}):void{
 		alertify.message(param.eng);
 	}
 }
+
+gsap.from("body",{
+	opacity:0,
+	duration:1,
+})

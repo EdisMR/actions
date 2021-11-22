@@ -70,7 +70,8 @@ a,button{
 }
 
 .loader{
-	background-color: #1f292e;
+	background-color: var(--bodyBg);
+	color: var(--bodyColor);
 	display: grid;
 	place-items: center;
 	position: fixed;

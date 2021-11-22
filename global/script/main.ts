@@ -4,10 +4,11 @@ var globals={
 }
 
 /* Menu animation */
-let Menuanimation=gsap.from(".header-enlaces li",{
+let Menuanimation=gsap.timeline()
+.from(".header-enlaces li,footer,footer li",{
 	duration:.5,
 	opacity:0,
-	x:-10,
+	x:-50,
 	stagger:.1,
 	delay:1
 })

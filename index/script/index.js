@@ -12,6 +12,6 @@ gsap.from(".tituloPortada,.index-portada", {
     scale: .9,
     rotationX: 90,
     stagger: 1,
-    delay: .2
+    delay: 1
 });
 //# sourceMappingURL=index.js.map
