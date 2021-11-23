@@ -238,5 +238,5 @@ window.addEventListener("load",deleteLoader,false)
 function deleteLoader():void{
 	window.removeEventListener("load",deleteLoader,false)
 	let childBodyA:any=document.querySelector(".loader");
-	document.body.removeChild(childBodyA);
+	childBodyA.style.display="none"
 }

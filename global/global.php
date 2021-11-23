@@ -19,7 +19,8 @@ function loader()
 	?>
 	<style>
 		.loader{
-			background-color: hsl(200deg, 20%, 15%);
+			background-color: rgb(31 41 46 / 80%);
+			color: #eee;
 			display: grid;
 			place-items: center;
 			position: fixed;

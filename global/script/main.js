@@ -147,6 +147,6 @@ window.addEventListener("load", deleteLoader, false);
 function deleteLoader() {
     window.removeEventListener("load", deleteLoader, false);
     let childBodyA = document.querySelector(".loader");
-    document.body.removeChild(childBodyA);
+    childBodyA.style.display = "none";
 }
 //# sourceMappingURL=main.js.map
