@@ -8,28 +8,28 @@ const video = document.querySelector("video");
 buttons.play.addEventListener("click", playVideo, false);
 buttons.pause.addEventListener("click", pauseVideo, false);
 buttons.stop.addEventListener("click", stopVideo, false);
-function restartState() {
+const restartState = () => {
     buttons.play.disabled = false;
     buttons.pause.disabled = true;
     buttons.stop.disabled = true;
-}
-function playVideo() {
+};
+const playVideo = () => {
     buttons.play.disabled = true;
     buttons.pause.disabled = false;
     buttons.stop.disabled = false;
     video.play();
-}
-function pauseVideo() {
+};
+const pauseVideo = () => {
     buttons.play.disabled = false;
     buttons.pause.disabled = true;
     buttons.stop.disabled = false;
     video.pause();
-}
-function stopVideo() {
+};
+const stopVideo = () => {
     video.pause();
     video.currentTime = 0.0;
     restartState();
-}
+};
 restartState();
 window.addEventListener("load", solicitaTexto, false);
 function solicitaTexto() {
