@@ -151,8 +151,8 @@ header{
 				}
 			}
 			&:hover{
-				background-color: steelblue;
-				
+				background-color: var(--materialSecondaryDarkerBG);
+				color: var(--materialSecondaryDarkerColor);
 			}
 		}
 	}
@@ -164,9 +164,11 @@ header{
 	flex-wrap: nowrap;
 	justify-content: space-around;
 	align-items: center;
-	margin-top: 20px;
+	padding-top: 20px;
 	padding-left: 10px;
 	padding-right: 10px;
+	background-color: var(--materialPrimaryBG);
+	color: var(--materialPrimaryColor);
 	button{
 		display: none;
 		border-radius: 100%;
@@ -273,7 +275,8 @@ footer{
 				}
 			}
 			&:hover{
-				background-color: steelblue;
+				background-color: var(--materialSecondaryDarkerBG);
+				color: var(--materialSecondaryDarkerColor);
 			}
 		}
 	}
@@ -354,12 +357,10 @@ footer{
 	width: 40vw;
 	min-height: 50vh;
 	opacity: 1;
-	background-color: steelblue;
+	background-color: var(--bodyBg);
+	color: var(--bodyColor);
 	z-index: 120;
-	border: 1px solid rgb(0, 174, 255);
-	*{
-		color: #eee;
-	}
+	border: 1px solid rgb(0, 89, 255);
 
 }
 
@@ -368,7 +369,8 @@ footer{
 	justify-content: center;
 	align-items: center;
 	padding: 20px;
-	background-color: #333;
+	background-color: var(--materialPrimaryBG);
+	color: var(--materialPrimaryColor);
 	font-size: 25px;
 }
 
@@ -379,7 +381,7 @@ footer{
 .settingsBodyItem{
 	padding: 20px;
 	&:hover{
-		background-color: rgb(86, 139, 182);
+		background-color: rgba(86, 139, 182,.2);
 	}
 }
 
@@ -394,13 +396,14 @@ footer{
 }
 
 .settingItem{
-	border: 1px solid black;
+	border: 1px solid var(--materialPrimaryBG);
 	margin: 20px;
 }
 
 .settingItemType{
 	padding: 10px;
-	background-color: #333;
+	background-color: var(--materialPrimaryDarkerBG);
+	color: var(--materialPrimaryDarkerColor);
 }
 
 .settingItemControl{

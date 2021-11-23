@@ -122,8 +122,8 @@ main{
 	margin: 25px;
 	padding: 10px;
 	border: 2px solid rgba(100,100,100,.5);
-	background-color: #4682b4;
-	color: #e4e4e4;
+	background-color: var(--materialSecondaryDarkerBG);
+	color: var(--materialSecondaryDarkerColor);
 	font-size: 20px;
 	@media screen and (max-width:600px){
 		margin: 5px;

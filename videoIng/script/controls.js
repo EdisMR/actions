@@ -5,9 +5,6 @@ let buttons = {
     stop: document.getElementById("stop"),
 };
 const video = document.querySelector("video");
-buttons.play.addEventListener("click", playVideo, false);
-buttons.pause.addEventListener("click", pauseVideo, false);
-buttons.stop.addEventListener("click", stopVideo, false);
 const restartState = () => {
     buttons.play.disabled = false;
     buttons.pause.disabled = true;
@@ -39,4 +36,7 @@ function solicitaTexto() {
         eng: window.location.origin + "/videoIng/lang/eng.json",
     });
 }
+buttons.play.addEventListener("click", playVideo, false);
+buttons.pause.addEventListener("click", pauseVideo, false);
+buttons.stop.addEventListener("click", stopVideo, false);
 //# sourceMappingURL=controls.js.map

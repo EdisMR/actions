@@ -9,9 +9,9 @@ var settingsVars = {
     settingsDisplayed: false,
 };
 let animationSettings = gsap.from(".settingsContainer", {
-    y: -300,
-    rotationY: 50,
+    rotationY: 20,
     duration: .5,
+    opacity: .5,
     paused: true,
     onStart: function () {
         settingsVars.parentDisplay.classList.remove("d-none");

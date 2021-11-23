@@ -38,7 +38,8 @@ main{
 
 /* Form de nombres */
 .nombres{
-    background-color:rgba(70, 130, 180, .8);
+    background-color: var(--materialSecondary);
+	color: var(--materialSecondaryColor);
     display:flex;/* none | flex */
     flex-wrap:wrap;
     justify-content:center;
@@ -50,7 +51,6 @@ main{
         text-align: center;
         margin: 5px;
         font-size: 20px;
-        color: white;
     }
 }
 
@@ -130,7 +130,6 @@ main{
 	align-items: center;
 	align-content: center;
     background-color: steelblue;
-    color: whitesmoke;
     padding: 10px;
     text-align: center;
 	font-size: 40px;
