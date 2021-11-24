@@ -19,7 +19,6 @@
 
 	<?php
 	loader();
-	redirector();
 	headerHTML();
 	?>
 

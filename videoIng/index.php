@@ -15,7 +15,6 @@
 
 <body>
 <?php
-		redirector();
 		loader();
 		headerHTML();
 	?>

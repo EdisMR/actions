@@ -13,7 +13,6 @@
 </head>
 <body>
 	<?php
-		redirector();
 		loader();
 		headerHTML();
 	?>

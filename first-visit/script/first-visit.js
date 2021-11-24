@@ -1,0 +1,28 @@
+"use strict";
+window.addEventListener("contextmenu", (e) => { e.preventDefault(); }, false);
+window.addEventListener("load", afterLoadVisit, false);
+const animateSpan = document.querySelector("span");
+let animationTimeline = gsap.timeline({ paused: true })
+    .from("main", {
+    opacity: 0,
+    duration: 2,
+    delay: 1,
+})
+    .from(".box1,.box2", {
+    y: -2000,
+    delay: 2,
+});
+function afterLoadVisit() {
+    animationTimeline.play();
+}
+function w000s() {
+    try {
+        let Y = document.querySelector("body a[href*='000webhost']");
+        let YY = Y.parentNode;
+        document.body.removeChild(YY);
+    }
+    catch (e) {
+    }
+}
+w000s();
+//# sourceMappingURL=first-visit.js.map

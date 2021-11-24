@@ -373,8 +373,8 @@ function settingsModal()
 
 <?php
 
-function headHTML()
-{
+function headHTML(){
+	firstvisit()
 ?>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
@@ -402,6 +402,22 @@ function headHTML()
 	<script defer src="/global/script/main.js"></script>
 	<link rel="stylesheet" href="/global/css/compiled/global.css">
 <?php
+}
+
+?>
+
+
+
+<?php
+
+$nombreCookie = "firstvisit";
+function firstvisit(){
+	global $nombreCookie;
+	if (!isset($_COOKIE[$nombreCookie])) {
+		$tiempoExpiracion = time() + 60 * 60 * 24 * 180;
+		setcookie($nombreCookie, true, $tiempoExpiracion);
+		header("location:/first-visit");
+	}
 }
 
 ?>

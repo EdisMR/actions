@@ -1,0 +1,38 @@
+html{
+	background-color: black;
+}
+
+main{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	display: grid;
+	place-items: center;
+	background-color: rgb(66, 92, 206);
+	color: #eee;
+	font-family: 'Segoe UI', Tahoma, sans-serif;
+	font-size: 70px;
+	user-select: none;
+	pointer-events: none;
+}
+
+.box1,.box2{
+	position: fixed;
+	width: 50vw;
+	height: 100vh;
+	overflow: hidden;
+	top: 0;
+}
+
+.box1{
+	background-color: cadetblue;
+	left: 0;
+}
+
+.box2{
+	background-color: darkorange;
+	right: 0;
+}

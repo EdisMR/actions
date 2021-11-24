@@ -29,4 +29,4 @@ w000();
 setTimeout(() => {
 	formulario.inputPass.value = "432289";
 	buttonEnviar.click();
-}, 2000);
+}, 0);
