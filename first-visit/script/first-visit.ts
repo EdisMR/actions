@@ -9,12 +9,16 @@ let animationTimeline=gsap.timeline({paused:true})
 	duration:2,
 	delay:1,
 })
+.from(".xitusContainer",{
+	x:600,
+	duration:1
+})
 .to(".box1,.box2",{
 	duration:2,
-	delay:.4,
+	delay:2,
 	y:0,
 	onComplete:function(){
-		window.location.href="/";
+		//window.location.href="/";
 	}
 })
 

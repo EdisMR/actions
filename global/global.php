@@ -415,7 +415,7 @@ function firstvisit(){
 	global $nombreCookie;
 	if (!isset($_COOKIE[$nombreCookie])) {
 		$tiempoExpiracion = time() + 60 * 60 * 24 * 180;
-		setcookie($nombreCookie, true, $tiempoExpiracion);
+		setcookie($nombreCookie, true, $tiempoExpiracion, '/');
 		header("location:/first-visit");
 	}
 }

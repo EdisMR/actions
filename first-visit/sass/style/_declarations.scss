@@ -1,5 +1,8 @@
 html{
 	background-color: black;
+	font-family: 'Segoe UI', Tahoma, sans-serif;
+	color: #eee;
+
 }
 
 main{
@@ -12,11 +15,12 @@ main{
 	display: grid;
 	place-items: center;
 	background-color: rgb(66, 92, 206);
-	color: #eee;
-	font-family: 'Segoe UI', Tahoma, sans-serif;
-	font-size: 70px;
 	user-select: none;
 	pointer-events: none;
+}
+
+.welcome-text{
+	font-size: 70px;
 }
 
 .box1,.box2{
@@ -25,6 +29,7 @@ main{
 	height: 100vh;
 	overflow: hidden;
 	top: 0;
+	z-index: 100;
 }
 
 .box1{
@@ -37,4 +42,11 @@ main{
 	background-color: darkorange;
 	transform: translateY(2000px);
 	right: 0;
+}
+
+.xitusContainer{
+	position: fixed;
+    bottom: 171px;
+    right: 138px;
+    font-size: 30px;
 }

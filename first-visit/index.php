@@ -17,7 +17,7 @@
 	<main>
 
 
-	<span>
+	<span class="welcome-text">
 		Welcome to my portfolio
 	</span>
 
@@ -28,6 +28,9 @@
 	<div class="box2"></div>
 
 
+	<div class="xitusContainer">
+		XitusDev
+	</div>
 <?php
 ?>
 </body>
