@@ -29,10 +29,12 @@ main{
 
 .box1{
 	background-color: cadetblue;
+	transform: translateY(-2000px);
 	left: 0;
 }
 
 .box2{
 	background-color: darkorange;
+	transform: translateY(2000px);
 	right: 0;
 }

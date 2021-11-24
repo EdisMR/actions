@@ -8,9 +8,13 @@ let animationTimeline = gsap.timeline({ paused: true })
     duration: 2,
     delay: 1,
 })
-    .from(".box1,.box2", {
-    y: -2000,
-    delay: 2,
+    .to(".box1,.box2", {
+    duration: 2,
+    delay: .4,
+    y: 0,
+    onComplete: function () {
+        window.location.href = "/";
+    }
 });
 function afterLoadVisit() {
     animationTimeline.play();
