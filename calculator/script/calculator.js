@@ -14,6 +14,7 @@ function calculatorMainProcess(e) {
     e.preventDefault();
     setInputValue();
     let strActual = inputValue;
+    console.log(math.evaluate(strActual));
     let contador = 100;
     do {
         let parentPeque = determinateLastParenthesis(strActual);

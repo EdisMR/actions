@@ -11,6 +11,7 @@
 
 	<link rel="stylesheet" href="./sass/calculator.css">
 	<script defer src="./script/calculator.js"></script>
+	<script src="./script/math.min.js"></script>
 
 </head>
 

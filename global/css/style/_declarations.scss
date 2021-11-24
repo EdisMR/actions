@@ -2,7 +2,7 @@
 /********************* GENERAL ****************** */
 /* ********************************************** */
 
-*{
+* {
 	scroll-padding-block: 60px;
 	&::-webkit-scrollbar {
 		width: 10px;
@@ -14,93 +14,108 @@
 		border-radius: 8px;
 		-webkit-box-shadow: none;
 		box-shadow: none;
-		min-height: 50px
+		min-height: 50px;
 	}
-	&:target{
+	&:target {
 		animation: targetAnimation 1s linear 2;
 	}
 }
 
-
-
 @keyframes targetAnimation {
-	0%{background-color: transparent;}
-	50%{background-color: steelblue;}
-	100%{background-color: transparent;}
+	0% {
+		background-color: transparent;
+	}
+	50% {
+		background-color: steelblue;
+	}
+	100% {
+		background-color: transparent;
+	}
 }
 
-body{
+body {
 	scroll-behavior: smooth;
 }
 
-html{
+html {
 	background-color: var(--bodyBg);
 	color: var(--bodyColor);
 }
 
-a{
+a {
 	cursor: pointer;
 	text-decoration: none;
 }
-.block{
+.block {
 	display: block;
 	margin: 0px;
 	padding: 0px;
 }
 
-img{
+img {
 	width: 100%;
 	pointer-events: none;
 	object-fit: contain;
 }
 
-a,button{
-	transition-duration: .1s;
+a,
+button {
+	transition-duration: 0.1s;
 	transform: scale(1);
-	&:hover{
+	&:hover {
 		transform: scale(1.03);
-		&:disabled{
+		&:disabled {
 			transform: scale(1);
 		}
 	}
-	&:active{
+	&:active {
 		transform: scale(0.95);
-		&:disabled{
+		&:disabled {
 			transform: scale(1);
 		}
 	}
 }
 
-.card{
+$card-padding: 10px;
+.card {
 	border: 1px solid #aaa;
-	box-shadow: 0px 5px 5px 2px rgba(0,0,0,.2);
-	padding: 10px;
+	box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.2);
 	position: relative;
 	top: 0px;
-	&:hover{
-		box-shadow: 0px 10px 5px 2px rgba(0,0,0,.2);
-		transition: top .2s;
+	&:hover {
+		box-shadow: 0px 10px 5px 2px rgba(0, 0, 0, 0.2);
+		transition: top 0.2s;
 		top: -10px;
 	}
-	img{
+	img {
 		min-height: 200px;
 	}
 }
 
-.card-header{
+.card-header {
 	border-bottom: 1px solid var(--cardHeaderBorderBottomColor);
 	font-size: 18px;
+	padding: $card-padding;
+	background-color: var(--materialSecondaryDarkerBG);
+	h4 {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		a {
+			color: var(--materialSecondaryDarkerColor);
+		}
+	}
 }
 
-.card-content{
-	li{
+.card-content {
+	padding: $card-padding;
+	li {
 		padding-bottom: 7px;
 	}
 }
 /* *********************************************** */
 /********************* BODY ********************** */
 /* *********************************************** */
-body{
+body {
 	display: grid;
 	grid-template-columns: auto 1fr;
 	grid-template-rows: 1fr auto;
@@ -108,28 +123,26 @@ body{
 	user-select: none;
 }
 
-
-
 /* *********************************************** */
 /********************* HEADER ******************** */
 /* *********************************************** */
-$padding-Left:20px;
+$padding-Left: 20px;
 
-header{
+header {
 	overflow-y: hidden;
 	touch-action: none;
 	z-index: 100;
 }
 
-.header-enlaces{
-	ul{
+.header-enlaces {
+	ul {
 		padding: 0px;
 		margin: 0px;
-		li{
+		li {
 			list-style-type: none;
 			padding: 0px $padding-Left 0px $padding-Left;
 
-			a{
+			a {
 				display: flex;
 				justify-content: flex-start;
 				align-items: center;
@@ -138,9 +151,10 @@ header{
 				padding-left: 0px;
 				padding-right: 10px;
 				color: white;
-				div{
+				div {
 					display: inline-block;
-					span,button{
+					span,
+					button {
 						background-color: rgba(255, 255, 255, 0.2);
 						padding: 5px;
 						border-radius: 50%;
@@ -150,35 +164,35 @@ header{
 					}
 				}
 			}
-			&:hover{
+			&:hover {
 				background-color: var(--materialSecondaryDarkerBG);
 				color: var(--materialSecondaryDarkerColor);
 			}
 		}
 	}
-
 }
 
-.header-title{
+.header-title {
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: space-around;
 	align-items: center;
 	padding-top: 20px;
+	padding-bottom: 20px;
 	padding-left: 10px;
 	padding-right: 10px;
 	background-color: var(--materialPrimaryBG);
 	color: var(--materialPrimaryColor);
-	button{
+	button {
 		display: none;
 		border-radius: 100%;
-		width:30px;
-		height:30px;
+		width: 30px;
+		height: 30px;
 		background-color: transparent;
 		color: white;
 		border: 1px solid rgba(255, 255, 255, 0.411);
 		outline: none;
-		@supports(aspect-ratio: 1/1){
+		@supports (aspect-ratio: 1/1) {
 			width: auto;
 			height: auto;
 			aspect-ratio: 1/1;
@@ -186,24 +200,23 @@ header{
 	}
 }
 
-.header-events{
+.header-events {
 	margin-top: 20px;
 	padding-left: $padding-Left;
 	padding-right: 20px;
-	div{
+	div {
 		margin-top: 10px;
-		p{
+		p {
 			margin: 0px;
 			padding: 0px;
 		}
 	}
 }
 
-
 /* *************************************************** */
 /********************* MAIN ************************** */
 /* *************************************************** */
-main{
+main {
 	height: 100vh;
 	overflow-y: scroll;
 }
@@ -211,17 +224,17 @@ main{
 /* ********************************************** */
 /********************* GLASS ******************** */
 /* ********************************************** */
-.glass{
+.glass {
 	position: relative;
 	color: white;
-	img{
+	img {
 		filter: invert(90%);
 	}
-	&::before{
+	&::before {
 		content: "";
 		position: absolute;
 		z-index: -1;
-		top:0px;
+		top: 0px;
 		left: 0px;
 		width: 100%;
 		height: 100%;
@@ -232,11 +245,10 @@ main{
 	}
 }
 
-
 /* ********************************************** */
 /********************* FOOTER ****************** */
 /* ********************************************** */
-footer{
+footer {
 	display: flex;
 	margin: 0px;
 	padding: 0px;
@@ -244,29 +256,29 @@ footer{
 	bottom: 0px;
 	left: 50%;
 	justify-content: center;
-	
-	ul{
+
+	ul {
 		margin: 0px;
 		padding: 0px;
 		display: flex;
 		flex-wrap: nowrap;
-		li{
+		li {
 			display: inline-block;
 			padding: 5px;
-			a{
+			a {
 				display: inline-block;
 				color: white;
-				div{
+				div {
 					margin: 0;
 					padding: 0;
-					span{
+					span {
 						display: inline-block;
 						width: 35px;
 						height: 35px;
 						font-size: 35px;
 					}
-					figure{
-						img{
+					figure {
+						img {
 							display: inline-block;
 							width: 35px;
 							height: 35px;
@@ -274,7 +286,7 @@ footer{
 					}
 				}
 			}
-			&:hover{
+			&:hover {
 				background-color: var(--materialSecondaryDarkerBG);
 				color: var(--materialSecondaryDarkerColor);
 			}
@@ -282,7 +294,7 @@ footer{
 	}
 }
 
-#helpNode{
+#helpNode {
 	background-color: steelblue;
 	border-radius: 10px;
 	border: 2px dashed white;
@@ -293,10 +305,10 @@ footer{
 	left: 40vw;
 	top: 40vh;
 	box-shadow: 10px 10px 15px rgba(56, 56, 56, 0.377);
-	z-index:150;
+	z-index: 150;
 }
 
-.animateHelpNode{
+.animateHelpNode {
 	animation-name: helpNodeAnimation;
 	animation-delay: 0s;
 	animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -305,37 +317,38 @@ footer{
 }
 
 @keyframes helpNodeAnimation {
-	from{transform: rotate3d(1, 1, 1, 120deg);}
-	to{transform: rotate3d(1, 1, 1, 0deg);}
+	from {
+		transform: rotate3d(1, 1, 1, 120deg);
+	}
+	to {
+		transform: rotate3d(1, 1, 1, 0deg);
+	}
 }
 
-
-#dino{
+#dino {
 	position: fixed;
 	display: none;
 	width: 50px;
 	height: 50px;
 	z-index: 100;
-	background-color: rgba($color: black, $alpha: .7);
+	background-color: rgba($color: black, $alpha: 0.7);
 	padding: 10px;
 	border-radius: 50%;
-	img{
+	img {
 		width: auto;
 		height: auto;
 	}
 }
 
-
 /* ************************************* */
 /* ********** SETTINGS MODAL ********** */
 /* ************************************* */
 
-.d-none{
+.d-none {
 	display: none !important;
 }
 
-
-.settings-priorization{
+.settings-priorization {
 	touch-action: none;
 	position: fixed;
 	top: 0px;
@@ -345,15 +358,15 @@ footer{
 	overflow: hidden !important;
 	z-index: 110;
 	background-color: black;
-	opacity: .7;
+	opacity: 0.7;
 }
 
-.settingsContainer{
+.settingsContainer {
 	touch-action: none;
 	position: fixed;
 	top: 30%;
 	left: 50%;
-	transform: translate(-50%,-50%);
+	transform: translate(-50%, -50%);
 	width: 40vw;
 	min-height: 50vh;
 	opacity: 1;
@@ -361,10 +374,9 @@ footer{
 	color: var(--bodyColor);
 	z-index: 120;
 	border: 1px solid rgb(0, 89, 255);
-
 }
 
-.settingsHeader{
+.settingsHeader {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -374,44 +386,43 @@ footer{
 	font-size: 25px;
 }
 
-
-.settingsBody{
+.settingsBody {
 }
 
-.settingsBodyItem{
+.settingsBodyItem {
 	padding: 20px;
-	&:hover{
-		background-color: rgba(86, 139, 182,.2);
+	&:hover {
+		background-color: rgba(86, 139, 182, 0.2);
 	}
 }
 
-.stItemtitle{
+.stItemtitle {
 }
 
-.settingItemContainer{
+.settingItemContainer {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	flex-wrap: wrap;
 }
 
-.settingItem{
+.settingItem {
 	border: 1px solid var(--materialPrimaryBG);
 	margin: 20px;
 }
 
-.settingItemType{
+.settingItemType {
 	padding: 10px;
 	background-color: var(--materialPrimaryDarkerBG);
 	color: var(--materialPrimaryDarkerColor);
 }
 
-.settingItemControl{
+.settingItemControl {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	flex-wrap: nowrap;
-	span{
+	span {
 		margin: 10px;
 		cursor: pointer;
 	}
@@ -424,80 +435,84 @@ footer{
 } */
 
 /* Icono: 300x117 */
-$iconWidth:300px;
-$iconHeight:117px;
-.settingItemIcon{
+$iconWidth: 300px;
+$iconHeight: 117px;
+.settingItemIcon {
 	display: inline-block;
 	background-image: url("../../assets/switch.svg");
-	width: $iconWidth*.2;
-	height: $iconHeight*.2;
+	width: $iconWidth * 0.2;
+	height: $iconHeight * 0.2;
 	border-radius: 20px;
-	border:1px solid transparent;
+	border: 1px solid transparent;
 	background-color: rgb(21, 165, 134) !important;
-	&:hover{
+	&:hover {
 		border-color: whitesmoke;
 	}
-	&:active{
+	&:active {
 		border-color: black;
-		opacity: .4;
+		opacity: 0.4;
 	}
 }
 
-
-.settingsFooter{
+.settingsFooter {
 	padding: 20px;
 	display: flex;
 	justify-content: flex-end;
-	
 }
-#settingsClose{
+#settingsClose {
 	color: #333;
 	background-color: #ccc;
 	border: none;
 	border-radius: 10px;
 	padding: 5px;
-	&:hover{
+	&:hover {
 		background-color: #eee;
 	}
-	&:active{
+	&:active {
 		background-color: #aaa;
 	}
 }
 
-.settingItemInactive{
+.settingItemInactive {
 	transform: rotatey(180deg);
 	background-color: rgb(165, 21, 69) !important;
 }
 
-.accesibilityBorder{
+.accesibilityBorder {
 	border: 1px solid yellow !important;
 	color: yellow !important;
-	span,p,h1,h2,h3,h4,li,a{
+	span,
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	li,
+	a {
 		background-color: black !important;
 		color: yellow !important;
 	}
 }
 
-[data-text]{
-	transition-duration: .2s;
+[data-text] {
+	transition-duration: 0.2s;
 }
 
-.menuItemText{
+.menuItemText {
 	display: inline-block;
 	border: none;
 	background: unset !important;
 	font-size: unset !important;
 }
 
-
-div.ajs-message,.alertify-notifier{
+div.ajs-message,
+.alertify-notifier {
 	background-color: #eee !important;
 	color: black !important;
 	font-size: 20px;
 }
 
-.highContrast{
+.highContrast {
 	color: rgb(211, 211, 66) !important;
 	background-color: rgb(56, 56, 56) !important;
 }
-

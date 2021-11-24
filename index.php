@@ -108,7 +108,7 @@
 							</ul>
 						</div>
 					</section>
-					
+
 				</div>
 			</article>
 		</section>
@@ -269,10 +269,10 @@
 				<div class="main-index-grid col4y2">
 
 					<section class="card" data-accesibilityborder="true">
-						<div>
+						<div class="card-header">
 							<h4><a href="/gameConecta4/" rel="noopener noreferrer" data-text="bgamesconnect"></a></h4>
 						</div>
-						<div>
+						<div class="card-content">
 							<figure>
 								<img src="index/assets/conecta4.webp" alt="Connect four game" title="Connect 4">
 							</figure>
@@ -280,10 +280,10 @@
 					</section>
 
 					<section class="card" data-accesibilityborder="true">
-						<div>
+						<div class="card-header">
 							<h4><a href="/gameTictactoe/" rel="noopener noreferrer" data-text="bgamestic"></a></h4>
 						</div>
-						<div>
+						<div class="card-content">
 							<figure>
 								<img src="index/assets/tictactoe.webp" alt="Tic tac toe" title="tic tac toe">
 							</figure>
@@ -291,10 +291,10 @@
 					</section>
 
 					<section class="card" data-accesibilityborder="true">
-						<div>
+						<div class="card-header">
 							<h4><a href="/calculator/" rel="noopener noreferrer" data-text="bgamescalc"></a></h4>
 						</div>
-						<div>
+						<div class="card-content">
 							<figure>
 								<img src="index/assets//calculadora.webp" alt="random rabbit" title="Calculator">
 							</figure>
@@ -302,10 +302,10 @@
 					</section>
 
 					<section class="card" data-accesibilityborder="true">
-						<div>
+						<div class="card-header">
 							<h4><a href="/videoIng/" rel="noopener noreferrer" data-text="bgamesvideo"></a></h4>
 						</div>
-						<div>
+						<div class="card-content">
 							<figure>
 								<img src="index/assets/broccoli.webp" alt="Broccoli Video">
 							</figure>

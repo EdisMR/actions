@@ -3,22 +3,22 @@ var settingsVars = {
     parentDisplay: document.getElementById("modalSettings"),
     buttonOpen: document.getElementById("settingsButton"),
     closeButton: document.getElementById("settingsClose"),
-    buttonHighContrast: document.getElementById("buttonHighContrast"),
+    buttonHighContrast: (document.getElementById("buttonHighContrast")),
     buttonBigFont: document.getElementById("buttonBigFont"),
-    buttonBilingual: document.getElementById("buttonBilingual"),
+    buttonBilingual: (document.getElementById("buttonBilingual")),
     settingsDisplayed: false,
 };
 let animationSettings = gsap.from(".settingsContainer", {
     rotationY: 20,
-    duration: .5,
-    opacity: .5,
+    duration: 0.5,
+    opacity: 0.5,
     paused: true,
     onStart: function () {
         settingsVars.parentDisplay.classList.remove("d-none");
     },
     onReverseComplete: function () {
         settingsVars.parentDisplay.classList.add("d-none");
-    }
+    },
 });
 settingsVars.buttonOpen.addEventListener("click", displaySettings, false);
 settingsVars.closeButton.addEventListener("click", hideSettings, false);
@@ -95,42 +95,42 @@ function switchBigFont() {
 function applyHighContrast() {
     settingsVars.buttonHighContrast.classList.remove("settingItemInactive");
     let arrayTodos = Array.from(document.querySelectorAll("[data-text]"));
-    arrayTodos.forEach(elm => {
+    arrayTodos.forEach((elm) => {
         elm.classList.add("highContrast");
     });
     if (settingsVars.settingsDisplayed) {
         alertifyMessageBilingual({
             es: "Alto Contraste Aplicado",
-            eng: "High Contrast Applied"
+            eng: "High Contrast Applied",
         });
     }
 }
 function applyBigFont() {
     settingsVars.buttonBigFont.classList.remove("settingItemInactive");
     let arrayTodos = Array.from(document.querySelectorAll("*"));
-    arrayTodos.forEach(elm => {
+    arrayTodos.forEach((elm) => {
         elm.dataset.initialfont = getComputedStyle(elm).fontSize;
     });
-    arrayTodos.forEach(elm => {
+    arrayTodos.forEach((elm) => {
         elm.style.fontSize = `calc(${elm.dataset.initialfont} + 5px)`;
     });
     if (settingsVars.settingsDisplayed) {
         alertifyMessageBilingual({
             es: "Tipografía grande Aplicada",
-            eng: "Big Typography Applied"
+            eng: "Big Typography Applied",
         });
     }
 }
 function removeHighContrast() {
     settingsVars.buttonHighContrast.classList.add("settingItemInactive");
     let arrayTodos = Array.from(document.querySelectorAll("[data-text]"));
-    arrayTodos.forEach(elm => {
+    arrayTodos.forEach((elm) => {
         elm.classList.remove("highContrast");
     });
     if (settingsVars.settingsDisplayed) {
         alertifyMessageBilingual({
             es: "Alto Contraste Removido",
-            eng: "High Contrast Removed"
+            eng: "High Contrast Removed",
         });
     }
 }
@@ -144,7 +144,7 @@ function removeBigFont() {
     if (settingsVars.settingsDisplayed) {
         alertifyMessageBilingual({
             es: "Tipografía grande Removida",
-            eng: "Big Typography Removed"
+            eng: "Big Typography Removed",
         });
     }
 }
@@ -158,11 +158,11 @@ function defineLang(idiomText = "") {
         }
         alertifyMessageBilingual({
             es: "Puedes cambiarlo en Configuraciones.",
-            eng: "You can change it on Settings."
+            eng: "You can change it on Settings.",
         });
         alertifyMessageBilingual({
             es: "Idioma configurado automáticamente.",
-            eng: "Language was set automatically."
+            eng: "Language was set automatically.",
         });
     }
     else {
@@ -171,10 +171,10 @@ function defineLang(idiomText = "") {
 }
 function idiomHTMLInner(urls) {
     var myHeaders = new Headers();
-    myHeaders.append('pragma', 'no-cache');
-    myHeaders.append('cache-control', 'no-cache');
+    myHeaders.append("pragma", "no-cache");
+    myHeaders.append("cache-control", "no-cache");
     var myInit = {
-        method: 'GET',
+        method: "GET",
         headers: myHeaders,
     };
     let urlParaFetch = "";
@@ -191,13 +191,13 @@ function idiomHTMLInner(urls) {
         htmlLang = "eng";
     }
     fetch(urlParaFetch, myInit)
-        .then(fetchResult => {
+        .then((fetchResult) => {
         return fetchResult.text();
     })
-        .then(textoResult => {
+        .then((textoResult) => {
         return JSON.parse(textoResult);
     })
-        .then(jsonParseado => {
+        .then((jsonParseado) => {
         let firstHTML = document.firstElementChild;
         firstHTML.setAttribute("lang", htmlLang);
         let todosSpan = Array.from(document.querySelectorAll("[data-text]"));
@@ -220,13 +220,13 @@ if (localStorage.lang == "spa") {
 }
 function alertifyMessageBilingual(param) {
     if (localStorage.lang == "spa") {
-        alertify.set('notifier', 'delay', 5);
-        alertify.set('notifier', 'position', 'top-center');
+        alertify.set("notifier", "delay", 5);
+        alertify.set("notifier", "position", "top-center");
         alertify.message(param.es);
     }
     if (localStorage.lang == "eng") {
-        alertify.set('notifier', 'delay', 5);
-        alertify.set('notifier', 'position', 'top-center');
+        alertify.set("notifier", "delay", 5);
+        alertify.set("notifier", "position", "top-center");
         alertify.message(param.eng);
     }
 }

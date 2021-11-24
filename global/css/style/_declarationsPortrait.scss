@@ -2,47 +2,44 @@
 /********************* GENERAL ****************** */
 /* ********************************************** */
 
-
-
 /* *********************************************** */
 /********************* BODY ********************** */
 /* *********************************************** */
-html{
+html {
 	padding: 0;
 	margin: 0;
 }
-body{
+body {
 	grid-template-columns: initial;
 	grid-template-rows: initial;
 }
 
-
-
 /* *********************************************** */
 /********************* HEADER ******************** */
 /* *********************************************** */
-header{
+header {
 	position: fixed !important;
 	top: 0px;
 	left: 0px;
 	width: 100vw;
 }
 
-.header-title{
+.header-title {
 	display: flex;
 	padding-left: 20px;
 	align-items: center;
 	justify-content: space-between;
 	margin: 0px;
 	padding-top: 0;
-	div{
+	padding-bottom: 0;
+	div {
 		margin: 0px;
-		
-		h1{
-			margin:5px 0px;
+
+		h1 {
+			margin: 5px 0px;
 			font-size: 25px;
 		}
-		button{
+		button {
 			display: inline-block;
 		}
 	}
@@ -56,17 +53,18 @@ header{
 	padding-top: 0px;
 	padding-bottom: 0px;
 	margin-top: 0px;
-	transition-duration: .2s;
-	ul{
-		li{
+	transition-duration: 0.2s;
+	ul {
+		li {
 			padding-left: 40px;
-			a{
+			a {
 				display: flex;
 				margin-top: 10px;
 				font-size: 20px;
-				div{
+				div {
 					font-size: inherit;
-					span,button{
+					span,
+					button {
 						font-size: inherit;
 					}
 				}
@@ -75,48 +73,43 @@ header{
 	}
 }
 
-.showMenu{
+.showMenu {
 	padding-top: 20px;
 	overflow: initial;
 }
 
-
-.header-events{
+.header-events {
 	display: none;
 }
-
-
 
 /* *************************************************** */
 /********************* MAIN ************************** */
 /* *************************************************** */
-main{
+main {
 	height: auto;
 	overflow-y: auto;
 	padding-top: 20px;
 	padding-bottom: 50px;
 }
 
-
-
 /* ********************************************** */
 /********************* FOOTER ****************** */
 /* ********************************************** */
-footer{
+footer {
 	transform: translateX(-50%);
-	ul{
-		li{
-			a{
-				div{
-					span{
+	ul {
+		li {
+			a {
+				div {
+					span {
 						width: 35px;
 						height: 35px;
 						font-size: 35px;
 					}
-					figure{
+					figure {
 						width: 35px;
 						height: 35px;
-						img{
+						img {
 							width: 35px;
 							height: 35px;
 						}
@@ -127,23 +120,22 @@ footer{
 	}
 }
 
-
 /* ************************************* */
 /* ********** SETTINGS MODAL ********** */
 /* ************************************* */
 
-.settingsHeader{
+.settingsHeader {
 	padding: 15px;
 }
 
-.settingsContainer{
+.settingsContainer {
 	width: 85vw;
 }
 
-.settingsBodyItem{
+.settingsBodyItem {
 	padding: 10px;
 }
 
-.settingItem{
+.settingItem {
 	margin: 10px;
 }
