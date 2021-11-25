@@ -5,6 +5,7 @@
 	<title data-text="pagetitle"></title>
 	<?php
 		include_once "../global/global.php";
+		firstvisit();
 		headHTML();
 	?>
 	<link rel="stylesheet" href="./sass/galeria.css">

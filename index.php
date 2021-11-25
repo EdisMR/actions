@@ -7,6 +7,7 @@
 
 	<?php
 	include_once "global/global.php";
+	firstvisit();
 	headHTML();
 	?>
 

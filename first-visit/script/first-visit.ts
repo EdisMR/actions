@@ -18,7 +18,7 @@ let animationTimeline=gsap.timeline({paused:true})
 	delay:2,
 	y:0,
 	onComplete:function(){
-		//window.location.href="/";
+		window.location.href="/";
 	}
 })
 

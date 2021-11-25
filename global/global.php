@@ -19,7 +19,7 @@ function loader()
 	?>
 	<style>
 		.loader{
-			background-color: rgb(31 41 46 / 80%);
+			background-color: rgb(31 41 46 / 100%);
 			color: #eee;
 			display: grid;
 			place-items: center;
@@ -368,13 +368,8 @@ function settingsModal()
 <?php
 }
 
-?>
-
-
-<?php
 
 function headHTML(){
-	firstvisit()
 ?>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
@@ -404,19 +399,14 @@ function headHTML(){
 <?php
 }
 
-?>
 
-
-
-<?php
-
-$nombreCookie = "firstvisit";
 function firstvisit(){
-	global $nombreCookie;
-	if (!isset($_COOKIE[$nombreCookie])) {
+	if (!isset($_COOKIE["firstvisit"])) {
 		$tiempoExpiracion = time() + 60 * 60 * 24 * 180;
-		setcookie($nombreCookie, true, $tiempoExpiracion, '/');
-		header("location:/first-visit");
+		setcookie("firstvisit", true, $tiempoExpiracion, '/');
+
+		$redirection="Location:/first-visit/";
+		header($redirection);
 	}
 }
 
