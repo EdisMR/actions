@@ -43,11 +43,11 @@ let animationSettings = gsap.from(".settingsContainer", {
 /* Settings to Display */
 settingsVars.buttonOpen.addEventListener("click", displaySettings, false);
 settingsVars.closeButton.addEventListener("click", hideSettings, false);
-function displaySettings() {
+async function displaySettings() {
 	animationSettings.play();
 	settingsVars.settingsDisplayed = true;
 }
-function hideSettings() {
+async function hideSettings() {
 	animationSettings.reverse();
 	settingsVars.settingsDisplayed = false;
 }

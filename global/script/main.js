@@ -74,12 +74,12 @@ function menuSwitchMain() {
         closeMenu();
     }
 }
-function openMenu() {
+async function openMenu() {
     headerButton.disp = true;
     headerButton.headerEnlaces.classList.add("showMenu");
     menuAnimationPortrait.play();
 }
-function closeMenu() {
+async function closeMenu() {
     if (headerButton.disp == true) {
         headerButton.disp = false;
         headerButton.headerEnlaces.classList.remove("showMenu");
@@ -108,7 +108,7 @@ enlacesGato.forEach(elm => {
     let elmParent = elm.parentNode;
     elmParent.addEventListener("click", helpNodeAppear, false);
 });
-function helpNodeAppear() {
+async function helpNodeAppear() {
     ayuda.style.display = "inline-block";
     ayuda.classList.add("animateHelpNode");
     setTimeout(() => {
@@ -118,7 +118,7 @@ function helpNodeAppear() {
 }
 const dinoEd = document.getElementById("dino");
 window.addEventListener("contextmenu", dino, false);
-function dino(e) {
+async function dino(e) {
     e.preventDefault();
     dinoEd.style.display = "block";
     dinoEd.style.left = positionDino(e.clientX, mitadPantallaHoriz) + "px";

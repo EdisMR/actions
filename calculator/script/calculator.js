@@ -10,7 +10,7 @@ let inputValue = "";
 inputTag.addEventListener("input", resetResult, false);
 const resultInnerTag = document.getElementById("resultInner");
 var resultValue = "";
-function calculatorMainProcess(e) {
+async function calculatorMainProcess(e) {
     e.preventDefault();
     setInputValue();
     let strActual = inputValue;

@@ -120,7 +120,7 @@ function menuSwitchMain() {
 	}
 }
 
-function openMenu():void {
+async function openMenu():void {
 	headerButton.disp = true;
 	headerButton.headerEnlaces.classList.add("showMenu");
 
@@ -129,7 +129,7 @@ function openMenu():void {
 	
 }
 
-function closeMenu():void {
+async function closeMenu():void {
 	if (headerButton.disp == true) {
 		headerButton.disp = false;
 		headerButton.headerEnlaces.classList.remove("showMenu");
@@ -182,7 +182,7 @@ enlacesGato.forEach(elm=>{
 	elmParent.addEventListener("click",helpNodeAppear,false);
 })
 
-function helpNodeAppear(){
+async function helpNodeAppear(){
 	ayuda.style.display="inline-block";
 	ayuda.classList.add("animateHelpNode")
 
@@ -200,7 +200,7 @@ const dinoEd=<HTMLElement>document.getElementById("dino");
 
 window.addEventListener("contextmenu",dino,false);
 
-function dino(e:MouseEvent){
+async function dino(e:MouseEvent){
 	e.preventDefault();
 
 	dinoEd.style.display="block";

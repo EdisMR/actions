@@ -18,7 +18,7 @@ var resultValue: string = "";
 
 
 /* Funcion principal para manejar el calculo */
-function calculatorMainProcess(e: Event): void {
+async function calculatorMainProcess(e: Event){
 	/* ETAPA INICIAL */
 	e.preventDefault();
 	setInputValue();
