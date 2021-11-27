@@ -1,11 +1,13 @@
+<?php
+		include_once "../global/global.php";
+		firstvisit();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<title>XitusDev - Connect 4</title>
 	<?php
-		include_once "../global/global.php";
-		firstvisit();
 		headHTML();
 	?>
 	<link rel="stylesheet" href="./sass/gameConecta4.css">

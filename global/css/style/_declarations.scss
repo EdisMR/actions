@@ -300,12 +300,12 @@ footer {
 	border: 2px dashed white;
 	color: white;
 	padding: 10px 20px 10px 20px;
-	display: none; /* none || inline-block */
 	position: fixed;
 	left: 40vw;
 	top: 40vh;
 	box-shadow: 10px 10px 15px rgba(56, 56, 56, 0.377);
 	z-index: 150;
+	visibility: hidden;
 }
 
 .animateHelpNode {
@@ -327,13 +327,13 @@ footer {
 
 #dino {
 	position: fixed;
-	display: none;
 	width: 50px;
 	height: 50px;
 	z-index: 100;
 	background-color: rgba($color: black, $alpha: 0.7);
 	padding: 10px;
 	border-radius: 50%;
+	visibility: hidden;
 	img {
 		width: auto;
 		height: auto;
@@ -346,6 +346,10 @@ footer {
 
 .d-none {
 	display: none !important;
+}
+
+#modalSettings{
+	visibility: hidden;
 }
 
 .settings-priorization {

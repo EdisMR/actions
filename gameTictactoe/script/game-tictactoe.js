@@ -163,8 +163,8 @@ buttonReset.addEventListener("click", resetGame, false);
 function resetGame() {
     gridItemsSpan.forEach(elm => {
         elm.parentNode.dataset.occupied = "false";
-        elm.classList.remove("ms-Icon--CircleRing");
-        elm.classList.remove("ms-Icon--Cancel");
+        elm.classList.remove(classInner.userO);
+        elm.classList.remove(classInner.userX);
     });
     htmlElm.mostrarGanador.classList.add("d-None");
     htmlElm.resetGame.classList.add("d-None");

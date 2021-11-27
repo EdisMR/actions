@@ -14,10 +14,10 @@ let animationSettings = gsap.from(".settingsContainer", {
     opacity: 0.5,
     paused: true,
     onStart: function () {
-        settingsVars.parentDisplay.classList.remove("d-none");
+        settingsVars.parentDisplay.style.visibility = "visible";
     },
     onReverseComplete: function () {
-        settingsVars.parentDisplay.classList.add("d-none");
+        settingsVars.parentDisplay.style.visibility = "hidden";
     },
 });
 settingsVars.buttonOpen.addEventListener("click", displaySettings, false);

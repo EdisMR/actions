@@ -1,11 +1,14 @@
+<?php
+		include_once "../global/global.php";
+		firstvisit();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<title>XitusDev - Tic Tac Toe</title>
 	<?php
-		include_once "../global/global.php";
-		firstvisit();
 		headHTML();
 	?>
 

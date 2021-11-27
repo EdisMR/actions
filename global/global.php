@@ -249,7 +249,7 @@ function settingsModal()
 ?>
 
 	<!-- Aqui el HTML -->
-	<section id="modalSettings" class="d-none">
+	<section id="modalSettings">
 		<!-- d-none -->
 		<div class="settings-priorization"></div>
 
@@ -396,16 +396,19 @@ function headHTML(){
 	<script src="/global/script/alertify.min.js"></script>
 	<script defer src="/global/script/main.js"></script>
 	<link rel="stylesheet" href="/global/css/compiled/global.css">
+	<link rel="stylesheet" href="/global/css/extras/fabric-icons-inline.css">
 <?php
 }
 
 
 function firstvisit(){
-	if (!isset($_COOKIE["firstvisit"])) {
-		$tiempoExpiracion = time() + 60 * 60 * 24 * 180;
-		setcookie("firstvisit", true, $tiempoExpiracion, '/');
+	$cookiename="firstvisit";
+	$cookievalue="true";
+	$tiempoExpiracion = time() + 60 * 60 * 24 * 30;
+	$redirection="Location: /first-visit/";
 
-		$redirection="Location:/first-visit/";
+	if (!isset($_COOKIE[$cookiename]) || $_COOKIE[$cookiename]!=$cookievalue) {
+		setcookie($cookiename, $cookievalue, $tiempoExpiracion, '/');
 		header($redirection);
 	}
 }

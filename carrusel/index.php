@@ -1,3 +1,7 @@
+<?php
+	include_once "../global/global.php";
+	firstvisit();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,8 +9,6 @@
 	<title data-text="htitle"></title>
 	
 	<?php
-		include_once "../global/global.php";
-		firstvisit();
 		headHTML();
 	?>
 

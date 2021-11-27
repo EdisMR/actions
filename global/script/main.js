@@ -109,10 +109,10 @@ enlacesGato.forEach(elm => {
     elmParent.addEventListener("click", helpNodeAppear, false);
 });
 async function helpNodeAppear() {
-    ayuda.style.display = "inline-block";
+    ayuda.style.visibility = "visible";
     ayuda.classList.add("animateHelpNode");
     setTimeout(() => {
-        ayuda.style.display = "none";
+        ayuda.style.visibility = "hidden";
         ayuda.classList.remove("animateHelpNode");
     }, 2000);
 }
@@ -120,11 +120,11 @@ const dinoEd = document.getElementById("dino");
 window.addEventListener("contextmenu", dino, false);
 async function dino(e) {
     e.preventDefault();
-    dinoEd.style.display = "block";
+    dinoEd.style.visibility = "visible";
     dinoEd.style.left = positionDino(e.clientX, mitadPantallaHoriz) + "px";
     dinoEd.style.top = positionDino(e.clientY, mitadPantallaVert) + "px";
     setTimeout(() => {
-        dinoEd.style.display = "none";
+        dinoEd.style.visibility = "hidden";
     }, 500);
 }
 function positionDino(evVal, mitadP) {

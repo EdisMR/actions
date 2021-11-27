@@ -17,10 +17,13 @@ main{
 	background-color: rgb(66, 92, 206);
 	user-select: none;
 	pointer-events: none;
+	opacity: 0;
 }
 
 .welcome-text{
 	font-size: 70px;
+	display: inline-block;
+	padding: 30px;
 }
 
 .box1,.box2{

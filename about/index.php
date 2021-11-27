@@ -1,11 +1,13 @@
+<?php
+	include_once "../global/global.php";
+	firstvisit();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>XitusDev - Gallery</title>
 	<?php
-		include_once "../global/global.php";
-		firstvisit();
 		headHTML();
 	?>
 	<link rel="stylesheet" href="sass/about.css">

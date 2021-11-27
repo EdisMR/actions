@@ -3,8 +3,8 @@ window.addEventListener("contextmenu", (e) => { e.preventDefault(); }, false);
 window.addEventListener("load", afterLoadVisit, false);
 const animateSpan = document.querySelector("span");
 let animationTimeline = gsap.timeline({ paused: true })
-    .from("main", {
-    opacity: 0,
+    .to("main", {
+    opacity: 1,
     duration: 2,
     delay: 1,
 })

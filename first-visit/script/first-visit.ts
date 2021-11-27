@@ -4,8 +4,8 @@ window.addEventListener("load",afterLoadVisit,false)
 const animateSpan:HTMLElement=<HTMLElement>document.querySelector("span")
 
 let animationTimeline=gsap.timeline({paused:true})
-.from("main",{
-	opacity:0,
+.to("main",{
+	opacity:1,
 	duration:2,
 	delay:1,
 })
