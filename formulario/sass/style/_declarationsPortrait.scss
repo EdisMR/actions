@@ -22,9 +22,8 @@ form{
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	margin-bottom: 30px;
-	&:first-child{
-		margin-right: 0px !important;
-	}
+	margin-right: 20px;
+    margin-left: 20px;
 	.block{
 		width: 100%;
 	}
