@@ -43,7 +43,7 @@
 					</p>
 				</div>
 				<figure>
-					<img src="index/assets/portada-6-1.webp" alt="" title="Portada">
+					<img src="index/assets/portada-5.webp" alt="" title="Portada">
 				</figure>
 			</article>
 		</section>
