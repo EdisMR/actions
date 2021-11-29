@@ -36,7 +36,7 @@
 
 					<article class="textItem">
 						<p class="btnSendHelper">example: <span>9.936633, -84.107593</span></p>
-						<button id="myLocation" data-text="fmylocation"></button>
+						<button id="myLocation" data-text="fmylocation" aria-label="Use my location"></button>
 					</article>
 				</article>
 
@@ -57,12 +57,12 @@
 
 						<div class="buttons">
 							<div class="btn">
-								<button type="reset">
+								<button type="reset" aria-label="Reset form">
 									<span class="ms-Icon ms-Icon--Reset"></span>
 								</button>
 							</div>
 							<div class="btn">
-								<button type="submit">
+								<button type="submit" aria-label="Submit form">
 									<span class="ms-Icon ms-Icon--AcceptMedium"></span>
 								</button>
 							</div>
@@ -120,9 +120,9 @@
 				</article>
 
 				<article class="mostrarFooter">
-					<button id="updateLoc" data-text="fmostrarupdate"></button>
-					<button id="copyLoc" data-text="fmostrarcopy"></button>
-					<button id="toGmaps" data-text="fmostrarlocation"></button>
+					<button id="updateLoc" data-text="fmostrarupdate" aria-label="Update Location"></button>
+					<button id="copyLoc" data-text="fmostrarcopy" aria-label="Copy Location"></button>
+					<button id="toGmaps" data-text="fmostrarlocation" aria-label="Location on Google Maps"></button>
 					<p class="notaPie" data-text="fmostrardata"></p>
 				</article>
 

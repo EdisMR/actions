@@ -30,8 +30,8 @@
 					<span>Player 2 (red): </span><input type="text" name="user2" minlength="1" maxlength="30" autocomplete="off" pattern="^([\w]{1,20}[\s]{0,1}){1,3}$" required>
 				</div>
 				<div class="resetearInputs">
-					<button type="reset"><span class="ms-Icon ms-Icon--Reset"></span></button>
-					<button type="submit"><span class="ms-Icon ms-Icon--AcceptMedium"></span></button>
+					<button type="reset" aria-label="Reset"><span class="ms-Icon ms-Icon--Reset"></span></button>
+					<button type="submit" aria-label="Submit"><span class="ms-Icon ms-Icon--AcceptMedium"></span></button>
 				</div>
 			</form>
 		</section>
@@ -236,7 +236,7 @@
 
 		<section class="buttonReset d-none">
 			<div>
-				<button>Restart game</button>
+				<button aria-label="Restart game">Restart game</button>
 			</div>
 		</section>
 

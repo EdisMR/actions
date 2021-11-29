@@ -139,14 +139,14 @@
 		
 		<article class="carousel-controls">
 			<div class="carousel-buttons">
-				<button class="carousel-btn-previous"><span class="ms-Icon ms-Icon--ChevronLeftMed"></span></button>
+				<button class="carousel-btn-previous" aria-label="Previous slide"><span class="ms-Icon ms-Icon--ChevronLeftMed"></span></button>
 				<div class="carousel-Inner-howMany">
 					<span class="carousel-innerActual">5</span> <span>/</span>
 					<span class="carousel-innerTotal">8</span>
 				</div>
-				<button class="carousel-btn-pause"><span class="ms-Icon ms-Icon--Pause"></span></button>
-				<button class="carousel-btn-play"><span class="ms-Icon ms-Icon--Play"></span></button>
-				<button class="carousel-btn-next"><span class="ms-Icon ms-Icon--ChevronRightMed"></span></button>
+				<button class="carousel-btn-pause" aria-label="Pause carousel"><span class="ms-Icon ms-Icon--Pause"></span></button>
+				<button class="carousel-btn-play" aria-label="Play carousel"><span class="ms-Icon ms-Icon--Play"></span></button>
+				<button class="carousel-btn-next" aria-label="Next slide"><span class="ms-Icon ms-Icon--ChevronRightMed"></span></button>
 			</div>
 		</article>
 	</section>
@@ -237,14 +237,14 @@
 		
 		<article class="carousel-controls">
 			<div class="carousel-buttons">
-				<button class="carousel-btn-previous"><span class="ms-Icon ms-Icon--ChevronLeftMed"></span></button>
+				<button class="carousel-btn-previous" aria-label="Previous slide"><span class="ms-Icon ms-Icon--ChevronLeftMed"></span></button>
 				<div class="carousel-Inner-howMany">
 					<span class="carousel-innerActual">5</span> <span>/</span>
 					<span class="carousel-innerTotal">8</span>
 				</div>
-				<button class="carousel-btn-pause"><span class="ms-Icon ms-Icon--Pause"></span></button>
-				<button class="carousel-btn-play"><span class="ms-Icon ms-Icon--Play"></span></button>
-				<button class="carousel-btn-next"><span class="ms-Icon ms-Icon--ChevronRightMed"></span></button>
+				<button class="carousel-btn-pause" aria-label="Pause carousel"><span class="ms-Icon ms-Icon--Pause"></span></button>
+				<button class="carousel-btn-play" aria-label="Play carousel"><span class="ms-Icon ms-Icon--Play"></span></button>
+				<button class="carousel-btn-next" aria-label="Next slide"><span class="ms-Icon ms-Icon--ChevronRightMed"></span></button>
 			</div>
 		</article>
 	</section>
@@ -306,14 +306,14 @@
 		
 		<article class="carousel-controls">
 			<div class="carousel-buttons">
-				<button class="carousel-btn-previous"><span class="ms-Icon ms-Icon--ChevronLeftMed"></span></button>
+				<button class="carousel-btn-previous" aria-label="Previous slide"><span class="ms-Icon ms-Icon--ChevronLeftMed"></span></button>
 				<div class="carousel-Inner-howMany">
 					<span class="carousel-innerActual">5</span> <span>/</span>
 					<span class="carousel-innerTotal">8</span>
 				</div>
-				<button class="carousel-btn-pause"><span class="ms-Icon ms-Icon--Pause"></span></button>
-				<button class="carousel-btn-play"><span class="ms-Icon ms-Icon--Play"></span></button>
-				<button class="carousel-btn-next"><span class="ms-Icon ms-Icon--ChevronRightMed"></span></button>
+				<button class="carousel-btn-pause" aria-label="Pause carousel"><span class="ms-Icon ms-Icon--Pause"></span></button>
+				<button class="carousel-btn-play" aria-label="Play carousel"><span class="ms-Icon ms-Icon--Play"></span></button>
+				<button class="carousel-btn-next" aria-label="Next slide"><span class="ms-Icon ms-Icon--ChevronRightMed"></span></button>
 			</div>
 		</article>
 	</section>

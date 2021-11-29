@@ -38,8 +38,8 @@
 						<input type="text" name="operationInput" autocomplete="off" autofocus placeholder="Example: (26+(234*2))/(5-3)" pattern="^[\d\+\-\*\/\(\)\.]{0,}$">
 					</article>
 					<article class="buttonsContainer">
-						<button type="reset" data-text="btnreset"></button>
-						<button type="submit" data-text="btnsolve"></button>
+						<button type="reset" data-text="btnreset" aria-label="Reset Calculator"></button>
+						<button type="submit" data-text="btnsolve" aria-label="Calculate"></button>
 					</article>
 					<article class="resultContainer">
 						<div>

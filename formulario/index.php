@@ -176,12 +176,12 @@
 
 				<article class="block">
 					<div class="buttonContainer">
-						<button type="reset">
+						<button type="reset" aria-label="reset form">
 							<!-- Reset -->
 							<span data-text="cbtnreset"></span><span class="ms-Icon ms-Icon--Reset"></span>
 						</button>
 
-						<button type="submit">
+						<button type="submit" aria-label="submit form">
 							<!-- Send -->
 							<span data-text="cbtnsend"></span><span class="ms-Icon ms-Icon--AcceptMedium"></span>
 						</button>

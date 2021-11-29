@@ -149,7 +149,7 @@ function headerHTML()
 					<li data-accesibilityborder="true">
 						<a rel="noopener noreferrer" id="settingsButton">
 							<div>
-								<button class="ms-Icon ms-Icon--Settings"></button>
+								<button aria-label="Open Settings" class="ms-Icon ms-Icon--Settings"></button>
 							</div>
 							<div>
 								<span data-text="asettings" class="menuItemText"></span>
@@ -356,7 +356,7 @@ function settingsModal()
 
 			<section class="block">
 				<div class="settingsFooter">
-					<button id="settingsClose" data-text="aclosebtn"></button>
+					<button aria-label="Close Settings" id="settingsClose" data-text="aclosebtn"></button>
 				</div>
 			</section>
 

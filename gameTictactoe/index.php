@@ -36,7 +36,7 @@
 					<span>O -> </span><input type="text" name="user2" minlength="1" maxlength="30" autocomplete="off" pattern="^([\w]{1,20}[\s]{0,1}){1,3}$">
 				</div>
 				<div class="btnSubmit">
-					<button type="submit">Start</button>
+					<button type="submit" aria-label="Start game">Start</button>
 				</div>
 			</form>
 		</section>
@@ -92,7 +92,7 @@
 
 		<!-- PARA MOSTRAR GANADOR -->
 		<div class="resetGame d-None">
-			<button>Restart game</button>
+			<button aria-label="Restart game">Restart game</button>
 		</div>
 		<section id="mostrarGanador" class="d-None">
 

@@ -29,13 +29,13 @@
 			<video src="./assets/Secuencia 02-3 1.mp4" title="video" alt="Video" poster="./assets/post.webp" preload></video>
 		</figure>
 		<section class="buttonsSection">
-			<button disabled id="play">
+			<button disabled id="play" aria-label="play video">
 				<span class="ms-Icon ms-Icon--PlaySolid" title="play video"></span>
 			</button>
-			<button disabled id="pause">
+			<button disabled id="pause" aria-label="pause video">
 				<span class="ms-Icon ms-Icon--CirclePauseSolid" title="pause video"></span>
 			</button>
-			<button disabled id="stop">
+			<button disabled id="stop" aria-label="stop video">
 				<span class="ms-Icon ms-Icon--StopSolid" title="stop video"></span>
 			</button>
 		</section>
