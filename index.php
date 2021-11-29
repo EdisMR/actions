@@ -1,14 +1,14 @@
 <?php
-	include_once "global/global.php";
-	firstvisit();
+include_once "global/global.php";
+firstvisit();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
 	<title>XitusDev</title>
+	<meta name="description" content="I'm XitusDev, welcome to my personal portfolio">
 
 	<?php
 	headHTML();
@@ -43,7 +43,7 @@
 					</p>
 				</div>
 				<figure>
-					<img src="index/assets/portada-5.webp" alt="" title="Portada">
+					<img src="index/assets/portada-5.webp" alt="portada" title="Portada" width="auto" height="auto">
 				</figure>
 			</article>
 		</section>
@@ -133,7 +133,7 @@
 					<div class="tecno-item">
 						<!-- HTML -->
 						<figure>
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+							<svg loading="lazy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 								<title>HTML5 Logo</title>
 								<polygon fill="#E44D26" points="107.644,470.877 74.633,100.62 437.367,100.62 404.321,470.819 255.778,512 			" />
 								<polygon fill="#F16529" points="256,480.523 376.03,447.246 404.27,130.894 256,130.894 			" />
@@ -174,84 +174,84 @@
 					<div class="tecno-item">
 						<!-- JS -->
 						<figure>
-							<img src="index/assets/icons/js.webp" alt="javascript">
+							<img loading="lazy" src="index/assets/icons/js.webp" alt="javascript" width="auto" height="auto">
 						</figure>
 					</div>
 
 					<div class="tecno-item">
 						<!-- Git -->
 						<figure>
-							<img src="index/assets/icons/git.webp" alt="git">
+							<img loading="lazy" src="index/assets/icons/git.webp" alt="git" width="auto" height="auto">
 						</figure>
 					</div>
 
 					<div class="tecno-item">
 						<!-- Github -->
 						<figure>
-							<img src="index/assets/icons/GitHub.webp" alt="github">
+							<img loading="lazy" src="index/assets/icons/GitHub.webp" alt="github" width="auto" height="auto">
 						</figure>
 					</div>
 
 					<div class="tecno-item">
 						<!-- JS -->
 						<figure>
-							<img src="index/assets/icons/sass.webp" alt="sass">
+							<img loading="lazy" src="index/assets/icons/sass.webp" alt="sass" width="auto" height="auto">
 						</figure>
 					</div>
 
 					<div class="tecno-item">
 						<!-- Responsive Web Design -->
 						<figure>
-							<img src="index/assets/icons/rwd1.webp" alt="responsive web design">
+							<img loading="lazy" src="index/assets/icons/rwd1.webp" alt="responsive web design" width="auto" height="auto">
 						</figure>
 					</div>
 
 					<div class="tecno-item">
 						<!-- Bootstrap -->
 						<figure>
-							<img src="index/assets/icons/bootstrap-logo.webp" alt="Bootstrap">
+							<img loading="lazy" src="index/assets/icons/bootstrap-logo.webp" alt="Bootstrap" width="auto" height="auto">
 						</figure>
 					</div>
 
 					<div class="tecno-item">
 						<!-- PHP -->
 						<figure>
-							<img src="index/assets/icons/php.webp" alt="PHP">
+							<img loading="lazy" src="index/assets/icons/php.webp" alt="PHP" width="auto" height="auto">
 						</figure>
 					</div>
 
 					<div class="tecno-item">
 						<!-- PHP -->
 						<figure>
-							<img src="index/assets/icons/wordpress1.svg" alt="Wordpress">
+							<img loading="lazy" src="index/assets/icons/wordpress1.svg" alt="Wordpress" width="auto" height="auto">
 						</figure>
 					</div>
 
 					<div class="tecno-item">
 						<!-- SEO -->
 						<figure>
-							<img src="index/assets/icons/seo.webp" alt="SEO">
+							<img loading="lazy" src="index/assets/icons/seo.webp" alt="SEO" width="auto" height="auto">
 						</figure>
 					</div>
 
 					<div class="tecno-item">
 						<!-- Accesibilidad Web -->
 						<figure>
-							<img src="index/assets/icons/w3c.webp" alt="Web Accesibility">
+							<img loading="lazy" src="index/assets/icons/w3c.webp" alt="Web Accesibility" width="auto" height="auto">
 						</figure>
 					</div>
 
 					<div class="tecno-item">
 						<!-- Animaciones CSS y JS -->
 						<div class="tecno-texto">
-							<span data-text="btecnostatic"></span>
+							<span loading="lazy" data-text="btecnostatic"></span>
 						</div>
 					</div>
 
 					<div class="tecno-item">
 						<!-- REGEX -->
 						<div class="tecno-texto">
-							<span data-text="btecnoregex"></span>
+							<span loading="lazy" data-text="btecnoregex"></span>
 						</div>
 					</div>
 
@@ -277,7 +277,7 @@
 						</div>
 						<div class="card-content">
 							<figure>
-								<img src="index/assets/conecta4.webp" alt="Connect four game" title="Connect 4">
+								<img src="index/assets/conecta4.webp" alt="Connect four game" title="Connect 4" loading="lazy" width="auto" height="auto">
 							</figure>
 						</div>
 					</section>
@@ -288,7 +288,7 @@
 						</div>
 						<div class="card-content">
 							<figure>
-								<img src="index/assets/tictactoe.webp" alt="Tic tac toe" title="tic tac toe">
+								<img src="index/assets/tictactoe.webp" alt="Tic tac toe" title="tic tac toe" loading="lazy" width="auto" height="auto">
 							</figure>
 						</div>
 					</section>
@@ -299,7 +299,7 @@
 						</div>
 						<div class="card-content">
 							<figure>
-								<img src="index/assets//calculadora.webp" alt="random rabbit" title="Calculator">
+								<img src="index/assets//calculadora.webp" alt="random rabbit" title="Calculator" loading="lazy" width="auto" height="auto">
 							</figure>
 						</div>
 					</section>
@@ -310,7 +310,7 @@
 						</div>
 						<div class="card-content">
 							<figure>
-								<img src="index/assets/broccoli.webp" alt="Broccoli Video">
+								<img src="index/assets/broccoli.webp" alt="Broccoli Video" loading="lazy" width="auto" height="auto">
 							</figure>
 						</div>
 					</section>

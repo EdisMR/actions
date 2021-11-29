@@ -13,8 +13,8 @@
 		headHTML();
 	?>
 
-<link rel="stylesheet" href="./sass/videoIng.css">
-<script defer src="./script/controls.js"></script>
+	<link rel="stylesheet" href="./sass/videoIng.css">
+	<script defer src="./script/controls.js"></script>
 </head>
 
 <body>

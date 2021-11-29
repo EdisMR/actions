@@ -44,7 +44,7 @@
 				<article class="carousel-item">
 					<div class="carousel-itemPart">
 						<figure>
-							<img src="./assets/asiprofe (4).webp" alt="copa">
+							<img src="./assets/asiprofe (4).webp" alt="copa" loading="lazy" width="auto" height="auto">
 						</figure>
 					</div>
 					<div class="carousel-itemPart">
@@ -62,7 +62,7 @@
 				<article class="carousel-item">
 					<div class="carousel-itemPart">
 						<figure>
-							<img src="./assets/asiprofe (5).webp" alt="copa">
+							<img src="./assets/asiprofe (5).webp" alt="copa" loading="lazy" width="auto" height="auto">
 						</figure>
 					</div>
 					<div class="carousel-itemPart">
@@ -78,7 +78,7 @@
 				<article class="carousel-item">
 					<div class="carousel-itemPart">
 						<figure>
-							<img src="./assets/asiprofe (2).webp" alt="copa">
+							<img src="./assets/asiprofe (2).webp" alt="copa" loading="lazy" width="auto" height="auto">
 						</figure>
 					</div>
 				</article>
@@ -91,7 +91,7 @@
 				<article class="carousel-item">
 					<div class="carousel-itemPart">
 						<figure>
-							<img src="./assets/asiprofe (3).webp" alt="copa">
+							<img src="./assets/asiprofe (3).webp" alt="copa" loading="lazy" width="auto" height="auto">
 						</figure>
 					</div>
 				</article>
@@ -103,7 +103,7 @@
 				<article class="carousel-item">
 					<div class="carousel-itemPart">
 						<figure>
-							<img src="./assets/asiprofe (6).webp" alt="copa">
+							<img src="./assets/asiprofe (6).webp" alt="copa" loading="lazy" width="auto" height="auto">
 						</figure>
 					</div>
 					<div class="carousel-itemPart">
@@ -119,7 +119,7 @@
 				<article class="carousel-item">
 					<div class="carousel-itemPart">
 						<figure>
-							<img src="./assets/asiprofe (1).webp" alt="copa">
+							<img src="./assets/asiprofe (1).webp" alt="copa" loading="lazy" width="auto" height="auto">
 						</figure>
 					</div>
 					<div class="carousel-itemPart">
@@ -169,7 +169,7 @@
 				<article class="carousel-item">
 					<div class="carousel-itemPart">
 						<figure>
-							<img src="./assets/command (1).webp" alt="comand 1">
+							<img src="./assets/command (1).webp" alt="comand 1" loading="lazy" width="auto" height="auto">
 						</figure>
 					</div>
 					<div class="carousel-itemPart">
@@ -186,7 +186,7 @@
 				<article class="carousel-item">
 					<div class="carousel-itemPart">
 						<figure>
-							<img src="./assets/command (2).webp" alt="copa">
+							<img src="./assets/command (2).webp" alt="copa" loading="lazy" width="auto" height="auto">
 						</figure>
 					</div>
 					<div class="carousel-itemPart">
@@ -203,7 +203,7 @@
 				<article class="carousel-item">
 					<div class="carousel-itemPart">
 						<figure>
-							<img src="./assets/command (3).webp" alt="copa">
+							<img src="./assets/command (3).webp" alt="copa" loading="lazy" width="auto" height="auto">
 						</figure>
 					</div>
 				</article>
@@ -215,7 +215,7 @@
 				<article class="carousel-item">
 					<div class="carousel-itemPart">
 						<figure>
-							<img src="./assets/command (4).webp" alt="copa">
+							<img src="./assets/command (4).webp" alt="copa" loading="lazy" width="auto" height="auto">
 						</figure>
 					</div>
 				</article>
@@ -226,7 +226,7 @@
 				<article class="carousel-item">
 					<div class="carousel-itemPart">
 						<figure>
-							<img src="./assets/command (5).webp" alt="copa">
+							<img src="./assets/command (5).webp" alt="copa" loading="lazy" width="auto" height="auto">
 						</figure>
 					</div>
 				</article>
@@ -270,7 +270,7 @@
 				<article class="carousel-item">
 					<div class="carousel-itemPart">
 						<figure>
-							<img src="./assets/mascarillas (1).webp" alt="header">
+							<img src="./assets/mascarillas (1).webp" alt="header" loading="lazy" width="auto" height="auto">
 						</figure>
 					</div>
 					<div class="carousel-itemPart">
@@ -287,7 +287,7 @@
 				<article class="carousel-item">
 					<div class="carousel-itemPart">
 						<figure>
-							<img src="./assets/mascarillas (2).webp" alt="copa">
+							<img src="./assets/mascarillas (2).webp" alt="copa" loading="lazy" width="auto" height="auto">
 						</figure>
 					</div>
 					<div class="carousel-itemPart">

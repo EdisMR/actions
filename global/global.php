@@ -74,7 +74,7 @@ function headerHTML()
 
 		<!-- URLs -->
 		<section class="block">
-			<nav class="header-enlaces">
+			<nav class="header-enlaces" role="navigation">
 				<ul>
 					<li data-accesibilityborder="true">
 						<a href="/" rel="noopener noreferrer">
@@ -149,7 +149,7 @@ function headerHTML()
 					<li data-accesibilityborder="true">
 						<a rel="noopener noreferrer" id="settingsButton">
 							<div>
-								<button aria-label="Open Settings" class="ms-Icon ms-Icon--Settings"></button>
+								<button aria-label="Open Settings" class="ms-Icon ms-Icon--Settings" accesskey = "a"></button>
 							</div>
 							<div>
 								<span data-text="asettings" class="menuItemText"></span>
@@ -253,7 +253,7 @@ function settingsModal()
 		<!-- d-none -->
 		<div class="settings-priorization"></div>
 
-		<article class="settingsContainer" data-accesibilityborder="true">
+		<article role="menu" class="settingsContainer" data-accesibilityborder="true">
 
 			<section class="block">
 				<div class="settingsHeader">
@@ -280,7 +280,7 @@ function settingsModal()
 
 
 							<div class="block">
-								<div class="settingItemContainer">
+								<div class="settingItemContainer" role="menuitem">
 									<!-- Contiene a los cuadros de control -->
 
 									<div class="settingItem">
@@ -290,7 +290,7 @@ function settingsModal()
 										</div>
 										<div class="block">
 											<div class="settingItemControl">
-												<span>Off</span><span class="settingItemIcon settingItemInactive" id="buttonHighContrast"></span><span>On</span>
+												<span>Off</span><span role="menuitemcheckbox" class="settingItemIcon settingItemInactive" id="buttonHighContrast"></span><span>On</span>
 											</div>
 										</div>
 									</div>
@@ -303,7 +303,7 @@ function settingsModal()
 										</div>
 										<div class="block">
 											<div class="settingItemControl">
-												<span>Off</span><span class="settingItemIcon settingItemInactive" id="buttonBigFont"></span><span>On</span>
+												<span>Off</span><span role="menuitemcheckbox" class="settingItemIcon settingItemInactive" id="buttonBigFont"></span><span>On</span>
 											</div>
 										</div>
 									</div>
@@ -328,7 +328,7 @@ function settingsModal()
 
 
 							<div class="block">
-								<div class="settingItemContainer">
+								<div class="settingItemContainer" role="menuitem">
 									<!-- Contiene a los cuadros de control -->
 
 									<div class="settingItem">
@@ -338,7 +338,7 @@ function settingsModal()
 										</div>
 										<div class="block">
 											<div class="settingItemControl">
-												<span data-text="asetenglish"></span><span class="settingItemIcon settingItemInactive" id="buttonBilingual"></span><span data-text="asetspanish"></span>
+												<span data-text="asetenglish"></span><span role="menuitemcheckbox" class="settingItemIcon settingItemInactive" id="buttonBilingual"></span><span data-text="asetspanish"></span>
 											</div>
 										</div>
 									</div>
@@ -356,7 +356,7 @@ function settingsModal()
 
 			<section class="block">
 				<div class="settingsFooter">
-					<button aria-label="Close Settings" id="settingsClose" data-text="aclosebtn"></button>
+					<button aria-label="Close Settings" id="settingsClose" data-text="aclosebtn" accesskey = "s"></button>
 				</div>
 			</section>
 
@@ -372,7 +372,7 @@ function settingsModal()
 function headHTML(){
 ?>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=3">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-7L6RHQNWLQ"></script>
