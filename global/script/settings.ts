@@ -222,32 +222,35 @@ function removeBigFont() {
 
 /* Si no se define el lenguaje, se definira el idioma tomando el del navegador */
 
-function defineLang(idiomText = "") {
+const defineLang=(idiomText = "")=>{
+	localStorage.lang = "eng";
+
 	if (idiomText == "") {
-		if (window.navigator.language.includes("es")) {
+		
+		if (window.navigator.language.includes("es")){
 			localStorage.lang = "spa";
+			alertifyMessageBilingual({
+				es: "Puedes cambiarlo en Configuraciones.",
+				eng: "You can change it on Settings.",
+			});
+			alertifyMessageBilingual({
+				es: "Idioma configurado automáticamente.",
+				eng: "Language was set automatically.",
+			});
 		}
-		if (window.navigator.language.includes("eng")) {
-			localStorage.lang = "eng";
-		}
-		alertifyMessageBilingual({
-			es: "Puedes cambiarlo en Configuraciones.",
-			eng: "You can change it on Settings.",
-		});
-		alertifyMessageBilingual({
-			es: "Idioma configurado automáticamente.",
-			eng: "Language was set automatically.",
-		});
-	} else {
+
+	}else {
 		localStorage.lang = idiomText;
 	}
 }
+
+
 /* La funcion idiomHTMLInner() recibe como parametro un objeto con las urls del fetch hacia el 
 archivo json de cada lenguaje, con los items spa y eng como keys. Esta funcion sera llamada
 para llenar los span correspondientes al idioma. el identificador en el html es un data-text="key" */
 
 /* Funcion para llenar el texto */
-function idiomHTMLInner(urls: { spa: string; eng: string }): void {
+async function idiomHTMLInner(urls: { spa: string; eng: string }): void {
 	var myHeaders = new Headers();
 	myHeaders.append("pragma", "no-cache");
 	myHeaders.append("cache-control", "no-cache");
@@ -312,7 +315,7 @@ if (localStorage.lang == "spa") {
 	settingsVars.buttonBilingual.classList.remove("settingItemInactive");
 }
 
-function alertifyMessageBilingual(param: { es: string; eng: string }): void {
+async function alertifyMessageBilingual(param: { es: string; eng: string }): void {
 	if (localStorage.lang == "spa") {
 		alertify.set("notifier", "delay", 5);
 		alertify.set("notifier", "position", "top-center");

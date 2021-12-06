@@ -26,8 +26,6 @@ async function calculatorMainProcess(e: Event){
 	/* Etapa de evaluacion: hacer logica para controlar flujo de calculo de los parentesis y casos */
 	let strActual:string=inputValue;
 
-	console.log(math.evaluate(strActual))
-
 	let contador:number=100;
 	do{
 		let parentPeque:string=determinateLastParenthesis(strActual);

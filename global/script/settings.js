@@ -148,28 +148,26 @@ function removeBigFont() {
         });
     }
 }
-function defineLang(idiomText = "") {
+const defineLang = (idiomText = "") => {
+    localStorage.lang = "eng";
     if (idiomText == "") {
         if (window.navigator.language.includes("es")) {
             localStorage.lang = "spa";
+            alertifyMessageBilingual({
+                es: "Puedes cambiarlo en Configuraciones.",
+                eng: "You can change it on Settings.",
+            });
+            alertifyMessageBilingual({
+                es: "Idioma configurado automáticamente.",
+                eng: "Language was set automatically.",
+            });
         }
-        if (window.navigator.language.includes("eng")) {
-            localStorage.lang = "eng";
-        }
-        alertifyMessageBilingual({
-            es: "Puedes cambiarlo en Configuraciones.",
-            eng: "You can change it on Settings.",
-        });
-        alertifyMessageBilingual({
-            es: "Idioma configurado automáticamente.",
-            eng: "Language was set automatically.",
-        });
     }
     else {
         localStorage.lang = idiomText;
     }
-}
-function idiomHTMLInner(urls) {
+};
+async function idiomHTMLInner(urls) {
     var myHeaders = new Headers();
     myHeaders.append("pragma", "no-cache");
     myHeaders.append("cache-control", "no-cache");
@@ -218,7 +216,7 @@ if (localStorage.lang == "eng") {
 if (localStorage.lang == "spa") {
     settingsVars.buttonBilingual.classList.remove("settingItemInactive");
 }
-function alertifyMessageBilingual(param) {
+async function alertifyMessageBilingual(param) {
     if (localStorage.lang == "spa") {
         alertify.set("notifier", "delay", 5);
         alertify.set("notifier", "position", "top-center");
