@@ -61,7 +61,7 @@ function headerHTML()
 		<section class="block">
 			<article class="header-title">
 				<div>
-					<h1>XitusDev
+					<h1>Chepo
 						<!-- Titulo -->
 					</h1>
 				</div>

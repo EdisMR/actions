@@ -1,7 +1,7 @@
 {
 	"bwebdev":"Desarrollador Web",
 	"bpages":"Páginas en este sitio",
-	"bform":"Formulario",
+	"bform":"Formulario de muestra",
 	"bformlist1":"Validar un formulario usando la API form de Javascript",
 	"bformlist2":"Animaciones de ayuda al usuario en caso de entradas inválidas",
 	"bformlist3":"Tratamiento de tipos de entrada a través de REGEXP para evitar entradas inválidas",

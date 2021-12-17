@@ -48,74 +48,6 @@ firstvisit();
 			</article>
 		</section>
 
-
-		<!-- GRID1 -->
-		<section class="block centrador">
-			<article class="block">
-				<div>
-					<h2 id="index-paginas" data-text="bpages"></h2>
-				</div>
-			</article>
-			<article class="block">
-				<div class="main-index-grid col2y1">
-					<section class="card" data-accesibilityborder="true">
-						<div class="card-header">
-							<h4><a href="/formulario/" rel="noopener noreferrer" data-text="bform"></a></h4>
-						</div>
-						<div class="card-content">
-							<ul>
-								<li data-text="bformlist1"></li>
-								<li data-text="bformlist2"></li>
-								<li data-text="bformlist3"></li>
-								<li data-text="bformlist4"></li>
-							</ul>
-						</div>
-					</section>
-					<section class="card" data-accesibilityborder="true">
-						<div class="card-header">
-							<h4><a href="/galeria/" rel="noopener noreferrer" data-text="agallery"></a></h4>
-						</div>
-						<div class="card-content">
-							<ul>
-								<li data-text="bgalelist1"></li>
-								<li data-text="bgalelist2"></li>
-								<li data-text="bgalelist3"></li>
-								<li data-text="bgalelist4"></li>
-							</ul>
-						</div>
-					</section>
-
-					<section class="card" data-accesibilityborder="true">
-						<div class="card-header">
-							<h4><a href="/api/" rel="noopener noreferrer" data-text="aapi"></a></h4>
-						</div>
-						<div class="card-content">
-							<ul>
-								<li data-text="aapili1"></li>
-								<li data-text="aapili2"></li>
-								<li data-text="aapili3"></li>
-							</ul>
-						</div>
-					</section>
-
-					<section class="card" data-accesibilityborder="true">
-						<div class="card-header">
-							<h4><a href="/index.php#juegos-html" rel="noopener noreferrer" data-text="bcarouseltitle"></a></h4>
-						</div>
-						<div class="card-content">
-							<ul>
-								<li data-text="bcarouselitem1"></li>
-								<li data-text="bcarouselitem2"></li>
-								<li data-text="bcarouselitem3"></li>
-								<li data-text="bcarouselitem4"></li>
-							</ul>
-						</div>
-					</section>
-
-				</div>
-			</article>
-		</section>
-
 		<!-- Seccion de tecnologias que uso -->
 		<section class="block centrador">
 			<article class="block">
@@ -258,6 +190,76 @@ firstvisit();
 				</div>
 			</article>
 		</section>
+
+		<!-- GRID1 -->
+		<section class="block centrador">
+			<article class="block">
+				<div>
+					<h2 id="index-paginas" data-text="bpages"></h2>
+				</div>
+			</article>
+			<article class="block">
+				<div class="main-index-grid col2y1">
+					<section class="card" data-accesibilityborder="true">
+						<div class="card-header">
+							<h4><a href="/formulario/" rel="noopener noreferrer" data-text="bform"></a></h4>
+						</div>
+						<div class="card-content">
+							<ul>
+								<li data-text="bformlist1"></li>
+								<li data-text="bformlist2"></li>
+								<li data-text="bformlist3"></li>
+								<li data-text="bformlist4"></li>
+							</ul>
+						</div>
+					</section>
+					<section class="card" data-accesibilityborder="true">
+						<div class="card-header">
+							<h4><a href="/galeria/" rel="noopener noreferrer" data-text="agallery"></a></h4>
+						</div>
+						<div class="card-content">
+							<ul>
+								<li data-text="bgalelist1"></li>
+								<li data-text="bgalelist2"></li>
+								<li data-text="bgalelist3"></li>
+								<li data-text="bgalelist4"></li>
+							</ul>
+						</div>
+					</section>
+
+					<section class="card" data-accesibilityborder="true">
+						<div class="card-header">
+							<h4><a href="/api/" rel="noopener noreferrer" data-text="aapi"></a></h4>
+						</div>
+						<div class="card-content">
+							<ul>
+								<li data-text="aapili1"></li>
+								<li data-text="aapili2"></li>
+								<li data-text="aapili3"></li>
+							</ul>
+						</div>
+					</section>
+
+					<section class="card" data-accesibilityborder="true">
+						<div class="card-header">
+							<h4><a href="/index.php#juegos-html" rel="noopener noreferrer" data-text="bcarouseltitle"></a></h4>
+						</div>
+						<div class="card-content">
+							<ul>
+								<li data-text="bcarouselitem1"></li>
+								<li data-text="bcarouselitem2"></li>
+								<li data-text="bcarouselitem3"></li>
+								<li data-text="bcarouselitem4"></li>
+							</ul>
+						</div>
+					</section>
+
+				</div>
+			</article>
+		</section>
+
+		
+
 
 		<!-- GRID2 -->
 		<section class="block centrador">

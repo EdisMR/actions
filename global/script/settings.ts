@@ -305,7 +305,7 @@ async function idiomHTMLInner(urls: { spa: string; eng: string }): void {
 
 idiomHTMLInner({
 	spa: window.location.origin + "/global/lang/spa.json",
-	eng: window.location.origin + "/global/lang/eng.json",
+	eng: window.location.origin + "/global/lang/eng.json"
 });
 
 if (localStorage.lang == "eng") {

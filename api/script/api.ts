@@ -131,7 +131,6 @@ function localizar() {
 			buttonMyLocation.style.display = "none";
 		},
 		function (error) {
-			alert("No es posible realizar la operacion");
 			buttonMyLocation.style.display = "none";
 		},
 		{
@@ -146,7 +145,13 @@ let btncopiarLocalizacion=<HTMLButtonElement>document.getElementById("copyLoc");
 btncopiarLocalizacion.addEventListener("click",copiarLocalizacion,false);
 function copiarLocalizacion(){
 	navigator.clipboard.writeText(`${api.lat}, ${api.lon}`)
-	.then(()=>{btncopiarLocalizacion.disabled=true;	})
+	.then(()=>{
+		btncopiarLocalizacion.disabled=true;
+		alertifyMessageBilingual({
+			es:"Coordenadas copiadas al portapapeles",
+			eng:"Coordinates copied to clipboard"
+		})
+	})
 	.catch(err=>{console.log(err);})
 }
 
@@ -172,6 +177,6 @@ function solicitaTexto(){
 	window.removeEventListener("load",solicitaTexto,false);
 	idiomHTMLInner({
 		spa: window.location.origin+"/api/lang/spa.json",
-		eng: window.location.origin+"/api/lang/eng.json",
+		eng: window.location.origin+"/api/lang/eng.json"
 	})
 }

@@ -213,3 +213,27 @@ function afterLoad():void{
 		eng: window.location.origin+"/galeria/lang/eng.json",
 	})
 }
+
+
+/* Animate Intro for Gallery */
+/* Animate intro with Intersection Observer */
+const imgQuery=".carousel-container,.portada-proyectos"
+const imgForObserver:HTMLElement[]=Array.from(document.querySelectorAll(imgQuery))
+
+const imgObserver=new IntersectionObserver((entries)=>{
+	entries.forEach(entry => {
+		if(entry.isIntersecting){
+			entry.target.style.opacity="1"
+			entry.target.style.transform="scale(1)"
+		}else{
+			entry.target.style.opacity="0"
+			entry.target.style.transform="scale(.95)"
+		}
+	});
+},
+{threshold:.1})
+
+imgForObserver.forEach(elm=>{
+	elm.style.transitionDuration="1s"
+	imgObserver.observe(elm)
+})

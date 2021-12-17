@@ -76,14 +76,14 @@ function menuSwitchMain() {
 }
 async function openMenu() {
     headerButton.disp = true;
-    headerButton.headerEnlaces.classList.add("showMenu");
     menuAnimationPortrait.play();
+    headerButton.headerEnlaces.classList.add("showMenu");
 }
 async function closeMenu() {
     if (headerButton.disp == true) {
         headerButton.disp = false;
-        headerButton.headerEnlaces.classList.remove("showMenu");
         menuAnimationPortrait.reverse();
+        headerButton.headerEnlaces.classList.remove("showMenu");
     }
 }
 function w000() {
@@ -116,8 +116,8 @@ async function helpNodeAppear() {
         ayuda.classList.remove("animateHelpNode");
     }, 2000);
 }
-const dinoEd = document.getElementById("dino");
 window.addEventListener("contextmenu", dino, false);
+const dinoEd = document.getElementById("dino");
 async function dino(e) {
     e.preventDefault();
     dinoEd.style.visibility = "visible";

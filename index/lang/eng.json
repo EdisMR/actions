@@ -1,7 +1,7 @@
 {
 	"bwebdev":"Web Developer",
 	"bpages":"Pages on this site",
-	"bform":"Form",
+	"bform":"Sample Form",
 	"bformlist1":"Validate a form using the Javascript Form API",
 	"bformlist2":"Animations to help to the user in invalid input case",
 	"bformlist3":"Treatment of types of data entered through REGEXP to avoid invalid entries",

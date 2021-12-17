@@ -122,20 +122,20 @@ function menuSwitchMain() {
 
 async function openMenu():void {
 	headerButton.disp = true;
-	headerButton.headerEnlaces.classList.add("showMenu");
-
+	
 	/* AGREGAR ANIMACION */
 	menuAnimationPortrait.play()
+	headerButton.headerEnlaces.classList.add("showMenu");
 	
 }
 
 async function closeMenu():void {
 	if (headerButton.disp == true) {
 		headerButton.disp = false;
-		headerButton.headerEnlaces.classList.remove("showMenu");
 		
 		/* Agregar animacion */
 		menuAnimationPortrait.reverse()
+		headerButton.headerEnlaces.classList.remove("showMenu");
 	}
 }
 
@@ -196,10 +196,10 @@ async function helpNodeAppear(){
 /* ****************************** */
 /* *********** DINO ************* */
 /* ****************************** */
-const dinoEd=<HTMLElement>document.getElementById("dino");
 
 window.addEventListener("contextmenu",dino,false);
 
+const dinoEd=<HTMLElement>document.getElementById("dino");
 async function dino(e:MouseEvent){
 	e.preventDefault();
 

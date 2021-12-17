@@ -19,4 +19,22 @@ function afterLoad() {
         rotationX: 90,
     });
 }
+const textsQuery = "#index-paginas,.bio,.card-content,.tecno-item,#tecnologias,.card-header,.index-portada";
+const texts = Array.from(document.querySelectorAll(textsQuery));
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "scale(1)";
+        }
+        else {
+            entry.target.style.opacity = "0";
+            entry.target.style.transform = "scale(.95)";
+        }
+    });
+}, { threshold: .5 });
+texts.forEach(elm => {
+    elm.style.transitionDuration = "1s";
+    observer.observe(elm);
+});
 //# sourceMappingURL=index.js.map
