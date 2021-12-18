@@ -28,5 +28,10 @@
 	"carousel04":"Configuraciones y opciones del sitio web",
 	"carousel05":"Entre las configuraciones se destaca el cambio del tamaño de texto, el modo de alto contraste y el cambio de idioma",
 	"carousel07":"Es importante notar que estos carruseles y su operación fue desarrollada completamente por mí mismo (XitusDev).",
-	"carousel08":"Es posible manipular el carrusel usando los controles añadidos, o usando el scroll manual: en un celular, arrastra con el dedo hacia un lado, y en el caso de una computadora, el scroll manual se realiza con la tecla Shift + Scroll"
+	"carousel08":"Es posible manipular el carrusel usando los controles añadidos, o usando el scroll manual: en un celular, arrastra con el dedo hacia un lado, y en el caso de una computadora, el scroll manual se realiza con la tecla Shift + Scroll",
+
+	"bgamesconnect":"Conecta 4",
+	"bgamestic":"Tic tac toe",
+	"bgamescalc":"Calculadora Basada en Texto",
+	"bgamesvideo":"Reproductor de Video - Broccoli"
 }

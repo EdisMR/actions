@@ -261,64 +261,7 @@ firstvisit();
 		
 
 
-		<!-- GRID2 -->
-		<section class="block centrador">
-
-			<article class="block">
-				<div>
-					<h2 id="juegos-html" data-text="aprojects"></h2>
-				</div>
-			</article>
-
-			<article class="block">
-				<div class="main-index-grid col4y2">
-
-					<section class="card" data-accesibilityborder="true">
-						<div class="card-header">
-							<h4><a href="/gameConecta4/" rel="noopener noreferrer" data-text="bgamesconnect"></a></h4>
-						</div>
-						<div class="card-content">
-							<figure>
-								<img src="index/assets/conecta4.webp" alt="Connect four game" title="Connect 4" loading="lazy" width="auto" height="auto">
-							</figure>
-						</div>
-					</section>
-
-					<section class="card" data-accesibilityborder="true">
-						<div class="card-header">
-							<h4><a href="/gameTictactoe/" rel="noopener noreferrer" data-text="bgamestic"></a></h4>
-						</div>
-						<div class="card-content">
-							<figure>
-								<img src="index/assets/tictactoe.webp" alt="Tic tac toe" title="tic tac toe" loading="lazy" width="auto" height="auto">
-							</figure>
-						</div>
-					</section>
-
-					<section class="card" data-accesibilityborder="true">
-						<div class="card-header">
-							<h4><a href="/calculator/" rel="noopener noreferrer" data-text="bgamescalc"></a></h4>
-						</div>
-						<div class="card-content">
-							<figure>
-								<img src="index/assets//calculadora.webp" alt="random rabbit" title="Calculator" loading="lazy" width="auto" height="auto">
-							</figure>
-						</div>
-					</section>
-
-					<section class="card" data-accesibilityborder="true">
-						<div class="card-header">
-							<h4><a href="/videoIng/" rel="noopener noreferrer" data-text="bgamesvideo"></a></h4>
-						</div>
-						<div class="card-content">
-							<figure>
-								<img src="index/assets/broccoli.webp" alt="Broccoli Video" loading="lazy" width="auto" height="auto">
-							</figure>
-						</div>
-					</section>
-				</div>
-			</article>
-		</section>
+	
 
 		<!-- <section class="moreinfowebsite">
 			<a href="about/" data-text="moreinfosite"></a>

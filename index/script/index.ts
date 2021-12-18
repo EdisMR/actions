@@ -22,7 +22,7 @@ function afterLoad() {
 }
 
 /* Animate intro with Intersection Observer */
-const textsQuery="#index-paginas,.bio,.card-content,.tecno-item,#tecnologias,.card-header,.index-portada"
+const textsQuery="#index-paginas,.card-content,.tecno-item,#tecnologias,.card-header,.bio"
 const texts:HTMLElement[]=Array.from(document.querySelectorAll(textsQuery))
 
 const observer=new IntersectionObserver((entries)=>{
@@ -36,7 +36,7 @@ const observer=new IntersectionObserver((entries)=>{
 		}
 	});
 },
-{threshold:.5})
+{rootMargin:"300px 0px"})
 
 texts.forEach(elm=>{
 	elm.style.transitionDuration="1s"

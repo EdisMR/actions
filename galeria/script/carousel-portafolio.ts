@@ -231,7 +231,7 @@ const imgObserver=new IntersectionObserver((entries)=>{
 		}
 	});
 },
-{threshold:.1})
+{rootMargin:"300px 0px"})
 
 imgForObserver.forEach(elm=>{
 	elm.style.transitionDuration="1s"

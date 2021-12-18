@@ -61,7 +61,7 @@ function headerHTML()
 		<section class="block">
 			<article class="header-title">
 				<div>
-					<h1>Chepo
+					<h1>XitusDev
 						<!-- Titulo -->
 					</h1>
 				</div>
@@ -137,7 +137,7 @@ function headerHTML()
 						</a>
 					</li>
 					<li data-accesibilityborder="true">
-						<a href="/index.php#juegos-html" rel="noopener noreferrer">
+						<a href="/galeria/index.php#juegos-html" rel="noopener noreferrer">
 							<div>
 								<span class="ms-Icon ms-Icon--Game"></span>
 							</div>

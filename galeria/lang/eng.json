@@ -28,5 +28,10 @@
 	"carousel04":"Website Settings and options",
 	"carousel05":"The settings include changing the text size, high contrast mode, and changing the language.",
 	"carousel07":"It is important to note that these carousels and their operation was developed completely by myself (XitusDev).",
-	"carousel08":"It is possible to manipulate the carousel by using the added controls, or using the manual scroll: in a cellphone, slide with your finger, and in the case of a computer, manual scrolling is done with Shift key + Scroll"
+	"carousel08":"It is possible to manipulate the carousel by using the added controls, or using the manual scroll: in a cellphone, slide with your finger, and in the case of a computer, manual scrolling is done with Shift key + Scroll",
+
+	"bgamesconnect":"Connect4",
+	"bgamestic":"Tic tac toe",
+	"bgamescalc":"String Based Calculator",
+	"bgamesvideo":"Video Player - Broccoli"
 }

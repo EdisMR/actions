@@ -19,7 +19,7 @@ function afterLoad() {
         rotationX: 90,
     });
 }
-const textsQuery = "#index-paginas,.bio,.card-content,.tecno-item,#tecnologias,.card-header,.index-portada";
+const textsQuery = "#index-paginas,.card-content,.tecno-item,#tecnologias,.card-header,.bio";
 const texts = Array.from(document.querySelectorAll(textsQuery));
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -32,7 +32,7 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.style.transform = "scale(.95)";
         }
     });
-}, { threshold: .5 });
+}, { rootMargin: "300px 0px" });
 texts.forEach(elm => {
     elm.style.transitionDuration = "1s";
     observer.observe(elm);

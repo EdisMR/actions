@@ -183,10 +183,6 @@ header {
 	padding-right: 10px;
 	background-color: var(--materialPrimaryBG);
 	color: var(--materialPrimaryColor);
-	background-image: url("../../assets/chr1.jpg");
-	background-blend-mode: multiply;
-	background-size: 100vw;
-	animation: background-animation 50s linear infinite alternate;
 	button {
 		display: none;
 		border-radius: 100%;
@@ -523,14 +519,4 @@ div.ajs-message,
 .highContrast {
 	color: rgb(211, 211, 66) !important;
 	background-color: rgb(56, 56, 56) !important;
-}
-
-
-@keyframes background-animation{
-	from{
-		background-position-y: 0%;
-	}
-	to{
-		background-position-y: 100%;
-	}
 }

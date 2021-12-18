@@ -167,7 +167,7 @@ const imgObserver = new IntersectionObserver((entries) => {
             entry.target.style.transform = "scale(.95)";
         }
     });
-}, { threshold: .1 });
+}, { rootMargin: "300px 0px" });
 imgForObserver.forEach(elm => {
     elm.style.transitionDuration = "1s";
     imgObserver.observe(elm);

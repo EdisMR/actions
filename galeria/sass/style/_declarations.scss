@@ -163,3 +163,32 @@ main{
 	padding: 20px;
 
 }
+
+
+
+
+
+.main-index-grid{
+	padding-top: 0px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 50px;
+	margin-bottom: 70px;
+	display: grid;
+	gap: 20px;
+}
+
+#juegos-html{
+	padding-left: 20px;
+	margin: 0px;
+	margin-bottom: 20px;
+	margin-top: 30px;
+}
+
+.col2y1{
+	grid-template-columns: 1fr 1fr;
+}
+
+.col4y2{
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
