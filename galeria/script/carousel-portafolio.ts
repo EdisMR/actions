@@ -217,7 +217,7 @@ function afterLoad():void{
 
 /* Animate Intro for Gallery */
 /* Animate intro with Intersection Observer */
-const imgQuery=".carousel-container,.portada-proyectos"
+const imgQuery=".carousel-container,.portada-proyectos,.card"
 const imgForObserver:HTMLElement[]=Array.from(document.querySelectorAll(imgQuery))
 
 const imgObserver=new IntersectionObserver((entries)=>{
@@ -231,9 +231,9 @@ const imgObserver=new IntersectionObserver((entries)=>{
 		}
 	});
 },
-{rootMargin:"300px 0px"})
+{rootMargin:"0px 0px -100px 0px"})
 
 imgForObserver.forEach(elm=>{
-	elm.style.transitionDuration="1s"
+	elm.style.transitionDuration="1.2s"
 	imgObserver.observe(elm)
 })

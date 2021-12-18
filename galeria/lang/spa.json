@@ -27,11 +27,21 @@
 	"carousel03":"Este sitio web es bilingüe, en esta imagen puedes ver el sitio web en español",
 	"carousel04":"Configuraciones y opciones del sitio web",
 	"carousel05":"Entre las configuraciones se destaca el cambio del tamaño de texto, el modo de alto contraste y el cambio de idioma",
-	"carousel07":"Es importante notar que estos carruseles y su operación fue desarrollada completamente por mí mismo (XitusDev).",
+	"carousel07":"Es importante notar que estos carruseles y su operación fue desarrollada completamente por mí mismo (Edis MR).",
 	"carousel08":"Es posible manipular el carrusel usando los controles añadidos, o usando el scroll manual: en un celular, arrastra con el dedo hacia un lado, y en el caso de una computadora, el scroll manual se realiza con la tecla Shift + Scroll",
 
 	"bgamesconnect":"Conecta 4",
 	"bgamestic":"Tic tac toe",
 	"bgamescalc":"Calculadora Basada en Texto",
-	"bgamesvideo":"Reproductor de Video - Broccoli"
+	"bgamesvideo":"Reproductor de Video - Broccoli",
+
+	"bform":"Formulario de muestra",
+	"bformlist1":"Validar un formulario usando la API form de Javascript",
+	"bformlist2":"Animaciones de ayuda al usuario en caso de entradas inválidas",
+	"bformlist3":"Tratamiento de tipos de entrada a través de REGEXP para evitar entradas inválidas",
+	"bformlist4":"Formulario creado usando etiquetas HTML5 y etiquetas semánticas",
+
+	"aapili1":"Solicitar información usando una API del tiempo meteorológico",
+	"aapili2":"Estilo adaptable al viewport para mostrar la información cómodamente",
+	"aapili3":"Programado en Javascript con el uso de la API Promesas, API Fetch y manejo de errores del la solicitud HTTP"
 }

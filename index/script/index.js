@@ -32,9 +32,9 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.style.transform = "scale(.95)";
         }
     });
-}, { rootMargin: "300px 0px" });
+}, { rootMargin: "0px 0px -100px 0px" });
 texts.forEach(elm => {
-    elm.style.transitionDuration = "1s";
+    elm.style.transitionDuration = "1.2s";
     observer.observe(elm);
 });
 //# sourceMappingURL=index.js.map

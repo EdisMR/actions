@@ -154,7 +154,7 @@ function afterLoad() {
         eng: window.location.origin + "/galeria/lang/eng.json",
     });
 }
-const imgQuery = ".carousel-container,.portada-proyectos";
+const imgQuery = ".carousel-container,.portada-proyectos,.card";
 const imgForObserver = Array.from(document.querySelectorAll(imgQuery));
 const imgObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -167,9 +167,9 @@ const imgObserver = new IntersectionObserver((entries) => {
             entry.target.style.transform = "scale(.95)";
         }
     });
-}, { rootMargin: "300px 0px" });
+}, { rootMargin: "0px 0px -100px 0px" });
 imgForObserver.forEach(elm => {
-    elm.style.transitionDuration = "1s";
+    elm.style.transitionDuration = "1.2s";
     imgObserver.observe(elm);
 });
 //# sourceMappingURL=carousel-portafolio.js.map

@@ -29,7 +29,7 @@
 
 
 	<div class="xitusContainer">
-		XitusDev
+		Edis MR
 	</div>
 <?php
 ?>

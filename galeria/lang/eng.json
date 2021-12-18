@@ -27,11 +27,21 @@
 	"carousel03":"This website is bilingual, and in this image you can see the website in spanish",
 	"carousel04":"Website Settings and options",
 	"carousel05":"The settings include changing the text size, high contrast mode, and changing the language.",
-	"carousel07":"It is important to note that these carousels and their operation was developed completely by myself (XitusDev).",
+	"carousel07":"It is important to note that these carousels and their operation was developed completely by myself (Edis MR).",
 	"carousel08":"It is possible to manipulate the carousel by using the added controls, or using the manual scroll: in a cellphone, slide with your finger, and in the case of a computer, manual scrolling is done with Shift key + Scroll",
 
 	"bgamesconnect":"Connect4",
 	"bgamestic":"Tic tac toe",
 	"bgamescalc":"String Based Calculator",
-	"bgamesvideo":"Video Player - Broccoli"
+	"bgamesvideo":"Video Player - Broccoli",
+
+	"bform":"Sample Form",
+	"bformlist1":"Validate a form using the Javascript Form API",
+	"bformlist2":"Animations to help to the user in invalid input case",
+	"bformlist3":"Treatment of types of data entered through REGEXP to avoid invalid entries",
+	"bformlist4":"Form created using HTML5 tags and semantic tags",
+
+	"aapili1":"Request data using a weather API",
+	"aapili2":"Style adapts to the viewport to display information comfortably",
+	"aapili3":"Javascript programming with use of the Promise API, Fetch API and error handling of the http request"
 }

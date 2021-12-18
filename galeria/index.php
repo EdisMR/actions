@@ -381,6 +381,35 @@
 							</figure>
 						</div>
 					</section>
+
+					<section class="card" data-accesibilityborder="true">
+						<div class="card-header">
+							<h4><a href="/formulario/" rel="noopener noreferrer" data-text="bform"></a></h4>
+						</div>
+						<div class="card-content">
+							<ul>
+								<li data-text="bformlist1"></li>
+								<li data-text="bformlist2"></li>
+								<li data-text="bformlist3"></li>
+								<li data-text="bformlist4"></li>
+							</ul>
+						</div>
+					</section>
+
+					<section class="card" data-accesibilityborder="true">
+						<div class="card-header">
+							<h4><a href="/api/" rel="noopener noreferrer" data-text="aapi"></a></h4>
+						</div>
+						<div class="card-content">
+							<ul>
+								<li data-text="aapili1"></li>
+								<li data-text="aapili2"></li>
+								<li data-text="aapili3"></li>
+							</ul>
+						</div>
+					</section>
+
+
 				</div>
 			</article>
 		</section>

@@ -1,11 +1,7 @@
 {
 	"bwebdev":"Desarrollador Web",
-	"bpages":"Páginas en este sitio",
-	"bform":"Formulario de muestra",
-	"bformlist1":"Validar un formulario usando la API form de Javascript",
-	"bformlist2":"Animaciones de ayuda al usuario en caso de entradas inválidas",
-	"bformlist3":"Tratamiento de tipos de entrada a través de REGEXP para evitar entradas inválidas",
-	"bformlist4":"Formulario creado usando etiquetas HTML5 y etiquetas semánticas",
+	"bpages":"Proyectos realizados",
+	
 	"bgalelist1":"Galería de imagenes para mostrar los proyectos realizados",
 	"bgalelist2":"La galería tiene dos vistas diferentes, Vista de cuadrícula y vista panorámica",
 	"bgalelist3":"Cuando tocas una imagen en la vista de cuadrícula, verás la vista panorámica con la descripción correspondiente",
@@ -15,10 +11,8 @@
 	"bcarouselitem2":"Juegos entre los que se incluyen Conecta4 y Tic Tac Toe",
 	"bcarouselitem3":"Una calculadora basada en texto plano, para realizar operaciones combinadas basicas",
 	"bcarouselitem4":"Un reproductor de video desarrollado para un proyecto de video para una pyme ficticia",
-	"aapili1":"Solicitar información usando una API del tiempo meteorológico",
-	"aapili2":"Estilo adaptable al viewport para mostrar la información cómodamente",
-	"aapili3":"Programado en Javascript con el uso de la API Promesas, API Fetch y manejo de errores del la solicitud HTTP",
-	"baboutlongtext":"Soy XitusDev (Edis Mercado) de San José, Costa Rica. Soy un desarrollador web enfocado en el desarrollo de interfaces para el cliente final. <br> Tengo más de 5 años de experiencia en programación, comencé a programar con C ++ en la Universidad Nacional de Costa Rica (UNA), donde adquirí experiencia en el uso de las matemáticas para la programación, la lógica de programación y las estrategias de desarrollo para resolver una situación programáticamente. <br> Ingresé al Instituto Nacional de Aprendizaje (INA), donde estudié Adobe Photoshop, Microsoft Office, Access, y mi pasión por el desarrollo web comenzó desde que ingresé al programa de Desarrollo Web en esta institución. <br>Luego de estudiar los fundamentos del desarrollo web, continué capacitándome y aprendiendo específicamente para el desarrollo web front-end a través de plataformas digitales, y aprendiendo a usar herramientas y lenguajes de programación como SASS, GIT, AJAX, PHP, Angular entre otros. <br> La mayoría del conocimiento que he adquirido se refleja en el grupo de iconos junto a este párrafo (pero es una lista incompleta). Puedes contactarme o ver más detalles en los enlaces que aparecen en la parte inferior de la pantalla.",
+	
+	"baboutlongtext":"Soy Edis Mercado Ruiz de San José, Costa Rica. Soy un desarrollador web enfocado en el desarrollo de interfaces para el cliente final. <br> Tengo más de 5 años de experiencia en programación, comencé a programar con C ++ en la Universidad Nacional de Costa Rica (UNA), donde adquirí experiencia en el uso de las matemáticas para la programación, la lógica de programación y las estrategias de desarrollo para resolver una situación programáticamente. <br> Ingresé al Instituto Nacional de Aprendizaje (INA), donde estudié Adobe Photoshop, Microsoft Office, Access, y mi pasión por el desarrollo web comenzó desde que ingresé al programa de Desarrollo Web en esta institución. <br>Luego de estudiar los fundamentos del desarrollo web, continué capacitándome y aprendiendo específicamente para el desarrollo web front-end a través de plataformas digitales, y aprendiendo a usar herramientas y lenguajes de programación como SASS, GIT, AJAX, PHP, Angular entre otros. <br> La mayoría del conocimiento que he adquirido se refleja en el grupo de iconos junto a este párrafo (pero es una lista incompleta). Puedes contactarme o ver más detalles en los enlaces que aparecen en la parte inferior de la pantalla.",
 	"btecnostatic":"Animaciones estáticas y dinámicas",
 	"btecnoregex":"REGEX (Expresiones regulares)",
 	"bgamesconnect":"Conecta 4",

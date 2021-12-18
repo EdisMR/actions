@@ -61,7 +61,7 @@ function headerHTML()
 		<section class="block">
 			<article class="header-title">
 				<div>
-					<h1>XitusDev
+					<h1>Edis MR
 						<!-- Titulo -->
 					</h1>
 				</div>
@@ -187,14 +187,14 @@ function footerHTML()
 	<footer data-accesibilityborder="true">
 		<ul class="glass">
 			<li>
-				<a href="https://github.com/XitusDev" target="_blank" rel="noopener noreferrer" title="Git">
+				<a href="https://github.com/EdisMR" target="_blank" rel="noopener noreferrer" title="Git">
 					<div>
 						<span class="ms-Icon ms-Icon--GitGraph"></span>
 					</div>
 				</a>
 			</li>
 			<li>
-				<a href="https://linkedin.com/in/edisanthony" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+				<a href="https://www.linkedin.com/in/edismr/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
 					<div>
 						<figure>
 							<img src="/global/assets/linkedin.webp" alt="LinkedIn logo" style="filter: invert(0.07);transform: scale(.85);">
