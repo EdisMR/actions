@@ -85,13 +85,16 @@
 	margin-bottom: 0px !important;
 }
 
+.tecno-item-tec{
+	font-weight: 600;
+}
+
 #index-paginas,#juegos-html,#tecnologias{
 	padding-left: 20px;
 	margin: 0px;
 	margin-bottom: 20px;
 	margin-top: 30px;
 }
-
 .col2y1{
 	grid-template-columns: 1fr 1fr;
 }
@@ -120,14 +123,15 @@
 	align-items: stretch;
 	max-width: 100vw;
 	width: 45%;
-	background-color: #eee;
-	color: black;
+	background-color: 	rgb(255 255 255 / 22%);
+	color: var(--bodyColor);
 }
 
 $texnoItemsSize:60px;
 .tecno-item{
-	padding: 10px;
-	margin: 10px;
+	margin: 0px;
+	padding: 0px;
+	padding-top: 10px;
 	transition: background-color .4s;
 	&:hover{
 		background-color: rgba($color: #00a2ff, $alpha: .2);
