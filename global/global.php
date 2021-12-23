@@ -96,7 +96,8 @@ function headerHTML()
 							</div>
 						</a>
 					</li>
-					<li data-accesibilityborder="true">
+					<!-- FORM
+						<li data-accesibilityborder="true">
 						<a href="/formulario/" rel="noopener noreferrer">
 							<div>
 								<span class="ms-Icon ms-Icon--OfficeFormsLogo24"></span>
@@ -105,7 +106,7 @@ function headerHTML()
 								<span data-text="aform" class="menuItemText"></span>
 							</div>
 						</a>
-					</li>
+					</li> -->
 					<li data-accesibilityborder="true">
 						<a href="/galeria/" rel="noopener noreferrer">
 							<div>
@@ -116,7 +117,9 @@ function headerHTML()
 							</div>
 						</a>
 					</li>
-					<!-- <li data-accesibilityborder="true">
+					<!-- 
+						CARRUSEL Y API
+					<li data-accesibilityborder="true">
 						<a href="/carrusel/" rel="noopener noreferrer">
 							<div>
 								<span class="ms-Icon ms-Icon--PanoIndicator"></span>
@@ -125,7 +128,7 @@ function headerHTML()
 								<span data-text="acarousel" class="menuItemText"></span>
 							</div>
 						</a>
-					</li> -->
+					</li>
 					<li data-accesibilityborder="true">
 						<a href="/api/" rel="noopener noreferrer">
 							<div>
@@ -136,6 +139,7 @@ function headerHTML()
 							</div>
 						</a>
 					</li>
+					-->
 					<li data-accesibilityborder="true">
 						<a href="/galeria/index.php#juegos-html" rel="noopener noreferrer">
 							<div>

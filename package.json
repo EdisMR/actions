@@ -4,17 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sss":"sass --watch ../site-native --style compressed"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/XitusDev/actions.git"
+    "url": "git+https://github.com/EdisMR/actions.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/XitusDev/actions/issues"
+    "url": "https://github.com/EdisMR/actions/issues"
   },
-  "homepage": "https://github.com/XitusDev/actions#readme"
+  "homepage": "https://github.com/EdisMR/actions#readme"
 }

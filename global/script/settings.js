@@ -204,6 +204,8 @@ async function idiomHTMLInner(urls) {
                 todosSpan[x].innerHTML = jsonParseado[todosSpan[x].dataset.text];
             }
         }
+    }).catch(e => {
+        window.location.reload();
     });
 }
 idiomHTMLInner({

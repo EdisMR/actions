@@ -1,0 +1,38 @@
+.formCenter{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	flex-wrap: nowrap;
+	width: 100%;
+	padding-top: 55px;
+
+	textarea{
+		resize: vertical;
+		width: 99%;
+		font-size: 17px;
+		min-height: 150px;
+		background-color: var(--bodyBg);
+		color: var(--bodyColor);
+	}
+}
+
+.rectangleContainer{
+	display: inline-block;
+	width: 30%;
+}
+
+#encodeOutput,#decodeOutput{
+	word-break: break-all;
+
+}
+
+.pagetitle{
+	font-size: 35px;
+	font-weight: 700;
+	padding-top: 47px;
+	padding-left: 20px;
+}
+
+button{
+	margin-top: 10px;
+}

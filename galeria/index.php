@@ -382,7 +382,7 @@
 						</div>
 					</section>
 
-					<section class="card" data-accesibilityborder="true">
+					<section class="card col2y4" data-accesibilityborder="true">
 						<div class="card-header">
 							<h4><a href="/formulario/" rel="noopener noreferrer" data-text="bform"></a></h4>
 						</div>
@@ -396,7 +396,7 @@
 						</div>
 					</section>
 
-					<section class="card" data-accesibilityborder="true">
+					<section class="card col2y4" data-accesibilityborder="true">
 						<div class="card-header">
 							<h4><a href="/api/" rel="noopener noreferrer" data-text="aapi"></a></h4>
 						</div>
@@ -405,6 +405,20 @@
 								<li data-text="aapili1"></li>
 								<li data-text="aapili2"></li>
 								<li data-text="aapili3"></li>
+							</ul>
+						</div>
+					</section>
+
+					<section class="card col2y4" data-accesibilityborder="true">
+						<div class="card-header">
+							<h4><a href="/crypto/" rel="noopener noreferrer" data-text="acrypto1"></a></h4>
+						</div>
+						<div class="card-content">
+							<ul>
+								<li data-text="acrypto2"></li>
+								<li data-text="acrypto3"></li>
+								<li data-text="acrypto4"></li>
+								<li data-text="acrypto5"></li>
 							</ul>
 						</div>
 					</section>

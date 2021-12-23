@@ -201,7 +201,6 @@ window.addEventListener("contextmenu",dino,false);
 
 const dinoEd=<HTMLElement>document.getElementById("dino");
 async function dino(e:MouseEvent){
-	e.preventDefault();
 
 	dinoEd.style.visibility="visible";
 	dinoEd.style.left=positionDino(e.clientX,mitadPantallaHoriz)+"px";

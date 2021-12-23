@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>XitusDev - Welcome</title>
+	<title>Edis MR - Welcome</title>
 	<link rel="stylesheet" href="sass/first-visit.css">
 	<meta http-equiv="Cache-Control" content="max-age=43200">
 	<link rel="shortcut icon" href="/global/assets/me.ico" type="image/x-icon">

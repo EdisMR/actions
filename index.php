@@ -7,8 +7,8 @@ firstvisit();
 <html lang="en">
 
 <head>
-	<title>XitusDev</title>
-	<meta name="description" content="I'm XitusDev, welcome to my personal portfolio">
+	<title>Edis MR</title>
+	<meta name="description" content="I'm Edis MR, welcome to my personal portfolio">
 
 	<?php
 	headHTML();
@@ -79,11 +79,17 @@ firstvisit();
 						<div class="tecno-item-progress"><progress value="95" min="0" max="100"></progress></div>
 						<div class="tecno-item-value">95%</div>
 					</div>
-					
+
 				<div class="tecno-item">
 						<div class="tecno-item-tec">Typescript</div>
 						<div class="tecno-item-progress"><progress value="80" min="0" max="100"></progress></div>
 						<div class="tecno-item-value">80%</div>
+					</div>
+
+					<div class="tecno-item">
+						<div class="tecno-item-tec">Javascript REGEX</div>
+						<div class="tecno-item-progress"><progress value="70" min="0" max="100"></progress></div>
+						<div class="tecno-item-value">70%</div>
 					</div>
 					
 				<div class="tecno-item">
@@ -111,27 +117,21 @@ firstvisit();
 					</div>
 					
 				<div class="tecno-item">
-						<div class="tecno-item-tec">Javascript REGEX</div>
-						<div class="tecno-item-progress"><progress value="70" min="0" max="100"></progress></div>
-						<div class="tecno-item-value">70%</div>
-					</div>
-					
-				<div class="tecno-item">
-						<div class="tecno-item-tec">PHP</div>
-						<div class="tecno-item-progress"><progress value="20" min="0" max="100"></progress></div>
-						<div class="tecno-item-value">20%</div>
-					</div>
-					
-				<div class="tecno-item">
 						<div class="tecno-item-tec">Web Accesibility</div>
 						<div class="tecno-item-progress"><progress value="25" min="0" max="100"></progress></div>
 						<div class="tecno-item-value">25%</div>
 					</div>
 					
+					<div class="tecno-item">
+						<div class="tecno-item-tec">PHP</div>
+						<div class="tecno-item-progress"><progress value="20" min="0" max="100"></progress></div>
+						<div class="tecno-item-value">25%</div>
+					</div>
+					
 				<div class="tecno-item">
 						<div class="tecno-item-tec">Angular Framework</div>
-						<div class="tecno-item-progress"><progress value="10" min="0" max="100"></progress></div>
-						<div class="tecno-item-value">10%</div>
+						<div class="tecno-item-progress"><progress value="25" min="0" max="100"></progress></div>
+						<div class="tecno-item-value">25%</div>
 					</div>
 
 				</div>

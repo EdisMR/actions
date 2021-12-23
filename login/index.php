@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>XitusDev - Log in</title>
+	<title>Edis MR - Log in</title>
 	<link rel="shortcut icon" href="/global/assets/me.ico" type="image/x-icon">
 
 	<link rel="stylesheet" href="/global/css/compiled/global.css">

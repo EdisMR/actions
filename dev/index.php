@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>XitusDev - Development page</title>
+	<title>Edis MR - Development page</title>
 	<?php
 		include_once "../global/global.php";
 		headHTML();

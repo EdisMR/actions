@@ -6,7 +6,7 @@
 <html lang="en">
 
 <head>
-	<title>XitusDev - Connect 4</title>
+	<title>Edis MR - Connect 4</title>
 	<?php
 		headHTML();
 	?>

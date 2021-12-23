@@ -7,7 +7,7 @@
 <html lang="en">
 
 <head>
-	<title>XitusDev - Tic Tac Toe</title>
+	<title>Edis MR - Tic Tac Toe</title>
 	<?php
 		headHTML();
 	?>

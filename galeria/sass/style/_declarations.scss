@@ -192,3 +192,7 @@ main{
 .col4y2{
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
+.col2y4{
+	grid-column: span 2;
+}

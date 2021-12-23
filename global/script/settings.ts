@@ -300,7 +300,11 @@ async function idiomHTMLInner(urls: { spa: string; eng: string }): void {
 					todosSpan[x].innerHTML = jsonParseado[todosSpan[x].dataset.text];
 				}
 			}
-		});
+		}).catch(
+			e=>{
+				window.location.reload()
+			}
+		)
 }
 
 idiomHTMLInner({

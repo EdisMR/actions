@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>XitusDev - Gallery</title>
+	<title>Edis MR - Gallery</title>
 	<?php
 		headHTML();
 	?>

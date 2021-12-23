@@ -1,0 +1,16 @@
+.formCenter{
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 14px;
+	padding-bottom: 30px;
+
+	textarea{
+		min-height: 120px;
+	}
+}
+
+.rectangleContainer{
+	width: 90%;
+	margin-top: 50px;
+}

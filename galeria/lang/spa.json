@@ -1,5 +1,5 @@
 {
-	"pagetitle":"XitusDev - Galería",
+	"pagetitle":"Edis MR - Galería",
 	"portada1":"Galería de proyectos",
 	"about1":"La asociación ASIPROFE está conformada por mujeres de La Legua, en Aserrí, quienes preparan varios productos basados en el café que ellas y su comunidad cosechan. este sitio fue realizado con php, html, sass, y javascript vanilla",
 	"portada2":"Título y portada del sitio",
@@ -43,5 +43,11 @@
 
 	"aapili1":"Solicitar información usando una API del tiempo meteorológico",
 	"aapili2":"Estilo adaptable al viewport para mostrar la información cómodamente",
-	"aapili3":"Programado en Javascript con el uso de la API Promesas, API Fetch y manejo de errores del la solicitud HTTP"
+	"aapili3":"Programado en Javascript con el uso de la API Promesas, API Fetch y manejo de errores del la solicitud HTTP",
+
+	"acrypto1":"Criptografía simple",
+	"acrypto2":"Codificar una cadena de texto con Base64",
+	"acrypto3":"Puedes codificar también emojis y caracteres especiales",
+	"acrypto4":"Decodifica texto que ha sido codificado en base64",
+	"acrypto5":"Uso sencillo"
 }

@@ -119,7 +119,6 @@ async function helpNodeAppear() {
 window.addEventListener("contextmenu", dino, false);
 const dinoEd = document.getElementById("dino");
 async function dino(e) {
-    e.preventDefault();
     dinoEd.style.visibility = "visible";
     dinoEd.style.left = positionDino(e.clientX, mitadPantallaHoriz) + "px";
     dinoEd.style.top = positionDino(e.clientY, mitadPantallaVert) + "px";
