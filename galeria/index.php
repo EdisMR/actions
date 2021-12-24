@@ -340,7 +340,7 @@
 
 					<section class="card" data-accesibilityborder="true">
 						<div class="card-header">
-							<h4><a href="/gameConecta4/" rel="noopener noreferrer" data-text="bgamesconnect"></a></h4>
+							<h4><a href="/gameConecta4/" rel="noopener noreferrer" data-text="bgamesconnect"></a><span class="ms-Icon ms-Icon--OpenInNewTab"></span></h4>
 						</div>
 						<div class="card-content">
 							<figure>
@@ -351,7 +351,7 @@
 
 					<section class="card" data-accesibilityborder="true">
 						<div class="card-header">
-							<h4><a href="/gameTictactoe/" rel="noopener noreferrer" data-text="bgamestic"></a></h4>
+							<h4><a href="/gameTictactoe/" rel="noopener noreferrer" data-text="bgamestic"></a><span class="ms-Icon ms-Icon--OpenInNewTab"></span></h4>
 						</div>
 						<div class="card-content">
 							<figure>
@@ -362,7 +362,7 @@
 
 					<section class="card" data-accesibilityborder="true">
 						<div class="card-header">
-							<h4><a href="/calculator/" rel="noopener noreferrer" data-text="bgamescalc"></a></h4>
+							<h4><a href="/calculator/" rel="noopener noreferrer" data-text="bgamescalc"></a><span class="ms-Icon ms-Icon--OpenInNewTab"></span></h4>
 						</div>
 						<div class="card-content">
 							<figure>
@@ -373,7 +373,7 @@
 
 					<section class="card" data-accesibilityborder="true">
 						<div class="card-header">
-							<h4><a href="/videoIng/" rel="noopener noreferrer" data-text="bgamesvideo"></a></h4>
+							<h4><a href="/videoIng/" rel="noopener noreferrer" data-text="bgamesvideo"></a><span class="ms-Icon ms-Icon--OpenInNewTab"></span></h4>
 						</div>
 						<div class="card-content">
 							<figure>
@@ -384,7 +384,7 @@
 
 					<section class="card col2y4" data-accesibilityborder="true">
 						<div class="card-header">
-							<h4><a href="/formulario/" rel="noopener noreferrer" data-text="bform"></a></h4>
+							<h4><a href="/formulario/" rel="noopener noreferrer" data-text="bform"></a><span class="ms-Icon ms-Icon--OpenInNewTab"></span></h4>
 						</div>
 						<div class="card-content">
 							<ul>
@@ -398,7 +398,7 @@
 
 					<section class="card col2y4" data-accesibilityborder="true">
 						<div class="card-header">
-							<h4><a href="/api/" rel="noopener noreferrer" data-text="aapi"></a></h4>
+							<h4><a href="/api/" rel="noopener noreferrer" data-text="aapi"></a><span class="ms-Icon ms-Icon--OpenInNewTab"></span></h4>
 						</div>
 						<div class="card-content">
 							<ul>
@@ -411,7 +411,7 @@
 
 					<section class="card col2y4" data-accesibilityborder="true">
 						<div class="card-header">
-							<h4><a href="/crypto/" rel="noopener noreferrer" data-text="acrypto1"></a></h4>
+							<h4><a href="/crypto/" rel="noopener noreferrer" data-text="acrypto1"></a><span class="ms-Icon ms-Icon--OpenInNewTab"></span></h4>
 						</div>
 						<div class="card-content">
 							<ul>

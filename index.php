@@ -150,7 +150,7 @@ firstvisit();
 					
 					<section class="card" data-accesibilityborder="true">
 						<div class="card-header">
-							<h4><a href="/galeria/" rel="noopener noreferrer" data-text="agallery"></a></h4>
+							<h4><a href="/galeria/" rel="noopener noreferrer" data-text="agallery"></a><span class="ms-Icon ms-Icon--OpenInNewTab"></span></h4>
 						</div>
 						<div class="card-content">
 							<ul>
@@ -164,7 +164,7 @@ firstvisit();
 
 					<section class="card" data-accesibilityborder="true">
 						<div class="card-header">
-							<h4><a href="/galeria/index.php#juegos-html" rel="noopener noreferrer" data-text="bcarouseltitle"></a></h4>
+							<h4><a href="/galeria/index.php#juegos-html" rel="noopener noreferrer" data-text="bcarouseltitle"></a><span class="ms-Icon ms-Icon--OpenInNewTab"></span></h4>
 						</div>
 						<div class="card-content">
 							<ul>

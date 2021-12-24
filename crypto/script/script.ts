@@ -85,7 +85,7 @@ cryptoElements.copyDecoded.addEventListener("click",()=>{
 cryptoElements.resetDecoded.addEventListener("click",()=>{
 	cryptoElements.decodeInput.value=""
 	cryptoElements.decodeOutput.innerText=""
-	cryptoElements.copyEncoded.disabled=true
+	cryptoElements.copyDecoded.disabled=true
 })
 cryptoElements.resetEncoded.addEventListener("click",()=>{
 	cryptoElements.encodeInput.value=""

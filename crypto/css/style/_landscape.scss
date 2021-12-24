@@ -19,6 +19,9 @@
 .rectangleContainer{
 	display: inline-block;
 	width: 30%;
+	*{
+		font-size: 1.2rem !important;
+	}
 }
 
 #encodeOutput,#decodeOutput{
