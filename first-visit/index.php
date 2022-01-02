@@ -10,6 +10,8 @@
 	<script src="/global/script/gsap-3.8.0.min.js"></script>
 	<script defer src="script/first-visit.js"></script>
 
+	<link rel="prefetch" href="/global/css/compiled/global.css">
+
 </head>
 <body>
 

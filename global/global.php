@@ -224,13 +224,13 @@ function footerHTML()
 					</div>
 				</a>
 			</li>
-			<li>
+			<!-- <li>
 				<a href="/" rel="noopener noreferrer" title="Website">
 					<div>
 						<span class="ms-Icon ms-Icon--Website"></span>
 					</div>
 				</a>
-			</li>
+			</li> -->
 		</ul>
 	</footer>
 

@@ -11,7 +11,7 @@
 	?>
 	<link rel="stylesheet" href="./sass/galeria.css">
 	<script defer src="./script/carousel-portafolio.js"></script>
-
+	<link rel="preload" href="/videoIng/assets/Secuencia 02-3 1">
 </head>
 <body>
 	<?php
@@ -158,7 +158,7 @@
 		
 		<article class="carousel-header">
 			<div><h1 data-text="carousel00"></h1></div>
-			<div data-text="carousel01"></div>
+			<div data-text="carousel01"></div><a href="https://edismr.github.io/windowscommands/" target="_blank" rel="noopener noreferrer"><span class="ms-Icon ms-Icon--OpenInNewTab" style="color:var(--bodyColor)!important;"></span></a>
 		</article>
 		
 		<article class="carousel-body">
