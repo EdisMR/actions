@@ -120,7 +120,7 @@ function menuSwitchMain() {
 	}
 }
 
-async function openMenu():void {
+async function openMenu() {
 	headerButton.disp = true;
 	
 	/* AGREGAR ANIMACION */
@@ -129,7 +129,7 @@ async function openMenu():void {
 	
 }
 
-async function closeMenu():void {
+async function closeMenu() {
 	if (headerButton.disp == true) {
 		headerButton.disp = false;
 		
@@ -144,7 +144,7 @@ async function closeMenu():void {
 /* ***************************************** */
 function w000():void {
 	try {
-		let Y=<HTMLElement>document.querySelector("body a[href*='000webhost']")
+		let Y=<HTMLElement>document.querySelector("a[href\*='www.000webhost']")
 		let YY=<Node>Y.parentNode;
 		document.body.removeChild(YY);
 	} catch (e) {
