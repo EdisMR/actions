@@ -150,8 +150,8 @@ window.addEventListener("load", afterLoad, false);
 function afterLoad() {
     window.removeEventListener("load", afterLoad, false);
     idiomHTMLInner({
-        spa: window.location.origin + "/galeria/lang/spa.json",
-        eng: window.location.origin + "/galeria/lang/eng.json",
+        spa: window.location.origin + "/gallery/lang/spa.json",
+        eng: window.location.origin + "/gallery/lang/eng.json",
     });
 }
 //# sourceMappingURL=carousel-portafolio.js.map

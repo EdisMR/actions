@@ -108,7 +108,7 @@ function headerHTML()
 						</a>
 					</li> -->
 					<li data-accesibilityborder="true">
-						<a href="/galeria/" rel="noopener noreferrer">
+						<a href="/gallery/" rel="noopener noreferrer">
 							<div>
 								<span class="ms-Icon ms-Icon--SamsungGallery"></span>
 							</div>
@@ -141,7 +141,7 @@ function headerHTML()
 					</li>
 					-->
 					<li data-accesibilityborder="true">
-						<a href="/galeria/index.php#juegos-html" rel="noopener noreferrer">
+						<a href="/gallery/index.php#juegos-html" rel="noopener noreferrer">
 							<div>
 								<span class="ms-Icon ms-Icon--Game"></span>
 							</div>

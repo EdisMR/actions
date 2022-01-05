@@ -19,7 +19,7 @@ function afterLoad() {
         rotationX: 90,
     });
 }
-const textsQuery = "#index-paginas,.card-content,.tecno-item,#tecnologias,.card-header,.bio";
+const textsQuery = "#index-paginas,.card-content,#tecnologias-items-container,.card-header,.bio";
 const texts = Array.from(document.querySelectorAll(textsQuery));
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {

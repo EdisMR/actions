@@ -11,7 +11,6 @@
 	?>
 	<link rel="stylesheet" href="./sass/galeria.css">
 	<script defer src="./script/carousel-portafolio.js"></script>
-	<link rel="preload" href="/videoIng/assets/Secuencia 02-3 1">
 </head>
 <body>
 	<?php
@@ -34,6 +33,8 @@
 		<article class="carousel-header">
 			<div><h1>ASIPROFE</h1></div>
 			<div data-text="about1"></div>
+			<a href="https://socpruebas.000webhostapp.com/" target="_blank" rel="noopener noreferrer" style="color: var(--bgColor);">Link<span class="ms-Icon ms-Icon--OpenInNewTab" style="color:var(--bodyColor)!important;"></span></a>
+
 		</article>
 		
 		<article class="carousel-body">
@@ -158,7 +159,8 @@
 		
 		<article class="carousel-header">
 			<div><h1 data-text="carousel00"></h1></div>
-			<div data-text="carousel01"></div><a href="https://edismr.github.io/windowscommands/" target="_blank" rel="noopener noreferrer"><span class="ms-Icon ms-Icon--OpenInNewTab" style="color:var(--bodyColor)!important;"></span></a>
+			<div data-text="carousel01"></div>
+			<a href="https://edismr.github.io/windowscommands/" target="_blank" rel="noopener noreferrer" style="color: var(--bgColor);">Link<span class="ms-Icon ms-Icon--OpenInNewTab" style="color:var(--bodyColor)!important;"></span></a>
 		</article>
 		
 		<article class="carousel-body">
@@ -344,7 +346,7 @@
 						</div>
 						<div class="card-content">
 							<figure>
-								<img src="/galeria/assets/conecta4.webp" alt="Connect four game" title="Connect 4" loading="lazy" width="auto" height="auto">
+								<img src="/gallery/assets/conecta4.webp" alt="Connect four game" title="Connect 4" loading="lazy" width="auto" height="auto">
 							</figure>
 						</div>
 					</section>
@@ -355,7 +357,7 @@
 						</div>
 						<div class="card-content">
 							<figure>
-								<img src="/galeria/assets/tictactoe.webp" alt="Tic tac toe" title="tic tac toe" loading="lazy" width="auto" height="auto">
+								<img src="/gallery/assets/tictactoe.webp" alt="Tic tac toe" title="tic tac toe" loading="lazy" width="auto" height="auto">
 							</figure>
 						</div>
 					</section>
@@ -366,7 +368,7 @@
 						</div>
 						<div class="card-content">
 							<figure>
-								<img src="/galeria/assets/calculadora.webp" alt="random rabbit" title="Calculator" loading="lazy" width="auto" height="auto">
+								<img src="/gallery/assets/calculadora.webp" alt="random rabbit" title="Calculator" loading="lazy" width="auto" height="auto">
 							</figure>
 						</div>
 					</section>
@@ -377,7 +379,7 @@
 						</div>
 						<div class="card-content">
 							<figure>
-								<img src="/galeria/assets/broccoli.webp" alt="Broccoli Video" loading="lazy" width="auto" height="auto">
+								<img src="/gallery/assets/broccoli.webp" alt="Broccoli Video" loading="lazy" width="auto" height="auto">
 							</figure>
 						</div>
 					</section>

@@ -13,8 +13,8 @@
 
 	<link rel="stylesheet" href="./index/sass/index.css">
 	<script defer src="index/script/index.js"></script>
-	<link rel="prefetch" href="/galeria/lang/eng.json">
-	<link rel="prefetch" href="/galeria/lang/spa.json">
+	<link rel="prefetch" href="/gallery/lang/eng.json">
+	<link rel="prefetch" href="/gallery/lang/spa.json">
 
 </head>
 
@@ -149,7 +149,7 @@
 					
 					<section class="card" data-accesibilityborder="true">
 						<div class="card-header">
-							<h4><a href="/galeria/" rel="noopener noreferrer" data-text="agallery"></a><span class="ms-Icon ms-Icon--OpenInNewTab"></span></h4>
+							<h4><a href="/gallery/" rel="noopener noreferrer" data-text="agallery"></a><span class="ms-Icon ms-Icon--OpenInNewTab"></span></h4>
 						</div>
 						<div class="card-content">
 							<ul>
@@ -163,7 +163,7 @@
 
 					<section class="card" data-accesibilityborder="true">
 						<div class="card-header">
-							<h4><a href="/galeria/index.php#juegos-html" rel="noopener noreferrer" data-text="bcarouseltitle"></a><span class="ms-Icon ms-Icon--OpenInNewTab"></span></h4>
+							<h4><a href="/gallery/index.php#juegos-html" rel="noopener noreferrer" data-text="bcarouseltitle"></a><span class="ms-Icon ms-Icon--OpenInNewTab"></span></h4>
 						</div>
 						<div class="card-content">
 							<ul>

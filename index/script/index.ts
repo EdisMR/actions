@@ -22,7 +22,7 @@ function afterLoad() {
 }
 
 /* Animate intro with Intersection Observer */
-const textsQuery="#index-paginas,.card-content,.tecno-item,#tecnologias,.card-header,.bio"
+const textsQuery="#index-paginas,.card-content,#tecnologias-items-container,.card-header,.bio"
 const texts:HTMLElement[]=Array.from(document.querySelectorAll(textsQuery))
 
 const observer=new IntersectionObserver((entries)=>{

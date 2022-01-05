@@ -1,5 +1,5 @@
-/* Declare elements to be used */
-var cryptoElements = {
+"use strict";
+const cryptoElements = {
     encodeInput: document.getElementById("encodeInput"),
     encodeOutput: document.getElementById("encodeOutput"),
     decodeInput: document.getElementById("decodeInput"),
@@ -7,30 +7,25 @@ var cryptoElements = {
     copyEncoded: document.getElementById("copyEncoded"),
     copyDecoded: document.getElementById("copyDecoded"),
     resetEncoded: document.getElementById("resetEncoded"),
-    resetDecoded: document.getElementById("resetDecoded")
+    resetDecoded: document.getElementById("resetDecoded"),
 };
-/* Variables to use when inner an input */
 var encodeInputValue, decodeInputValue;
-/* Encode the input */
-var encodeString = function (input) {
-    var result = btoa(encodeURI(input));
+const encodeString = (input) => {
+    let result = btoa(encodeURI(input));
     return result;
 };
-/* Decode the input */
-var decodeString = function (input) {
-    var result = decodeURI(atob(input));
+const decodeString = (input) => {
+    let result = decodeURI(atob(input));
     return result;
 };
-/* Show encoded result */
-var innerEncoded = function () {
+const innerEncoded = () => {
     encodeInputValue = cryptoElements.encodeInput.value;
     cryptoElements.encodeOutput.innerText = encodeString(encodeInputValue);
     cryptoElements.copyEncoded.disabled = false;
 };
-/* Show Decoded result */
-var innerDecoded = function () {
+const innerDecoded = () => {
     decodeInputValue = cryptoElements.decodeInput.value;
-    var result;
+    let result;
     try {
         result = decodeString(decodeInputValue);
         cryptoElements.decodeOutput.innerText = result;
@@ -40,41 +35,38 @@ var innerDecoded = function () {
         cryptoElements.copyDecoded.disabled = true;
     }
 };
-/* Copy the input to the clipboard */
-var copyResult = function (what) {
+const copyResult = (what) => {
     navigator.clipboard.writeText(what);
     alertifyMessageBilingual({
         es: "Resultado copiado al portapapeles",
         eng: "Result copied to clipboard"
     });
 };
-/* Reset input */
-var resetInput = function (where) {
+const resetInput = (where) => {
     where.value = "";
 };
-/* Listeners */
 cryptoElements.encodeInput.addEventListener("input", innerEncoded, false);
 cryptoElements.decodeInput.addEventListener("input", innerDecoded, false);
-cryptoElements.copyEncoded.addEventListener("click", function () {
+cryptoElements.copyEncoded.addEventListener("click", () => {
     copyResult(cryptoElements.encodeOutput.innerText);
 });
-cryptoElements.copyDecoded.addEventListener("click", function () {
+cryptoElements.copyDecoded.addEventListener("click", () => {
     copyResult(cryptoElements.decodeOutput.innerText);
 });
-cryptoElements.resetDecoded.addEventListener("click", function () {
+cryptoElements.resetDecoded.addEventListener("click", () => {
     cryptoElements.decodeInput.value = "";
     cryptoElements.decodeOutput.innerText = "";
     cryptoElements.copyDecoded.disabled = true;
 });
-cryptoElements.resetEncoded.addEventListener("click", function () {
+cryptoElements.resetEncoded.addEventListener("click", () => {
     cryptoElements.encodeInput.value = "";
     cryptoElements.encodeOutput.innerText = "";
     cryptoElements.copyEncoded.disabled = true;
 });
-/* INNER TEXT */
-window.addEventListener("load", function () {
+window.addEventListener("load", () => {
     idiomHTMLInner({
         spa: window.location.origin + "/crypto/lang/spa.json",
         eng: window.location.origin + "/crypto/lang/eng.json"
     });
 });
+//# sourceMappingURL=script.js.map
