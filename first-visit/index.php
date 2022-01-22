@@ -5,12 +5,13 @@
 	<title>Edis MR - Welcome</title>
 	<link rel="stylesheet" href="sass/first-visit.css">
 	<meta http-equiv="Cache-Control" content="max-age=43200">
-	<link rel="shortcut icon" href="/global/assets/me.ico" type="image/x-icon">
 	
 	<script src="/global/script/gsap-3.8.0.min.js"></script>
 	<script defer src="script/first-visit.js"></script>
 
 	<link rel="prefetch" href="/global/css/compiled/global.css">
+	<link rel="prefetch" href="/global/css/extras/loaders.min.css">
+	<link rel="prefetch" href="/index/sass/index.css">
 
 </head>
 <body>

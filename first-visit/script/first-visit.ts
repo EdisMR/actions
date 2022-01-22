@@ -7,15 +7,15 @@ let animationTimeline=gsap.timeline({paused:true})
 .to("main",{
 	opacity:1,
 	duration:2,
-	delay:1,
+	delay:2,
 })
 .from(".xitusContainer",{
 	x:600,
-	duration:1
+	duration:2
 })
 .to(".box1,.box2",{
 	duration:2,
-	delay:2,
+	delay:3,
 	y:0,
 	onComplete:function(){
 		window.location.href="/";

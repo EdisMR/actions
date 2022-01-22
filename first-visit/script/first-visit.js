@@ -1,20 +1,19 @@
-"use strict";
-window.addEventListener("contextmenu", (e) => { e.preventDefault(); }, false);
+window.addEventListener("contextmenu", function (e) { e.preventDefault(); }, false);
 window.addEventListener("load", afterLoadVisit, false);
-const animateSpan = document.querySelector("span");
-let animationTimeline = gsap.timeline({ paused: true })
+var animateSpan = document.querySelector("span");
+var animationTimeline = gsap.timeline({ paused: true })
     .to("main", {
     opacity: 1,
     duration: 2,
-    delay: 1,
+    delay: 2
 })
     .from(".xitusContainer", {
     x: 600,
-    duration: 1
+    duration: 2
 })
     .to(".box1,.box2", {
     duration: 2,
-    delay: 2,
+    delay: 3,
     y: 0,
     onComplete: function () {
         window.location.href = "/";
@@ -25,12 +24,12 @@ function afterLoadVisit() {
 }
 function w000s() {
     try {
-        let Y = document.querySelector("body a[href*='000webhost']");
-        let YY = Y.parentNode;
+        var Y = document.querySelector("body a[href*='000webhost']");
+        var YY = Y.parentNode;
         document.body.removeChild(YY);
     }
     catch (e) {
+        /* console.log(e); */
     }
 }
 w000s();
-//# sourceMappingURL=first-visit.js.map
