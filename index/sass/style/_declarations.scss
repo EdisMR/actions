@@ -19,7 +19,7 @@
 
 .index-portada{
 	background-color: #f3f3f3;
-	color: #333;
+	color: #e4e4e4;
 	position: relative;
 	figure{
 		display: flex;
@@ -52,30 +52,31 @@
 }
 
 @keyframes titleAnimation {
+	$alphax1:.6;
 	0%{text-shadow:
-		3px -3px rgba($color: red, $alpha: .3),
-		4px 4px rgba($color: blue, $alpha: .3),
-		-5px 2px rgba($color: green, $alpha: .3);
+		3px -3px rgba($color: red, $alpha: $alphax1),
+		4px 4px rgba($color: blue, $alpha: $alphax1),
+		-5px 2px rgba($color: green, $alpha: $alphax1);
 	}
 	25%{text-shadow:
-		-3px 3px rgba($color: red, $alpha: .3),
-		4px -4px rgba($color: blue, $alpha: .3),
-		-5px -2px rgba($color: green, $alpha: .3);
+		-3px 3px rgba($color: red, $alpha: $alphax1),
+		4px -4px rgba($color: blue, $alpha: $alphax1),
+		-5px -2px rgba($color: green, $alpha: $alphax1);
 	}
 	50%{text-shadow:
-		3px 3px rgba($color: red, $alpha: .3),
-		-4px -4px rgba($color: blue, $alpha: .3),
-		-2px 2px rgba($color: green, $alpha: .3);
+		3px 3px rgba($color: red, $alpha: $alphax1),
+		-4px -4px rgba($color: blue, $alpha: $alphax1),
+		-2px 2px rgba($color: green, $alpha: $alphax1);
 	}
 	75%{text-shadow:
-		-3px -5px rgba($color: red, $alpha: .3),
-		-4px 4px rgba($color: blue, $alpha: .3),
-		-2px -2px rgba($color: green, $alpha: .3);
+		-3px -5px rgba($color: red, $alpha: $alphax1),
+		-4px 4px rgba($color: blue, $alpha: $alphax1),
+		-2px -2px rgba($color: green, $alpha: $alphax1);
 	}
 	100%{text-shadow:
-		3px -3px rgba($color: red, $alpha: .3),
-		4px 4px rgba($color: blue, $alpha: .3),
-		-5px 2px rgba($color: green, $alpha: .3);
+		3px -3px rgba($color: red, $alpha: $alphax1),
+		4px 4px rgba($color: blue, $alpha: $alphax1),
+		-5px 2px rgba($color: green, $alpha: $alphax1);
 	}
 }
 

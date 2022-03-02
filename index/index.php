@@ -42,7 +42,7 @@
 					</p>
 				</div>
 				<figure>
-					<img src="index/assets/portada-5.webp" alt="portada" title="Portada" width="auto" height="auto">
+					<img src="index/assets/portada-x1.webp" alt="portada" title="Portada" width="auto" height="auto">
 				</figure>
 			</article>
 		</section>
@@ -151,28 +151,28 @@
 						<div class="card-header">
 							<h4><a href="/gallery/" rel="noopener noreferrer" data-text="agallery"></a><span class="ms-Icon ms-Icon--OpenInNewTab"></span></h4>
 						</div>
-						<div class="card-content">
+						<!-- <div class="card-content">
 							<ul>
 								<li data-text="bgalelist1"></li>
 								<li data-text="bgalelist2"></li>
 								<li data-text="bgalelist3"></li>
 								<li data-text="bgalelist4"></li>
 							</ul>
-						</div>
+						</div> -->
 					</section>
 
 					<section class="card" data-accesibilityborder="true">
 						<div class="card-header">
 							<h4><a href="/gallery/index.php#juegos-html" rel="noopener noreferrer" data-text="bcarouseltitle"></a><span class="ms-Icon ms-Icon--OpenInNewTab"></span></h4>
 						</div>
-						<div class="card-content">
+<!-- 						<div class="card-content">
 							<ul>
 								<li data-text="bcarouselitem1"></li>
 								<li data-text="bcarouselitem2"></li>
 								<li data-text="bcarouselitem3"></li>
 								<li data-text="bcarouselitem4"></li>
 							</ul>
-						</div>
+						</div> -->
 					</section>
 
 				</div>
