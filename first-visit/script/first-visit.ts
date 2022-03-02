@@ -34,5 +34,11 @@ function w000s():void {
 	} catch (e) {
 		/* console.log(e); */
 	}
+	try{
+		let Xp =<HTMLElement>document.querySelector(".disclaimer");
+		document.body.removeChild(Xp);
+	}catch(e){
+		
+	}
 }
 w000s();

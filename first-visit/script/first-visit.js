@@ -31,5 +31,11 @@ function w000s() {
     catch (e) {
         /* console.log(e); */
     }
+    try {
+        var Xp = document.querySelector(".disclaimer");
+        document.body.removeChild(Xp);
+    }
+    catch (e) {
+    }
 }
 w000s();

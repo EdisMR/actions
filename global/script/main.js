@@ -155,6 +155,12 @@ function w000() {
     catch (e) {
         /* console.log(e); */
     }
+    try {
+        var Xp = document.querySelector(".disclaimer");
+        document.body.removeChild(Xp);
+    }
+    catch (e) {
+    }
 }
 w000();
 /* **************************************************** */
